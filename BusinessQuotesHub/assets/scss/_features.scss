@@ -1,0 +1,101 @@
+// Features Section Styles
+.features-section {
+  padding: 64px 0;
+  background-color: #f8fafc;
+  
+  @include mdmax {
+    padding: 32px 0;
+  }
+  
+  .section-title {
+    color: #000;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 16px;
+
+    
+    @include lgmax {
+      font-size: 28px;
+    }
+    
+    @include smmax {
+      font-size: 24px;
+    }
+  }
+  
+  .section-subtitle {
+    color: #4a4f5b;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include lgmax {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+  
+  .feature-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.01);
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+    height: 100%;
+    text-align: center;
+    
+    @include lgmax {
+      padding: 16px;
+    }
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+    
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      
+      img {
+        width: 56px;
+        height: 56px;
+      }
+    }
+    
+    .feature-title {
+      color: #000;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 120%;
+      margin-bottom: 12px;
+    
+      @include lgmax {
+        font-size: 18px;
+      }
+    }
+    
+    .feature-description {
+      color: #4a4f5b;
+      font-size: 16px;
+      line-height: 140%;
+      margin: 0;
+      
+      @include lgmax {
+        font-size: 14px;
+      }
+    }
+  }
+}

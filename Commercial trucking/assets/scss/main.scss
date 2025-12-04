@@ -1,0 +1,333 @@
+$xsm: 300px;
+$xs: 600px;
+$sm: 780px;
+$md: 992px;
+$lg: 1040px;
+
+
+@mixin xsmmin {
+    @media screen and (min-width: #{$xsm}) {
+        @content;
+    }
+}
+
+@mixin xsmin {
+    @media screen and (min-width: #{$xs}) {
+        @content;
+    }
+}
+
+@mixin smmin {
+    @media screen and (min-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin mdmin {
+    @media screen and (min-width: #{$md}) {
+        @content;
+    }
+}
+
+
+@mixin lgmin {
+    @media screen and (min-width: #{$lg}) {
+        @content;
+    }
+}
+
+
+@mixin xlmin {
+    @media screen and (min-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin xxlmin {
+    @media screen and (min-width: #{$xxl}) {
+        @content;
+    }
+}
+
+@mixin xlmax {
+    @media screen and (max-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin xxlmax {
+    @media screen and (max-width: #{$xxl}) {
+        @content;
+    }
+}
+
+
+@mixin lgmax {
+    @media screen and (max-width: #{$lg}) {
+        @content;
+    }
+}
+
+
+
+@mixin mdmax {
+    @media screen and (max-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin smmax {
+    @media screen and (max-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin xsmax {
+    @media screen and (max-width: #{$xs}) {
+        @content;
+    }
+}
+
+@mixin xsmmax {
+    @media screen and (max-width: #{$xsm}) {
+        @content;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,800&family=Inter:wght@400;700&display=swap");
+
+
+
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 16px;
+  @include mdmax {
+      font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+header.header {
+  background: #ffffff;
+  padding: 15px 0;
+  .brand img {
+    margin-right: 10px;
+  }
+  .slogan {
+    color: #00bbf0;
+    font-size: 18px;
+    font-weight: 500;
+    vertical-align: bottom;
+  }
+
+  .phone {
+    display: inline-flex;
+    white-space: nowrap;
+    img {
+      margin-right: 5px;
+      vertical-align: unset;
+    }
+    .phone-no {
+      color: #222222;
+      font-size: 24px;
+      font-weight: 700;
+      vertical-align: bottom;
+      @include lgmax {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: #e8f9ff;
+  display: flex;
+  padding: 32px;
+  gap: 18px;
+  height: 300px;
+
+  @include lgmax {
+      height: auto;
+
+  }
+  h1 {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 120%; /* 54px */
+    letter-spacing: -0.9px;
+    margin-bottom: 16px;
+    @include lgmax {
+        font-size: 28px;
+    } 
+  }
+  p {
+    color: #000;
+    font-size: 20px;
+
+    line-height: 120%; /* 24px */
+     @include lgmax {
+        font-size: 16px;
+    } 
+  }
+}
+
+.quote-form {
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 32px 42px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  @include smmax {
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+      max-width: 360px;
+      min-width: 320px;
+  }
+  .input-grp {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    position: relative;
+    width: 100%;
+    @include lgmax {
+        width: 100%;
+    }
+    .input-icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+    }
+    input {
+      border-radius: 12px;
+      border: 1px solid #373435;
+      background: #fff;
+      height: 68px;
+      padding: 12px 16px;
+      text-align: center;
+      max-width: 100%;
+     font-weight: 700;
+    }
+  }
+
+  .submit-btn {
+    border-radius: 12px;
+    background: #0241a6;
+    box-shadow: 2px 2px 0 0 #0241a6;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    display: flex;
+    height: 68px;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    transition-duration: .3s;
+    width: 100%;
+    white-space: nowrap;
+    &:hover {
+
+      box-shadow: 4px 4px 0 0 #061558;
+          transform: translateY(-2px);
+    }
+  }
+}
+.insurace-partners {
+ padding: 70px 0 32px 0;
+ @include mdmax {
+    padding: 32px 0 32px 0;
+ }
+  .heading {
+    color: #4A4F5B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 19.2px */
+    @include smmax {
+      font-size: 14px;
+    }
+  }
+}
+.content {
+  padding-bottom: 32px;
+  ul {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0 0 16px;
+    font-weight: bold;
+    li {
+      padding: 5px 0;
+    }
+  }
+}
+
+.contact-us {
+  padding: 32px 16px;
+  align-items: center;
+  gap: 10px;
+  background: #daf5ff;
+
+  .button {
+    display: inline-flex;
+    padding: 15px 20px;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    background: #1230b0;
+  }
+}
+footer {
+  color: #373435;
+  a {
+    color: #373435;
+  }
+}
