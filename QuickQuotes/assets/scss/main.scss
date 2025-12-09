@@ -288,7 +288,6 @@ header.header {
   border-radius: 50px;
   @include lgmax {
     margin: auto;
-    background: none;
   }
   @include smmax {
     align-items: center;
@@ -327,6 +326,9 @@ header.header {
       font-size: 20px;
       @include lgmax {
         font-size: 18px;
+        max-width: 160px;
+        padding: 5px;
+        height: 50px;
       }
       &:focus {
         outline: 2px solid #373435;
@@ -353,9 +355,13 @@ header.header {
     @include lgmax {
       max-width: 100%;
       white-space: nowrap;
-        background: linear-gradient(97deg, #7047ef 45.98%, #9551fb 96.43%);
+       
         border-radius: 50px;
-        font-size: 18px;
+         font-size: 16px;
+        max-width: 100%;
+        border-radius: 20px;
+        padding: 5px 15px;
+        height: 50px;
 
     }
     &:hover {
