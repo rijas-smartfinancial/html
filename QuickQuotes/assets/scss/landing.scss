@@ -323,11 +323,12 @@ header.header {
     flex-wrap: nowrap;
     width: 100%;
     transition-duration: 0.3s;
+       border-radius: 50px;
     @include lgmax {
       max-width: 100%;
       white-space: nowrap;
        
-        border-radius: 50px;
+     
          font-size: 16px;
         max-width: 100%;
         border-radius: 20px;
@@ -338,7 +339,6 @@ header.header {
     &:hover {
       transform: translateY(-2px);
        background: linear-gradient(97deg, #9551fb 45.98%, #7047ef 96.43%);
-
     }
   }
 }

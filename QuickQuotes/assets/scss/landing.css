@@ -344,12 +344,12 @@ header.header .phone .phone-no {
   flex-wrap: nowrap;
   width: 100%;
   transition-duration: 0.3s;
+  border-radius: 50px;
 }
 @media screen and (max-width: 1040px) {
   .quote-form .submit-btn {
     max-width: 100%;
     white-space: nowrap;
-    border-radius: 50px;
     font-size: 16px;
     max-width: 100%;
     border-radius: 20px;
