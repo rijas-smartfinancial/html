@@ -1,3 +1,10 @@
+:root{
+      --primary-purple: #6b46ff;
+      --bg-lavender: #f3e8ff;
+      --card-radius: 28px;
+      --muted-text: #6c6b80;
+    }
+
 $xsm: 300px;
 $xs: 600px;
 $sm: 780px;
@@ -88,10 +95,12 @@ $lg: 1040px;
   }
 }
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,800&family=Inter:wght@400;700&display=swap");
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap");
 
 // Import feature styles
-@import 'features';
+@import "features";
 
 * {
   -moz-osx-font-smoothing: grayscale;
@@ -99,13 +108,13 @@ $lg: 1040px;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   color: #000;
   font-size: 16px;
-    @include mdmax {
-      font-size: 14px;
+  @include mdmax {
+    font-size: 14px;
   }
   a {
     text-decoration: none;
@@ -152,10 +161,9 @@ header.header {
     img {
       margin-right: 5px;
       vertical-align: unset;
-    
     }
     .phone-no {
-      color: #FFF;
+      color: #fff;
       font-size: 24px;
       font-weight: 700;
       vertical-align: bottom;
@@ -167,7 +175,7 @@ header.header {
 }
 
 .hero {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 32px 0 0;
   overflow: hidden;
   .container {
@@ -179,13 +187,11 @@ header.header {
     top: 0;
     bottom: auto;
     text-align: center;
-    padding: 16px 32px;
+    padding: 16px 0 0;
   }
- 
 
   h1 {
     color: #000;
-    font-family: Poppins;
     font-size: 45px;
     font-style: normal;
     font-weight: bold;
@@ -193,7 +199,7 @@ header.header {
     letter-spacing: -0.9px;
     margin-bottom: 16px;
     @include lgmax {
-      font-size: 22px;
+      font-size: 28px;
       text-align: center;
     }
   }
@@ -212,44 +218,87 @@ header.header {
     &-tabs {
       border: 0;
       gap: 16px;
-          flex-wrap: nowrap;
-          justify-content:space-between;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      @include mdmax {
+        gap: 5px;
+      }
     }
     &-item {
       width: 100%;
       button {
         border-radius: 20px;
-        background: #F6F3FF;
+        background: #f6f3ff;
         max-width: 100%;
         width: 100%;
         height: 120px;
-        svg {
-          min-width: 50px;
-          max-width: 100%;
+        @include smmax {
+          height: 60px;
+          padding: 0px;
+          width: 60px;
         }
-      &.active {
-        background: #7842EC;
-      }
+        svg {
+          min-width: 30px;
+          max-width: 100%;
+          @include smmax {
+                width: 50px;
+                height: 50px;
+          } 
+        }
+        &.active {
+          background: #7842ec;
+        }
       }
     }
   }
+  .tab-content {
+    .h1 {
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 120%; /* 42px */
+      letter-spacing: -0.7px;
+      @include lgmax {
+        font-size: 32px;
+      } 
+    }
+    .subheading {
+      margin-bottom: 16px;
+      font-size: 22px;
+      font-weight: 300;
+      @include lgmax {
+        font-size: 16px;
+      }
+    }
+
+    .img-fluid {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
 }
+
 .quote-form {
   padding: 5px;
   display: flex;
   justify-content: start;
   align-items: flex-start;
   max-width: 600px;
-  background: linear-gradient(97deg, #7047EF 45.98%, #9551FB 96.43%);
+  background: linear-gradient(97deg, #7047ef 45.98%, #9551fb 96.43%);
   border-radius: 50px;
+  @include lgmax {
+    margin: auto;
+    background: none;
+  }
   @include smmax {
-    flex-direction: column;
     align-items: center;
-    padding: 0;
     justify-content: center;
     text-align: center;
-    max-width: 320px;
+    max-width: 100%;
     margin: auto;
+    border-radius: 40px;
+    padding: 4px;
+    gap: 10px;
   }
   .input-grp {
     display: flex;
@@ -277,18 +326,17 @@ header.header {
       font-weight: bold;
       font-size: 20px;
       @include lgmax {
-        max-width: 320px;
+        font-size: 18px;
       }
       &:focus {
-           outline:2px solid #373435;
-           border-color: #373435;
+        outline: 2px solid #373435;
+        border-color: #373435;
       }
     }
   }
 
   .submit-btn {
     color: #fff;
-    font-family: Poppins;
     font-size: 22px;
     font-style: normal;
     font-weight: 800;
@@ -303,50 +351,34 @@ header.header {
     width: 100%;
     transition-duration: 0.3s;
     @include lgmax {
-      width: 100%;
-      max-width: 320px;
+      max-width: 100%;
+      white-space: nowrap;
+        background: linear-gradient(97deg, #7047ef 45.98%, #9551fb 96.43%);
+        border-radius: 50px;
+        font-size: 18px;
+
     }
     &:hover {
       transform: translateY(-2px);
     }
   }
 }
-.insurace-partners {
-  padding: 24px 0;
-    @include mdmax {
-    padding: 16px 0;
-  }
-  .container {
-    position: relative;
-    z-index: 1;
-    background-color: #fff;
-    border-radius: 50px;
-    max-width: 900px;
- 
-  }
- 
-  .heading {
-    color: #4a4f5b;
-    font-family: Poppins;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%; /* 19.2px */
-     @include smmax {
-      font-size: 14px;
-    }
-  }
-}
-.content {
+
+.content-section {
   padding-bottom: 32px;
-   @include mdmax {
-      padding-bottom: 16px;
+  @include mdmax {
+    padding-bottom: 16px;
+  }
+  h3 {
+    font-size: 24px;
   }
   img.img {
     @include lgmax {
-       max-width: 60%;
-       margin: auto;
-       padding-bottom: 32px;
+        max-width: 100%;
+        margin: auto;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 30px;
     }
   }
   ul {
@@ -360,123 +392,186 @@ header.header {
   }
 }
 
+.insurance-section {
+    padding: 32px 0;
+    .container {
+      background: #EDE5FF;
+      border-radius: var(--card-radius);
+      box-shadow: 0 6px 18px rgba(42,37,64,0.06);
+      padding: 32px;
+            font-size: 25px;
+
+    }
+
+    .insurance-title {
+      font-weight: 700;
+      color: #23067B;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.2px;
+      font-size: 25px;
+    }
+     .insurance-subtitle {
+      color: #23067B;
+      margin-bottom: 0.85rem;
+      font-size: 25px;
+    }
+     /* Controls styling to resemble pill selects */
+    .form-select,
+    .btn-go {
+        font-size: 22px;
+      border-radius: 12px;
+      min-height: 44px;
+      padding-top: 0.45rem;
+      padding-bottom: 0.45rem;
+      box-shadow: 0 6px 14px rgba(42,37,64,0.03);
+    }
+     .btn-go {
+      background: var(--primary-purple);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      min-width: 64px;
+    }
+     .btn-go:focus,
+    .form-select:focus {
+      box-shadow: 0 0 0 4px rgba(107,70,255,0.12);
+      outline: none;
+    }
+
+    /* small "Companies" text like reference */
+    .form-sep {
+      font-weight: 700;
+      color: #23067B;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+}
+
+  
+
+    
+
+
+   
+
+   
+   
+
+   
+
+
+
+
+.insurance-covered-section {
+  padding: 32px 0;
+  text-align: center;
+  @include mdmax {
+    padding: 16px 0;
+  }
+   .product-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+     
+      .product-item {
+        .product-link {
+        border-radius: 20px;
+        background: #f6f3ff;
+        max-width: 100%;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include smmax {
+          width: 100px;
+          height: 100px;
+          padding: 8px;
+        }
+        svg {
+          min-width: 50px;
+          max-width: 100%;
+        }
+        &:hover {
+          background: #7842ec;
+          svg path {
+            stroke: #fff;
+          }
+        }
+      }
+  }
+}
+}
+ 
 .contact-us {
+  background-image: url(../images/Footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 32px 16px;
   align-items: center;
   gap: 10px;
-  background: #daf5ff;
- @include mdmax {
-      padding: 16px;
+  background-color: #000;
+ 
+  @include mdmax {
+    padding: 16px;
+  }
+  .row {
+     height: 216px;
+  }
+  h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
   }
   .contact-subtitle {
-    color: var(--Gray, #373435);
-font-size: 20px;
+    color: var(--White, #fff);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
   }
   .button {
     display: inline-flex;
-    padding: 16px 32px;
+    padding: 22px 32px;
     align-items: center;
     gap: 10px;
     color: #fff;
-    font-family: Poppins;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.5px;
     border-radius: 50px;
-    background: #1230b0;
-     transition-duration: 0.3s;
+    border-radius: 50px;
+    background: var(
+      --gradient,
+      linear-gradient(97deg, #7047ef 45.98%, #9551fb 96.43%)
+    );
+    transition-duration: 0.3s;
     &:hover {
       box-shadow: 4px 4px 0 0 #000;
       transform: translateY(-2px);
     }
   }
 }
-.testimonial-section {
-  background-color: #DAF5FF;
-  padding: 48px 0;
-  @include mdmax {
-    padding: 32px 0;
-  }
-  
-  .testimonial-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .testimonial-title {
-  color: #21212D;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 32px;
-    @include mdmax {
-      font-size: 24px;
-    }
-  }
-  
-  .testimonial-subtitle {
-    color: var(--Gray, #373435);
-  text-align: center;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-    @include mdmax {
-      font-size: 16px;
-      margin-bottom: 24px;
-    }
-  }
-  
-  .testimonial-quote {
-    padding: 32px;
-    @include mdmax {
-      padding: 24px;
-    }
-    
-    blockquote {
-      font-style: italic;
-      color: #2c3e50;
-      margin: 0;
-      position: relative;
-      color: #494954;
-    text-align: center;
-    font-family: "Playfair Display";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 130% */
-    letter-spacing: -0.2px;
-      @include mdmax {
-        font-size: 16px;
-      }
-      
-      &::before {
-        content: '"';
-        font-size: 48px;
-        color: #2B8AFF;
-        position: absolute;
-        top: -10px;
-        left: -20px;
-        font-family: serif;
-      }
-    }
-  }
-}
 
 footer {
-  background-color: #FFF;
-  color: #4a4f5b;
+  background-color: #000;
+  color: #FFF;
   a {
     padding: 5px;
     display: inline-block;
     text-decoration: none;
-    color: #4a4f5b;
+    color: #FFF;
+    &:hover {
+      color: #bea0ff;
+    }
   }
 }

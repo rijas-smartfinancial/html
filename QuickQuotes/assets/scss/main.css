@@ -1,7 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,800&family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap");
+:root {
+  --primary-purple: #6b46ff;
+  --bg-lavender: #f3e8ff;
+  --card-radius: 28px;
+  --muted-text: #6c6b80;
+}
+
 .features-section {
   padding: 64px 0;
-  background-color: #f8fafc;
 }
 @media screen and (max-width: 992px) {
   .features-section {
@@ -10,7 +16,6 @@
 }
 .features-section .section-title {
   color: #000;
-  font-family: Poppins;
   font-size: 36px;
   font-weight: 700;
   line-height: 120%;
@@ -46,7 +51,7 @@
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   margin-bottom: 24px;
   height: 100%;
@@ -62,17 +67,19 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 .features-section .feature-card .feature-icon {
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
+  background-color: #FFF;
+  padding: 15px;
 }
-.features-section .feature-card .feature-icon img {
-  width: 56px;
-  height: 56px;
+.features-section .feature-card .feature-icon svg {
+  width: 76px;
+  height: 76px;
 }
 .features-section .feature-card .feature-title {
   color: #000;
@@ -104,7 +111,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   color: #000;
@@ -165,7 +172,7 @@ header.header .phone img {
   vertical-align: unset;
 }
 header.header .phone .phone-no {
-  color: #FFF;
+  color: #fff;
   font-size: 24px;
   font-weight: 700;
   vertical-align: bottom;
@@ -177,7 +184,7 @@ header.header .phone .phone-no {
 }
 
 .hero {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 32px 0 0;
   overflow: hidden;
 }
@@ -191,12 +198,11 @@ header.header .phone .phone-no {
     top: 0;
     bottom: auto;
     text-align: center;
-    padding: 16px 32px;
+    padding: 16px 0 0;
   }
 }
 .hero h1 {
   color: #000;
-  font-family: Poppins;
   font-size: 45px;
   font-style: normal;
   font-weight: bold;
@@ -206,7 +212,7 @@ header.header .phone .phone-no {
 }
 @media screen and (max-width: 1040px) {
   .hero h1 {
-    font-size: 22px;
+    font-size: 28px;
     text-align: center;
   }
 }
@@ -227,22 +233,66 @@ header.header .phone .phone-no {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 992px) {
+  .product-tab-section .nav-tabs {
+    gap: 5px;
+  }
+}
 .product-tab-section .nav-item {
   width: 100%;
 }
 .product-tab-section .nav-item button {
   border-radius: 20px;
-  background: #F6F3FF;
+  background: #f6f3ff;
   max-width: 100%;
   width: 100%;
   height: 120px;
 }
+@media screen and (max-width: 780px) {
+  .product-tab-section .nav-item button {
+    height: 60px;
+    padding: 0px;
+    width: 60px;
+  }
+}
 .product-tab-section .nav-item button svg {
-  min-width: 50px;
+  min-width: 30px;
   max-width: 100%;
 }
+@media screen and (max-width: 780px) {
+  .product-tab-section .nav-item button svg {
+    width: 50px;
+    height: 50px;
+  }
+}
 .product-tab-section .nav-item button.active {
-  background: #7842EC;
+  background: #7842ec;
+}
+.product-tab-section .tab-content .h1 {
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 120%; /* 42px */
+  letter-spacing: -0.7px;
+}
+@media screen and (max-width: 1040px) {
+  .product-tab-section .tab-content .h1 {
+    font-size: 32px;
+  }
+}
+.product-tab-section .tab-content .subheading {
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1040px) {
+  .product-tab-section .tab-content .subheading {
+    font-size: 16px;
+  }
+}
+.product-tab-section .tab-content .img-fluid {
+  width: 100%;
+  max-width: 400px;
 }
 
 .quote-form {
@@ -251,18 +301,25 @@ header.header .phone .phone-no {
   justify-content: start;
   align-items: flex-start;
   max-width: 600px;
-  background: linear-gradient(97deg, #7047EF 45.98%, #9551FB 96.43%);
+  background: linear-gradient(97deg, #7047ef 45.98%, #9551fb 96.43%);
   border-radius: 50px;
+}
+@media screen and (max-width: 1040px) {
+  .quote-form {
+    margin: auto;
+    background: none;
+  }
 }
 @media screen and (max-width: 780px) {
   .quote-form {
-    flex-direction: column;
     align-items: center;
-    padding: 0;
     justify-content: center;
     text-align: center;
-    max-width: 320px;
+    max-width: 100%;
     margin: auto;
+    border-radius: 40px;
+    padding: 4px;
+    gap: 10px;
   }
 }
 .quote-form .input-grp {
@@ -296,7 +353,7 @@ header.header .phone .phone-no {
 }
 @media screen and (max-width: 1040px) {
   .quote-form .input-grp input {
-    max-width: 320px;
+    font-size: 18px;
   }
 }
 .quote-form .input-grp input:focus {
@@ -305,7 +362,6 @@ header.header .phone .phone-no {
 }
 .quote-form .submit-btn {
   color: #fff;
-  font-family: Poppins;
   font-size: 22px;
   font-style: normal;
   font-weight: 800;
@@ -322,97 +378,191 @@ header.header .phone .phone-no {
 }
 @media screen and (max-width: 1040px) {
   .quote-form .submit-btn {
-    width: 100%;
-    max-width: 320px;
+    max-width: 100%;
+    white-space: nowrap;
+    background: linear-gradient(97deg, #7047ef 45.98%, #9551fb 96.43%);
+    border-radius: 50px;
+    font-size: 18px;
   }
 }
 .quote-form .submit-btn:hover {
   transform: translateY(-2px);
 }
 
-.insurace-partners {
-  padding: 24px 0;
-}
-@media screen and (max-width: 992px) {
-  .insurace-partners {
-    padding: 16px 0;
-  }
-}
-.insurace-partners .container {
-  position: relative;
-  z-index: 1;
-  background-color: #fff;
-  border-radius: 50px;
-  max-width: 900px;
-}
-.insurace-partners .heading {
-  color: #4a4f5b;
-  font-family: Poppins;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 19.2px */
-}
-@media screen and (max-width: 780px) {
-  .insurace-partners .heading {
-    font-size: 14px;
-  }
-}
-
-.content {
+.content-section {
   padding-bottom: 32px;
 }
 @media screen and (max-width: 992px) {
-  .content {
+  .content-section {
     padding-bottom: 16px;
   }
 }
+.content-section h3 {
+  font-size: 24px;
+}
 @media screen and (max-width: 1040px) {
-  .content img.img {
-    max-width: 60%;
+  .content-section img.img {
+    max-width: 100%;
     margin: auto;
-    padding-bottom: 32px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
   }
 }
-.content ul {
+.content-section ul {
   list-style: none;
   padding: 5px 0;
   margin: 0 0 16px;
   font-weight: bold;
 }
-.content ul li {
+.content-section ul li {
   padding: 5px 0;
 }
 
+.insurance-section {
+  padding: 32px 0;
+  /* Controls styling to resemble pill selects */
+  /* small "Companies" text like reference */
+}
+.insurance-section .container {
+  background: #EDE5FF;
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 18px rgba(42, 37, 64, 0.06);
+  padding: 32px;
+  font-size: 25px;
+}
+.insurance-section .insurance-title {
+  font-weight: 700;
+  color: #23067B;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.2px;
+  font-size: 25px;
+}
+.insurance-section .insurance-subtitle {
+  color: #23067B;
+  margin-bottom: 0.85rem;
+  font-size: 25px;
+}
+.insurance-section .form-select,
+.insurance-section .btn-go {
+  font-size: 22px;
+  border-radius: 12px;
+  min-height: 44px;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  box-shadow: 0 6px 14px rgba(42, 37, 64, 0.03);
+}
+.insurance-section .btn-go {
+  background: var(--primary-purple);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  min-width: 64px;
+}
+.insurance-section .btn-go:focus,
+.insurance-section .form-select:focus {
+  box-shadow: 0 0 0 4px rgba(107, 70, 255, 0.12);
+  outline: none;
+}
+.insurance-section .form-sep {
+  font-weight: 700;
+  color: #23067B;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.insurance-covered-section {
+  padding: 32px 0;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .insurance-covered-section {
+    padding: 16px 0;
+  }
+}
+.insurance-covered-section .product-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.insurance-covered-section .product-list .product-item .product-link {
+  border-radius: 20px;
+  background: #f6f3ff;
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 780px) {
+  .insurance-covered-section .product-list .product-item .product-link {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+  }
+}
+.insurance-covered-section .product-list .product-item .product-link svg {
+  min-width: 50px;
+  max-width: 100%;
+}
+.insurance-covered-section .product-list .product-item .product-link:hover {
+  background: #7842ec;
+}
+.insurance-covered-section .product-list .product-item .product-link:hover svg path {
+  stroke: #fff;
+}
+
 .contact-us {
+  background-image: url(../images/Footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 32px 16px;
   align-items: center;
   gap: 10px;
-  background: #daf5ff;
+  background-color: #000;
 }
 @media screen and (max-width: 992px) {
   .contact-us {
     padding: 16px;
   }
 }
+.contact-us .row {
+  height: 216px;
+}
+.contact-us h3 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
 .contact-us .contact-subtitle {
-  color: var(--Gray, #373435);
+  color: var(--White, #fff);
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
 }
 .contact-us .button {
   display: inline-flex;
-  padding: 16px 32px;
+  padding: 22px 32px;
   align-items: center;
   gap: 10px;
   color: #fff;
-  font-family: Poppins;
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.5px;
   border-radius: 50px;
-  background: #1230b0;
+  border-radius: 50px;
+  background: var(--gradient, linear-gradient(97deg, #7047ef 45.98%, #9551fb 96.43%));
   transition-duration: 0.3s;
 }
 .contact-us .button:hover {
@@ -420,94 +570,16 @@ header.header .phone .phone-no {
   transform: translateY(-2px);
 }
 
-.testimonial-section {
-  background-color: #DAF5FF;
-  padding: 48px 0;
-}
-@media screen and (max-width: 992px) {
-  .testimonial-section {
-    padding: 32px 0;
-  }
-}
-.testimonial-section .testimonial-content {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.testimonial-section .testimonial-title {
-  color: #21212D;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 32px;
-}
-@media screen and (max-width: 992px) {
-  .testimonial-section .testimonial-title {
-    font-size: 24px;
-  }
-}
-.testimonial-section .testimonial-subtitle {
-  color: var(--Gray, #373435);
-  text-align: center;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-}
-@media screen and (max-width: 992px) {
-  .testimonial-section .testimonial-subtitle {
-    font-size: 16px;
-    margin-bottom: 24px;
-  }
-}
-.testimonial-section .testimonial-quote {
-  padding: 32px;
-}
-@media screen and (max-width: 992px) {
-  .testimonial-section .testimonial-quote {
-    padding: 24px;
-  }
-}
-.testimonial-section .testimonial-quote blockquote {
-  font-style: italic;
-  color: #2c3e50;
-  margin: 0;
-  position: relative;
-  color: #494954;
-  text-align: center;
-  font-family: "Playfair Display";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 130% */
-  letter-spacing: -0.2px;
-}
-@media screen and (max-width: 992px) {
-  .testimonial-section .testimonial-quote blockquote {
-    font-size: 16px;
-  }
-}
-.testimonial-section .testimonial-quote blockquote::before {
-  content: '"';
-  font-size: 48px;
-  color: #2B8AFF;
-  position: absolute;
-  top: -10px;
-  left: -20px;
-  font-family: serif;
-}
-
 footer {
-  background-color: #FFF;
-  color: #4a4f5b;
+  background-color: #000;
+  color: #FFF;
 }
 footer a {
   padding: 5px;
   display: inline-block;
   text-decoration: none;
-  color: #4a4f5b;
+  color: #FFF;
+}
+footer a:hover {
+  color: #bea0ff;
 }/*# sourceMappingURL=main.css.map */
