@@ -102,6 +102,14 @@ $lg: 1040px;
 // Import feature styles
 @import "features";
 
+.features-section {
+  background-color: #EDE5FF;
+    .feature-card {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+
+    }
+}
+
 * {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -112,7 +120,7 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  font-size: 16px;
+  font-size: 18px;
   @include mdmax {
     font-size: 14px;
   }
@@ -181,6 +189,7 @@ header.header {
   .container {
     position: relative;
     z-index: 1;
+    
   }
   @include lgmax {
     height: auto;
@@ -212,46 +221,7 @@ header.header {
       font-size: 14px;
     }
   }
-}
-.product-tab-section {
-  .nav {
-    &-tabs {
-      border: 0;
-      gap: 16px;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      @include mdmax {
-        gap: 5px;
-      }
-    }
-    &-item {
-      width: 100%;
-      button {
-        border-radius: 20px;
-        background: #f6f3ff;
-        max-width: 100%;
-        width: 100%;
-        height: 120px;
-        @include smmax {
-          height: 60px;
-          padding: 0px;
-          width: 60px;
-        }
-        svg {
-          min-width: 30px;
-          max-width: 100%;
-          @include smmax {
-                width: 50px;
-                height: 50px;
-          } 
-        }
-        &.active {
-          background: #7842ec;
-        }
-      }
-    }
-  }
-  .tab-content {
+
     .h1 {
       color: #000;
       font-size: 35px;
@@ -272,10 +242,8 @@ header.header {
     }
 
     .img-fluid {
-      width: 100%;
-      max-width: 500px;
+      width:500px;
     }
-  }
 }
 
 .quote-form {
@@ -355,12 +323,11 @@ header.header {
     flex-wrap: nowrap;
     width: 100%;
     transition-duration: 0.3s;
-       border-radius: 50px;
     @include lgmax {
       max-width: 100%;
       white-space: nowrap;
        
-     
+        border-radius: 50px;
          font-size: 16px;
         max-width: 100%;
         border-radius: 20px;
@@ -371,6 +338,7 @@ header.header {
     &:hover {
       transform: translateY(-2px);
        background: linear-gradient(97deg, #9551fb 45.98%, #7047ef 96.43%);
+
     }
   }
 }
