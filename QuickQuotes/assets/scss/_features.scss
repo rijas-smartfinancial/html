@@ -1,10 +1,7 @@
 // Features Section Styles
 .features-section {
-  padding: 64px 0;
-  
-  @include mdmax {
-    padding: 32px 0;
-  }
+  padding: 32px 0;
+
   
   .section-title {
     color: #000;
