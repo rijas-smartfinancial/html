@@ -1,7 +1,9 @@
 // Features Section Styles
 .features-section {
-  padding: 32px 0;
-
+  padding: 63px 0;
+ @include lgmax {
+     padding: 24px 0;
+    }
   
   .section-title {
     color: #000;
