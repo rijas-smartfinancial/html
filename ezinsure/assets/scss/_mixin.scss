@@ -1,0 +1,95 @@
+$xsm: 300px;
+$xs: 600px;
+$sm: 780px;
+$md: 992px;
+$lg: 1040px;
+
+
+@mixin xsmmin {
+    @media screen and (min-width: #{$xsm}) {
+        @content;
+    }
+}
+
+@mixin xsmin {
+    @media screen and (min-width: #{$xs}) {
+        @content;
+    }
+}
+
+@mixin smmin {
+    @media screen and (min-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin mdmin {
+    @media screen and (min-width: #{$md}) {
+        @content;
+    }
+}
+
+
+@mixin lgmin {
+    @media screen and (min-width: #{$lg}) {
+        @content;
+    }
+}
+
+
+@mixin xlmin {
+    @media screen and (min-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin xxlmin {
+    @media screen and (min-width: #{$xxl}) {
+        @content;
+    }
+}
+
+@mixin xlmax {
+    @media screen and (max-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin xxlmax {
+    @media screen and (max-width: #{$xxl}) {
+        @content;
+    }
+}
+
+
+@mixin lgmax {
+    @media screen and (max-width: #{$lg}) {
+        @content;
+    }
+}
+
+
+
+@mixin mdmax {
+    @media screen and (max-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin smmax {
+    @media screen and (max-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin xsmax {
+    @media screen and (max-width: #{$xs}) {
+        @content;
+    }
+}
+
+@mixin xsmmax {
+    @media screen and (max-width: #{$xsm}) {
+        @content;
+    }
+}
