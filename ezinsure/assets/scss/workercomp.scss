@@ -140,32 +140,28 @@ header.header {
     vertical-align: bottom;
   }
 
-  .phone {
-    display: inline-flex;
-    white-space: nowrap;
-    background-color: $cta;
-    border-radius: 50px;
+   .phone {
+    white-space: pre;
+    border-radius: 30px;
     padding: 8px 16px;
-    transition-duration: 0.3s;
-    width: 220px;
-    @include smmax {
-      width: 160px;
-    }
+    background-color: $cta;
+    display: inline-flex;
+    box-sizing: border-box;
+   
     &:hover {
-      box-shadow: 4px 4px 0 0 #000;
-      transform: translateY(-2px);
+      background-color: $ctahover;
+      text-decoration: none;
     }
     img {
-      margin-right: 5px;
       vertical-align: unset;
       max-width: 24px;
-    
     }
     .phone-no {
       color: #FFF;
       font-size: 24px;
       font-weight: 700;
-      vertical-align: bottom;
+      display: block;
+      padding: 0 15px;
       @include lgmax {
         font-size: 16px;
       }
@@ -196,18 +192,30 @@ header.header {
       min-height: auto;
     }
   }
+
+    .hero-content {
+    @include lgmax {
+      background-color: #247CA2C9;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      padding: 16px; 
+      margin-top: 200px;
+    }
+  }
   .hero-bg {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
-    height: max-content;
+     height: 100%;
+              object-fit: cover;
 
     z-index: 0;
     left: 0;
     bottom: 0;
     @include lgmax {
       display: none;
+            
     }
   }
 
@@ -243,7 +251,13 @@ header.header {
   text-align: center;
   background-color: #FFF;
   @include lgmax {
-    padding: 16px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    .h5 {
+      color: #FFF;
+      font-size: 14px;
+    }
   }
 }
 .quote-form {

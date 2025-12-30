@@ -50,25 +50,18 @@ header.header .slogan {
   vertical-align: bottom;
 }
 header.header .phone {
-  display: inline-flex;
-  white-space: nowrap;
-  background-color: #b20000;
-  border-radius: 50px;
+  white-space: pre;
+  border-radius: 30px;
   padding: 8px 16px;
-  transition-duration: 0.3s;
-  width: 220px;
-}
-@media screen and (max-width: 780px) {
-  header.header .phone {
-    width: 160px;
-  }
+  background-color: #b20000;
+  display: inline-flex;
+  box-sizing: border-box;
 }
 header.header .phone:hover {
-  box-shadow: 4px 4px 0 0 #000;
-  transform: translateY(-2px);
+  background-color: #7c0000;
+  text-decoration: none;
 }
 header.header .phone img {
-  margin-right: 5px;
   vertical-align: unset;
   max-width: 24px;
 }
@@ -76,7 +69,8 @@ header.header .phone .phone-no {
   color: #FFF;
   font-size: 24px;
   font-weight: 700;
-  vertical-align: bottom;
+  display: block;
+  padding: 0 15px;
 }
 @media screen and (max-width: 1040px) {
   header.header .phone .phone-no {
@@ -100,7 +94,7 @@ header.header .phone .phone-no {
     top: 0;
     bottom: auto;
     text-align: center;
-    padding: 32px;
+    padding: 212px 32px 32px 32px;
   }
 }
 .hero .row {
@@ -109,6 +103,14 @@ header.header .phone .phone-no {
 @media screen and (max-width: 992px) {
   .hero .row {
     min-height: auto;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .hero .hero-content {
+    background-color: #FFF;
+    border-radius: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 16px;
   }
 }
 .hero .hero-bg {
