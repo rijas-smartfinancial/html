@@ -52,26 +52,31 @@ header.header .slogan {
 }
 header.header .phone {
   white-space: pre;
-  border-radius: 30px;
+  border-radius: 50px;
   padding: 8px 16px;
-  background-color: #2EA3F2;
+  background-color: #2ea3f2;
   display: inline-flex;
   box-sizing: border-box;
 }
+@media screen and (max-width: 992px) {
+  header.header .phone {
+    padding: 16px;
+  }
+}
 header.header .phone:hover {
-  background-color: #1B6FA8;
+  background-color: #1b6fa8;
   text-decoration: none;
 }
 header.header .phone img {
   vertical-align: unset;
-  max-width: 24px;
+  width: 24px;
 }
 header.header .phone .phone-no {
-  color: #FFF;
+  color: #fff;
   font-size: 24px;
   font-weight: 700;
   display: block;
-  padding: 0 15px;
+  padding: 0 5px;
 }
 @media screen and (max-width: 1040px) {
   header.header .phone .phone-no {
@@ -80,7 +85,7 @@ header.header .phone .phone-no {
 }
 
 .hero {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 32px 0;
   overflow: hidden;
 }
@@ -145,9 +150,9 @@ header.header .phone .phone-no {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   margin-bottom: -50px;
   position: relative;
-  background-color: #FFF;
+  background-color: #fff;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 992px) {
   .quote-form {
     flex-direction: column;
     align-items: center;
@@ -197,7 +202,7 @@ header.header .phone .phone-no {
 }
 .quote-form .submit-btn {
   border-radius: 50px;
-  background: #2EA3F2;
+  background: #2ea3f2;
   box-shadow: 2px 2px 0 0 #000;
   color: #fff;
   font-family: Poppins;
@@ -224,7 +229,7 @@ header.header .phone .phone-no {
 .quote-form .submit-btn:hover {
   box-shadow: 4px 4px 0 0 #000;
   transform: translateY(-2px);
-  background-color: #1B6FA8;
+  background-color: #1b6fa8;
 }
 
 .insurace-partners {
@@ -236,7 +241,7 @@ header.header .phone .phone-no {
   }
 }
 .insurace-partners .heading {
-  color: #4A4F5B;
+  color: #4a4f5b;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
@@ -262,12 +267,12 @@ header.header .phone .phone-no {
   padding: 5px 0;
   display: flex;
   align-items: start;
+  gap: 10px;
 }
 .content ul li img {
   margin-top: 4px;
 }
-
-.icon-list {
+.content .icon-list {
   list-style: none;
   padding: 0;
   display: flex;
@@ -275,11 +280,11 @@ header.header .phone .phone-no {
   justify-content: center;
 }
 @media screen and (max-width: 780px) {
-  .icon-list {
+  .content .icon-list {
     flex-wrap: wrap;
   }
 }
-.icon-list li {
+.content .icon-list li {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -287,27 +292,24 @@ header.header .phone .phone-no {
   border: 1px solid #ccc;
   border-radius: 10px;
   min-width: 200px;
+  justify-content: center;
   padding: 10px !important;
 }
-.icon-list li::before {
+.content .icon-list li::before {
   content: "🚗";
   margin-right: 0.5rem;
   font-size: 3rem;
 }
-
-.icon-list li:nth-child(2)::before {
+.content .icon-list li:nth-child(2)::before {
   content: "🚚";
 }
-
-.icon-list li:nth-child(3)::before {
+.content .icon-list li:nth-child(3)::before {
   content: "🚐";
 }
-
-.icon-list li:nth-child(4)::before {
+.content .icon-list li:nth-child(4)::before {
   content: "🚛";
 }
-
-.icon-list li:nth-child(5)::before {
+.content .icon-list li:nth-child(5)::before {
   content: "🔧";
 }
 
@@ -328,29 +330,27 @@ header.header .phone .phone-no {
 }
 .contact-us .button {
   display: inline-flex;
-  padding: 16px 32px;
+  padding: 16px;
   align-items: center;
   gap: 10px;
   color: #fff;
-  font-family: Poppins;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: 0.5px;
   border-radius: 50px;
-  background: #2EA3F2;
+  background: #2ea3f2;
   transition-duration: 0.3s;
   white-space: pre;
 }
 .contact-us .button img {
   vertical-align: unset;
-  max-width: 20px;
+  width: 24px;
 }
 .contact-us .button:hover {
   box-shadow: 4px 4px 0 0 #000;
   transform: translateY(-2px);
-  background-color: #1B6FA8;
+  background-color: #1b6fa8;
 }
 
 .testimonial-section {
@@ -367,7 +367,7 @@ header.header .phone .phone-no {
   margin: 0 auto;
 }
 .testimonial-section .testimonial-title {
-  color: #21212D;
+  color: #21212d;
   text-align: center;
   font-family: Poppins;
   font-size: 24px;
@@ -409,7 +409,7 @@ header.header .phone .phone-no {
 }
 .testimonial-section .testimonial-quote {
   padding: 32px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 20px;
 }
 @media screen and (max-width: 992px) {
@@ -450,7 +450,7 @@ header.header .phone .phone-no {
 .testimonial-section .testimonial-quote blockquote::before {
   content: '"';
   font-size: 48px;
-  color: #2B8AFF;
+  color: #2b8aff;
   position: absolute;
   top: -10px;
   left: -20px;
@@ -462,4 +462,4 @@ footer {
 }
 footer a {
   color: #373435;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=commercialauto.css.map */

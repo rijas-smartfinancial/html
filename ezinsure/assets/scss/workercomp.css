@@ -51,11 +51,16 @@ header.header .slogan {
 }
 header.header .phone {
   white-space: pre;
-  border-radius: 30px;
+  border-radius: 50px;
   padding: 8px 16px;
   background-color: #b20000;
   display: inline-flex;
   box-sizing: border-box;
+}
+@media screen and (max-width: 992px) {
+  header.header .phone {
+    padding: 16px;
+  }
 }
 header.header .phone:hover {
   background-color: #7c0000;
@@ -63,14 +68,14 @@ header.header .phone:hover {
 }
 header.header .phone img {
   vertical-align: unset;
-  max-width: 24px;
+  width: 24px;
 }
 header.header .phone .phone-no {
-  color: #FFF;
+  color: #fff;
   font-size: 24px;
   font-weight: 700;
   display: block;
-  padding: 0 15px;
+  padding: 0 5px;
 }
 @media screen and (max-width: 1040px) {
   header.header .phone .phone-no {
@@ -133,7 +138,7 @@ header.header .phone .phone-no {
   }
 }
 .hero h1 {
-  color: #FFF;
+  color: #fff;
   font-family: Poppins;
   font-size: 45px;
   font-style: normal;
@@ -149,7 +154,7 @@ header.header .phone .phone-no {
   }
 }
 .hero p {
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   line-height: 120%; /* 24px */
 }
@@ -160,12 +165,12 @@ header.header .phone .phone-no {
 }
 
 .quote-form-section {
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 20px;
   padding: 32px 32px 16px;
   display: inline-block;
   text-align: center;
-  background-color: #FFF;
+  background-color: #fff;
 }
 @media screen and (max-width: 1040px) {
   .quote-form-section {
@@ -174,7 +179,7 @@ header.header .phone .phone-no {
     border: 0;
   }
   .quote-form-section .h5 {
-    color: #FFF;
+    color: #fff;
     font-size: 14px;
   }
 }
@@ -298,6 +303,21 @@ header.header .phone .phone-no {
 .content {
   padding: 16 0;
   background-color: #f8fafc;
+}
+.content ul {
+  list-style: none;
+  padding: 5px 0;
+  margin: 0 0 16px;
+  font-weight: bold;
+}
+.content ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+.content ul li img {
+  margin-top: 4px;
 }
 .content .section-title {
   color: #000;
@@ -493,7 +513,7 @@ header.header .phone .phone-no {
   margin: 0 auto;
 }
 .testimonial-section .testimonial-title {
-  color: #21212D;
+  color: #21212d;
   text-align: center;
   font-family: Poppins;
   font-size: 24px;
@@ -535,7 +555,7 @@ header.header .phone .phone-no {
 }
 .testimonial-section .testimonial-quote {
   padding: 32px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 20px;
   width: 50%;
 }
@@ -579,7 +599,7 @@ header.header .phone .phone-no {
 .testimonial-section .testimonial-quote blockquote::before {
   content: '"';
   font-size: 48px;
-  color: #2B8AFF;
+  color: #2b8aff;
   position: absolute;
   top: -10px;
   left: -20px;
@@ -587,7 +607,7 @@ header.header .phone .phone-no {
 }
 
 footer {
-  background-color: #FFF;
+  background-color: #fff;
   color: #4a4f5b;
 }
 footer a {

@@ -130,6 +130,7 @@ img {
 header.header {
   background: #ffffff;
   padding: 15px 0;
+
   .brand img {
     margin-right: 10px;
   }
@@ -140,28 +141,30 @@ header.header {
     vertical-align: bottom;
   }
 
-    .phone {
+  .phone {
     white-space: pre;
-    border-radius: 30px;
+    border-radius: 50px;
     padding: 8px 16px;
     background-color: $cta;
     display: inline-flex;
     box-sizing: border-box;
-   
+    @include mdmax {
+      padding: 16px;
+    }
     &:hover {
       background-color: $ctahover;
       text-decoration: none;
     }
     img {
       vertical-align: unset;
-      max-width: 24px;
+      width: 24px;
     }
     .phone-no {
-      color: #FFF;
+      color: #fff;
       font-size: 24px;
       font-weight: 700;
       display: block;
-      padding: 0 15px;
+      padding: 0 5px;
       @include lgmax {
         font-size: 16px;
       }
@@ -345,7 +348,21 @@ header.header {
 .content {
     padding: 16 0;
   background-color: #f8fafc;
-  
+    ul {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0 0 16px;
+    font-weight: bold;
+    li {
+      padding: 5px 0;
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      img {
+        margin-top: 4px;
+      }
+    }
+  }
   .section-title {
     color: #000;
     font-family: Poppins;

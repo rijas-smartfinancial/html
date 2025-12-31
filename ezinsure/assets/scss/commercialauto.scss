@@ -1,5 +1,5 @@
-$cta: #2EA3F2;
-$ctahover: #1B6FA8;
+$cta: #2ea3f2;
+$ctahover: #1b6fa8;
 
 $xsm: 300px;
 $xs: 600px;
@@ -7,100 +7,91 @@ $sm: 780px;
 $md: 992px;
 $lg: 1040px;
 
-
 @mixin xsmmin {
-    @media screen and (min-width: #{$xsm}) {
-        @content;
-    }
+  @media screen and (min-width: #{$xsm}) {
+    @content;
+  }
 }
 
 @mixin xsmin {
-    @media screen and (min-width: #{$xs}) {
-        @content;
-    }
+  @media screen and (min-width: #{$xs}) {
+    @content;
+  }
 }
 
 @mixin smmin {
-    @media screen and (min-width: #{$sm}) {
-        @content;
-    }
+  @media screen and (min-width: #{$sm}) {
+    @content;
+  }
 }
 
 @mixin mdmin {
-    @media screen and (min-width: #{$md}) {
-        @content;
-    }
+  @media screen and (min-width: #{$md}) {
+    @content;
+  }
 }
-
 
 @mixin lgmin {
-    @media screen and (min-width: #{$lg}) {
-        @content;
-    }
+  @media screen and (min-width: #{$lg}) {
+    @content;
+  }
 }
 
-
 @mixin xlmin {
-    @media screen and (min-width: #{$xl}) {
-        @content;
-    }
+  @media screen and (min-width: #{$xl}) {
+    @content;
+  }
 }
 
 @mixin xxlmin {
-    @media screen and (min-width: #{$xxl}) {
-        @content;
-    }
+  @media screen and (min-width: #{$xxl}) {
+    @content;
+  }
 }
 
 @mixin xlmax {
-    @media screen and (max-width: #{$xl}) {
-        @content;
-    }
+  @media screen and (max-width: #{$xl}) {
+    @content;
+  }
 }
 
 @mixin xxlmax {
-    @media screen and (max-width: #{$xxl}) {
-        @content;
-    }
+  @media screen and (max-width: #{$xxl}) {
+    @content;
+  }
 }
-
 
 @mixin lgmax {
-    @media screen and (max-width: #{$lg}) {
-        @content;
-    }
+  @media screen and (max-width: #{$lg}) {
+    @content;
+  }
 }
 
-
-
 @mixin mdmax {
-    @media screen and (max-width: #{$md}) {
-        @content;
-    }
+  @media screen and (max-width: #{$md}) {
+    @content;
+  }
 }
 
 @mixin smmax {
-    @media screen and (max-width: #{$sm}) {
-        @content;
-    }
+  @media screen and (max-width: #{$sm}) {
+    @content;
+  }
 }
 
 @mixin xsmax {
-    @media screen and (max-width: #{$xs}) {
-        @content;
-    }
+  @media screen and (max-width: #{$xs}) {
+    @content;
+  }
 }
 
 @mixin xsmmax {
-    @media screen and (max-width: #{$xsm}) {
-        @content;
-    }
+  @media screen and (max-width: #{$xsm}) {
+    @content;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,800&family=Inter:wght@400;700&display=swap");
-
-
-
 
 * {
   -moz-osx-font-smoothing: grayscale;
@@ -114,7 +105,7 @@ body {
   color: #000;
   font-size: 16px;
   @include mdmax {
-      font-size: 14px;
+    font-size: 14px;
   }
   a {
     text-decoration: none;
@@ -138,7 +129,6 @@ header.header {
   background: #ffffff;
   padding: 15px 0;
 
-
   .brand img {
     margin-right: 10px;
   }
@@ -151,26 +141,28 @@ header.header {
 
   .phone {
     white-space: pre;
-    border-radius: 30px;
+    border-radius: 50px;
     padding: 8px 16px;
     background-color: $cta;
     display: inline-flex;
     box-sizing: border-box;
-   
+    @include mdmax {
+      padding: 16px;
+    }
     &:hover {
       background-color: $ctahover;
       text-decoration: none;
     }
     img {
       vertical-align: unset;
-      max-width: 24px;
+      width: 24px;
     }
     .phone-no {
-      color: #FFF;
+      color: #fff;
       font-size: 24px;
       font-weight: 700;
       display: block;
-      padding: 0 15px;
+      padding: 0 5px;
       @include lgmax {
         font-size: 16px;
       }
@@ -179,7 +171,7 @@ header.header {
 }
 
 .hero {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 32px 0;
   overflow: hidden;
   .container {
@@ -193,13 +185,13 @@ header.header {
     text-align: center;
     padding: 16px;
   }
- .hero-image {
-  border-radius: 20px;
-  min-height: 400px;
-  @include lgmax {
-   display: none;
+  .hero-image {
+    border-radius: 20px;
+    min-height: 400px;
+    @include lgmax {
+      display: none;
+    }
   }
- }
 
   h1 {
     color: #000;
@@ -236,10 +228,10 @@ header.header {
   max-width: 600px;
   border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-margin-bottom: -50px;
-position: relative;
-background-color: #FFF;
-  @include smmax {
+  margin-bottom: -50px;
+  position: relative;
+  background-color: #fff;
+  @include mdmax {
     flex-direction: column;
     align-items: center;
     padding: 16px;
@@ -276,8 +268,8 @@ background-color: #FFF;
         max-width: 320px;
       }
       &:focus {
-           outline:2px solid #373435;
-           border-color: #373435;
+        outline: 2px solid #373435;
+        border-color: #373435;
       }
     }
   }
@@ -313,12 +305,12 @@ background-color: #FFF;
   }
 }
 .insurace-partners {
- padding: 32px 0;
- @include mdmax {
+  padding: 32px 0;
+  @include mdmax {
     padding: 32px 0 32px 0;
- }
+  }
   .heading {
-    color: #4A4F5B;
+    color: #4a4f5b;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
@@ -338,77 +330,85 @@ background-color: #FFF;
     font-weight: bold;
     li {
       padding: 5px 0;
-    display: flex;
-    align-items: start;
-    img {
-      margin-top: 4px;
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      img {
+        margin-top: 4px;
+      }
     }
+  }
+
+  .icon-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  @include smmax {
+    flex-wrap: wrap;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    min-width: 200px;
+    justify-content: center;
+    padding: 10px !important;
+    &::before {
+      content: "🚗";
+      margin-right: 0.5rem;
+      font-size: 3rem;
     }
   }
 }
-  .icon-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            @include smmax {
-              flex-wrap: wrap;
-            }
-            li {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            min-width: 200px;
-            padding: 10px !important;
-              &::before {
-              content: "🚗";
-              margin-right: 0.5rem;
-              font-size: 3rem;
-              }
-            }
-        }
-         .icon-list li:nth-child(2)::before { content: "🚚"; }
-        .icon-list li:nth-child(3)::before { content: "🚐"; }
-        .icon-list li:nth-child(4)::before { content: "🚛"; }
-        .icon-list li:nth-child(5)::before { content: "🔧"; }
-       
-        
-       
+.icon-list li:nth-child(2)::before {
+  content: "🚚";
+}
+.icon-list li:nth-child(3)::before {
+  content: "🚐";
+}
+.icon-list li:nth-child(4)::before {
+  content: "🚛";
+}
+.icon-list li:nth-child(5)::before {
+  content: "🔧";
+}
+}
+
+
 .contact-us {
   padding: 32px 16px;
   align-items: center;
   gap: 10px;
   background: #daf5ff;
- @include mdmax {
-      padding: 16px;
+  @include mdmax {
+    padding: 16px;
   }
   .contact-subtitle {
     color: var(--Gray, #373435);
-font-size: 20px;
+    font-size: 20px;
   }
   .button {
     display: inline-flex;
-    padding: 16px 32px;
+    padding: 16px;
     align-items: center;
     gap: 10px;
     color: #fff;
-    font-family: Poppins;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
-    letter-spacing: 0.5px;
     border-radius: 50px;
     background: $cta;
-     transition-duration: 0.3s;
-     white-space: pre;
-     img {
+    transition-duration: 0.3s;
+    white-space: pre;
+    img {
       vertical-align: unset;
-      max-width: 20px;
+      width: 24px;
     }
     &:hover {
       box-shadow: 4px 4px 0 0 #000;
@@ -423,34 +423,34 @@ font-size: 20px;
   @include mdmax {
     padding: 32px 0;
   }
-  
+
   .testimonial-content {
     text-align: center;
     margin: 0 auto;
   }
-  
+
   .testimonial-title {
-  color: #21212D;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 32px;
+    color: #21212d;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 32px;
     @include mdmax {
       font-size: 24px;
     }
   }
-  
+
   .testimonial-subtitle {
     color: var(--Gray, #373435);
-  text-align: center;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
     @include mdmax {
       font-size: 16px;
       margin-bottom: 24px;
@@ -467,7 +467,7 @@ font-size: 20px;
   }
   .testimonial-quote {
     padding: 32px;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 20px;
     @include mdmax {
       padding: 24px;
@@ -488,22 +488,22 @@ font-size: 20px;
       margin: 0;
       position: relative;
       color: #494954;
-    text-align: left;
-    font-family: "Playfair Display";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 130% */
-    letter-spacing: -0.2px;
-    margin-bottom: 16px;
+      text-align: left;
+      font-family: "Playfair Display";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 130% */
+      letter-spacing: -0.2px;
+      margin-bottom: 16px;
       @include mdmax {
         font-size: 16px;
       }
-      
+
       &::before {
         content: '"';
         font-size: 48px;
-        color: #2B8AFF;
+        color: #2b8aff;
         position: absolute;
         top: -10px;
         left: -20px;
