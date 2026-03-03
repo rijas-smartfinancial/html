@@ -227,7 +227,14 @@ header.header .phone .phone-no {
   border-radius: 10px;
   min-width: 200px;
   justify-content: center;
-  padding: 20px !important;
+  padding: 20px;
+}
+@media screen and (max-width: 780px) {
+  .content .icon-list li {
+    width: 47%;
+    min-width: auto;
+    padding: 10px;
+  }
 }
 .content .icon-list li i {
   color: #38b86f;

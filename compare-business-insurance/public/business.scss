@@ -298,8 +298,12 @@ header.header {
       border-radius: 10px;
       min-width: 200px;
       justify-content: center;
-      padding: 20px !important;
-
+      padding: 20px;
+      @include smmax {
+            width: 47%;
+            min-width: auto;
+            padding: 10px;
+      }
       i {
         color: #38b86f;
         font-size: 48px;
