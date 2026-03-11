@@ -31,7 +31,7 @@ h6,
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 img {
@@ -102,6 +102,11 @@ header.header .phone .phone-no {
   overflow: hidden;
   color: #fff;
 }
+@media screen and (max-width: 1040px) {
+  .hero .row {
+    flex-direction: column-reverse;
+  }
+}
 .hero .container {
   position: relative;
   z-index: 1;
@@ -137,7 +142,7 @@ header.header .phone .phone-no {
   color: #FFF;
   font-size: 58px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 120%; /* 54px */
   margin-bottom: 16px;
 }
@@ -170,6 +175,13 @@ header.header .phone .phone-no {
     padding: 16px 0;
   }
 }
+@media screen and (max-width: 1040px) {
+  .hero .hero-image {
+    max-width: 70%;
+    margin: auto;
+    padding-bottom: 16px;
+  }
+}
 
 .quote-form {
   padding: 16px 0;
@@ -180,7 +192,7 @@ header.header .phone .phone-no {
   gap: 10px;
   max-width: 600px;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1040px) {
   .quote-form {
     flex-direction: column;
     align-items: center;
