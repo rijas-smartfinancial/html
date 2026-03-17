@@ -168,7 +168,7 @@ header.header {
     .phone-no {
       color: #222222;
       font-size: 24px;
-      font-weight: 900;
+      font-weight: 800;
       vertical-align: bottom;
           line-height: normal;
       @include lgmax {
@@ -243,6 +243,9 @@ header.header {
     }
   }
   .message {
+    gap: 10px;
+    display: inline-flex;
+    align-items: center;
     font-size: 15px;
     @include lgmax {
       font-size: 10px;
@@ -409,22 +412,7 @@ header.header {
      padding: 24px 0;
     }
   
-  .section-title {
-    color: #000;
-    font-size: 36px;
-    line-height: 120%;
-    margin-bottom: 16px;
 
-    
-    @include lgmax {
-      font-size: 28px;
-    }
-    
-    @include smmax {
-      font-size: 24px;
-    }
-  }
-  
   .section-subtitle {
     color: #4a4f5b;
     font-size: 18px;
@@ -452,6 +440,7 @@ header.header {
      font-size: 18px;
     @include lgmax {
       padding: 16px;
+      margin-bottom: 5px;
     }
     
     &:hover {
@@ -512,17 +501,8 @@ header.header {
    @include mdmax {
       padding-bottom: 16px;
   }
-  .h1 {
-    font-weight: 900;
 
-  }
-  img.img {
-    @include lgmax {
-       max-width: 80%;
-       margin: auto;
-       padding-bottom: 32px;
-    }
-  }
+
   ul {
     list-style: none;
     padding: 5px 0;

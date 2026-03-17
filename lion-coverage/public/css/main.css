@@ -86,7 +86,7 @@ header.header .phone img {
 header.header .phone .phone-no {
   color: #222222;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 800;
   vertical-align: bottom;
   line-height: normal;
 }
@@ -167,6 +167,9 @@ header.header .phone .phone-no {
   }
 }
 .hero .message {
+  gap: 10px;
+  display: inline-flex;
+  align-items: center;
   font-size: 15px;
 }
 @media screen and (max-width: 1040px) {
@@ -346,22 +349,6 @@ header.header .phone .phone-no {
     padding: 24px 0;
   }
 }
-.features-section .section-title {
-  color: #000;
-  font-size: 36px;
-  line-height: 120%;
-  margin-bottom: 16px;
-}
-@media screen and (max-width: 1040px) {
-  .features-section .section-title {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 780px) {
-  .features-section .section-title {
-    font-size: 24px;
-  }
-}
 .features-section .section-subtitle {
   color: #4a4f5b;
   font-size: 18px;
@@ -391,6 +378,7 @@ header.header .phone .phone-no {
 @media screen and (max-width: 1040px) {
   .features-section .feature-card {
     padding: 16px;
+    margin-bottom: 5px;
   }
 }
 .features-section .feature-card:hover {
@@ -449,16 +437,6 @@ header.header .phone .phone-no {
 @media screen and (max-width: 992px) {
   .content-section {
     padding-bottom: 16px;
-  }
-}
-.content-section .h1 {
-  font-weight: 900;
-}
-@media screen and (max-width: 1040px) {
-  .content-section img.img {
-    max-width: 80%;
-    margin: auto;
-    padding-bottom: 32px;
   }
 }
 .content-section ul {
