@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Benepath | www.benepath.com</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="insurance, Commercial" />
+  <meta name="description" content="Benepath" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/scss/main.css" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"> <img src="assets/images/logo.svg" alt="logo" /></a>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" aria-current="page">Home
+              <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Products</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Auto</a>
+              <a class="dropdown-item" href="#">Home</a>
+              <a class="dropdown-item" href="#">Health</a>
+              <a class="dropdown-item" href="#">Life</a>
+              <a class="dropdown-item" href="#">Medicare</a>
+              <a class="dropdown-item" href="#">Commercial</a>
+              <a class="dropdown-item" href="#">Group Health</a>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      <a href="tel:8555840211" class="phone">
+        <img src="assets/images/icon/phone-filled-white.svg" alt="call" />
+        <span class="phone-no"> Speak to an Agent </span>
+      </a>
+       <div class="offcanvas offcanvas-top d-lg-none offcanvas-nav" style="height: 100vh;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <a class="navbar-brand" href="#"> <img src="assets/images/logo.svg" alt="logo" /></a>
+        <a href="tel:8555840211" class="phone">
+        <img src="assets/images/icon/phone-filled-white.svg" alt="call" />
+        <span class="phone-no"> Speak to an Agent </span>
+      </a>
+      </div>
+      <div class="offcanvas-body">
+          <!-- Company -->
+          <h6 class="nav-title">Company</h6>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+           <h6 class="nav-title">Products</h6>
+          <ul class="nav-links">
+            <li><a href="#">Auto</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Life</a></li>
+            <li><a href="#">Commercial</a></li>
+            <li><a href="#">Medicare</a></li>
+            <li><a href="#">Group Health</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </nav>
+
+
+  <section id="hero" class="hero-section position-relative">
+    <div class="spacer"></div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+          <div class="col-12 ">
+            <h1 class="hero-heading">Find the <span style="color: #E67917;">Right</span> <span
+                style="color: #84C229;">Coverage</span> in Minutes</h1>
+
+            <div class="product-tab-section">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.75 18C9.15326 18 8.58097 18.2371 8.15901 18.659C7.73705 19.081 7.5 19.6533 7.5 20.25C7.5 20.8467 7.73705 21.419 8.15901 21.841C8.58097 22.2629 9.15326 22.5 9.75 22.5C10.3467 22.5 10.919 22.2629 11.341 21.841C11.7629 21.419 12 20.8467 12 20.25C12 19.6533 11.7629 19.081 11.341 18.659C10.919 18.2371 10.3467 18 9.75 18ZM26.25 18C25.6533 18 25.081 18.2371 24.659 18.659C24.2371 19.081 24 19.6533 24 20.25C24 20.8467 24.2371 21.419 24.659 21.841C25.081 22.2629 25.6533 22.5 26.25 22.5C26.8467 22.5 27.419 22.2629 27.841 21.841C28.2629 21.419 28.5 20.8467 28.5 20.25C28.5 19.6533 28.2629 19.081 27.841 18.659C27.419 18.2371 26.8467 18 26.25 18Z"
+                        fill="#E67917" />
+                      <path
+                        d="M31.1549 13.74L29.0999 7.58999C28.8025 6.69215 28.229 5.91129 27.4612 5.35901C26.6934 4.80674 25.7706 4.51132 24.8249 4.51499H11.1599C10.2146 4.5136 9.29295 4.80991 8.5256 5.36186C7.75825 5.91382 7.18419 6.69339 6.88486 7.58999L4.82986 13.74C3.74986 14.19 2.98486 15.27 2.98486 16.5V24C2.98486 25.11 3.59986 26.07 4.48486 26.58V30C4.48486 30.825 5.15986 31.5 5.98486 31.5H7.48486C8.30986 31.5 8.98486 30.825 8.98486 30V27H26.9849V30C26.9849 30.825 27.6599 31.5 28.4849 31.5H29.9849C30.8099 31.5 31.4849 30.825 31.4849 30V26.58C31.9383 26.3182 32.3153 25.9424 32.5784 25.4897C32.8416 25.0371 32.9817 24.5235 32.9849 24V16.5C32.9849 15.255 32.2199 14.19 31.1399 13.74H31.1549ZM11.1599 7.49999H24.8399C25.1543 7.49918 25.4611 7.59722 25.7168 7.78025C25.9725 7.96328 26.1642 8.22206 26.2649 8.51999L27.9299 13.5H8.08486L9.74986 8.51999C9.85049 8.22206 10.0422 7.96328 10.2979 7.78025C10.5536 7.59722 10.8604 7.49918 11.1749 7.49999H11.1599ZM5.99986 24V16.5H29.9999V24H5.99986Z"
+                        fill="#E67917" />
+                    </svg>
+                    Auto
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.49977 19.5H5.99977V30C5.99977 31.65 7.34977 33 8.99977 33H26.9998C28.6498 33 29.9998 31.65 29.9998 30V19.5H31.4998C32.0998 19.5 32.6548 19.14 32.8798 18.57C33.1048 18.015 32.9848 17.37 32.5498 16.935L19.0648 3.435C18.926 3.29595 18.7612 3.18563 18.5797 3.11036C18.3982 3.03508 18.2037 2.99634 18.0073 2.99634C17.8108 2.99634 17.6163 3.03508 17.4348 3.11036C17.2534 3.18563 17.0885 3.29595 16.9498 3.435L3.43477 16.935C2.99977 17.37 2.87977 18.015 3.10477 18.57C3.32977 19.125 3.88477 19.5 4.48477 19.5H4.49977ZM17.9998 6.615L26.9998 15.615V30H8.99977V15.615L17.9998 6.615Z"
+                        fill="#E67917" />
+                      <path
+                        d="M12.8852 21.975L12.9752 22.065L18.0002 27L23.0252 22.065C24.3002 20.835 24.3302 18.825 23.1152 17.55L23.0252 17.46C21.7202 16.17 19.6352 16.17 18.3452 17.46L18.0152 17.79L17.6852 17.46C16.3802 16.17 14.2952 16.17 13.0052 17.46C11.7302 18.69 11.7002 20.7 12.9152 21.975H12.8852Z"
+                        fill="#E67917" />
+                    </svg>
+                    Home
+
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M23.85 10.515C22.2 10.41 20.565 10.8 19.155 11.64C18.465 12.045 17.535 12.045 16.86 11.64C15.45 10.8 13.83 10.41 12.165 10.515C7.84504 10.77 4.41004 14.58 4.51504 19.005C4.77004 29.655 13.035 33 15.345 33C16.29 33 17.22 32.76 17.985 32.295C18.81 32.76 19.74 33 20.685 33C22.995 33 31.26 29.64 31.515 19.005C31.62 14.595 28.185 10.785 23.865 10.515H23.85ZM20.67 30C20.235 30 19.815 29.895 19.44 29.685C18.54 29.175 17.46 29.175 16.56 29.685C16.185 29.895 15.765 30 15.345 30C15.27 30 7.72504 28.485 7.50004 18.93C7.44004 16.11 9.60004 13.68 12.33 13.515H12.66C13.605 13.515 14.52 13.77 15.315 14.235C16.95 15.195 19.05 15.195 20.67 14.235C21.57 13.71 22.605 13.455 23.655 13.515C26.385 13.68 28.56 16.11 28.485 18.93C28.26 28.485 20.715 30 20.655 30H20.67ZM24 3C20.685 3 18 4.5 18 9C21.315 9 24 7.5 24 3Z"
+                        fill="#E67917" />
+                    </svg>
+
+                    Health
+
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 3C8.20435 3 7.44129 3.31607 6.87868 3.87868C6.31607 4.44129 6 5.20435 6 6C6 6.79565 6.31607 7.55871 6.87868 8.12132C7.44129 8.68393 8.20435 9 9 9C9.79565 9 10.5587 8.68393 11.1213 8.12132C11.6839 7.55871 12 6.79565 12 6C12 5.20435 11.6839 4.44129 11.1213 3.87868C10.5587 3.31607 9.79565 3 9 3ZM25.5 12C24.7044 12 23.9413 12.3161 23.3787 12.8787C22.8161 13.4413 22.5 14.2044 22.5 15C22.5 15.7956 22.8161 16.5587 23.3787 17.1213C23.9413 17.6839 24.7044 18 25.5 18C26.2956 18 27.0587 17.6839 27.6213 17.1213C28.1839 16.5587 28.5 15.7956 28.5 15C28.5 14.2044 28.1839 13.4413 27.6213 12.8787C27.0587 12.3161 26.2956 12 25.5 12Z"
+                        fill="#E67917" />
+                      <path
+                        d="M28.5 19.5H18.81L13.26 11.175C12.975 10.755 12.51 10.5 12.015 10.5H4.5C3.675 10.5 3 11.175 3 12V22.5H6V33H12V14.7L16.755 21.825C17.04 22.245 17.505 22.5 18 22.5H21V33H24V28.5H27V33H30V27.36L30.165 27.675L32.85 26.34L29.85 20.34C29.7253 20.0926 29.5346 19.8846 29.299 19.739C29.0634 19.5934 28.792 19.5158 28.515 19.515L28.5 19.5Z"
+                        fill="#E67917" />
+                    </svg>
+
+                    Life
+
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.5 15H16.5V19.5H12V22.5H16.5V27H19.5V22.5H24V19.5H19.5V15Z" fill="#E67917" />
+                      <path
+                        d="M6 33H30C31.65 33 33 31.65 33 30V12C33 10.35 31.65 9 30 9H25.5V6C25.5 4.35 24.15 3 22.5 3H13.5C11.85 3 10.5 4.35 10.5 6V9H6C4.35 9 3 10.35 3 12V30C3 31.65 4.35 33 6 33ZM13.5 6H22.5V9H13.5V6ZM6 12H30V30H6V12Z"
+                        fill="#E67917" />
+                    </svg>
+
+                    Medicare
+
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M30 9H24V6C24 4.35 22.65 3 21 3H6C4.35 3 3 4.35 3 6V31.5C3 32.325 3.675 33 4.5 33H31.5C32.325 33 33 32.325 33 31.5V12C33 10.35 31.65 9 30 9ZM30 30H6V6H21V10.5C21 11.325 21.675 12 22.5 12H30V30Z"
+                        fill="#E67917" />
+                      <path
+                        d="M15 9H18V12H15V9ZM9 9H12V12H9V9ZM9 15H12V18H9V15ZM15 15H18V18H15V15ZM24 15H27V18H24V15ZM15 21H18V24H15V21ZM9 21H12V24H9V21ZM24 21H27V24H24V21Z"
+                        fill="#E67917" />
+                    </svg>
+
+                    Commercial
+
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M18 16.5C20.565 16.5 22.5 14.565 22.5 12C22.5 9.435 20.565 7.5 18 7.5C15.435 7.5 13.5 9.435 13.5 12C13.5 14.565 15.435 16.5 18 16.5ZM18 10.5C18.9 10.5 19.5 11.1 19.5 12C19.5 12.9 18.9 13.5 18 13.5C17.1 13.5 16.5 12.9 16.5 12C16.5 11.1 17.1 10.5 18 10.5ZM19.5 18H16.5C12.36 18 9 21.36 9 25.5V26.25C9 27.495 10.005 28.5 11.25 28.5H24.75C25.995 28.5 27 27.495 27 26.25V25.5C27 21.36 23.64 18 19.5 18ZM12 25.5C12 23.025 14.025 21 16.5 21H19.5C21.975 21 24 23.025 24 25.5H12ZM9.75 16.5C10.455 16.5 11.1 16.32 11.655 16.005C11.0259 15.0034 10.6411 13.8679 10.5317 12.6901C10.4222 11.5124 10.5912 10.3254 11.025 9.225C10.635 9.09 10.2 9 9.75 9C7.59 9 6 10.59 6 12.75C6 14.91 7.59 16.5 9.75 16.5ZM9.165 18H8.25C5.355 18 3 20.355 3 23.25V24.75C3 25.17 3.33 25.5 3.75 25.5H6C6 22.56 7.215 19.905 9.165 18ZM26.25 16.5C28.41 16.5 30 14.91 30 12.75C30 10.59 28.41 9 26.25 9C25.785 9 25.365 9.09 24.975 9.225C25.4088 10.3254 25.5778 11.5124 25.4683 12.6901C25.3589 13.8679 24.9741 15.0034 24.345 16.005C24.9 16.32 25.53 16.5 26.25 16.5ZM27.75 18H26.835C27.8373 18.975 28.6338 20.1411 29.1774 21.4293C29.7211 22.7175 30.0008 24.1017 30 25.5H32.25C32.67 25.5 33 25.17 33 24.75V23.25C33 20.355 30.645 18 27.75 18Z"
+                        fill="#E67917" />
+                    </svg>
+                    Group Health
+
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div>
+              <ul class="breadcrumb gap-2 justify-content-center justify-content-lg-start text-center text-lg-start">
+                <li class="breadcrumb-item"><span>Free to Use</span></li>
+                <li>
+                  <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="3" cy="3" r="3" fill="#84C229" />
+                  </svg>
+
+                </li>
+                <li class="breadcrumb-item"><span>No Obligation</span></li>
+                <li>
+                  <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="3" cy="3" r="3" fill="#84C229" />
+                  </svg>
+
+                </li>
+                <li class="breadcrumb-item" aria-current="page">Takes 2-3 minutes</li>
+              </ul>
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <img src="assets/images/home-hero-new.jpg" alt="Health Quote" class="hero-image d-none d-md-block" />
+    <img src="assets/images/home-hero-new-mobile.jpg" alt="Health Quote" class="hero-image d-md-none" />
+
+
+
+  </section>
+
+  <section class="partners-section">
+    <div class="container px-0">
+
+      <div class="swiper partners-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo1.png" alt="Progressive">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo2.png" alt="Allstate">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo3.png" alt="Nationwide">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo4.png" alt="Liberty Mutual">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo5.png" alt="21st Century">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo6.png" alt="MetLife">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="stats-section">
+    <div class="container">
+      <div class="row text-center">
+
+        <!-- Item 1 -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="stat-item">
+            <div class="icon mb-3">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 3C13.86 3 10.5 6.36 10.5 10.5V12H6C5.175 12 4.5 12.675 4.5 13.5V30C4.5 31.65 5.85 33 7.5 33H28.5C30.15 33 31.5 31.65 31.5 30V13.5C31.5 12.675 30.825 12 30 12H25.5V10.5C25.5 6.36 22.14 3 18 3ZM13.5 10.5C13.5 8.025 15.525 6 18 6C20.475 6 22.5 8.025 22.5 10.5V12H13.5V10.5ZM28.5 15V30H7.5V15H28.5Z"
+                  fill="#E67917" />
+              </svg>
+
+            </div>
+            <h2 class="stat-number">50M+</h2>
+            <p class="stat-text">Insurance Shoppers Served</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="stat-item">
+            <div class="icon mb-3">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M31.5 21H30C30 19.38 29.685 17.805 29.055 16.335C28.0098 13.851 26.1539 11.7942 23.79 10.5C23.115 7.92001 20.79 6.01501 18 6.01501C15.21 6.01501 12.9 7.93501 12.21 10.5C11.22 11.04 10.32 11.715 9.51 12.525C8.415 13.62 7.545 14.91 6.945 16.335C6.315 17.82 6 19.38 6 21H4.5C3.675 21 3 21.675 3 22.5V28.5C3 29.325 3.675 30 4.5 30H10.5C11.325 30 12 29.325 12 28.5V22.5C12 21.675 11.325 21 10.5 21H9C9 19.785 9.24 18.6 9.705 17.49C10.155 16.425 10.8 15.45 11.64 14.625C11.865 14.4 12.135 14.22 12.375 14.01C13.215 16.32 15.405 17.985 18 17.985C20.595 17.985 22.785 16.32 23.625 14.01C23.88 14.205 24.135 14.385 24.36 14.625C25.185 15.45 25.83 16.41 26.295 17.49C26.76 18.6 27 19.77 27 20.985H25.5C24.675 20.985 24 21.66 24 22.485V28.485C24 29.31 24.675 29.985 25.5 29.985H31.5C32.325 29.985 33 29.31 33 28.485V22.485C33 21.66 32.325 20.985 31.5 20.985V21ZM9 27H6V24H9V27ZM18 15C16.35 15 15 13.65 15 12C15 10.35 16.35 9.00001 18 9.00001C19.65 9.00001 21 10.35 21 12C21 13.65 19.65 15 18 15ZM30 27H27V24H30V27Z"
+                  fill="#E67917" />
+              </svg>
+
+            </div>
+            <h2 class="stat-number">200+</h2>
+            <p class="stat-text">Carrier Integrations</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-4">
+          <div class="stat-item">
+            <div class="icon mb-3">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 3C9.735 3 3 9.735 3 18V25.5C3 26.325 3.675 27 4.5 27H9C9.825 27 10.5 26.325 10.5 25.5V18C10.5 17.175 9.825 16.5 9 16.5H6.105C6.84 10.59 11.895 6 18 6C24.105 6 29.16 10.59 29.895 16.5H27C26.175 16.5 25.5 17.175 25.5 18V25.5C25.5 26.325 26.175 27 27 27H30V28.5C30 29.325 29.325 30 28.5 30H22.5C22.5 29.175 21.825 28.5 21 28.5H15C14.175 28.5 13.5 29.175 13.5 30V31.5C13.5 32.325 14.175 33 15 33H28.5C30.975 33 33 30.975 33 28.5V18C33 9.735 26.265 3 18 3Z"
+                  fill="#E67917" />
+              </svg>
+
+            </div>
+            <h2 class="stat-number">10K</h2>
+            <p class="stat-text">Active Agents Nationwide</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="container text-center">
+
+      <!-- Heading -->
+      <div class="section-header mb-5">
+        <h2 class="title">Simple Steps. Confident Decisions.</h2>
+        <p class="subtitle">
+          A quick, guided process connects you with personalized insurance options tailored to your needs.
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="row g-5">
+
+        <!-- Step 1 -->
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/steps-1.png" alt="Step 1" class="img-fluid">
+            </div>
+            <div class="step-number">1</div>
+            <h4 class="step-title">Answer a few questions</h4>
+            <p class="step-text">
+              Share a few details about yourself and your coverage needs. It takes about 2 minutes and there's no
+              obligation to buy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/steps-2.png" alt="Step 2" class="img-fluid">
+            </div>
+            <div class="step-number">2</div>
+            <h4 class="step-title">We compare instantly</h4>
+            <p class="step-text">
+              We match your profile against 40+ carriers and surface real, bindable quotes — not estimates.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/steps-3.png" alt="Step 3" class="img-fluid">
+            </div>
+            <div class="step-number">3</div>
+            <h4 class="step-title">Pick your best rate</h4>
+            <p class="step-text">
+              Choose the coverage that fits your needs and budget. Switch in minutes — we handle the paperwork.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="testimonial-section">
+    <div class="container-fluid text-center px-0">
+      <h2 class="title mb-3">
+        <span class="text-orange">Real People.</span>
+        <span class="text-green"> Real Coverage.</span>
+      </h2>
+      <p class="subtitle mb-5">
+        Insights from real people who used our platform to find the right health coverage.
+      </p>
+
+      <!-- Swiper -->
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">K.L.</small>
+              <h5 class="content">
+                Working with Benepath is Amazing. Great Team, Great Service!
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">LAUREN H.</small>
+              <h5 class="content">
+                I have really enjoyed working with the Benepath team. They are attentive, professional and truly the
+                best in the business. Looking forward to our continued partnership.
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">LARA S.</small>
+              <h5 class="content">
+                I was able to compare options quickly and found a better rate than expected.
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">Susan B.</small>
+              <h5 class="content">
+                It only took a few minutes tot get matched with providers in my area.
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Optional Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="why-section py-5">
+    <div class="container text-center">
+
+      <!-- Heading -->
+      <div class="section-header mb-5">
+        <h2 class="title">Why Benepath?</h2>
+
+      </div>
+
+      <!-- Why -->
+      <div class="row g-5">
+
+        <!-- Why 1 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-1.png" alt="Why 1" class="img-fluid">
+            </div>
+            <h4 class="step-title">Personalized Matching</h4>
+            <p class="step-text">
+              We connect you with providers based on your profile and preferences.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why 2 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-2.png" alt="Why 2" class="img-fluid">
+            </div>
+            <h4 class="step-title">Competitive Options</h4>
+            <p class="step-text">
+              Access insurance providers offering competitive rates in your area.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why 3 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-3.png" alt="Why 3" class="img-fluid">
+            </div>
+            <h4 class="step-title">Trusted Providers</h4>
+            <p class="step-text">
+              Work with licensed agents and established carriers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why 3 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-4.png" alt="Why 4" class="img-fluid">
+            </div>
+
+            <h4 class="step-title">Fast & Free</h4>
+            <p class="step-text">
+              No cost to use. No obligation to enroll.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="insurance-section py-5">
+    <div class="container-fluid text-center px-0">
+
+      <!-- Title -->
+      <h2 class="title">
+        Explore Coverage Across <br />
+        Major Insurance Types
+      </h2>
+
+      <!-- Tabs -->
+      <div class="insurance-tabs">
+        <button class="tab active">Auto</button>
+        <button class="tab">Home</button>
+        <button class="tab">Health</button>
+        <button class="tab">Life</button>
+        <button class="tab">Commercial</button>
+        <button class="tab">Medicare</button>
+        <button class="tab">Group Health</button>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper insurance-swiper">
+        <div class="swiper-wrapper">
+
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/auto-img.png" alt="Auto Insurance" />
+              <h5>Auto</h5>
+              <p>Connect with local drivers looking for coverage.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/home-img.jpg" alt="Home Insurance" />
+              <h5>Home</h5>
+              <p>Our real-time home leads connect you with local homeowners.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/health-img.png" alt="Health Insurance" />
+              <h5>Health</h5>
+              <p>U65 leads connect you with individuals seeking coverage.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/life-img.png" alt="Life Insurance" />
+              <h5>Life</h5>
+              <p>High-quality life insurance prospects ready to convert.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/commercial-img.png" alt="Commercial Insurance" />
+              <h5>Commercial</h5>
+              <p>High-quality commercial insurance prospects ready to convert.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/medicare-img.png" alt="Medicare Insurance" />
+              <h5>Medicare</h5>
+              <p>High-quality medicare insurance prospects ready to convert.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+
+      <div class="row gy-4">
+        <div class="col-12">
+          <img src="assets/images/logo.svg" alt="Benepath" class="footer-logo mb-4">
+
+        </div>
+        <!-- Logo + Products -->
+        <div class="col-lg-4 col-6">
+
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="#">Auto</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Life</a></li>
+            <li><a href="#">Commercial</a></li>
+            <li><a href="#">Medicare</a></li>
+            <li><a href="#">Group Health</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-lg-3 col-6">
+          <h6 class="footer-title">Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <!-- Social -->
+          <div class="mt-5">
+            <h6 class="footer-title">Follow Us</h6>
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- Bottom Text -->
+      <div class="footer-bottom mt-5">
+        <p>
+          As part of our ongoing effort to provide you with the best possible service,
+          SmartFinancial and its Service Providers may monitor and/or record and retain
+          all activity on this website and its applicable links, for informational and
+          quality control purposes.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="assets/js/tab-colors.js"></script>
+<script>
+  const dropdowns = document.querySelectorAll('.navbar .dropdown');
+
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('mouseenter', () => {
+      dropdown.classList.add('show');
+      dropdown.querySelector('.dropdown-menu').classList.add('show');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      dropdown.classList.remove('show');
+      dropdown.querySelector('.dropdown-menu').classList.remove('show');
+    });
+  });
+  const partnersSwiper = new Swiper(".partners-swiper", {
+    slidesPerView: 2.5,
+    spaceBetween: 16,
+    grabCursor: true,
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2.5,
+      },
+      768: {
+        slidesPerView: 4.5,
+      },
+      992: {
+        slidesPerView: 6,   // all logos
+        allowTouchMove: false, // disable dragging
+      }
+    }
+  });
+  let Testimonialswiper;
+
+  function handleTestimonialSwiper() {
+    if (window.innerWidth >= 992) {
+
+      // INIT only if not already initialized
+      if (!Testimonialswiper) {
+        Testimonialswiper = new Swiper(".testimonial-swiper", {
+          slidesPerView: 3.65,
+          spaceBetween: 24,
+          grabCursor: true,
+          loop: false,
+          centeredSlides: false,
+
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+
+          breakpoints: {
+            1200: {
+              slidesPerView: 3.65,
+            },
+            1600: {
+              slidesPerView: 4.45,
+            }
+          }
+        });
+      }
+
+    } else {
+
+      // DESTROY swiper below 992
+      if (Testimonialswiper) {
+        Testimonialswiper.destroy(true, true);
+        Testimonialswiper = undefined;
+      }
+
+    }
+  }
+
+  // Run on load
+  handleTestimonialSwiper();
+
+  // Run on resize
+  window.addEventListener("resize", handleTestimonialSwiper);
+  const insuranceSwiper = new Swiper(".insurance-swiper", {
+    slidesPerView: 3.25,   // 3 full + 1/4 visible
+    spaceBetween: 24,      // exact gap
+    grabCursor: true,
+    loop: false,
+    centeredSlides: false,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+      },
+      576: {
+        slidesPerView: 1.5,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      992: {
+        slidesPerView: 3.65, // your main layout
+      },
+      1600: {
+        slidesPerView: 4.45, // extra wide screens
+        spaceBetween: 48,
+      }
+    },
+  });
+
+
+  const tabs = document.querySelectorAll(".tab");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+    });
+  });
+</script>
+
+</html>
