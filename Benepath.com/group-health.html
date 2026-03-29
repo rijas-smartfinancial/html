@@ -2,10 +2,10 @@
 <html>
 
 <head>
-  <title>Benepath | www.benepath.com</title>
+  <title>Group Health Insurance | Benepath | www.benepath.com</title>
   <link rel="icon" href="assets/images/favicon.png" type="image/png" />
   <meta charset="utf-8" />
-  <meta name="keywords" content="insurance, Commercial" />
+  <meta name="keywords" content="insurance, Group Health" />
   <meta name="description" content="Benepath" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,14 +17,14 @@
 
 </head>
 
-<body>
+<body class="page product-page">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="index.html"> <img src="assets/images/logo.svg" alt="logo" /></a>
+      <a class="navbar-brand" href="#"> <img src="assets/images/logo.svg" alt="logo" /></a>
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
@@ -35,9 +35,9 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">Products</a>
-            <div class="dropdown-menu" >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
               <a class="dropdown-item" href="auto.html">Auto</a>
               <a class="dropdown-item" href="home.html">Home</a>
               <a class="dropdown-item" href="health.html">Health</a>
@@ -54,23 +54,24 @@
         <img src="assets/images/icon/phone-filled-white.svg" alt="call" />
         <span class="phone-no"> Speak to an Agent </span>
       </a>
-       <div class="offcanvas offcanvas-top d-lg-none offcanvas-nav" style="height: 100vh;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      <a class="navbar-brand" href="#"> <img src="assets/images/logo.svg" alt="logo" /></a>
-        <a href="tel:8555840211" class="phone">
-        <img src="assets/images/icon/phone-filled-white.svg" alt="call" />
-        <span class="phone-no"> Speak to an Agent </span>
-      </a>
-      </div>
-      <div class="offcanvas-body">
+      <div class="offcanvas offcanvas-top d-lg-none offcanvas-nav" style="height: 100vh;" tabindex="-1"
+        id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <a class="navbar-brand" href="index.html"> <img src="assets/images/logo.svg" alt="logo" /></a>
+          <a href="tel:8555840211" class="phone">
+            <img src="assets/images/icon/phone-filled-white.svg" alt="call" />
+            <span class="phone-no"> Speak to an Agent </span>
+          </a>
+        </div>
+        <div class="offcanvas-body">
           <!-- Company -->
           <h6 class="nav-title">Company</h6>
-          <ul class="nav-links mb-5">
+          <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
-           <h6 class="nav-title">Products</h6>
+          <h6 class="nav-title">Products</h6>
           <ul class="nav-links">
             <li><a href="auto.html">Auto</a></li>
             <li><a href="home.html">Home</a></li>
@@ -86,149 +87,36 @@
 
     </div>
   </nav>
+  <section class="product-hero-section position-relative">
+    <div class="row m-0 product-hero-content">
+       <img src="assets/images/group-health-hero-mobile.jpg" alt="Health Quote" class="hero-image d-lg-none p-0" />
+       <div class="col-xl-6 col-lg-5 form-block p-0">
+          <div class="form-section">
+            <h1 class="hero-heading">Compare <br><span style="color: #E67917;">Group Health</span> <span
+              style="color: #84C229;">Insurance</span></h1>
+            <form class="cta-form mx-auto">
+      <div class="input-group">
+        <input type="text" class="form-control zip-input" placeholder="ZIP Code">
+        <button class="btn btn-cta" type="submit">Compare</button>
+      </div>
+    </form>
 
-
-  <section id="hero" class="hero-section position-relative">
-    <div class="spacer"></div>
-    <div class="hero-content">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-
-          <div class="col-12 ">
-            <h1 class="hero-heading">Find the <span style="color: #E67917;">Right</span> <span
-                style="color: #84C229;">Coverage</span> in Minutes</h1>
-
-            <div class="product-tab-section">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a href="auto.html" class="nav-link active"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M9.75 18C9.15326 18 8.58097 18.2371 8.15901 18.659C7.73705 19.081 7.5 19.6533 7.5 20.25C7.5 20.8467 7.73705 21.419 8.15901 21.841C8.58097 22.2629 9.15326 22.5 9.75 22.5C10.3467 22.5 10.919 22.2629 11.341 21.841C11.7629 21.419 12 20.8467 12 20.25C12 19.6533 11.7629 19.081 11.341 18.659C10.919 18.2371 10.3467 18 9.75 18ZM26.25 18C25.6533 18 25.081 18.2371 24.659 18.659C24.2371 19.081 24 19.6533 24 20.25C24 20.8467 24.2371 21.419 24.659 21.841C25.081 22.2629 25.6533 22.5 26.25 22.5C26.8467 22.5 27.419 22.2629 27.841 21.841C28.2629 21.419 28.5 20.8467 28.5 20.25C28.5 19.6533 28.2629 19.081 27.841 18.659C27.419 18.2371 26.8467 18 26.25 18Z"
-                        fill="#E67917" />
-                      <path
-                        d="M31.1549 13.74L29.0999 7.58999C28.8025 6.69215 28.229 5.91129 27.4612 5.35901C26.6934 4.80674 25.7706 4.51132 24.8249 4.51499H11.1599C10.2146 4.5136 9.29295 4.80991 8.5256 5.36186C7.75825 5.91382 7.18419 6.69339 6.88486 7.58999L4.82986 13.74C3.74986 14.19 2.98486 15.27 2.98486 16.5V24C2.98486 25.11 3.59986 26.07 4.48486 26.58V30C4.48486 30.825 5.15986 31.5 5.98486 31.5H7.48486C8.30986 31.5 8.98486 30.825 8.98486 30V27H26.9849V30C26.9849 30.825 27.6599 31.5 28.4849 31.5H29.9849C30.8099 31.5 31.4849 30.825 31.4849 30V26.58C31.9383 26.3182 32.3153 25.9424 32.5784 25.4897C32.8416 25.0371 32.9817 24.5235 32.9849 24V16.5C32.9849 15.255 32.2199 14.19 31.1399 13.74H31.1549ZM11.1599 7.49999H24.8399C25.1543 7.49918 25.4611 7.59722 25.7168 7.78025C25.9725 7.96328 26.1642 8.22206 26.2649 8.51999L27.9299 13.5H8.08486L9.74986 8.51999C9.85049 8.22206 10.0422 7.96328 10.2979 7.78025C10.5536 7.59722 10.8604 7.49918 11.1749 7.49999H11.1599ZM5.99986 24V16.5H29.9999V24H5.99986Z"
-                        fill="#E67917" />
-                    </svg>
-                    Auto
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="home.html" class="nav-link">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M4.49977 19.5H5.99977V30C5.99977 31.65 7.34977 33 8.99977 33H26.9998C28.6498 33 29.9998 31.65 29.9998 30V19.5H31.4998C32.0998 19.5 32.6548 19.14 32.8798 18.57C33.1048 18.015 32.9848 17.37 32.5498 16.935L19.0648 3.435C18.926 3.29595 18.7612 3.18563 18.5797 3.11036C18.3982 3.03508 18.2037 2.99634 18.0073 2.99634C17.8108 2.99634 17.6163 3.03508 17.4348 3.11036C17.2534 3.18563 17.0885 3.29595 16.9498 3.435L3.43477 16.935C2.99977 17.37 2.87977 18.015 3.10477 18.57C3.32977 19.125 3.88477 19.5 4.48477 19.5H4.49977ZM17.9998 6.615L26.9998 15.615V30H8.99977V15.615L17.9998 6.615Z"
-                        fill="#E67917" />
-                      <path
-                        d="M12.8852 21.975L12.9752 22.065L18.0002 27L23.0252 22.065C24.3002 20.835 24.3302 18.825 23.1152 17.55L23.0252 17.46C21.7202 16.17 19.6352 16.17 18.3452 17.46L18.0152 17.79L17.6852 17.46C16.3802 16.17 14.2952 16.17 13.0052 17.46C11.7302 18.69 11.7002 20.7 12.9152 21.975H12.8852Z"
-                        fill="#E67917" />
-                    </svg>
-                    Home
-
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="health.html" class="nav-link">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M23.85 10.515C22.2 10.41 20.565 10.8 19.155 11.64C18.465 12.045 17.535 12.045 16.86 11.64C15.45 10.8 13.83 10.41 12.165 10.515C7.84504 10.77 4.41004 14.58 4.51504 19.005C4.77004 29.655 13.035 33 15.345 33C16.29 33 17.22 32.76 17.985 32.295C18.81 32.76 19.74 33 20.685 33C22.995 33 31.26 29.64 31.515 19.005C31.62 14.595 28.185 10.785 23.865 10.515H23.85ZM20.67 30C20.235 30 19.815 29.895 19.44 29.685C18.54 29.175 17.46 29.175 16.56 29.685C16.185 29.895 15.765 30 15.345 30C15.27 30 7.72504 28.485 7.50004 18.93C7.44004 16.11 9.60004 13.68 12.33 13.515H12.66C13.605 13.515 14.52 13.77 15.315 14.235C16.95 15.195 19.05 15.195 20.67 14.235C21.57 13.71 22.605 13.455 23.655 13.515C26.385 13.68 28.56 16.11 28.485 18.93C28.26 28.485 20.715 30 20.655 30H20.67ZM24 3C20.685 3 18 4.5 18 9C21.315 9 24 7.5 24 3Z"
-                        fill="#E67917" />
-                    </svg>
-
-                    Health
-
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="life.html" class="nav-link">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M9 3C8.20435 3 7.44129 3.31607 6.87868 3.87868C6.31607 4.44129 6 5.20435 6 6C6 6.79565 6.31607 7.55871 6.87868 8.12132C7.44129 8.68393 8.20435 9 9 9C9.79565 9 10.5587 8.68393 11.1213 8.12132C11.6839 7.55871 12 6.79565 12 6C12 5.20435 11.6839 4.44129 11.1213 3.87868C10.5587 3.31607 9.79565 3 9 3ZM25.5 12C24.7044 12 23.9413 12.3161 23.3787 12.8787C22.8161 13.4413 22.5 14.2044 22.5 15C22.5 15.7956 22.8161 16.5587 23.3787 17.1213C23.9413 17.6839 24.7044 18 25.5 18C26.2956 18 27.0587 17.6839 27.6213 17.1213C28.1839 16.5587 28.5 15.7956 28.5 15C28.5 14.2044 28.1839 13.4413 27.6213 12.8787C27.0587 12.3161 26.2956 12 25.5 12Z"
-                        fill="#E67917" />
-                      <path
-                        d="M28.5 19.5H18.81L13.26 11.175C12.975 10.755 12.51 10.5 12.015 10.5H4.5C3.675 10.5 3 11.175 3 12V22.5H6V33H12V14.7L16.755 21.825C17.04 22.245 17.505 22.5 18 22.5H21V33H24V28.5H27V33H30V27.36L30.165 27.675L32.85 26.34L29.85 20.34C29.7253 20.0926 29.5346 19.8846 29.299 19.739C29.0634 19.5934 28.792 19.5158 28.515 19.515L28.5 19.5Z"
-                        fill="#E67917" />
-                    </svg>
-
-                    Life
-
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="medicare.html" class="nav-link">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.5 15H16.5V19.5H12V22.5H16.5V27H19.5V22.5H24V19.5H19.5V15Z" fill="#E67917" />
-                      <path
-                        d="M6 33H30C31.65 33 33 31.65 33 30V12C33 10.35 31.65 9 30 9H25.5V6C25.5 4.35 24.15 3 22.5 3H13.5C11.85 3 10.5 4.35 10.5 6V9H6C4.35 9 3 10.35 3 12V30C3 31.65 4.35 33 6 33ZM13.5 6H22.5V9H13.5V6ZM6 12H30V30H6V12Z"
-                        fill="#E67917" />
-                    </svg>
-
-                    Medicare
-
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="commercial.html" class="nav-link">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M30 9H24V6C24 4.35 22.65 3 21 3H6C4.35 3 3 4.35 3 6V31.5C3 32.325 3.675 33 4.5 33H31.5C32.325 33 33 32.325 33 31.5V12C33 10.35 31.65 9 30 9ZM30 30H6V6H21V10.5C21 11.325 21.675 12 22.5 12H30V30Z"
-                        fill="#E67917" />
-                      <path
-                        d="M15 9H18V12H15V9ZM9 9H12V12H9V9ZM9 15H12V18H9V15ZM15 15H18V18H15V15ZM24 15H27V18H24V15ZM15 21H18V24H15V21ZM9 21H12V24H9V21ZM24 21H27V24H24V21Z"
-                        fill="#E67917" />
-                    </svg>
-
-                    Commercial
-
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="group-health.html" class="nav-link">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M18 16.5C20.565 16.5 22.5 14.565 22.5 12C22.5 9.435 20.565 7.5 18 7.5C15.435 7.5 13.5 9.435 13.5 12C13.5 14.565 15.435 16.5 18 16.5ZM18 10.5C18.9 10.5 19.5 11.1 19.5 12C19.5 12.9 18.9 13.5 18 13.5C17.1 13.5 16.5 12.9 16.5 12C16.5 11.1 17.1 10.5 18 10.5ZM19.5 18H16.5C12.36 18 9 21.36 9 25.5V26.25C9 27.495 10.005 28.5 11.25 28.5H24.75C25.995 28.5 27 27.495 27 26.25V25.5C27 21.36 23.64 18 19.5 18ZM12 25.5C12 23.025 14.025 21 16.5 21H19.5C21.975 21 24 23.025 24 25.5H12ZM9.75 16.5C10.455 16.5 11.1 16.32 11.655 16.005C11.0259 15.0034 10.6411 13.8679 10.5317 12.6901C10.4222 11.5124 10.5912 10.3254 11.025 9.225C10.635 9.09 10.2 9 9.75 9C7.59 9 6 10.59 6 12.75C6 14.91 7.59 16.5 9.75 16.5ZM9.165 18H8.25C5.355 18 3 20.355 3 23.25V24.75C3 25.17 3.33 25.5 3.75 25.5H6C6 22.56 7.215 19.905 9.165 18ZM26.25 16.5C28.41 16.5 30 14.91 30 12.75C30 10.59 28.41 9 26.25 9C25.785 9 25.365 9.09 24.975 9.225C25.4088 10.3254 25.5778 11.5124 25.4683 12.6901C25.3589 13.8679 24.9741 15.0034 24.345 16.005C24.9 16.32 25.53 16.5 26.25 16.5ZM27.75 18H26.835C27.8373 18.975 28.6338 20.1411 29.1774 21.4293C29.7211 22.7175 30.0008 24.1017 30 25.5H32.25C32.67 25.5 33 25.17 33 24.75V23.25C33 20.355 30.645 18 27.75 18Z"
-                        fill="#E67917" />
-                    </svg>
-                    Group Health
-
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-
-            <div>
-              <ul class="breadcrumb gap-2 justify-content-center justify-content-lg-start text-center text-lg-start">
-                <li class="breadcrumb-item"><span>Free to Use</span></li>
-                <li>
-                  <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="3" cy="3" r="3" fill="#84C229" />
-                  </svg>
-
-                </li>
-                <li class="breadcrumb-item"><span>No Obligation</span></li>
-                <li>
-                  <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="3" cy="3" r="3" fill="#84C229" />
-                  </svg>
-
-                </li>
-                <li class="breadcrumb-item" aria-current="page">Takes 2-3 minutes</li>
-              </ul>
-            </div>
-
-
+    <div class="cta-features mt-2">
+      <span>Free to Use</span>
+      <span class="dot"></span>
+      <span>No Obligation</span>
+      <span class="dot"></span>
+      <span>Takes 2-3 minutes</span>
+    </div>
           </div>
 
+        </div>
+        <div class="col-xl-6 col-lg-7 p-0">
+
+          <img src="assets/images/group-health-hero.jpg" alt="Group Health Quote" class="hero-image w-100 d-none d-lg-block" />
 
         </div>
-      </div>
     </div>
-
-    <img src="assets/images/home-hero-new.jpg" alt="Health Quote" class="hero-image d-none d-md-block" />
-    <img src="assets/images/home-hero-new-mobile.jpg" alt="Health Quote" class="hero-image d-md-none" />
 
 
 
@@ -269,62 +157,7 @@
 
     </div>
   </section>
-  <section class="stats-section">
-    <div class="container">
-      <div class="row text-center">
-
-        <!-- Item 1 -->
-        <div class="col-md-4 mb-4 mb-md-0">
-          <div class="stat-item">
-            <div class="icon mb-3">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18 3C13.86 3 10.5 6.36 10.5 10.5V12H6C5.175 12 4.5 12.675 4.5 13.5V30C4.5 31.65 5.85 33 7.5 33H28.5C30.15 33 31.5 31.65 31.5 30V13.5C31.5 12.675 30.825 12 30 12H25.5V10.5C25.5 6.36 22.14 3 18 3ZM13.5 10.5C13.5 8.025 15.525 6 18 6C20.475 6 22.5 8.025 22.5 10.5V12H13.5V10.5ZM28.5 15V30H7.5V15H28.5Z"
-                  fill="#E67917" />
-              </svg>
-
-            </div>
-            <h2 class="stat-number">50M+</h2>
-            <p class="stat-text">Insurance Shoppers Served</p>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="col-md-4 mb-4 mb-md-0">
-          <div class="stat-item">
-            <div class="icon mb-3">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M31.5 21H30C30 19.38 29.685 17.805 29.055 16.335C28.0098 13.851 26.1539 11.7942 23.79 10.5C23.115 7.92001 20.79 6.01501 18 6.01501C15.21 6.01501 12.9 7.93501 12.21 10.5C11.22 11.04 10.32 11.715 9.51 12.525C8.415 13.62 7.545 14.91 6.945 16.335C6.315 17.82 6 19.38 6 21H4.5C3.675 21 3 21.675 3 22.5V28.5C3 29.325 3.675 30 4.5 30H10.5C11.325 30 12 29.325 12 28.5V22.5C12 21.675 11.325 21 10.5 21H9C9 19.785 9.24 18.6 9.705 17.49C10.155 16.425 10.8 15.45 11.64 14.625C11.865 14.4 12.135 14.22 12.375 14.01C13.215 16.32 15.405 17.985 18 17.985C20.595 17.985 22.785 16.32 23.625 14.01C23.88 14.205 24.135 14.385 24.36 14.625C25.185 15.45 25.83 16.41 26.295 17.49C26.76 18.6 27 19.77 27 20.985H25.5C24.675 20.985 24 21.66 24 22.485V28.485C24 29.31 24.675 29.985 25.5 29.985H31.5C32.325 29.985 33 29.31 33 28.485V22.485C33 21.66 32.325 20.985 31.5 20.985V21ZM9 27H6V24H9V27ZM18 15C16.35 15 15 13.65 15 12C15 10.35 16.35 9.00001 18 9.00001C19.65 9.00001 21 10.35 21 12C21 13.65 19.65 15 18 15ZM30 27H27V24H30V27Z"
-                  fill="#E67917" />
-              </svg>
-
-            </div>
-            <h2 class="stat-number">200+</h2>
-            <p class="stat-text">Carrier Integrations</p>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="col-md-4">
-          <div class="stat-item">
-            <div class="icon mb-3">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M18 3C9.735 3 3 9.735 3 18V25.5C3 26.325 3.675 27 4.5 27H9C9.825 27 10.5 26.325 10.5 25.5V18C10.5 17.175 9.825 16.5 9 16.5H6.105C6.84 10.59 11.895 6 18 6C24.105 6 29.16 10.59 29.895 16.5H27C26.175 16.5 25.5 17.175 25.5 18V25.5C25.5 26.325 26.175 27 27 27H30V28.5C30 29.325 29.325 30 28.5 30H22.5C22.5 29.175 21.825 28.5 21 28.5H15C14.175 28.5 13.5 29.175 13.5 30V31.5C13.5 32.325 14.175 33 15 33H28.5C30.975 33 33 30.975 33 28.5V18C33 9.735 26.265 3 18 3Z"
-                  fill="#E67917" />
-              </svg>
-
-            </div>
-            <h2 class="stat-number">10K</h2>
-            <p class="stat-text">Active Agents Nationwide</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
+ 
   <section class="steps-section">
     <div class="container text-center">
 
@@ -348,8 +181,7 @@
             <div class="step-number">1</div>
             <h4 class="step-title">Answer a few questions</h4>
             <p class="step-text">
-              Share a few details about yourself and your coverage needs. It takes about 2 minutes and there's no
-              obligation to buy.
+             Share a few details about yourself and your coverage needs. It takes about 2 minutes and there's no obligation to buy.
             </p>
           </div>
         </div>
@@ -363,7 +195,7 @@
             <div class="step-number">2</div>
             <h4 class="step-title">We compare instantly</h4>
             <p class="step-text">
-              We match your profile against 40+ carriers and surface real, bindable quotes — not estimates.
+             We match your profile against 40+ carriers and surface real, bindable quotes — not estimates.
             </p>
           </div>
         </div>
@@ -386,6 +218,131 @@
     </div>
   </section>
 
+
+  <section class="what-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <h2 class="title">
+            What Affects Your Rate
+          </h2>
+        </div>
+        <!-- Item 1 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 11C13.71 11 15 9.71 15 8C15 6.29 13.71 5 12 5C10.29 5 9 6.29 9 8C9 9.71 10.29 11 12 11ZM12 7C12.6 7 13 7.4 13 8C13 8.6 12.6 9 12 9C11.4 9 11 8.6 11 8C11 7.4 11.4 7 12 7ZM13 12H11C8.24 12 6 14.24 6 17V17.5C6 18.33 6.67 19 7.5 19H16.5C17.33 19 18 18.33 18 17.5V17C18 14.24 15.76 12 13 12ZM8 17C8 15.35 9.35 14 11 14H13C14.65 14 16 15.35 16 17H8ZM6.5 11C6.97 11 7.4 10.88 7.77 10.67C7.3506 10.0022 7.09407 9.24523 7.02111 8.46007C6.94815 7.67491 7.06081 6.8836 7.35 6.15C7.09 6.06 6.8 6 6.5 6C5.06 6 4 7.06 4 8.5C4 9.94 5.06 11 6.5 11ZM6.11 12H5.5C3.57 12 2 13.57 2 15.5V16.5C2 16.78 2.22 17 2.5 17H4C4 15.04 4.81 13.27 6.11 12ZM17.5 11C18.94 11 20 9.94 20 8.5C20 7.06 18.94 6 17.5 6C17.19 6 16.91 6.06 16.65 6.15C16.9392 6.8836 17.0519 7.67491 16.9789 8.46007C16.9059 9.24523 16.6494 10.0022 16.23 10.67C16.6 10.88 17.02 11 17.5 11ZM18.5 12H17.89C18.5582 12.65 19.0892 13.4274 19.4516 14.2862C19.814 15.145 20.0005 16.0678 20 17H21.5C21.78 17 22 16.78 22 16.5V15.5C22 13.57 20.43 12 18.5 12Z" fill="#E67917"/>
+</svg>
+
+
+
+            </div>
+            <h2 class="what-title">
+              Number of Employees
+            </h2>
+            <p class="what-text">
+             The size of your workforce directly impacts your group rate. Larger groups often qualify for better pricing, while smaller businesses may have fewer plan options available.
+            </p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.2102 8.11007C20.9602 7.52007 20.6502 6.95007 20.2902 6.41007C19.9302 5.88007 19.5202 5.38007 19.0702 4.93007C18.6202 4.48007 18.1202 4.07007 17.5902 3.71007C17.0502 3.35007 16.4802 3.04007 15.8902 2.79007C15.2902 2.53007 14.6502 2.34007 14.0102 2.21007C12.7002 1.94007 11.2902 1.94007 9.98023 2.21007C9.34023 2.34007 8.71024 2.54007 8.10023 2.79007C7.51023 3.04007 6.94023 3.35007 6.40023 3.71007C5.87023 4.07007 5.37023 4.48007 4.92023 4.93007C4.75023 5.10007 4.60023 5.28007 4.44023 5.45007L1.99023 3.00007V9.00007H7.99023L5.86023 6.87007C6.01023 6.69007 6.17023 6.51007 6.34023 6.35007C6.70023 5.99007 7.10023 5.66007 7.52023 5.37007C7.95023 5.08007 8.41023 4.83007 8.88023 4.63007C9.36023 4.43007 9.87023 4.27007 10.3802 4.16007C11.4302 3.95007 12.5602 3.95007 13.6102 4.16007C14.1202 4.27007 14.6302 4.42007 15.1102 4.63007C15.5802 4.83007 16.0402 5.08007 16.4702 5.37007C16.8902 5.66007 17.2902 5.99007 17.6502 6.35007C18.0102 6.71007 18.3402 7.11007 18.6302 7.53007C18.9202 7.96007 19.1702 8.42007 19.3702 8.89007C19.5702 9.37007 19.7302 9.88007 19.8402 10.3901C19.9502 10.9201 20.0002 11.4601 20.0002 12.0001C20.0041 13.0688 19.7898 14.1271 19.3702 15.1101C19.1702 15.5801 18.9202 16.0401 18.6302 16.4701C18.3402 16.8901 18.0102 17.2901 17.6502 17.6501C17.2902 18.0101 16.8902 18.3401 16.4702 18.6301C16.0402 18.9201 15.5802 19.1701 15.1102 19.3701C14.6302 19.5701 14.1202 19.7301 13.6102 19.8401C12.5602 20.0501 11.4302 20.0501 10.3802 19.8401C9.86602 19.733 9.36359 19.5756 8.88023 19.3701C8.41023 19.1701 7.95023 18.9201 7.52023 18.6301C7.10023 18.3401 6.70023 18.0101 6.34023 17.6501C5.98023 17.2901 5.65023 16.8901 5.36023 16.4701C5.07023 16.0401 4.82023 15.5801 4.62023 15.1101C4.42023 14.6301 4.26023 14.1201 4.15023 13.6101C4.04263 13.0802 3.98902 12.5408 3.99023 12.0001H1.99023C1.99023 12.6801 2.06023 13.3501 2.19023 14.0101C2.32023 14.6501 2.52023 15.2801 2.77023 15.8901C3.02023 16.4801 3.33023 17.0501 3.69023 17.5901C4.05023 18.1201 4.46023 18.6201 4.91023 19.0701C5.36023 19.5201 5.86023 19.9301 6.39023 20.2901C6.93023 20.6501 7.50023 20.9601 8.09023 21.2101C8.69023 21.4701 9.33024 21.6601 9.97023 21.7901C10.6302 21.9201 11.3002 21.9901 11.9802 21.9901C12.6602 21.9901 13.3402 21.9201 13.9902 21.7901C14.6302 21.6601 15.2602 21.4601 15.8702 21.2101C16.4602 20.9601 17.0302 20.6501 17.5702 20.2901C18.1002 19.9301 18.6002 19.5201 19.0502 19.0701C19.5002 18.6201 19.9102 18.1201 20.2702 17.5901C20.6302 17.0501 20.9402 16.4801 21.1902 15.8901C21.4502 15.2901 21.6402 14.6501 21.7702 14.0101C21.9002 13.3501 21.9702 12.6701 21.9702 12.0001C21.9702 11.3301 21.9002 10.6501 21.7702 9.99007C21.6402 9.35007 21.4402 8.72007 21.1902 8.11007H21.2102Z" fill="#E67917"/>
+<path d="M11 7V13H17V11H13V7H11Z" fill="#E67917"/>
+</svg>
+
+
+              </div>
+            <h2 class="what-title">
+              Employee Age & Health Demographics
+            </h2>
+            <p class="what-text">
+              Insurers look at the overall age and health profile of your employee pool. A younger, healthier workforce typically results in lower premiums across the group.
+            </p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 3H17C17 2.45 16.55 2 16 2H8C7.45 2 7 2.45 7 3H5C3.9 3 3 3.9 3 5V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V5C21 3.9 20.1 3 19 3ZM19 20H5V5H7V7H17V5H19V20Z" fill="#E67917"/>
+<path d="M11.0008 14.09L8.71078 11.8L7.30078 13.21L10.3008 16.21C10.5008 16.41 10.7508 16.5 11.0108 16.5C11.2708 16.5 11.5208 16.4 11.7208 16.21L16.7208 11.21L15.3108 9.80005L11.0208 14.09H11.0008Z" fill="#E67917"/>
+</svg>
+
+
+            </div>
+            <h2 class="what-title">
+              Coverage Level & Plan Type
+            </h2>
+            <p class="what-text">
+              The benefits you choose for your employees — deductibles, copays, and network type — all affect your rate. PPO plans generally cost more than HMOs due to broader provider access.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 6H16V4C16 2.9 15.1 2 14 2H4C2.9 2 2 2.9 2 4V21C2 21.55 2.45 22 3 22H21C21.55 22 22 21.55 22 21V8C22 6.9 21.1 6 20 6ZM20 20H4V4H14V7C14 7.55 14.45 8 15 8H20V20Z" fill="#E67917"/>
+<path d="M10 6H12V8H10V6ZM6 6H8V8H6V6ZM6 10H8V12H6V10ZM10 10H12V12H10V10ZM16 10H18V12H16V10ZM10 14H12V16H10V14ZM6 14H8V16H6V14ZM16 14H18V16H16V14Z" fill="#E67917"/>
+</svg>
+
+            </div>
+            <h2 class="what-title">
+              Industry & Occupation
+            </h2>
+            <p class="what-text">
+              Some industries carry higher health risk than others. Physical or high-hazard occupations may result in higher premiums compared to desk-based workforces.
+            </p>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.5102 6.13995L16.5102 3.13995C16.381 3.06095 16.2354 3.01266 16.0845 2.99879C15.9337 2.98492 15.7817 3.00584 15.6402 3.05995L8.09023 5.88995L3.51023 3.13995C3.35828 3.04778 3.18432 2.99822 3.00661 2.99646C2.82889 2.9947 2.65398 3.04081 2.50023 3.12995C2.19023 3.30995 1.99023 3.63995 1.99023 3.99995V17C1.99023 17.35 2.17023 17.68 2.48023 17.86L7.48023 20.86C7.74023 21.02 8.06024 21.05 8.35023 20.94L15.9002 18.11L20.4902 20.86C20.6502 20.96 20.8302 21 21.0002 21C21.1702 21 21.3402 20.96 21.4902 20.87C21.8002 20.69 22.0002 20.36 22.0002 20V6.99995C22.0012 6.82621 21.9564 6.65528 21.8704 6.50432C21.7844 6.35336 21.6602 6.2277 21.5102 6.13995ZM7.00023 18.2299L4.00023 16.43V5.76995L7.00023 7.56995V18.24V18.2299ZM15.0002 16.2999L9.00023 18.5499V7.68995L15.0002 5.43995V16.2999ZM20.0002 18.2299L17.0002 16.43V5.76995L20.0002 7.56995V18.24V18.2299Z" fill="#E67917"/>
+</svg>
+
+            </div>
+            <h2 class="what-title">
+             Location
+            </h2>
+            <p class="what-text">
+              Healthcare costs vary significantly by state and region. Your business's ZIP code affects both the cost of plans available and the provider networks accessible to your employees.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#E67917"/>
+<path d="M12 11C10 11 10 10.37 10 10C10 9.52 10.7 9 12 9C13.18 9 13.39 9.64 13.4 10.02L14.4 10H15.4C15.4 8.97 14.73 7.53 13 7.12V6H11V7.09C9.03 7.42 8 8.72 8 10C8 11.12 8.52 13 12 13C14 13 14 13.68 14 14C14 14.42 13.38 15 12 15C10.16 15 10.01 14.14 10 14H8C8 14.92 8.66 16.55 11 16.92V18H13V16.91C14.97 16.58 16 15.28 16 14C16 12.88 15.48 11 12 11Z" fill="#E67917"/>
+</svg>
+
+            </div>
+            <h2 class="what-title">
+              Employer Contribution
+            </h2>
+            <p class="what-text">
+              The percentage of the premium your business covers versus what employees pay affects your overall cost. Higher employer contributions increase your spend but improve employee uptake and retention.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
   <section class="testimonial-section">
@@ -452,6 +409,54 @@
     </div>
   </section>
 
+<section class="faq-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="title">FAQ</h2>
+    </div>
+
+    <div class="faq-item">
+      <h4 class="faq-question">
+        Do I have to offer health insurance to my employees?
+      </h4>
+      <p class="faq-answer">
+        Businesses with 50 or more full-time employees are required by law to offer health coverage under the Affordable Care Act. Smaller businesses aren't mandated to, but offering coverage can be a major advantage for attracting and retaining talent.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="faq-item">
+      <h4 class="faq-question">
+        How much of the premium am I required to cover as an employer?
+      </h4>
+      <p class="faq-answer">
+      There's no federal minimum, but most carriers require employers to cover at least 50% of the employee's premium to qualify for a group plan. Your contribution level can also affect how many employees opt in.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="faq-item">
+      <h4 class="faq-question">
+        Can part-time employees be included in a group plan?
+      </h4>
+      <p class="faq-answer">
+        It depends on the carrier and the plan. Some group plans allow part-time employees to be covered, but eligibility rules vary. We'll surface plans that match your specific workforce structure.
+      </p>
+    </div>
+<hr>
+
+    <div class="faq-item">
+      <h4 class="faq-question">
+        What's the difference between a group plan and individual health insurance?
+      </h4>
+      <p class="faq-answer">
+       Group plans are purchased by the employer and cover all eligible employees under one policy, usually at a lower per-person cost than individual plans. Employees typically get broader coverage for less out-of-pocket than they'd find shopping on their own.
+      </p>
+    </div>
+  </div>
+</section>
 
   <section class="why-section py-5">
     <div class="container text-center">
@@ -522,7 +527,32 @@
     </div>
   </section>
 
+<section class="cta-section d-flex align-items-center text-center">
+  <div class="container">
+    
+    <h2 class="cta-title mb-4">
+      Ready to find your 
+      <span class="text-orange">best</span> 
+      <span class="text-green">rate?</span>
+    </h2>
 
+    <form class="cta-form mx-auto">
+      <div class="input-group">
+        <input type="text" class="form-control zip-input" placeholder="ZIP Code">
+        <button class="btn btn-cta" type="submit">Compare</button>
+      </div>
+    </form>
+
+    <div class="cta-features mt-4">
+      <span>Free to Use</span>
+      <span class="dot"></span>
+      <span>No Obligation</span>
+      <span class="dot"></span>
+      <span>Takes 2–3 minutes</span>
+    </div>
+
+  </div>
+</section>
   <section class="insurance-section py-5">
     <div class="container-fluid text-center px-0">
 
@@ -532,7 +562,7 @@
         Major Insurance Types
       </h2>
 
-       <!-- Tabs -->
+     <!-- Tabs -->
       <div class="insurance-tabs">
         <a href="auto.html" class="tab">Auto</a>
         <a href="home.html" class="tab">Home</a>
@@ -540,10 +570,10 @@
         <a href="life.html" class="tab">Life</a>
         <a href="commercial.html" class="tab">Commercial</a>
         <a href="medicare.html" class="tab">Medicare</a>
-        <a href="group-health.html" class="tab">Group Health</a>
+        <a href="group-health.html" class="tab active">Group Health</a>
       </div>
 
-     <!-- Swiper -->
+       <!-- Swiper -->
       <div class="swiper insurance-swiper">
         <div class="swiper-wrapper">
 
@@ -615,7 +645,6 @@
 
     </div>
   </section>
-
   <footer class="footer-section">
     <div class="container">
 
@@ -691,8 +720,6 @@
 
     </div>
   </footer>
-
-
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

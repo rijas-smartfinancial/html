@@ -11,15 +11,13 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/scss/main.css" />
 
 </head>
 
-<body class="about">
+<body class="page about-page">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
@@ -386,15 +384,15 @@
         Major Insurance Types
       </h2>
 
-      <!-- Tabs -->
+       <!-- Tabs -->
       <div class="insurance-tabs">
-        <button class="tab active">Auto</button>
-        <button class="tab">Home</button>
-        <button class="tab">Health</button>
-        <button class="tab">Life</button>
-        <button class="tab">Commercial</button>
-        <button class="tab">Medicare</button>
-        <button class="tab">Group Health</button>
+        <a href="auto.html" class="tab">Auto</a>
+        <a href="home.html" class="tab">Home</a>
+        <a href="health.html" class="tab">Health</a>
+        <a href="life.html" class="tab">Life</a>
+        <a href="commercial.html" class="tab">Commercial</a>
+        <a href="medicare.html" class="tab">Medicare</a>
+        <a href="group-health.html" class="tab">Group Health</a>
       </div>
 
       <!-- Swiper -->
@@ -403,57 +401,66 @@
 
           <!-- Card 1 -->
           <div class="swiper-slide">
-            <div class="insurance-card">
+            <a href="auto.html" class="insurance-card">
               <img src="assets/images/auto-img.png" alt="Auto Insurance" />
               <h5>Auto</h5>
               <p>Connect with local drivers looking for coverage.</p>
-            </div>
+            </a>
           </div>
 
           <!-- Card 2 -->
-          <div class="swiper-slide">
+          <a href="home.html" class="swiper-slide">
             <div class="insurance-card">
               <img src="assets/images/home-img.jpg" alt="Home Insurance" />
               <h5>Home</h5>
               <p>Our real-time home leads connect you with local homeowners.</p>
             </div>
-          </div>
+          </a>
 
           <!-- Card 3 -->
-          <div class="swiper-slide">
+          <a href="health.html" class="swiper-slide">
             <div class="insurance-card">
               <img src="assets/images/health-img.png" alt="Health Insurance" />
               <h5>Health</h5>
               <p>U65 leads connect you with individuals seeking coverage.</p>
             </div>
-          </div>
+          </a>
 
           <!-- Card 4 -->
-          <div class="swiper-slide">
+          <a href="life.html" class="swiper-slide">
             <div class="insurance-card">
               <img src="assets/images/life-img.png" alt="Life Insurance" />
               <h5>Life</h5>
-              <p>High-quality life insurance prospects ready to convert.</p>
+              <p>Life insurance leads connect you with high-intent consumers looking for life insurance quotes.</p>
             </div>
-          </div>
+          </a>
 
           <!-- Card 5 -->
-          <div class="swiper-slide">
+          <a href="commercial.html" class="swiper-slide">
             <div class="insurance-card">
               <img src="assets/images/commercial-img.png" alt="Commercial Insurance" />
               <h5>Commercial</h5>
-              <p>High-quality commercial insurance prospects ready to convert.</p>
+              <p>Businesses of all sizes are looking for commercial auto coverage, BOP, workers’ compensation and more.</p>
             </div>
-          </div>
+          </a>
 
           <!-- Card 5 -->
-          <div class="swiper-slide">
+          <a href="medicare.html" class="swiper-slide">
             <div class="insurance-card">
               <img src="assets/images/medicare-img.png" alt="Medicare Insurance" />
               <h5>Medicare</h5>
-              <p>High-quality medicare insurance prospects ready to convert.</p>
+              <p>Connect with seniors and retirees exploring Medicare plans and supplemental coverage.</p>
             </div>
-          </div>
+          </a>
+
+           <!-- Card 6 -->
+          <a href="group-health.html" class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/group-health-img.png" alt="Group Health Insurance" />
+              <h5>Group Health</h5>
+              <p>Connect with businesses looking for employee health coverage and benefits.</p>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -468,7 +475,7 @@
                <div class="product-tab-section">
             <ul class="nav nav-tabs">
               <li class="nav-item">
-                <a class="nav-link active"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                <a href="auto.html" class="nav-link active"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M9.75 18C9.15326 18 8.58097 18.2371 8.15901 18.659C7.73705 19.081 7.5 19.6533 7.5 20.25C7.5 20.8467 7.73705 21.419 8.15901 21.841C8.58097 22.2629 9.15326 22.5 9.75 22.5C10.3467 22.5 10.919 22.2629 11.341 21.841C11.7629 21.419 12 20.8467 12 20.25C12 19.6533 11.7629 19.081 11.341 18.659C10.919 18.2371 10.3467 18 9.75 18ZM26.25 18C25.6533 18 25.081 18.2371 24.659 18.659C24.2371 19.081 24 19.6533 24 20.25C24 20.8467 24.2371 21.419 24.659 21.841C25.081 22.2629 25.6533 22.5 26.25 22.5C26.8467 22.5 27.419 22.2629 27.841 21.841C28.2629 21.419 28.5 20.8467 28.5 20.25C28.5 19.6533 28.2629 19.081 27.841 18.659C27.419 18.2371 26.8467 18 26.25 18Z"
@@ -481,7 +488,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">
+                <a href="home.html" class="nav-link">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M4.49977 19.5H5.99977V30C5.99977 31.65 7.34977 33 8.99977 33H26.9998C28.6498 33 29.9998 31.65 29.9998 30V19.5H31.4998C32.0998 19.5 32.6548 19.14 32.8798 18.57C33.1048 18.015 32.9848 17.37 32.5498 16.935L19.0648 3.435C18.926 3.29595 18.7612 3.18563 18.5797 3.11036C18.3982 3.03508 18.2037 2.99634 18.0073 2.99634C17.8108 2.99634 17.6163 3.03508 17.4348 3.11036C17.2534 3.18563 17.0885 3.29595 16.9498 3.435L3.43477 16.935C2.99977 17.37 2.87977 18.015 3.10477 18.57C3.32977 19.125 3.88477 19.5 4.48477 19.5H4.49977ZM17.9998 6.615L26.9998 15.615V30H8.99977V15.615L17.9998 6.615Z"
@@ -495,7 +502,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">
+                <a href="health.html" class="nav-link">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M23.85 10.515C22.2 10.41 20.565 10.8 19.155 11.64C18.465 12.045 17.535 12.045 16.86 11.64C15.45 10.8 13.83 10.41 12.165 10.515C7.84504 10.77 4.41004 14.58 4.51504 19.005C4.77004 29.655 13.035 33 15.345 33C16.29 33 17.22 32.76 17.985 32.295C18.81 32.76 19.74 33 20.685 33C22.995 33 31.26 29.64 31.515 19.005C31.62 14.595 28.185 10.785 23.865 10.515H23.85ZM20.67 30C20.235 30 19.815 29.895 19.44 29.685C18.54 29.175 17.46 29.175 16.56 29.685C16.185 29.895 15.765 30 15.345 30C15.27 30 7.72504 28.485 7.50004 18.93C7.44004 16.11 9.60004 13.68 12.33 13.515H12.66C13.605 13.515 14.52 13.77 15.315 14.235C16.95 15.195 19.05 15.195 20.67 14.235C21.57 13.71 22.605 13.455 23.655 13.515C26.385 13.68 28.56 16.11 28.485 18.93C28.26 28.485 20.715 30 20.655 30H20.67ZM24 3C20.685 3 18 4.5 18 9C21.315 9 24 7.5 24 3Z"
@@ -507,7 +514,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">
+                <a href="life.html" class="nav-link">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M9 3C8.20435 3 7.44129 3.31607 6.87868 3.87868C6.31607 4.44129 6 5.20435 6 6C6 6.79565 6.31607 7.55871 6.87868 8.12132C7.44129 8.68393 8.20435 9 9 9C9.79565 9 10.5587 8.68393 11.1213 8.12132C11.6839 7.55871 12 6.79565 12 6C12 5.20435 11.6839 4.44129 11.1213 3.87868C10.5587 3.31607 9.79565 3 9 3ZM25.5 12C24.7044 12 23.9413 12.3161 23.3787 12.8787C22.8161 13.4413 22.5 14.2044 22.5 15C22.5 15.7956 22.8161 16.5587 23.3787 17.1213C23.9413 17.6839 24.7044 18 25.5 18C26.2956 18 27.0587 17.6839 27.6213 17.1213C28.1839 16.5587 28.5 15.7956 28.5 15C28.5 14.2044 28.1839 13.4413 27.6213 12.8787C27.0587 12.3161 26.2956 12 25.5 12Z"
@@ -522,7 +529,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">
+                <a href="medicare.html" class="nav-link">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.5 15H16.5V19.5H12V22.5H16.5V27H19.5V22.5H24V19.5H19.5V15Z" fill="#E67917" />
                     <path
@@ -536,7 +543,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link">
+                <a href="commercial.html" class="nav-link">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M30 9H24V6C24 4.35 22.65 3 21 3H6C4.35 3 3 4.35 3 6V31.5C3 32.325 3.675 33 4.5 33H31.5C32.325 33 33 32.325 33 31.5V12C33 10.35 31.65 9 30 9ZM30 30H6V6H21V10.5C21 11.325 21.675 12 22.5 12H30V30Z"
@@ -552,7 +559,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link">
+                <a href="group-health.html" class="nav-link">
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M18 16.5C20.565 16.5 22.5 14.565 22.5 12C22.5 9.435 20.565 7.5 18 7.5C15.435 7.5 13.5 9.435 13.5 12C13.5 14.565 15.435 16.5 18 16.5ZM18 10.5C18.9 10.5 19.5 11.1 19.5 12C19.5 12.9 18.9 13.5 18 13.5C17.1 13.5 16.5 12.9 16.5 12C16.5 11.1 17.1 10.5 18 10.5ZM19.5 18H16.5C12.36 18 9 21.36 9 25.5V26.25C9 27.495 10.005 28.5 11.25 28.5H24.75C25.995 28.5 27 27.495 27 26.25V25.5C27 21.36 23.64 18 19.5 18ZM12 25.5C12 23.025 14.025 21 16.5 21H19.5C21.975 21 24 23.025 24 25.5H12ZM9.75 16.5C10.455 16.5 11.1 16.32 11.655 16.005C11.0259 15.0034 10.6411 13.8679 10.5317 12.6901C10.4222 11.5124 10.5912 10.3254 11.025 9.225C10.635 9.09 10.2 9 9.75 9C7.59 9 6 10.59 6 12.75C6 14.91 7.59 16.5 9.75 16.5ZM9.165 18H8.25C5.355 18 3 20.355 3 23.25V24.75C3 25.17 3.33 25.5 3.75 25.5H6C6 22.56 7.215 19.905 9.165 18ZM26.25 16.5C28.41 16.5 30 14.91 30 12.75C30 10.59 28.41 9 26.25 9C25.785 9 25.365 9.09 24.975 9.225C25.4088 10.3254 25.5778 11.5124 25.4683 12.6901C25.3589 13.8679 24.9741 15.0034 24.345 16.005C24.9 16.32 25.53 16.5 26.25 16.5ZM27.75 18H26.835C27.8373 18.975 28.6338 20.1411 29.1774 21.4293C29.7211 22.7175 30.0008 24.1017 30 25.5H32.25C32.67 25.5 33 25.17 33 24.75V23.25C33 20.355 30.645 18 27.75 18Z"
@@ -587,13 +594,12 @@
 
   </section>
 
-
   <footer class="footer-section">
     <div class="container">
 
       <div class="row gy-4">
         <div class="col-12">
-          <img src="assets/images/logo.svg" alt="Benepath" class="footer-logo mb-4">
+          <a href="index.html"><img src="assets/images/logo.svg" alt="Benepath" class="footer-logo mb-4"></a>
 
         </div>
         <!-- Logo + Products -->
@@ -601,13 +607,13 @@
 
           <h6 class="footer-title">Products</h6>
           <ul class="footer-links">
-            <li><a href="#">Auto</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Health</a></li>
-            <li><a href="#">Life</a></li>
-            <li><a href="#">Commercial</a></li>
-            <li><a href="#">Medicare</a></li>
-            <li><a href="#">Group Health</a></li>
+            <li><a href="auto.html">Auto</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="life.html">Life</a></li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="medicare.html">Medicare</a></li>
+            <li><a href="group-health.html">Group Health</a></li>
           </ul>
         </div>
 
@@ -615,16 +621,34 @@
         <div class="col-lg-3 col-6">
           <h6 class="footer-title">Company</h6>
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
           <!-- Social -->
           <div class="mt-5">
             <h6 class="footer-title">Follow Us</h6>
             <div class="social-icons">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/benepathleads" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_557_4860)">
+                  <path d="M13.5635 10.125L14.0634 6.86742H10.9377V4.75348C10.9377 3.86227 11.3743 2.99355 12.7742 2.99355H14.1952V0.220078C14.1952 0.220078 12.9057 0 11.6728 0C9.09863 0 7.41605 1.56023 7.41605 4.38469V6.86742H4.55469V10.125H7.41605V18H10.9377V10.125H13.5635Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_557_4860">
+                  <rect width="18" height="18" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+</a>
+              <a href="https://www.youtube.com/@benepath1624" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6239 4.98027C17.4169 4.20079 16.8069 3.5869 16.0325 3.37857C14.6288 3 9 3 9 3C9 3 3.37127 3 1.96752 3.37857C1.19308 3.58693 0.583143 4.20079 0.376127 4.98027C0 6.39312 0 9.34091 0 9.34091C0 9.34091 0 12.2887 0.376127 13.7015C0.583143 14.481 1.19308 15.0693 1.96752 15.2777C3.37127 15.6562 9 15.6562 9 15.6562C9 15.6562 14.6287 15.6562 16.0325 15.2777C16.8069 15.0693 17.4169 14.481 17.6239 13.7015C18 12.2887 18 9.34091 18 9.34091C18 9.34091 18 6.39312 17.6239 4.98027ZM7.15908 12.0173V6.66454L11.8636 9.34097L7.15908 12.0173Z" fill="white"/>
+                </svg>
+                </a>
+              <a href="https://www.linkedin.com/company/benepath-com/" target="_blank"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.85826 16.5H1.74777V6.48549H4.85826V16.5ZM3.30134 5.11942C2.30692 5.11942 1.5 4.29576 1.5 3.30134C1.5 2.82254 1.69085 2.36719 2.02902 2.02902C2.36719 1.69085 2.82589 1.5 3.30134 1.5C3.77679 1.5 4.23549 1.69085 4.57366 2.02902C4.91183 2.36719 5.10268 2.82589 5.10268 3.30134C5.10268 4.29576 4.29576 5.11942 3.30134 5.11942ZM16.4967 16.5H13.3929V11.625C13.3929 10.4632 13.3694 8.97321 11.7757 8.97321C10.1585 8.97321 9.91071 10.2355 9.91071 11.5413V16.5H6.80357V6.48549H9.78683V7.85156H9.83036C10.2455 7.06473 11.26 6.23437 12.7734 6.23437C15.9208 6.23437 16.5 8.30692 16.5 10.9989V16.5H16.4967Z" fill="white"/>
+</svg>
+</a>
             </div>
           </div>
         </div>
@@ -645,122 +669,15 @@
 
     </div>
   </footer>
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
   integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
   integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="assets/js/tab-colors.js"></script>
-<script>
-  const dropdowns = document.querySelectorAll('.navbar .dropdown');
-
-  dropdowns.forEach(dropdown => {
-    dropdown.addEventListener('mouseenter', () => {
-      dropdown.classList.add('show');
-      dropdown.querySelector('.dropdown-menu').classList.add('show');
-    });
-
-    dropdown.addEventListener('mouseleave', () => {
-      dropdown.classList.remove('show');
-      dropdown.querySelector('.dropdown-menu').classList.remove('show');
-    });
-  });
-
-  let Testimonialswiper;
-
-  function handleTestimonialSwiper() {
-    if (window.innerWidth >= 992) {
-
-      // INIT only if not already initialized
-      if (!Testimonialswiper) {
-        Testimonialswiper = new Swiper(".testimonial-swiper", {
-          slidesPerView: 3.65,
-          spaceBetween: 24,
-          grabCursor: true,
-          loop: false,
-          centeredSlides: false,
-
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-          },
-
-          breakpoints: {
-            1200: {
-              slidesPerView: 3.65,
-            },
-            1600: {
-              slidesPerView: 4,
-
-            }
-          }
-        });
-      }
-
-    } else {
-
-      // DESTROY swiper below 992
-      if (Testimonialswiper) {
-        Testimonialswiper.destroy(true, true);
-        Testimonialswiper = undefined;
-      }
-
-    }
-  }
-
-  // Run on load
-  handleTestimonialSwiper();
-
-  // Run on resize
-  window.addEventListener("resize", handleTestimonialSwiper);
-  const insuranceSwiper = new Swiper(".insurance-swiper", {
-    slidesPerView: 3.25,   // 3 full + 1/4 visible
-    spaceBetween: 24,      // exact gap
-    grabCursor: true,
-    loop: false,
-    centeredSlides: false,
-
-    breakpoints: {
-      0: {
-        slidesPerView: 1.2,
-      },
-      576: {
-        slidesPerView: 1.5,
-      },
-      768: {
-        slidesPerView: 2.2,
-      },
-      992: {
-        slidesPerView: 3.65, // your main layout
-      },
-      1600: {
-        slidesPerView: 4.45, // extra wide screens
-        spaceBetween: 48,
-      }
-    },
-  });
-
-
-  const tabs = document.querySelectorAll(".tab");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-    });
-  });
-</script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 </html>

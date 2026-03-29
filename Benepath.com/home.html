@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Auto Insurance | Benepath | www.benepath.com</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="insurance, Auto" />
+  <meta name="description" content="Benepath" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/scss/main.css" />
+
+</head>
+
+<body class="page product-page">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"> <img src="assets/images/logo.svg" alt="logo" /></a>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" aria-current="page">Home
+              <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Products</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="auto.html">Auto</a>
+              <a class="dropdown-item" href="home.html">Home</a>
+              <a class="dropdown-item" href="health.html">Health</a>
+              <a class="dropdown-item" href="life.html">Life</a>
+              <a class="dropdown-item" href="medicare.html">Medicare</a>
+              <a class="dropdown-item" href="commercial.html">Commercial</a>
+              <a class="dropdown-item" href="group-health.html">Group Health</a>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+      <a href="tel:8555840211" class="phone">
+        <img src="assets/images/icon/phone-filled-white.svg" alt="call" />
+        <span class="phone-no"> Speak to an Agent </span>
+      </a>
+      <div class="offcanvas offcanvas-top d-lg-none offcanvas-nav" style="height: 100vh;" tabindex="-1"
+        id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <a class="navbar-brand" href="index.html"> <img src="assets/images/logo.svg" alt="logo" /></a>
+          <a href="tel:8555840211" class="phone">
+            <img src="assets/images/icon/phone-filled-white.svg" alt="call" />
+            <span class="phone-no"> Speak to an Agent </span>
+          </a>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Company -->
+          <h6 class="nav-title">Company</h6>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+          <h6 class="nav-title">Products</h6>
+          <ul class="nav-links">
+            <li><a href="auto.html">Auto</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="life.html">Life</a></li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="medicare.html">Medicare</a></li>
+            <li><a href="group-health.html">Group Health</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </nav>
+  <section class="product-hero-section position-relative">
+    <div class="row m-0 product-hero-content">
+       <img src="assets/images/home-hero-mobile.jpg" alt="Health Quote" class="hero-image d-lg-none p-0" />
+       <div class="col-lg-5 form-block p-0">
+          <div class="form-section">
+            <h1 class="hero-heading">Compare <br><span style="color: #E67917;">Home</span> <span
+              style="color: #84C229;">Insurance</span></h1>
+            <form class="cta-form mx-auto">
+      <div class="input-group">
+        <input type="text" class="form-control zip-input" placeholder="ZIP Code">
+        <button class="btn btn-cta" type="submit">Compare</button>
+      </div>
+    </form>
+
+    <div class="cta-features mt-2">
+      <span>Free to Use</span>
+      <span class="dot"></span>
+      <span>No Obligation</span>
+      <span class="dot"></span>
+      <span>Takes 2–3 minutes</span>
+    </div>
+          </div>
+
+        </div>
+        <div class="col-lg-7 p-0">
+
+          <img src="assets/images/home-hero.jpg" alt="Health Quote" class="hero-image w-100 d-none d-lg-block" />
+
+        </div>
+    </div>
+
+
+
+  </section>
+
+  <section class="partners-section">
+    <div class="container px-0">
+
+      <div class="swiper partners-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo1.png" alt="Progressive">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo2.png" alt="Allstate">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo3.png" alt="Nationwide">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo4.png" alt="Liberty Mutual">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo5.png" alt="21st Century">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/images/carriers/partner-logo6.png" alt="MetLife">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+ 
+  <section class="steps-section">
+    <div class="container text-center">
+
+      <!-- Heading -->
+      <div class="section-header mb-5">
+        <h2 class="title">Simple Steps. Confident Decisions.</h2>
+        <p class="subtitle">
+          A quick, guided process connects you with personalized insurance options tailored to your needs.
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="row g-5">
+
+        <!-- Step 1 -->
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/steps-1.png" alt="Step 1" class="img-fluid">
+            </div>
+            <div class="step-number">1</div>
+            <h4 class="step-title">Answer a few questions</h4>
+            <p class="step-text">
+             Share a few details about yourself and your coverage needs. It takes about 2 minutes and there's no obligation to buy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/steps-2.png" alt="Step 2" class="img-fluid">
+            </div>
+            <div class="step-number">2</div>
+            <h4 class="step-title">We compare instantly</h4>
+            <p class="step-text">
+             We match your profile against 40+ carriers and surface real, bindable quotes — not estimates.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/steps-3.png" alt="Step 3" class="img-fluid">
+            </div>
+            <div class="step-number">3</div>
+            <h4 class="step-title">Pick your best rate</h4>
+            <p class="step-text">
+              Choose the coverage that fits your needs and budget. Switch in minutes — we handle the paperwork.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="what-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <h2 class="title">
+            What Affects Your Rate
+          </h2>
+        </div>
+        <!-- Item 1 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.5102 6.13995L16.5102 3.13995C16.381 3.06095 16.2354 3.01266 16.0845 2.99879C15.9337 2.98492 15.7817 3.00584 15.6402 3.05995L8.09023 5.88995L3.51023 3.13995C3.35828 3.04778 3.18432 2.99822 3.00661 2.99646C2.82889 2.9947 2.65398 3.04081 2.50023 3.12995C2.19023 3.30995 1.99023 3.63995 1.99023 3.99995V17C1.99023 17.35 2.17023 17.68 2.48023 17.86L7.48023 20.86C7.74023 21.02 8.06024 21.05 8.35023 20.94L15.9002 18.11L20.4902 20.86C20.6502 20.96 20.8302 21 21.0002 21C21.1702 21 21.3402 20.96 21.4902 20.87C21.8002 20.69 22.0002 20.36 22.0002 20V6.99995C22.0012 6.82621 21.9564 6.65528 21.8704 6.50432C21.7844 6.35336 21.6602 6.2277 21.5102 6.13995ZM7.00023 18.2299L4.00023 16.43V5.76995L7.00023 7.56995V18.24V18.2299ZM15.0002 16.2999L9.00023 18.5499V7.68995L15.0002 5.43995V16.2999ZM20.0002 18.2299L17.0002 16.43V5.76995L20.0002 7.56995V18.24V18.2299Z" fill="#E67917"/>
+</svg>
+
+
+            </div>
+            <h2 class="what-title">Location</h2>
+            <p class="what-text">
+              Homes in areas prone to natural disasters, crime or extreme weather conditions may have higher premiums.
+            </p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4206 6.11L12.4506 2.11C12.1706 1.97 11.8306 1.97 11.5506 2.11L3.58059 6.11C3.27059 6.26 3.07059 6.56 3.03059 6.9C3.02059 7.01 2.07059 17.66 11.5806 21.91C11.7092 21.9692 11.849 21.9999 11.9906 21.9999C12.1321 21.9999 12.272 21.9692 12.4006 21.91C21.9106 17.66 20.9706 7 20.9506 6.9C20.9346 6.73213 20.8756 6.57122 20.7793 6.43282C20.6829 6.29443 20.5525 6.18324 20.4006 6.11H20.4206ZM12.0006 19.9C5.26059 16.63 4.94059 9.64 5.00059 7.64L12.0006 4.13001L19.0006 7.64C19.0406 9.63 18.6706 16.66 12.0006 19.9Z" fill="#E67917"/>
+<path d="M10.9991 12.59L9.70906 11.29L8.28906 12.71L10.9991 15.41L15.7091 10.71L14.2891 9.29004L10.9991 12.59Z" fill="#E67917"/>
+</svg>
+
+
+
+            </div>
+            <h2 class="what-title">
+              Coverage Limits
+            </h2>
+            <p class="what-text">
+              Opting for higher coverage limits provides more protection but can result in higher premiums.
+            </p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 2H2V4H4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4H22V2H5ZM18 20H6V4H18V20Z" fill="#E67917"/>
+<path d="M12 15C10.16 15 10.01 14.14 10 14H8C8 14.92 8.66 16.55 11 16.92V18H13V16.91C14.97 16.58 16 15.28 16 14C16 12.88 15.48 11 12 11C10 11 10 10.37 10 10C10 9.52 10.7 9 12 9C13.18 9 13.39 9.64 13.4 10.02L14.4 10H15.4C15.4 8.97 14.73 7.53 13 7.12V6H11V7.09C9.03 7.42 8 8.72 8 10C8 11.12 8.52 13 12 13C14 13 14 13.68 14 14C14 14.42 13.38 15 12 15Z" fill="#E67917"/>
+</svg>
+
+            </div>
+            <h2 class="what-title">
+              Deductible
+            </h2>
+            <p class="what-text">
+              Your chosen deductible is the amount you'll pay out of pocket before your insurance coverage kicks in. A higher deductible can lower your premiums but may increase your out-of-pocket cost in the event of a claim.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 22H18C19.1 22 20 21.1 20 20V11C20 9.9 19.1 9 18 9H17V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7V9H6C4.9 9 4 9.9 4 11V20C4 21.1 4.9 22 6 22ZM9 7C9 5.35 10.35 4 12 4C13.65 4 15 5.35 15 7V9H9V7ZM6 11H18V20H13V17.72C13.59 17.37 14 16.73 14 16C14 14.9 13.1 14 12 14C10.9 14 10 14.9 10 16C10.0021 16.349 10.0955 16.6914 10.2709 16.9932C10.4464 17.2949 10.6977 17.5455 11 17.72V20H6V11Z" fill="#E67917"/>
+</svg>
+
+
+            </div>
+            <h2 class="what-title">
+              Home Safety Features
+            </h2>
+            <p class="what-text">
+              Safety features like smoke detectors, security systems and fire-resistant materials can lead to safety-related discounts.
+            </p>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 11H18V5C18 3.9 17.1 3 16 3H4C2.9 3 2 3.9 2 5V18C2 19.65 3.35 21 5 21H19C20.65 21 22 19.65 22 18V12C22 11.45 21.55 11 21 11ZM5 19C4.45 19 4 18.55 4 18V5H16V18C15.9995 18.3406 16.057 18.6787 16.17 19H5ZM20 18C20 18.55 19.55 19 19 19C18.45 19 18 18.55 18 18V13H20V18Z" fill="#E67917"/>
+<path d="M6 7H14V9H6V7ZM6 11H14V13H6V11ZM11 15H14V17H11V15Z" fill="#E67917"/>
+</svg>
+
+            </div>
+            <h2 class="what-title">Claims History</h2>
+            <p class="what-text">
+              A history of frequent claims may lead to higher premiums.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.94 7.68001L19.91 7.59001C19.8657 7.47968 19.7974 7.38062 19.71 7.30001L14.71 2.30001C14.6229 2.21572 14.5213 2.14795 14.41 2.10001L14.32 2.07001C14.2331 2.03963 14.142 2.02277 14.05 2.02001C14.03 2.02001 14.01 2.01001 14 2.01001H6C4.9 2.01001 4 2.91001 4 4.01001V20.01C4 21.11 4.9 22.01 6 22.01H18C19.1 22.01 20 21.11 20 20.01V8.01001C20 8.01001 19.99 7.97001 19.99 7.95001C19.99 7.86001 19.97 7.78001 19.94 7.69001V7.68001ZM6 20V4.00001H13V8.00001C13 8.55001 13.45 9.00001 14 9.00001H18V20H6Z" fill="#E67917"/>
+              <path d="M8 12H10V18H8V12ZM11 10H13V18H11V10ZM14 14H16V18H14V14Z" fill="#E67917"/>
+            </svg>
+            </div>
+            <h2 class="what-title">
+              Credit Score
+            </h2>
+            <p class="what-text">
+              In some states, a higher credit score can result in lower insurance costs.
+            </p>
+          </div>
+        </div>
+        <!-- Item 7 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.4102 10.41C16.5855 10.3311 16.7343 10.2032 16.8386 10.0418C16.943 9.88036 16.9985 9.69223 16.9985 9.50001C16.9985 9.30778 16.943 9.11965 16.8386 8.95822C16.7343 8.79679 16.5855 8.66893 16.4102 8.59001L12.2602 6.75001L10.4202 2.60001C10.3424 2.42379 10.2149 2.27411 10.0532 2.16931C9.89157 2.06451 9.70287 2.00915 9.51023 2.01001C9.11023 1.98001 8.76023 2.23001 8.59023 2.59001L6.74023 6.60001L2.56023 8.61001C2.21023 8.78001 1.99023 9.14001 1.99023 9.53001C1.99023 9.92001 2.23023 10.27 2.58023 10.43L6.73023 12.27L8.57023 16.42C8.64916 16.5953 8.77702 16.744 8.93845 16.8484C9.09988 16.9527 9.28801 17.0082 9.48023 17.0082C9.67246 17.0082 9.86059 16.9527 10.022 16.8484C10.1835 16.744 10.3113 16.5953 10.3902 16.42L12.2302 12.27L16.3802 10.43L16.4102 10.41ZM10.5902 11.09L9.50023 13.53L8.41023 11.09C8.31125 10.8614 8.12888 10.679 7.90023 10.58L5.37023 9.46001L7.92023 8.23001C8.13023 8.13001 8.30023 7.96001 8.39023 7.75001L9.47023 5.42001L10.5702 7.90001C10.6702 8.13001 10.8502 8.31001 11.0802 8.41001L13.5202 9.50001L11.0802 10.59C10.8502 10.69 10.6702 10.87 10.5702 11.1L10.5902 11.09ZM21.6002 16.39L18.8302 15.16L17.6002 12.39C17.5478 12.2738 17.4637 12.1747 17.3576 12.1039C17.2515 12.0332 17.1277 11.9937 17.0002 11.99C16.7302 11.97 16.5002 12.14 16.3902 12.38L15.1602 15.05L12.3802 16.39C12.1502 16.5 12.0002 16.74 12.0002 17C12.0002 17.26 12.1602 17.49 12.4002 17.6L15.1702 18.83L16.4002 21.6C16.4512 21.7196 16.5362 21.8216 16.6446 21.8933C16.7531 21.965 16.8802 22.0033 17.0102 22.0033C17.1403 22.0033 17.2674 21.965 17.3759 21.8933C17.4843 21.8216 17.5693 21.7196 17.6202 21.6L18.8502 18.83L21.6202 17.6C21.8602 17.49 22.0202 17.25 22.0202 16.99C22.0202 16.73 21.8602 16.49 21.6202 16.38L21.6002 16.39ZM7.76023 18.63L6.10023 17.89L5.36023 16.23C5.32857 16.1604 5.27808 16.1011 5.21447 16.0587C5.15086 16.0162 5.07665 15.9925 5.00023 15.99C4.84023 15.98 4.70023 16.08 4.63023 16.22L3.89023 17.82L2.22023 18.62C2.08023 18.69 1.99023 18.83 1.99023 18.99C1.99023 19.15 2.09023 19.29 2.23023 19.35L3.89023 20.09L4.63023 21.75C4.66175 21.8219 4.71353 21.883 4.77924 21.926C4.84495 21.9689 4.92174 21.9918 5.00023 21.9918C5.07873 21.9918 5.15552 21.9689 5.22123 21.926C5.28694 21.883 5.33872 21.8219 5.37023 21.75L6.11023 20.09L7.77023 19.35C7.84212 19.3185 7.90327 19.2667 7.94621 19.201C7.98915 19.1353 8.01201 19.0585 8.01201 18.98C8.01201 18.9015 7.98915 18.8247 7.94621 18.759C7.90327 18.6933 7.84212 18.6415 7.77023 18.61L7.76023 18.63Z" fill="#E67917"/>
+</svg>
+
+            </div>
+            <h2 class="what-title">
+              Add-ons
+            </h2>
+            <p class="what-text">
+              Basic policies cost less but offer limited coverage, while comprehensive policies that fully insure your jewelry, antiques and other valuables provide broader protection at a higher cost.
+            </p>
+          </div>
+        </div>
+        <!-- Item 8 -->
+        <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H11.41L10 2.59C9.62 2.21 9.12 2 8.59 2H4C2.9 2 2 2.9 2 4V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V6H20V18Z" fill="#E67917"/>
+            <path d="M11 8V11H8V13H11V16H13V13H16V11H13V8H11Z" fill="#E67917"/>
+            </svg>
+
+
+            </div>
+            <h2 class="what-title">
+              Bundling
+            </h2>
+            <p class="what-text">
+              Many insurers offer discounts if you bundle your homeowners insurance with other policies, such as auto insurance.
+            </p>
+          </div>
+        </div>
+        <!-- Item 9 -->
+         <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.00017 13H4.00017V20C4.00017 21.1 4.90017 22 6.00017 22H18.0002C19.1002 22 20.0002 21.1 20.0002 20V13H21.0002C21.4002 13 21.7702 12.76 21.9202 12.38C22.0702 12.01 21.9902 11.58 21.7002 11.29L12.7102 2.29C12.6177 2.1973 12.5078 2.12375 12.3868 2.07357C12.2658 2.02339 12.1361 1.99756 12.0052 1.99756C11.8742 1.99756 11.7445 2.02339 11.6235 2.07357C11.5026 2.12375 11.3927 2.1973 11.3002 2.29L2.29017 11.29C2.00017 11.58 1.92017 12.01 2.07017 12.38C2.22017 12.75 2.59017 13 2.99017 13H3.00017ZM10.0002 20V15H14.0002V20H10.0002ZM12.0002 4.41L18.0002 10.41V20H16.0002V15C16.0002 13.9 15.1002 13 14.0002 13H10.0002C8.90017 13 8.00017 13.9 8.00017 15V20H6.00017V10.41L12.0002 4.41Z" fill="#E67917"/>
+</svg>
+            </div>
+            <h2 class="what-title">
+              Age and Condition of Home
+            </h2>
+            <p class="what-text">
+              Older homes or homes in poor condition may have higher premiums due to increased risk of damage or maintenance issues.
+            </p>
+          </div>
+        </div>
+        <!-- Item 10 -->
+         <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 6H16V4C16 2.9 15.1 2 14 2H4C2.9 2 2 2.9 2 4V21C2 21.55 2.45 22 3 22H21C21.55 22 22 21.55 22 21V8C22 6.9 21.1 6 20 6ZM20 20H11V15H7V20H4V4H14V7C14 7.55 14.45 8 15 8H20V20Z" fill="#E67917"/>
+<path d="M16 10H18V12H16V10ZM16 14H18V16H16V14ZM10 6H8V8H6V10H8V12H10V10H12V8H10V6Z" fill="#E67917"/>
+</svg>
+
+            </div>
+            <h2 class="what-title">
+              Proximity to Emergency Services
+            </h2>
+            <p class="what-text">
+              Living near a fire station, police station and other emergency services may lower your rate.
+            </p>
+          </div>
+        </div>
+        <!-- Item 11 -->
+         <div class="col-md-4">
+          <div class="what-item">
+            <div class="icon mb-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.71 2.29002C11.6166 2.19734 11.5058 2.12401 11.3839 2.07425C11.2621 2.02448 11.1316 1.99926 11 2.00002H6.00002C5.73002 2.00002 5.48002 2.11002 5.29002 2.29002L2.29002 5.29002C2.19734 5.38346 2.12401 5.49427 2.07425 5.61611C2.02448 5.73795 1.99926 5.86841 2.00002 6.00002V11C2.00002 11.27 2.11002 11.52 2.29002 11.71L12.29 21.71C12.49 21.91 12.74 22 13 22C13.26 22 13.51 21.9 13.71 21.71L21.71 13.71C21.8027 13.6175 21.8763 13.5076 21.9264 13.3866C21.9766 13.2657 22.0025 13.136 22.0025 13.005C22.0025 12.874 21.9766 12.7444 21.9264 12.6234C21.8763 12.5024 21.8027 12.3925 21.71 12.3L11.71 2.29002ZM13 19.58L4.00002 10.59V6.42002L6.41002 4.01002H10.58L19.58 13.01L12.99 19.6L13 19.58Z" fill="#E67917"/>
+<path d="M8 6C6.9 6 6 6.9 6 8C6 9.1 6.9 10 8 10C9.1 10 10 9.1 10 8C10 6.9 9.1 6 8 6Z" fill="#E67917"/>
+</svg>
+
+
+            </div>
+            <h2 class="what-title">
+              Discounts
+            </h2>
+            <p class="what-text">
+              Inquire about available discounts, such as loyalty discounts, new customer discounts or discounts for home improvements that enhance safety and security.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="testimonial-section">
+    <div class="container-fluid text-center px-0">
+      <h2 class="title mb-3">
+        <span class="text-orange">Real People.</span>
+        <span class="text-green"> Real Coverage.</span>
+      </h2>
+      <p class="subtitle mb-5">
+        Insights from real people who used our platform to find the right health coverage.
+      </p>
+
+      <!-- Swiper -->
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">K.L.</small>
+              <h5 class="content">
+                Working with Benepath is Amazing. Great Team, Great Service!
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">LAUREN H.</small>
+              <h5 class="content">
+                I have really enjoyed working with the Benepath team. They are attentive, professional and truly the
+                best in the business. Looking forward to our continued partnership.
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">LARA S.</small>
+              <h5 class="content">
+                I was able to compare options quickly and found a better rate than expected.
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <small class="name">Susan B.</small>
+              <h5 class="content">
+                It only took a few minutes tot get matched with providers in my area.
+              </h5>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Optional Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="title">FAQ</h2>
+    </div>
+
+    <div class="faq-item">
+      <h4 class="faq-question">
+        What are the four main types of homeowners insurance?
+      </h4>
+      <p class="faq-answer">
+        HO-1 and HO-2 policies provide the most limited type of coverage but are not commonly sold. These days HO-3 policies are standard but homeowners can upgrade to an HO-5 policy if they want replacement cost coverage for their personal belongings.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="faq-item">
+      <h4 class="faq-question">
+        What kind of home insurance should I get?
+      </h4>
+      <p class="faq-answer">
+        HO-3 insurance is standard homeowners insurance and is what most insurance companies sell these days. Beyond this, you can customize your policy by increasing your coverage limits or purchasing additional coverage like service line insurance or equipment breakdown insurance for your appliances.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="faq-item">
+      <h4 class="faq-question">
+        What is not covered by homeowners Insurance?
+      </h4>
+      <p class="faq-answer">
+        Homeowners insurance typically does not cover damage caused by floods, earthquakes, routine wear and tear or intentional acts of damage. Additionally, it may not cover or limit coverage for certain high-value items, such as expensive jewelry, without additional endorsements or riders.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <section class="why-section py-5">
+    <div class="container text-center">
+
+      <!-- Heading -->
+      <div class="section-header mb-5">
+        <h2 class="title">Why Benepath?</h2>
+
+      </div>
+
+      <!-- Why -->
+      <div class="row g-5">
+
+        <!-- Why 1 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-1.png" alt="Why 1" class="img-fluid">
+            </div>
+            <h4 class="step-title">Personalized Matching</h4>
+            <p class="step-text">
+              We connect you with providers based on your profile and preferences.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why 2 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-2.png" alt="Why 2" class="img-fluid">
+            </div>
+            <h4 class="step-title">Competitive Options</h4>
+            <p class="step-text">
+              Access insurance providers offering competitive rates in your area.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why 3 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-3.png" alt="Why 3" class="img-fluid">
+            </div>
+            <h4 class="step-title">Trusted Providers</h4>
+            <p class="step-text">
+              Work with licensed agents and established carriers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Why 3 -->
+        <div class="col-md-3">
+          <div class="step-card">
+            <div class="image-wrapper">
+              <img src="assets/images/why-4.png" alt="Why 4" class="img-fluid">
+            </div>
+
+            <h4 class="step-title">Fast & Free</h4>
+            <p class="step-text">
+              No cost to use. No obligation to enroll.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<section class="cta-section d-flex align-items-center text-center">
+  <div class="container">
+    
+    <h2 class="cta-title mb-4">
+      Ready to find your 
+      <span class="text-orange">best</span> 
+      <span class="text-green">rate?</span>
+    </h2>
+
+    <form class="cta-form mx-auto">
+      <div class="input-group">
+        <input type="text" class="form-control zip-input" placeholder="ZIP Code">
+        <button class="btn btn-cta" type="submit">Compare</button>
+      </div>
+    </form>
+
+    <div class="cta-features mt-4">
+      <span>Free to Use</span>
+      <span class="dot"></span>
+      <span>No Obligation</span>
+      <span class="dot"></span>
+      <span>Takes 2–3 minutes</span>
+    </div>
+
+  </div>
+</section>
+  <section class="insurance-section py-5">
+    <div class="container-fluid text-center px-0">
+
+      <!-- Title -->
+      <h2 class="title">
+        Explore Coverage Across <br />
+        Major Insurance Types
+      </h2>
+
+      <!-- Tabs -->
+      <div class="insurance-tabs">
+        <a href="auto.html" class="tab">Auto</a>
+        <a href="home.html" class="tab active">Home</a>
+        <a href="health.html" class="tab">Health</a>
+        <a href="life.html" class="tab">Life</a>
+        <a href="commercial.html" class="tab">Commercial</a>
+        <a href="medicare.html" class="tab">Medicare</a>
+        <a href="group-health.html" class="tab">Group Health</a>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper insurance-swiper">
+        <div class="swiper-wrapper">
+
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <a href="auto.html" class="insurance-card">
+              <img src="assets/images/auto-img.png" alt="Auto Insurance" />
+              <h5>Auto</h5>
+              <p>Connect with local drivers looking for coverage.</p>
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <a href="home.html" class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/home-img.jpg" alt="Home Insurance" />
+              <h5>Home</h5>
+              <p>Our real-time home leads connect you with local homeowners.</p>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="health.html" class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/health-img.png" alt="Health Insurance" />
+              <h5>Health</h5>
+              <p>U65 leads connect you with individuals seeking coverage.</p>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="life.html" class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/life-img.png" alt="Life Insurance" />
+              <h5>Life</h5>
+              <p>Life insurance leads connect you with high-intent consumers looking for life insurance quotes.</p>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="commercial.html" class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/commercial-img.png" alt="Commercial Insurance" />
+              <h5>Commercial</h5>
+              <p>Businesses of all sizes are looking for commercial auto coverage, BOP, workers’ compensation and more.</p>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="medicare.html" class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/medicare-img.png" alt="Medicare Insurance" />
+              <h5>Medicare</h5>
+              <p>Connect with seniors and retirees exploring Medicare plans and supplemental coverage.</p>
+            </div>
+          </a>
+
+           <!-- Card 6 -->
+          <a href="group-health.html" class="swiper-slide">
+            <div class="insurance-card">
+              <img src="assets/images/group-health-img.png" alt="Group Health Insurance" />
+              <h5>Group Health</h5>
+              <p>Connect with businesses looking for employee health coverage and benefits.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer-section">
+    <div class="container">
+
+      <div class="row gy-4">
+        <div class="col-12">
+          <a href="index.html"><img src="assets/images/logo.svg" alt="Benepath" class="footer-logo mb-4"></a>
+
+        </div>
+        <!-- Logo + Products -->
+        <div class="col-lg-4 col-6">
+
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="auto.html">Auto</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="life.html">Life</a></li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="medicare.html">Medicare</a></li>
+            <li><a href="group-health.html">Group Health</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-lg-3 col-6">
+          <h6 class="footer-title">Company</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+          <!-- Social -->
+          <div class="mt-5">
+            <h6 class="footer-title">Follow Us</h6>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/benepathleads" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_557_4860)">
+                  <path d="M13.5635 10.125L14.0634 6.86742H10.9377V4.75348C10.9377 3.86227 11.3743 2.99355 12.7742 2.99355H14.1952V0.220078C14.1952 0.220078 12.9057 0 11.6728 0C9.09863 0 7.41605 1.56023 7.41605 4.38469V6.86742H4.55469V10.125H7.41605V18H10.9377V10.125H13.5635Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_557_4860">
+                  <rect width="18" height="18" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+</a>
+              <a href="https://www.youtube.com/@benepath1624" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6239 4.98027C17.4169 4.20079 16.8069 3.5869 16.0325 3.37857C14.6288 3 9 3 9 3C9 3 3.37127 3 1.96752 3.37857C1.19308 3.58693 0.583143 4.20079 0.376127 4.98027C0 6.39312 0 9.34091 0 9.34091C0 9.34091 0 12.2887 0.376127 13.7015C0.583143 14.481 1.19308 15.0693 1.96752 15.2777C3.37127 15.6562 9 15.6562 9 15.6562C9 15.6562 14.6287 15.6562 16.0325 15.2777C16.8069 15.0693 17.4169 14.481 17.6239 13.7015C18 12.2887 18 9.34091 18 9.34091C18 9.34091 18 6.39312 17.6239 4.98027ZM7.15908 12.0173V6.66454L11.8636 9.34097L7.15908 12.0173Z" fill="white"/>
+                </svg>
+                </a>
+              <a href="https://www.linkedin.com/company/benepath-com/" target="_blank"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.85826 16.5H1.74777V6.48549H4.85826V16.5ZM3.30134 5.11942C2.30692 5.11942 1.5 4.29576 1.5 3.30134C1.5 2.82254 1.69085 2.36719 2.02902 2.02902C2.36719 1.69085 2.82589 1.5 3.30134 1.5C3.77679 1.5 4.23549 1.69085 4.57366 2.02902C4.91183 2.36719 5.10268 2.82589 5.10268 3.30134C5.10268 4.29576 4.29576 5.11942 3.30134 5.11942ZM16.4967 16.5H13.3929V11.625C13.3929 10.4632 13.3694 8.97321 11.7757 8.97321C10.1585 8.97321 9.91071 10.2355 9.91071 11.5413V16.5H6.80357V6.48549H9.78683V7.85156H9.83036C10.2455 7.06473 11.26 6.23437 12.7734 6.23437C15.9208 6.23437 16.5 8.30692 16.5 10.9989V16.5H16.4967Z" fill="white"/>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- Bottom Text -->
+      <div class="footer-bottom mt-5">
+        <p>
+          As part of our ongoing effort to provide you with the best possible service,
+          SmartFinancial and its Service Providers may monitor and/or record and retain
+          all activity on this website and its applicable links, for informational and
+          quality control purposes.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</html>
