@@ -245,7 +245,7 @@ img {
         transition-duration: 0.3s;
         padding: 6px 0;
         display: block;
-        &:hover {
+        &:hover, &.active  {
           color: var(--secondary);
           transform: translateY(-2px);
         }
@@ -292,8 +292,12 @@ img {
   .dropdown-item {
      padding: 16px 20px;
      &:focus, &:hover {
-       background-color: #f8f9fa;
        color: var(--secondary);
+       background-color: #FFF;
+     }
+     &.active {
+      color: var(--secondary);
+      background-color: #FFF;
      }
   }
 }
@@ -340,7 +344,7 @@ img {
   .spacer {
     height: 448px;
     @include smmax {
-      height: 340px;
+      height: 350px;
     }
   }
   .hero-content {
@@ -368,6 +372,9 @@ img {
     margin-bottom: 24px;
     @include lgmax {
       font-size: 28px;
+      text-align: left;
+    }
+    @include smmax {
       text-align: center;
     }
   }
@@ -388,7 +395,7 @@ img {
         flex-wrap: wrap;
       }
       &-item {
-        @include lgmax {
+        @include smmax {
           // Default → full width
           flex: 0 0 100%;
 
@@ -1323,7 +1330,9 @@ padding: 72px 120px;
         transition: 0.3s;
         font-weight: 700;
         font-size: 20px;
-
+        @include mdmax {
+          padding: 0 1rem;
+        }
         &:hover {
           background: darken(#f57c00, 8%);
         }
