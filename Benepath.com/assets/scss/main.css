@@ -348,6 +348,8 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+  border: 2px solid #FFF;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 780px) {
   .hero-section .product-tab-section .nav-item a.nav-link {
@@ -364,6 +366,10 @@ img {
     width: 50px;
     height: 50px;
   }
+}
+.hero-section .product-tab-section .nav-item a.nav-link:hover {
+  border: 2px solid var(--secondary);
+  transform: scale(1.1);
 }
 .hero-section .product-tab-section .nav-item a.nav-link.active {
   background: #fff;
@@ -520,7 +526,7 @@ img {
 @media screen and (max-width: 1040px) {
   .steps-section,
   .why-section {
-    padding: 48px 24px;
+    padding: 48px;
   }
 }
 .steps-section .section-header .title,
@@ -635,7 +641,7 @@ img {
 }
 .testimonial-section .testimonial-swiper {
   padding-bottom: 50px;
-  padding: 0 120px;
+  padding: 15px 120px;
 }
 @media screen and (max-width: 1040px) {
   .testimonial-section .testimonial-swiper {
@@ -655,6 +661,9 @@ img {
   padding: 24px;
   text-align: center;
   transition: all 0.3s ease;
+}
+.testimonial-section .testimonial-card:hover {
+  transform: translateY(-8px);
 }
 @media screen and (min-width: 1040px) {
   .testimonial-section .testimonial-card {
@@ -769,7 +778,7 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .insurance-section .insurance-swiper {
-    padding: 0 24px;
+    padding: 0 48px;
   }
 }
 .insurance-section .swiper-slide {
@@ -991,13 +1000,18 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .about-page .hero-section .hero-content {
-    padding: 48px 24px;
+    padding: 48px 36px;
   }
 }
 .about-page .hero-section .hero-content h1 {
   color: var(--neutral);
   font-size: 38px;
   text-align: center;
+}
+@media screen and (max-width: 1040px) {
+  .about-page .hero-section .hero-content h1 {
+    font-size: 28px;
+  }
 }
 .about-page .hero-section .hero-image {
   position: static;
@@ -1012,7 +1026,7 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .about-page .expertise-section {
-    padding: 48px 24px;
+    padding: 48px 36px;
   }
 }
 @media screen and (max-width: 1040px) {
@@ -1037,12 +1051,10 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .about-page .what-section {
-    padding: 48px 24px;
+    padding: 48px 36px;
   }
 }
 .about-page .what-section .title {
-  font-size: 38px;
-  font-weight: 700;
   color: var(--neutral);
   margin-bottom: 48px;
   text-align: center;
@@ -1066,6 +1078,11 @@ img {
   color: var(--neutral);
   margin-bottom: 8px;
 }
+@media screen and (max-width: 992px) {
+  .about-page .what-section .what-item .what-title {
+    font-size: 22px;
+  }
+}
 .about-page .what-section .what-item .what-text {
   font-size: 14px;
   color: var(--neutral);
@@ -1077,7 +1094,7 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .about-page .partners-section {
-    padding: 48px 24px;
+    padding: 48px 36px;
   }
 }
 .about-page .partners-section .title {
@@ -1108,7 +1125,7 @@ img {
   max-width: 100%;
 }
 .product-page .product-hero-section .product-hero-content .form-block {
-  background: url("../images/section-hero-compare-bg.jpg") no-repeat;
+  background: url("../images/section-hero-compare-bg.jpg") no-repeat bottom center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -1116,7 +1133,7 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .product-page .product-hero-section .product-hero-content .form-block {
-    padding: 48px 24px !important;
+    padding: 48px 36px !important;
   }
 }
 .product-page .product-hero-section .product-hero-content h1 {
@@ -1146,7 +1163,7 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .product-page .what-section {
-    padding: 48px 24px;
+    padding: 48px;
   }
 }
 .product-page .what-section .title {
@@ -1160,6 +1177,7 @@ img {
   .product-page .what-section .title {
     margin: auto auto 24px;
     max-width: 320px;
+    font-size: 28px;
   }
 }
 .product-page .what-section .col-md-4 {
@@ -1182,6 +1200,11 @@ img {
   color: var(--neutral);
   margin-bottom: 8px;
 }
+@media screen and (max-width: 992px) {
+  .product-page .what-section .what-item .what-title {
+    font-size: 22px;
+  }
+}
 .product-page .what-section .what-item .what-text {
   font-size: 14px;
   color: var(--neutral);
@@ -1198,7 +1221,7 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .product-page .faq-section {
-    padding: 48px 24px;
+    padding: 48px;
   }
 }
 .product-page .faq-section .faq-title {
@@ -1211,10 +1234,15 @@ img {
   margin: 0 auto 2rem;
 }
 .product-page .faq-section .faq-item .faq-question {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
   color: var(--neutral);
   margin-bottom: 0.75rem;
+}
+@media screen and (max-width: 992px) {
+  .product-page .faq-section .faq-item .faq-question {
+    font-size: 22px;
+  }
 }
 .product-page .faq-section .faq-item .faq-answer {
   font-size: 1rem;
@@ -1295,13 +1323,23 @@ img {
 }
 
 .cta-section {
-  min-height: 420px;
   background: linear-gradient(90deg, #6b4b3e, #5a5f6a);
+  padding: 72px 120px;
   color: #fff;
 }
+@media screen and (max-width: 1040px) {
+  .cta-section {
+    padding: 48px;
+  }
+}
 .cta-section .cta-title {
-  font-size: 2.8rem;
+  font-size: 38px;
   font-weight: 700;
+}
+@media screen and (max-width: 992px) {
+  .cta-section .cta-title {
+    font-size: 28px;
+  }
 }
 .cta-section .cta-title .text-orange {
   color: #f57c00;
