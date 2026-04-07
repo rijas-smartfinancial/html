@@ -778,7 +778,7 @@ img {
 }
 @media screen and (max-width: 1040px) {
   .insurance-section .insurance-swiper {
-    padding: 0 48px;
+    padding: 12px 48px;
   }
 }
 .insurance-section .swiper-slide {
