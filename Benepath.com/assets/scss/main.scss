@@ -1430,7 +1430,9 @@ padding: 72px 120px;
          font-weight: 700;
         font-size: 20px;
         color: #555;
-
+ @include mdmax {
+          padding: 1.2rem 1rem;
+        }
         &:focus {
           box-shadow: none;
         }
@@ -1444,7 +1446,9 @@ padding: 72px 120px;
         padding: 0 2rem;
         border: none;
         transition: 0.3s;
-
+        @include mdmax {
+          padding: 0 1rem;
+        }
         &:hover {
           background: darken(#f57c00, 8%);
         }
