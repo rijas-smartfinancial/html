@@ -225,6 +225,9 @@ img {
   position: relative;
   z-index: 999;
 }
+.navbar-nav .nav-link.active {
+  color: var(--secondary);
+}
 
 .navbar .dropdown:hover .dropdown-menu {
   opacity: 1;
@@ -842,8 +845,8 @@ img {
   text-decoration: none;
   transition: 0.3s;
 }
-.footer-section .footer-links li a:hover {
-  color: #84cc16;
+.footer-section .footer-links li a:hover, .footer-section .footer-links li a.active {
+  color: var(--secondary);
 }
 .footer-section .social-icons {
   display: flex;

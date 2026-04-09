@@ -306,6 +306,9 @@ img {
   .nav-link {
     position: relative;
     z-index: 999;
+    &.active {
+      color: var(--secondary);
+    }
   }
 }
 .navbar .dropdown:hover .dropdown-menu {
@@ -909,8 +912,8 @@ img {
         text-decoration: none;
         transition: 0.3s;
 
-        &:hover {
-          color: #84cc16;
+        &:hover, &.active {
+          color: var(--secondary);
         }
       }
     }
