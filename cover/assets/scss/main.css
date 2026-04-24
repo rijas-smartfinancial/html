@@ -385,12 +385,12 @@ p {
 .hero.home-hero .home-page-hero-h1 {
   font-size: 64px;
   max-width: 910px;
-  margin: auto;
+  margin: 12px auto;
 }
 @media screen and (max-width: 992px) {
   .hero.home-hero .home-page-hero-h1 {
     font-size: 36px;
-    margin: 0 36px;
+    margin: 12px 36px;
   }
 }
 .hero.home-hero .quote-forms {

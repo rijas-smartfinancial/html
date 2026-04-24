@@ -472,10 +472,10 @@ p {
     .home-page-hero-h1 {
       font-size: 64px;
       max-width: 910px;
-      margin: auto;
+      margin: 12px auto;
       @include mdmax {
         font-size: 36px;
-        margin: 0 36px;
+        margin: 12px 36px;
       }
     }
 
