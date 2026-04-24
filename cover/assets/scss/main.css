@@ -186,6 +186,7 @@ p {
 @media screen and (max-width: 992px) {
   .hero .hero-bullets {
     margin-bottom: 1.25rem;
+    gap: 0;
   }
 }
 .hero .hero-bullets li {
@@ -198,7 +199,7 @@ p {
 }
 @media screen and (max-width: 992px) {
   .hero .hero-bullets li {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .hero .hero-bullets li i {
@@ -390,7 +391,7 @@ p {
 @media screen and (max-width: 992px) {
   .hero.home-hero .home-page-hero-h1 {
     font-size: 36px;
-    margin: 12px 36px;
+    margin: 12px 24px;
   }
 }
 .hero.home-hero .quote-forms {
