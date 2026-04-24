@@ -1,0 +1,101 @@
+.about-hero {
+    max-width: 910px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero .about-hero-bullets {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+    justify-content: center;
+}
+
+.hero .about-hero-bullets li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    /*font-weight: 500;*/
+    color: black;
+}
+
+.hero .about-hero-bullets i {
+    font-size: 28px;
+    color: #e8563f;
+}
+
+.checked-step-item {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 15px;
+    font-size: 18px;
+    color: #000;
+}
+
+.checked-step-item i {
+    font-size: 28px;
+    color: #e8563f;
+}
+
+.features-section .about-features-graphic {
+    width: 100%;
+    max-width: 589px;
+}
+
+.features-section .steps-list .about-step-item p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+
+.about-trust-badges {
+    padding: 2rem 0 3rem;
+}
+
+.about-trust-badges .badge-item {
+    text-align: center;
+    padding: 1.25rem 0.75rem;
+}
+
+
+.about-trust-badges .badge-item .badge-icon {
+    font-size: 30px;
+    margin: 0 auto 10px;
+    color: #e8563f;
+}
+
+.about-trust-badges .badge-item .badge-icon i {
+    background-color: #fae6e2;
+    border: 15px solid #fae6e2;
+    border-radius: 45px;
+}
+
+.about-trust-badges .badge-item h6 {
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1a1a2e;
+    position: relative;
+}
+
+.about-trust-badges .badge-item p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+    .hero .about-hero-bullets li {
+        font-size: 16px;
+    }
+
+    .about-trust-badges .badge-item h6 {
+        font-size: 28px !important;
+    }
+}

@@ -1,0 +1,153 @@
+.home-hero {
+    max-width: 910px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero .home-hero .quote-forms {
+    max-width: 700px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.hero .home-hero .hero-bullets {
+    justify-content: center;
+}
+
+.hero .home-hero .hero-phone {
+    margin-top: 20px;
+}
+
+.insurance-type-options ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.insurance-type-options ul li {
+    margin: 0 10px;
+}
+
+.insurance-type-options ul a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #FAE6E2;
+    color: #1A1A2E;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.insurance-type-options ul a.active {
+    background: #e44f2d;
+    color: #FFFFFF;
+}
+
+.insurance-type-options ul a:hover {
+    background: #e44f2d;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.rates-section {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.rates-section p {
+    font-size: 18px;
+    color: #000;
+}
+
+.rates-section h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.rates-section img {
+    max-width: 100%;
+}
+
+.blog-item-wrapper {
+    margin: 0 0 60px 0;
+}
+
+.blog-item-wrapper .blog-item {
+    border-radius: 20px;
+    box-shadow: 0 0 12px #cccccc;
+    font-size: 18px;
+    background: #ffffff;
+    margin-bottom: 15px;
+}
+
+.blog-item-wrapper .blog-item .blog-header {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 175px;
+    border-radius: 20px 20px 0 0;
+}
+
+.blog-item-wrapper .blog-item .content {
+    padding: 25px;
+}
+
+.blog-item-wrapper .blog-item .content p {
+    min-height: 60px;
+}
+
+.blog-item-wrapper .blog-item .content h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.blog-item-wrapper .blog-item .content a {
+    color: #e44f2d;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .blog-item-wrapper {
+        margin: 0 0 40px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 36px;
+    }
+
+    .cta-section > .container > p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .insurance-type-options ul li {
+        flex: 1 1 auto; /* or 1 1 auto */
+        min-width: 0;
+    }
+
+    .hero .home-hero .quote-forms {
+        padding: 25px 15px;
+    }
+
+    .quote-forms .hero-form {
+        display: block;
+    }
+
+    .quote-forms .hero-form input,
+    .quote-forms .hero-form button {
+        flex: 1 1 0;
+        min-width: 100%;
+    }
+
+    .insurance-type-options ul a {
+        width: auto;
+    }
+}
