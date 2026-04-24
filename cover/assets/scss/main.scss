@@ -1581,6 +1581,18 @@ em {
       margin: 0 12px;
     }
   }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000;
+    @include mdmax {
+      font-size: 28px;
+    }
+  }
+  p {
+    margin-bottom: 48px;
+  }
   .coverage-card {
     border-radius: 16px;
     overflow: hidden;
@@ -1685,7 +1697,23 @@ em {
 }
 .auto-insurance-section {
   margin-bottom: 24px;
+.section-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000;
+    @include mdmax {
+      font-size: 28px;
+    }
+  }
 
+  .section-subtitle {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    @include mdmax {
+      font-size: 16px;
+    }
+  }
   .section-block {
     background: #f9fafb;
     border-radius: 24px;
@@ -1764,7 +1792,23 @@ em {
   @include mdmax {
     padding: 48px 12px;
   }
+.section-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000;
+    @include mdmax {
+      font-size: 28px;
+    }
+  }
 
+  .section-subtitle {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    @include mdmax {
+      font-size: 16px;
+    }
+  }
   .coverage-card {
     background: #fff;
     border-radius: 20px;
@@ -1831,6 +1875,7 @@ em {
 .common-auto-coverage-section {
   background: #f9fafb;
   border-radius: 12px;
+
 
   .section-desc {
     max-width: 720px;
@@ -1959,6 +2004,75 @@ em {
         }
       }
     }
+  }
+}
+.not-covered {
+  background: #F9FAFB;
+  border-radius: 24px;
+  padding: 60px 48px;
+  @include mdmax {
+    padding: 48px 24px;
+    margin: 0 12px;
+  }
+  .section-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    @include mdmax {
+      font-size: 22px;
+    }
+  }
+
+  .section-desc {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+
+  .exclude-card {
+    text-align: center;
+
+    .img-wrapper {
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+    }
+
+    h6 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1e1e2f;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .bottom-note {
+    font-size: 0.95rem;
+    color: #444;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
