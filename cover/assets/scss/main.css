@@ -7,20 +7,6 @@
   --link: #666;
 }
 
-* {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  font-family: "Open sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 18px;
-  color: #000;
-}
-body .main-page {
-  padding-top: 80px;
-}
-
 @font-face {
   font-family: "CabinetGrotesk";
   src: url("../../assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
@@ -42,19 +28,28 @@ body .main-page {
   font-style: normal;
   font-display: swap;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+body .main-page {
+  padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 900;
   color: #1a1a2e;
 }
 
 p {
-  font-family: "Open sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 28px;
   font-size: 18px;
 }
@@ -64,6 +59,14 @@ p {
   }
 }
 
+em {
+  color: #e00e0e;
+}
+
+.hide-options {
+  display: none;
+}
+
 .top-nav {
   background: #fffeff;
 }
@@ -71,7 +74,7 @@ p {
 .navbar {
   padding-top: 0.85rem;
   padding-bottom: 0.85rem;
-  background: #fff;
+  background: #ffffff;
 }
 .navbar .navbar-toggler {
   border: none;
@@ -85,7 +88,7 @@ p {
 .navbar .nav-link {
   font-weight: 400;
   font-size: 18px;
-  color: #111;
+  color: #111111;
   position: relative;
 }
 .navbar .nav-link::before {
@@ -109,16 +112,15 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background-color: #e8563f;
-  color: #fff;
+  background-color: #e44f2d;
+  color: #ffffff;
   font-weight: 400;
   font-size: 18px;
-  padding: 0.55rem 1.5rem;
+  padding: 0.55rem 1.2rem;
   border-radius: 50rem;
   text-decoration: none;
   border: none;
   transition: background-color 0.2s;
-  padding: 0.55rem 1.2rem;
 }
 @media screen and (max-width: 992px) {
   .navbar .nav-link.btn-phone {
@@ -127,11 +129,11 @@ p {
 }
 .navbar .nav-link.btn-phone:hover {
   background-color: #c44a37;
-  color: #fff;
+  color: #ffffff;
 }
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #e8563f;
+  color: #e44f2d;
 }
 
 .hero {
@@ -141,11 +143,12 @@ p {
 @media screen and (max-width: 992px) {
   .hero {
     padding: 1.5rem 0;
+    text-align: center;
   }
 }
 .hero .hero-tag {
   display: inline-block;
-  color: #e8563f;
+  color: #e44f2d;
   font-weight: bold;
   padding: 0.4rem 1.1rem 0.4rem 0;
 }
@@ -163,14 +166,13 @@ p {
 }
 .hero .hero-subtitle {
   font-size: 24px;
-  color: black;
+  color: #000000;
   margin-bottom: 24px;
-  font-family: "Open sans", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media screen and (max-width: 992px) {
   .hero .hero-subtitle {
     font-size: 14px;
-    margin-bottom: 12px;
     margin: 12px 24px;
     line-height: normal;
   }
@@ -185,8 +187,9 @@ p {
 }
 @media screen and (max-width: 992px) {
   .hero .hero-bullets {
-    margin-bottom: 1.25rem;
     gap: 0;
+    margin: 0 auto 1.25rem;
+    justify-content: center;
   }
 }
 .hero .hero-bullets li {
@@ -194,8 +197,7 @@ p {
   align-items: center;
   gap: 0.5rem;
   font-size: 18px;
-  /*font-weight: 500;*/
-  color: black;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   .hero .hero-bullets li {
@@ -204,7 +206,7 @@ p {
 }
 .hero .hero-bullets li i {
   font-size: 28px;
-  color: #e8563f;
+  color: #e44f2d;
 }
 .hero .hero-image-wrapper {
   position: relative;
@@ -214,7 +216,7 @@ p {
   max-width: 589px;
 }
 .hero .text-highlight {
-  color: #e8563f;
+  color: #e44f2d;
   position: relative;
   display: inline-block;
 }
@@ -224,7 +226,7 @@ p {
   right: -4px;
   bottom: 2px;
   height: 6px;
-  background: #e8563f;
+  background: #e44f2d;
   border-radius: 3px;
   opacity: 0.25;
   z-index: -1;
@@ -234,13 +236,14 @@ p {
 }
 .hero .hero-form {
   display: flex;
-  gap: 0.75rem;
+  gap: 24px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 @media screen and (max-width: 992px) {
   .hero .hero-form {
     flex-direction: column;
+    gap: 12px;
   }
 }
 .hero .hero-form .form-control::-moz-placeholder {
@@ -252,17 +255,9 @@ p {
   font-weight: 400;
 }
 .hero .hero-form .form-control:focus {
-  border-color: #e8563f;
+  border-color: #e44f2d;
   box-shadow: 0 0 0 0.2rem rgba(232, 86, 63, 0.12);
   outline: none;
-}
-.hero .hero-form .form-control::-moz-placeholder {
-  color: #111111;
-  font-weight: 400;
-}
-.hero .hero-form .form-control::placeholder {
-  color: #111111;
-  font-weight: 400;
 }
 .hero .quote-forms {
   background: #ffffff;
@@ -279,21 +274,20 @@ p {
 }
 .hero .quote-forms h5 {
   color: #e44f2d;
-  font-family: "Open sans", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 24px;
 }
 @media screen and (max-width: 992px) {
   .hero .quote-forms h5 {
-    font-size: 18px;
-    margin-bottom: 12px;
+    font-size: 20px;
+    letter-spacing: -1px;
   }
 }
 .hero .quote-forms form {
   display: flex;
   flex-direction: row;
-  /*justify-content: space-between;*/
   gap: 15px;
 }
 .hero .quote-forms input,
@@ -308,8 +302,7 @@ p {
 .hero .quote-forms input {
   width: calc(45% - 15px);
   border-color: #bbbaba;
-  /*background-image: url('../../assets/images/marker.png');*/
-  background-image: url("../../assets/images/icon/location.svg");
+  background-image: url("../../assets/images/icon/location-black.svg");
   background-repeat: no-repeat;
   background-position: 12px center;
   background-size: 24px 24px;
@@ -322,9 +315,8 @@ p {
   }
 }
 .hero .quote-forms button {
-  width: 55%;
+  width: 52%;
   background: #e44f2d;
-  /*border-color: #E44F2D;*/
   font-weight: 400;
   border: none;
   height: 60px;
@@ -427,13 +419,13 @@ p {
   }
 }
 .hero.home-hero .insurance-type-options ul li a {
-  font-family: "CabinetGrotesk", sans-serif;
+  font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 4px 20px;
-  background: #fff;
+  background: #ffffff;
   color: #1a1a2e;
   border-radius: 30px;
   font-weight: 400;
@@ -483,15 +475,18 @@ p {
     top: 8px;
   }
 }
-.hero.insurance-hero .insurance-page-hero-h1 {
+.hero.hero-insurance h1 {
   font-size: 54px;
   max-width: 910px;
 }
 @media screen and (max-width: 992px) {
-  .hero.insurance-hero .insurance-page-hero-h1 {
+  .hero.hero-insurance h1 {
     font-size: 36px;
-    margin: 0 36px;
+    margin: 0;
   }
+}
+.hero.hero-insurance .quote-forms {
+  padding: 36px;
 }
 
 .main-section {
@@ -512,13 +507,14 @@ p {
 }
 .main-section .section-subtitle {
   font-size: 24px;
-  color: #000;
+  color: #000000;
   margin-bottom: 2.5rem;
-  font-family: "Open sans", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media screen and (max-width: 992px) {
   .main-section .section-subtitle {
     font-size: 14px;
+    margin-bottom: 24px;
   }
 }
 
@@ -564,7 +560,7 @@ p {
 }
 .features-section .todays-best-car:hover {
   background-color: #e44f2d;
-  color: #fff;
+  color: #ffffff;
 }
 .features-section .steps-list .step-item {
   display: flex;
@@ -590,7 +586,7 @@ p {
   color: #1a1a2e;
 }
 .features-section .steps-list .step-item p {
-  color: #555;
+  color: #555555;
   margin-bottom: 0;
   line-height: 1.6;
 }
@@ -642,7 +638,7 @@ p {
   margin: auto;
   width: 120px;
   height: 3px;
-  background: #e3361b;
+  background: #e44f2d;
   left: calc(50% - 60px);
   transform: scaleX(0);
   transform-origin: left;
@@ -651,17 +647,17 @@ p {
 .trust-badges .badge-item .badge-icon {
   font-size: 36px;
   margin: 0 auto 12px;
-  color: #e8563f;
+  color: #e44f2d;
 }
 .trust-badges .badge-item p {
   font-size: 18px;
-  color: #000;
+  color: #000000;
   margin-bottom: 0;
   line-height: 1.4;
 }
 
 .content-section .content-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 0.75rem;
   padding: 2.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -673,7 +669,7 @@ p {
 .content-section .content-card p {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #555;
+  color: #555555;
 }
 .content-section .insurance-type-cards {
   display: flex;
@@ -681,7 +677,7 @@ p {
   flex-wrap: wrap;
 }
 .content-section .insurance-type-cards .type-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #f0f0f0;
   border-radius: 0.75rem;
   padding: 0;
@@ -719,6 +715,26 @@ p {
     padding: 2.25rem 0 1.25rem;
   }
 }
+.blog-section .section-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #000000;
+}
+@media screen and (max-width: 992px) {
+  .blog-section .section-title {
+    font-size: 28px;
+  }
+}
+.blog-section .section-subtitle {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .blog-section .section-subtitle {
+    font-size: 16px;
+  }
+}
 .blog-section .blog-label {
   color: #e44f2d;
   font-weight: 700;
@@ -730,7 +746,7 @@ p {
   font-size: 48px;
   font-weight: 900;
   margin-bottom: 1.25rem;
-  color: #000;
+  color: #000000;
   line-height: 1.2;
   text-align: center;
 }
@@ -750,7 +766,7 @@ p {
   color: #1a1a2e;
 }
 .blog-section .blog-content p {
-  color: #000;
+  color: #000000;
 }
 .blog-section .blog-content ul {
   padding-left: 1.25rem;
@@ -818,7 +834,7 @@ p {
 .cta-section {
   padding: 5rem 0;
   text-align: center;
-  background: linear-gradient(180deg, #fff 0%, #f3f3f3 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
 }
 .cta-section h2 {
   font-size: 48px;
@@ -860,7 +876,7 @@ p {
   color: #e44f2d;
 }
 .cta-section .cta-phone-bar a:hover {
-  color: #e8563f;
+  color: #e44f2d;
 }
 .cta-section .cta-phone-bar .phone-hours {
   font-size: 18px;
@@ -892,9 +908,10 @@ p {
 }
 .bottom-quote-form select {
   width: calc(30% - 15px);
-  background: #ffffff;
+  background-color: #ffffff;
   -webkit-appearance: none;
-  -moz-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-color: #bbbaba;
   background-image: url("../../assets/images/down-arrow.svg");
   background-repeat: no-repeat;
@@ -925,7 +942,6 @@ p {
 .bottom-quote-form button {
   background: #e44f2d;
   border-color: #e44f2d;
-  /*font-weight: bold;*/
   width: calc(40% - 15px);
   height: 60px;
 }
@@ -941,7 +957,7 @@ p {
 
 .site-footer {
   padding: 4rem 0 2rem;
-  background: #fff;
+  background: #ffffff;
   border-top: 1px solid #f0f0f0;
 }
 .site-footer .footer-logo {
@@ -949,7 +965,7 @@ p {
   margin-bottom: 1rem;
 }
 .site-footer .footer-heading {
-  font-family: "Open sans", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -964,16 +980,15 @@ p {
 .site-footer .footer-links li {
   margin-bottom: 0.45rem;
   font-size: 18px;
-  color: #555;
+  color: #555555;
 }
 .site-footer .footer-links a {
   font-size: 18px;
-  color: #555;
+  color: #000000;
   text-decoration: none;
-  color: black;
 }
 .site-footer .footer-links a:hover {
-  color: #e8563f;
+  color: #e44f2d;
 }
 .site-footer .footer-bottom {
   margin-top: 2.5rem;
@@ -982,9 +997,8 @@ p {
 }
 .site-footer .footer-bottom p {
   font-size: 18px;
-  color: #555;
+  color: #000000;
   line-height: 1.65;
-  color: black;
 }
 
 .action-button {
@@ -1051,21 +1065,13 @@ p {
 }
 .california-privacy-right .option-input-group input[type=radio] + label:hover {
   background: #01baef;
-  color: #fff;
+  color: #ffffff;
   box-shadow: 0 0 10px #ccc;
 }
 .california-privacy-right .option-input-group input[type=radio]:checked + label {
-  color: #fff;
+  color: #ffffff;
   background: #01baef;
   box-shadow: none;
-}
-
-em {
-  color: #e00e0e;
-}
-
-.hide-options {
-  display: none;
 }
 
 #ccpa-form .form-group {
@@ -1087,7 +1093,7 @@ em {
 .insurance-section .section-title {
   font-size: 36px;
   font-weight: 900;
-  color: #000;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   .insurance-section .section-title {
@@ -1100,7 +1106,7 @@ em {
 }
 .insurance-section .sub-heading {
   font-weight: 700;
-  color: #000;
+  color: #000000;
 }
 .insurance-section .info-card {
   text-align: center;
@@ -1131,12 +1137,12 @@ em {
   }
 }
 .insurance-section .bottom-text {
-  color: #666;
+  color: #666666;
 }
 .insurance-section .key-takeaway {
   max-width: 650px;
   margin: 0 auto;
-  color: #333;
+  color: #333333;
 }
 .insurance-section .key-takeaway strong {
   display: block;
@@ -1159,7 +1165,7 @@ em {
 .insurance-reasons .section-title {
   font-size: 36px;
   font-weight: 900;
-  color: #000;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   .insurance-reasons .section-title {
@@ -1172,7 +1178,7 @@ em {
   margin: 0 auto;
 }
 .insurance-reasons .reason-card {
-  background: #fff;
+  background: #ffffff;
   padding: 30px 25px;
   border-radius: 16px;
   height: 100%;
@@ -1260,7 +1266,7 @@ em {
 .compare-section .header-wrap h2 {
   font-size: 36px;
   font-weight: 900;
-  color: #111;
+  color: #111111;
   margin-bottom: 16px;
 }
 @media screen and (max-width: 992px) {
@@ -1270,19 +1276,19 @@ em {
 }
 .compare-section .header-wrap .desc {
   font-size: 16px;
-  color: #555;
+  color: #555555;
   margin-bottom: 20px;
 }
 .compare-section .header-wrap .sub-title {
   font-size: 18px;
   font-weight: 700;
-  color: #222;
+  color: #222222;
 }
 .compare-section .compare-grid {
   margin: 0 auto;
 }
 .compare-section .compare-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 24px;
   padding: 28px 24px 30px;
   text-align: center;
@@ -1385,7 +1391,7 @@ em {
 .how-often-section .items-row .item h6 {
   font-size: 28px;
   font-weight: 800;
-  color: #222;
+  color: #222222;
 }
 .how-often-section .footer-note {
   margin: 0 auto;
@@ -1434,7 +1440,7 @@ em {
   margin: 0 auto 50px;
 }
 .mistakes-section .mistake-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 22px;
   padding: 40px 28px;
   text-align: center;
@@ -1483,7 +1489,7 @@ em {
 .coverage-section .section-title {
   font-size: 36px;
   font-weight: 900;
-  color: #000;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   .coverage-section .section-title {
@@ -1540,7 +1546,7 @@ em {
   margin: auto;
   width: 40px;
   height: 3px;
-  background: #e3361b;
+  background: #e44f2d;
   left: calc(50% - 20px);
   transform: scaleX(0);
   transform-origin: left;
@@ -1557,29 +1563,7 @@ em {
 }
 .coverage-section .coverage-card .card-body .btn:hover {
   background-color: #e44f2d;
-  color: #fff;
-}
-
-/* Auto Page */
-.blog-section .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #000;
-}
-@media screen and (max-width: 992px) {
-  .blog-section .section-title {
-    font-size: 28px;
-  }
-}
-.blog-section .section-subtitle {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 992px) {
-  .blog-section .section-subtitle {
-    font-size: 16px;
-  }
+  color: #ffffff;
 }
 
 .auto-insurance-section {
@@ -1588,7 +1572,7 @@ em {
 .auto-insurance-section .section-title {
   font-size: 36px;
   font-weight: 900;
-  color: #000;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   .auto-insurance-section .section-title {
@@ -1650,7 +1634,7 @@ em {
   margin: 0 auto;
   border-radius: 50%;
   background: #fae6e2;
-  color: #e4572e;
+  color: #e44f2d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1667,7 +1651,7 @@ em {
 }
 .auto-insurance-section .checklist span::before {
   content: "✔";
-  color: #e4572e;
+  color: #e44f2d;
   margin-right: 6px;
 }
 
@@ -1684,7 +1668,7 @@ em {
 .auto-coverage-section .section-title {
   font-size: 36px;
   font-weight: 900;
-  color: #000;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   .auto-coverage-section .section-title {
@@ -1702,7 +1686,7 @@ em {
   }
 }
 .auto-coverage-section .coverage-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 20px;
   padding: 30px;
   height: 100%;
@@ -1742,10 +1726,11 @@ em {
   margin: 15px 0;
 }
 .auto-coverage-section .coverage-card ul li {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 10px;
   position: relative;
   padding-left: 20px;
+  text-align: left;
 }
 .auto-coverage-section .coverage-card ul li span {
   color: #e44f2d;
@@ -1786,7 +1771,7 @@ em {
   display: block;
   width: 60px;
   height: 3px;
-  background: #e4572e;
+  background: #e44f2d;
   margin: 8px auto 0;
   border-radius: 2px;
 }
@@ -1811,7 +1796,6 @@ em {
   margin-bottom: 6px;
 }
 
-/*home page */
 .home-insurance-section {
   margin-bottom: 24px;
 }
@@ -1845,7 +1829,7 @@ em {
 }
 .home-insurance-section .coverage-grid .coverage-card {
   text-align: center;
-  background-color: #FFF;
+  background-color: #ffffff;
   border-radius: 24px;
   padding: 36px;
 }
@@ -1861,7 +1845,7 @@ em {
 }
 .home-insurance-section .coverage-grid .coverage-card .img-wrapper img {
   width: 100%;
-  height: 292px;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
@@ -1869,7 +1853,7 @@ em {
 }
 .home-insurance-section .coverage-grid .coverage-card h4 {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 .home-insurance-section .coverage-grid .coverage-card p {
@@ -1881,9 +1865,10 @@ em {
 }
 
 .not-covered {
-  background: #F9FAFB;
+  background: #f9fafb;
   border-radius: 24px;
   padding: 60px 48px;
+  margin-bottom: 24px;
 }
 @media screen and (max-width: 992px) {
   .not-covered {
@@ -1904,7 +1889,7 @@ em {
 }
 .not-covered .section-desc {
   font-size: 16px;
-  color: #555;
+  color: #555555;
   max-width: 700px;
   margin: 0 auto 30px;
 }
@@ -1918,34 +1903,37 @@ em {
 }
 .not-covered .exclude-card .img-wrapper img {
   width: 100%;
-  height: 140px;
+  height: 190px;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.4s ease;
 }
 .not-covered .exclude-card h6 {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
   color: #1e1e2f;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 992px) {
+  .not-covered .exclude-card h6 {
+    font-size: 18px;
+  }
+}
 .not-covered .exclude-card p {
-  font-size: 0.9rem;
-  color: #666;
   margin: 0;
 }
 .not-covered .exclude-card:hover img {
   transform: scale(1.05);
 }
 .not-covered .bottom-note {
-  font-size: 0.95rem;
-  color: #444;
-  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Animation */
+.common-coverage-section .section-title {
+  margin: 0;
+}
+
 @keyframes fadeUp {
   to {
     opacity: 1;
