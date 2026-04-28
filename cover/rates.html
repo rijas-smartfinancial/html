@@ -1,0 +1,701 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cover - Compare Insurance Quotes for Free</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://d1knh3b6uo8q16.cloudfront.net/quote/assets/styles.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://d1knh3b6uo8q16.cloudfront.net/quote/assets/js/js.cookie.js"></script>
+    <script src="https://d1knh3b6uo8q16.cloudfront.net/common/new_sfanalytics.js"></script>
+    <script src="https://d1knh3b6uo8q16.cloudfront.net/common/cookiebanner.min.js"></script>
+    <script type="text/javascript">
+        var cookie_privacy_link = '/privacy-policy.html';
+    </script>
+    <style>
+        @media (max-width: 575px) {
+            .phone-no-wrapper {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="company-insurance main-bg" id='sf-results-container'>
+    <!-- Top nav -->
+    <div class="top-nav white-bg">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-nav mr-auto">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/images/logo.png" alt="Top Logo">
+                    </a>
+                </div>
+                <div class="phone-no-wrapper">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAQQAA/+4ADkFkb2JlAGTAAAAAAf/bAIQABQQEBAQEBQQEBQcFBAUHCQYFBQYJCggICQgICg0KCwsLCwoNDAwMDQwMDA8PEREPDxcWFhYXGRkZGRkZGRkZGQEGBgYKCQoTDQ0TFhEOERYZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZ/8AAEQgAIAAgAwERAAIRAQMRAf/EAGoAAAMBAQAAAAAAAAAAAAAAAAYHCAUDAQEBAAAAAAAAAAAAAAAAAAAAARAAAQQABQMCBQUBAAAAAAAAAgEDBAUAERIGByETFDFBUYEiMghxkUJSMxURAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8Aq/dG7Nu7OrVtty2LVdB1aAN1VVTPLPSADmRlkmeQpgObO54FrtMt10MmO/AehOTYcmURMMKgCq5ukqamxFUXVmPTALep5nsG4xWW4KWJMoGclmX20bBu6jxkL+UhgBCS2CeqkgFlgG7W2MC3gx7OsktzK+Y2L0aUySG242SZoQknTrgJT/LkZv8A2NqKSktb40tGh66fIQwUl+GehUxKDr8boe53eMJsGyE4VbJeeXb0wxBw+y+P1mjRooK2LuaghJkWEGTubZd/t69qVly4aWdk94e2981sNutlsWSgpMxLJiOnjyokpR0fb0X9cKNrh69GLejVsMJBpd21717Fqh/zr7eFI8W1itIv2tE7k4Ce3XCAy5k46HkfZ71ZHUG7qEfm1Dx9B74Cqdsl/q6KqC/JcKElwdzIm0VXjfkHXWhCdWPXTJaaPFLPrGkZ5aRRV+g/T29MsA3958ncSM3EHbG6bRpySy9HtWXA7jkePIYcRxgnHWV0gWpNSIq+nrigk27tjYqlAvttsxpCRCmuQZsR4nm0Wzd70rSqGQr3D6qntgDFcAq+T+Ets8kCs41Wq3KA6GraOCEpiidAfBckcH9lT2XDBOE78X+Tokvx4I1s6Lq+mW3I7KZfEmzHWnyzxMVT3DnHBcZ7SSmkyAlWkt85ti80io33TRBQAz66QEUTP39cIj//2Q=="
+                         alt="call-icon"/>
+                    <b class="phone-contact" style="font-size: 22px;">855-214-2291</b>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="company-insurance-header">
+        <div class="container company-insurance-container">
+            <h2>
+                The Best <span id='lead-type-head'></span> Insurance Rates in <span id='location'></span>
+            </h2>
+            <div class="mobile-filter-btn">
+                <a href="javascript:;">
+                    <img src="https://d1knh3b6uo8q16.cloudfront.net/quote/assets/filter-icon-black.png"
+                         alt="filter"/> Filters
+                </a>
+            </div>
+            <div class="rates-form-wrap auto-filter-listing-form">
+                <form class="rates-form-filter" id='filter-listing-form' action="">
+                    <h3 class="mobile-header">
+                        <img src="https://d1knh3b6uo8q16.cloudfront.net/quote/assets/filter-icon-pink.png"
+                             alt="filter"/>
+                        Customize Your Results
+                        <span class='filter-close-btn'>
+                            <i class="fa fa-times"></i>
+                        </span>
+                    </h3>
+                    <ul class="ul-style clearfix">
+                        <li>
+                            <label for="">Zip Code</label>
+                            <div class="zip-input-wrapper">
+                                <input type="tel" class="form-control input-field input-zip zipcode"
+                                       onkeyup="this.value=this.value.replace(/[^\d]/,'')" maxlength=" 5" name='zip'>
+                            </div>
+                        </li>
+                        <li class="dropdown-field">
+                            <label for="">Multiple Vehicles?</label>
+                            <select name='multiple_vehicles' class="input-field custom-select">
+                                <option value='true' selected> Yes</option>
+                                <option value='false'> No</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="">Age</label>
+                            <select name='age' class="input-field custom-select">
+                                <option value='16-20'> 16-20</option>
+                                <option value='21-24'> 21-24</option>
+                                <option value='25-34' selected> 25-34</option>
+                                <option value='35-44'> 35-44</option>
+                                <option value='45-54'> 45-54</option>
+                                <option value='55-64'> 55-64</option>
+                                <option value='65+'> 65+</option>
+                            </select>
+                        </li>
+                        <li class="dropdown-field">
+                            <label for="">Currently Insured?</label>
+                            <select name='insured' class="input-field custom-select">
+                                <option value='true' selected> Yes</option>
+                                <option value='false'> No</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="">Married?</label>
+                            <select name='married' class="input-field custom-select">
+                                <option value='true' selected>Yes</option>
+                                <option value='false'>No</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="">Homeowner?</label>
+                            <select name='own_home' class="input-field custom-select">
+                                <option value='true' selected>Yes</option>
+                                <option value='false'>No</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="">Credit?</label>
+                            <select name='credit' class="input-field custom-select">
+                                <option value='Poor'>Poor</option>
+                                <option value='Fair'>Fair</option>
+                                <option value='Good' selected>Good</option>
+                                <option value='Excellent'>Excellent</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="">Accidents?</label>
+                            <select name='accident' class="input-field custom-select">
+                                <option value='true'>Yes</option>
+                                <option value='false' selected>No</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="">DUI / SR-22?</label>
+                            <select name='sr_22' class="input-field custom-select">
+                                <option value='true'>Yes</option>
+                                <option value='false' selected>No</option>
+                            </select>
+                        </li>
+                        <li class="submit-filter">
+                            <input type='submit' class='btn btn-update update-listing' value='Update'>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="company-insurance-item-list">
+        <div class="container">
+            <div class='loading-listing'>
+                <img src="https://cover.com/assets/images/io_loading.gif"
+                     alt='loading...'/>
+            </div>
+            <div id='result-listing-container'>
+            </div>
+            <!-- Talk to agent -->
+            <div class="talk-to-agent">
+                <div class="display-table">
+                    <div class="display-table-cell">
+                        <div class="talk-to-agent-row row">
+                            <div class="agent-img-col col-md-2">
+                                <img src="assets/images/logo.png"
+                                     class="agent-img"
+                                     alt="Agent Image">
+                            </div>
+                            <div class="agent-content-col col-lg-8 col-md-7">
+                                <h4>Get a Free Quote Instantly - Talk to an Agent.</h4>
+                                <p>
+                                    Rather speak to someone? Let one of our licensed agents give you a call.
+                                </p>
+                            </div>
+                            <div class="agent-btn-col col-md-3 col-lg-2 btn-get-quote-reset-padding">
+                                <div class="btn-get-rate">
+                                    <a class="btn btn-get-quote slider-btn" href="javascript:void(0)"
+                                       onclick="showHelp(event)">
+                                        <div class='slider-btn-text-wrapper'>
+                                            <span>Call Me <i class="fa fa-caret-right"></i></span>
+                                            <span>Call Me <i class="fa fa-caret-right"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <p>
+                <a href='privacy-policy.html' style="font-size: 14px;" target="_blank">
+                    Privacy Policy
+                </a> |
+                <a href='terms-of-use.html' style="font-size: 14px;" target='_blank'>
+                    Terms of Use
+                </a> |
+                <a href='ccpa-opt-out.html' style="font-size: 14px;" target='_blank'>
+                    Do not sell my personal information
+                </a> |
+                <a href="about-us.html" style="font-size: 14px;" target='_blank'> About us </a> |
+                <a href="privacy-policy.html#special-notice-california" style="font-size: 14px;" target='_blank'>
+                    California Privacy Choices </a> |
+                <a href="privacy-policy.html#cookies-and-technologies" style="font-size: 14px;" target='_blank'> Cookies
+                    and Other Technology </a>
+            </p>
+            <p style="margin-top: 10px;">
+                4041 MacArthur Blvd, Suite 210 Newport Beach, CA 92660
+            </p>
+            <div class="lead-tcpa">
+                <p>
+                    We are a digital insurance comparison engine, providing comparison insurance
+                    services in all 50 states through its relationships with carrier and agency partners from which we
+                    receive compensation. We are not affiliated with any state or government agency.
+                </p>
+                <p class="extra-ccpa">
+                    The lowest advertised rates are not necessarily available from all advertisers on our site.
+                    This site matches users to advertisers and insurance agents only after we've received
+                    certain information from you, and your rates may vary based on your coverage limits, deductibles,
+                    driving history, education, occupation, type of vehicle, and location, among other factors. The
+                    rates included in our advertising reflect the lowest monthly premium when paid semi-annually for a
+                    2008 Kia Rio 4 Door Sedan driven for pleasure with less than 3000 miles per year for a male, 41 with
+                    an above-average driving record. Safe driver, association and alumni membership, and other discounts
+                    may have been applied.
+                </p>
+            </div>
+            <div class="lead-medicare-tcpa hidden" style="text-align: left;">
+                <p>
+                    <b>Disclaimer:</b>
+                </p>
+                <p>
+                    Cover.com is operated by SmartFinancial.com Insurance LLC, which is an independent
+                    broker and is not a Federal or State controlled Marketplace website, nor is it affiliated with any
+                    governmental entity. This website is owned and operated by SmartFinancial.com Insurance LLC, a
+                    licensed insurance agency, NPN #16007713. Invitations to apply for health insurance on
+                    SmartFinancial.com Insurance, LLC, are available only where properly licensed and appointed. License
+                    numbers are available upon request and are provided where required by law. SmartFinancial’s license
+                    information can be found at
+                    <a href="https://smartfinancial.com/licenses" style="color: #00bbf0;" target="_blank">https://smartfinancial.com/licenses</a>
+                </p>
+                <p>
+                    Federal Contracting Statement: Medicare Plans are insured or covered by a Medicare Advantage
+                    organization with a Medicare contract and/or a Medicare-approved Part D sponsor. Enrollment in the
+                    plan depends on the plan’s contract renewal with Medicare.
+                </p>
+                <p>
+                    Third Party Material (TPMO) (Medicare.gov): We do not necessarily offer every Medicare plan
+                    available in your specific area. Any information we provide is limited to the plans we are
+                    contracted to offer in your area. Please contact
+                    <a href="https://medicare.gov" style="color: #00bbf0;" target="_blank"> Medicare.gov </a> or
+                    1-800-MEDICARE (TTY users should call 1-877-486-2048) to get information on all of your options.
+                </p>
+                <p>
+                    Submittal of this form or an Application for Insurance does NOT affect your current enrollment, nor
+                    will it enroll you in a Medicare Advantage plan, Medicare Prescription Drug plan, Medicare
+                    Supplement Plan, or any other Medicare plan. SmartFinancial.com Insurance LLC is independent of the
+                    Medicare program and is neither associated with nor endorsed by The Centers for Medicare & Medicaid
+                    Services (CMS) or any other governmental agency.
+                </p>
+                <p>
+                    The plans represented on <a style="color: #00bbf0;" href="https://cover.com/">
+                    Cover.com </a> are Medicare Advantage HMO, PPO and PFFS organizations and stand-alone
+                    prescription drug plans with a Medicare contract. If you are paying Medicare Part B premium, you
+                    must continue to pay it to maintain coverage.
+                </p>
+                <p>
+                    Not all plans offer all available benefits. Specific benefits may vary by carrier, play year, and
+                    location. Check your official benefits disclosure for a full list of applicable benefits.
+                    Limitations and exclusions may apply.
+                </p>
+                <p>
+                    Medicare Part B Premium give-back is not available with all plans. Availability varies by carrier
+                    and location. Actual Part B premium reduction could be less. Deductibles, copays and coinsurance may
+                    apply.
+                </p>
+                <p>
+                    This information is not a complete description of benefits. Contact the plan for more information.
+                </p>
+                <p>
+                    Limitations, copayments, and restrictions may apply.
+                </p>
+                <p>
+                    [Benefits, premiums and/or copayments/coinsurance] are subject to change on January 1 of each year.
+                </p>
+                <p>
+                    <b> Advertised Pricing: </b>
+                </p>
+                <p>
+                    There are several factors that impact your monthly premium; including your age, geographical
+                    location, annual income, dependents, and the type of plan you choose. Monthly premiums do not
+                    include out-of-pocket costs.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile view 'Talk to agent' -->
+    <div class="mv-talk-to-agent text-center">
+        <a class="mv-content" href="tel:">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADNElEQVR4nO2XW4hVVRjHv7WHmXTySjFGxkQ4VGqQD3YhKCQIGroQBZUVoQ+FQg9BRNKNqIieKgikkHqwfMkUSxApJIJIoXJCocCIQLqAUlNGaY79fj3sNbg7s/eZc476Ev3f9l7f5fd9a6291o74Xz1IPRvY6En9on4EPKteB8zvNFZqlyQijqWU/q4ZOysi7lBHU0ozI2JBRFwUEQuzyVZ1Q0TsKopiotvqlqprc4VPAoOd+AEj6oPqzsm2AC+rC6f3LhP3qWvULyutRV1ek2ymulbdDLyhrgOur4zfro7lGDuAJZ0A3Kn+4VQ9DfS3AAwC61vs/lI/Vh/I8YaBTXnsU+CS6QDGrNd36nktAEkdUpepV6mr1XcrPtsywCCwIb97T13QDqCd7qqxPx9YAYxkqBkZZnIN7AeWAIMVuKd6BdhhufInOzAfeFM9ov6sfgU8kyFmAy9mv73qEHCpekD9Xb26F4Bj6rIKQAHcCLymfqCOqxPqPvUKdQB4RRXYlKfsofy8HpjRLYDq403dA0bybjiu/mi5Nuaon6u/AaPAOeoXuWOXdQswDow2zt/JGE/kTuwB+oGbLLfylgz6fI53X53z8Ybkh9R7pkteibMt+61U51ruru8td8WoOgG8Wue4pyb5EXVVp8lznGvVo+qHueoXVIHb1GH1oLpr0r6o+G6vifenWve+HcDuiDgcEYvVgZTSgYiIlNIF6k8RMR4RF9YB7IyIQy3xhlJK93YDUBTFiQxwbkQk9dc8NCsfTH0RMaeOfAB4qWYaDltzHrRTXnxrctxh9VH18vx8t7qy1lFdbvnpbdVuYF43ED3J8kR8pGE3bK79gJwBiFnqlhoAgLctLypnHGKp5Xd8CoQNpxowLx/R7wC3qrPVvp4hgBvUbxumYwxYoQ5k4Lnq1habfepjwMU9dy1XcrAB4ijwnHqN+n6DjZZnwUbg5p4WMnCL+k2bBN3o4db4RU3OfxsUxfaIWB0Rn3VNP1X905s0CFiUb8oneqz+B/XKU8LPt+FVNt8fGwW8buVWdaogi9V16v4O838CLDotyVtARtT7gbcsF+pEtWj16/y7Nnzak/9n9A+hDQQPWXx83QAAAABJRU5ErkJggg=="
+                 alt="call"/>
+            <p>Talk to an Agent & Get Free Quote</p>
+        </a>
+    </div>
+</section>
+
+<div id="ouibounce-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAsdQTFRFAAAAhoaGgoKCgoKCgYGBgYGBgICAgICAgYGBgoKCg4ODhISEi4uL0dHRgoKCgYGBgYGBgICAgICAhISEioqKlJSUgYGBgICAgICAgYGBhISEioqKwsLCgYGBgICAgoKCi4uLgYGBgICAgICAgICAf39/fn5+fn5+gICAf39/f39/f39/f39/gYGBjIyMgICAf39/gICAgICAf39/gICAgYGBi4uLtLS0f39/gICAf39/f39/f39/gICAgoKCi4uLf39/f39/gICAgICAf39/gYGBgICAgICAhISEkpKSf39/gICAf39/f39/gICAgYGBioqKf39/f39/f39/gICAf39/f39/f39/gICAf39/f39/fn5+f39/g4ODnp6efn5+f39/f39/f39/f39/fn5+gICAiIiIf39/gICAfn5+gICAf39/f39/fn5+f39/gICAf39/hYWFf39/gICAf39/f39/gICAg4ODgICAfn5+eHh4gICAfX19fX19gYGBgICAgYGBeHh4f39/fHx8gICAf39/jIyMfn5+f39/gICAfn5+gICApqamf39/f39/gICAgICAhoaGf39/gICAgICAfn5+fn5+fX19f39/fn5+f39/f39/f39/gYGBgICAgICAgICAfX19f39/gICAgICAf39/f39/gICAe3t7fn5+f39/gICAgICAgICAf39/f39/gICAf39/fn5+fX19f39/gICAf39/gICAfn5+f39/gICAgICAg4ODf39/gICAgICAf39/gICAgICAgICAfHx8gICAgICAgICAgICAgICAgICAfn5+f39/gICAgICAgYGBf39/fX19gICAgICAf39/enp6gICAgICAf39/gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAfn5+gICAgICAgICAgICAgICAgICAgICAgICAh8Tt9gAAAO10Uk5TAB5nos7v+/3z1q11LwEEIqP+/8EyCBuQ4eynKwEywNhWMOnThk4gERAdR37K+FC9PQQCMaz5XgIb9CAYme7eMwSQ82oLBlfstg4jqQoFkfRHpbgeEYenXAGjkxKa4AkfNXVWrxz5T2jKA7pgDAdJ7deYpHp6e5nTzz8G+g8i+u8SA3kH6vwCE5T8HtIBY4XO8glI4NQyVhSrS7CfadpysrET0JWhKxmvA5TIW7mPDjDLoA8GiebWQwZwLX8CZvX4VwfiQQHVxCbR33cFQUp+BGoFRZZFCT2Ka0/MtrPI53Yqqva/BAo45E4Dh8LNKOFPtAAAAllJREFUeJxlU/VDFEEUftadrbcGJuphgS1nrIoKBnaiILYnoh5wdp0KYuChiN0Ndge2YmF3nGIX9h/h92aOu91zfnjzxZuZ92ZniTyjQMFChYsYjEWLFS9RshT5jtJlypoU7yhXvoLer+hXSdGNylWqVtP41f1Niu+oUdPr1zILKaB2nbr16gcGNWhoZNqosWe98Js0bZYvNA+2sNKiZStBW/uDqJY22pratguB2L4D446hOD+sU2d91V26hiOjW3fAHlx/z16+fffug3V9+wH1hz9gIFHEoMGRUcILGhIdSDR0GIzhI2gkJtMoyH4AozljDIAV89gYgHEUizh+AvhELtUWF59gB5jEO1kBJtMUxKlMp3Fn6nQb+8oMViIBZtIsxNlM50Q7AGN4X6N1LivzAOdTImKSqG1BskNesjF0oexkEQgZFGXxEslTljpFgiXV3eoyToBmWC55fJpMWBHnTkjnhJUIqyRfbZdHqDZ5H7SGE9YirBN0vT3/S6viPmgDoJM2IsYy3STq27xFVLqVlQSAbbQdcQfTnaL+1F2il92sZABk0h5ufi8ob7UP/e0/AHCQa+YjDxEdxnTkKNGx4+YTJ3nhqdNZZ84SnTsPIxw3dgHvyXnxku/npstXFCX7KsC1TGRev3HTxw/OgXwrheHtO4B37+mezP20AIjmB5I9VEEcjzSP7vGTMH4myU/d/BlnKInPX4giX7peZTE3vfauyM2RV2h48/bd+2yJP3zUHBn16XOI/r/68tX1TVd03vd0rf/jZ8R/ff9y/f4jtlH/ZuTmeeR/L4ajPO7Ag5AAAAAASUVORK5CYII='
+                     alt='close' style="position: absolute; right: 5px; top: 5px;     cursor: pointer;"
+                     class='close-modal' data-dismiss="modal" aria-label="Close"/>
+                <img src="assets/images/fast_call.gif" alt="Call" height="105">
+                <h2 class="sf321_h1">Get a Free Quote Instantly.</h2>
+                <h3 class="sf321_h2">Let one of our licensed agents give you a call.</h3>
+                <form id="bounceForm" class="bounceForm" onsubmit="submitCallForm(event); return false;">
+                    What number should we call?
+                    <input type="tel" pattern="[0-9\-() ]+" inputmode="numeric" placeholder="(___) ___-____"
+                           class="form-control input-lg smart-text phoneSubmit"
+                           required id="phoneSubmit" name="phone">
+                    <button type="submit" class="btn btn-get-quote" style='padding: 10px 20px;'>
+                        Call Me Now <i class="fa fa-caret-right"></i>
+                    </button>
+                </form>
+                <div id="bounceResult" class="bounceResult" style="margin-top: 15px;"></div>
+                <ul id="bounceLogos" class="hidden-xs hidden-sm"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript"
+        src="https://d1knh3b6uo8q16.cloudfront.net/common/sf_landing.js"></script>
+<script type='text/javascript'>
+    (function (a) {
+        (jQuery.browser = jQuery.browser || {}).mobile = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))
+    })(navigator.userAgent || navigator.vendor || window.opera);
+</script>
+<script type="text/javascript">
+    var logoes = {
+        auto: ['https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/progressive.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/nationwide.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/allstate.png', 'https://s3.amazonaws.com/quick-form/assets/images/liberty_mutual_new.jpg'],
+        home: ['https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/progressive.png', 'https://s3.amazonaws.com/quick-form/assets/images/liberty_mutual_new.jpg', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/nationwide.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/hippo.png'],
+        life: ['https://smartfinancial.com/assets/images/company/amirican_family.png', 'https://smartfinancial.com/assets/images/company/aig.jpg', 'https://smartfinancial.com/assets/images/company/amirican_nation.png', 'https://smartfinancial.com/assets/images/company/nationwide.jpg'],
+        health: ['https://s3.amazonaws.com/quick-form-health/assets/images/aetna.png', 'https://s3.amazonaws.com/quick-form-health/assets/images/hunama.png', 'https://s3.amazonaws.com/quick-form-health/assets/images/oscar.png', 'https://s3.amazonaws.com/quick-form-health/assets/images/bluecross.png'],
+        medicare: ['https://s3.amazonaws.com/quick-form-health/assets/images/aetna.png', 'https://s3.amazonaws.com/quick-form-health/assets/images/hunama.png', 'https://s3.amazonaws.com/quick-form-health/assets/images/oscar.png', 'https://s3.amazonaws.com/quick-form-health/assets/images/bluecross.png'],
+        renters: ['https://smartfinancial.com/assets/images/company/amirican_nation.png', 'https://smartfinancial.com/assets/images/company/amirican_family.png', 'https://smartfinancial.com/assets/images/company/lemonade.png', 'https://smartfinancial.com/assets/images/company/libertymutual.png'],
+        business: ['https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/national_general.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/hiscox.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/libertymutual.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/nationwide.png'],
+        commercial: ['https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/national_general.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/hiscox.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/libertymutual.png', 'https://d1knh3b6uo8q16.cloudfront.net/rapidfire/carriers_logo/nationwide.png']
+    }, myIp = '', params = {};
+    var sf_types = {business: 6, commercial: 6, medicare: 10, renters: 3, life: 5, health: 4, home: 2, auto: 1};
+
+    $(function () {
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
+            params[key] = value || '';
+        });
+        qparams.aid = params.aid || '';  // Skip default aid
+        qparams.cid = params.cid || '';  // Skip default cid
+        isMobile = jQuery.browser.mobile;
+        if (isMobile) {
+            deviceType = 'mobile';
+        } else {
+            deviceType = 'desktop';
+        }
+        qparams.lead_type_id = sf_types[qparams.lead_type] || sf_types.auto;
+        if (qparams.lead_type_id === 10) {
+            $('.lead-medicare-tcpa').removeClass('hidden');
+            $('.lead-tcpa').remove();
+        } else {
+            $('.lead-medicare-tcpa').remove();
+        }
+        updatePhoneNumber();
+        getSfResults();
+        if (qparams.zip) {
+            loadLocationByZip(qparams.zip);
+        } else {
+            getUserLocation();
+        }
+        if (qparams.aid && qparams.cid) {
+            loadPixelCode();
+        }
+        $('#filter-listing-form').submit(function (e) {
+            e.preventDefault();
+            zipinput = $('.input-zip').val();
+            if (zipinput != qparams.zip) {
+                loadLocationByZip(zipinput);
+            }
+            filterResult($(this));
+        });
+
+        function filterResult(form) {
+            $('.mobile-filter').removeClass('show');
+            inputs = form.find('.input-field');
+            for (var i = 0; i < inputs.length; i++) {
+                input = $(inputs[i]);
+                qparams[input.attr('name')] = input.val();
+            }
+            $('.loading-listing').show();
+            $('#result-listing-container').html("");
+            fetchSmartFinancialResults();
+        }
+
+        function getSfResults() {
+            fetchSmartFinancialResults();
+        }
+
+        function fetchSmartFinancialResults() {
+            var session_id = Cookies.get('session_id');
+            if (session_id === undefined) {
+                session_id = generateUniqueId();
+                Cookies.set('session_id', session_id);
+            }
+            user_agent = navigator.userAgent.replace(';', ',');
+            var urlnew = 'https://api.smartfinancial.com/api/v1/ad_listings?session_id=' + session_id + '&user_agent=' + (user_agent || '') + '&ip_address=' + (myIp || '') + '&device_type=' + deviceType
+            for (var field in qparams) {
+                urlnew += '&' + field + '=' + qparams[field];
+            }
+
+            $.ajax({
+                type: 'GET',
+                url: urlnew,
+                async: false,
+                jsonCallback: 'callback' + randomString(32),
+                contentType: 'application/json',
+                dataType: 'jsonp'
+            }).done(function (data) {
+                layoutDesktopSF(data);
+                loadPopupLogo(qparams.lead_type);
+            }).fail(function (error, erStatus, erThrown) {
+                console.log('Request Status: ' + error.status + ' Status Text: ' + error.statusText + ' Response Text: ' + error.responseText);
+                setTimeout(function () {
+                    window.location.reload();
+                }, 1000);
+            });
+        }
+
+        function layoutDesktopSF(results) {
+            var flag = false, func = "", clickCode = '', cta_but_mobile, cta_but;
+            $("#result-listing-container").html("");
+            $('.loading-listing').hide();
+            results.forEach(function (listing, index) {
+                generateListingItem(listing, index == 0);
+            });
+        }
+
+        function loadPopupLogo(type) {
+            var lead_logos = [];
+            lead_logos = logoes[type] || logoes.auto;
+            target_element = $("#bounceLogos").html("");
+            for (i in lead_logos) {
+                logo = lead_logos[i];
+                target_element.append("<li> <img src='" + logo + "'/> </li>");
+            }
+        }
+
+        function updatePhoneNumber() {
+            var lead_type = qparams.lead_type;
+            loadPhone(qparams.lead_type_id);
+            $('#lead-type-head').html(lead_type.charAt(0).toUpperCase() + lead_type.slice(1));
+            document.title = "Cover.com - " + lead_type.charAt(0).toUpperCase() + lead_type.slice(1) + " Insurance Rates";
+            if (lead_type != 'auto') {
+                $('.auto-filter-listing-form').remove();
+            } else {
+                if (isMobile) {
+                    $(".auto-filter-listing-form").addClass('mobile-filter');
+                    $('.mobile-filter-btn').show();
+                }
+            }
+        }
+
+        $('.mobile-filter-btn a').click(function () {
+            $('.mobile-filter').toggleClass('show');
+        });
+
+        $('.filter-close-btn').click(function () {
+            $('.mobile-filter').toggleClass('show');
+        });
+
+        function generateListingItem(listing, recom) {
+            var item = '';
+            call_code = "";
+            click_link = "";
+            if (listing.click_to_call_code != null) {
+                call_code = listing.click_to_call_code.replace(/\'/g, '"');
+                click_link = "<a onclick='clickToCall(this, event)' target='_self' class='clickable-item-wrap' href='#' data-trackingurl='" + listing.tracking_url + "' data-code=" + call_code + ">";
+            } else {
+                call_code = "";
+                click_link = "<a href='" + listing.tracking_url + "' target='_blank' class='clickable-item-wrap'>";
+            }
+            if (recom) {
+                item = "<div class='company-insurance-item recommended'> <div class='top-title'>" +
+                    "<i class='fa fa-check'></i> <span>Recommended for you</span></div>";
+            } else {
+                item = "<div class='company-insurance-item'>";
+            }
+            if (isMobile) {
+                item += "<div class='company-insurance-item-row'>";
+                item += "<div class='row'>"
+                item += "<div class='col-lg-12'>";
+                item += "<div class='row'>";
+                item += "<div class='col-6 pr-8'>";
+                item += click_link;
+                item += "<img src='" + listing.logo_url + "' class='isurance-img'/>";
+                item += "<div class='star-img'> <img src='https://d1knh3b6uo8q16.cloudfront.net/quote/assets/stars.png' alt='star ratting'/> </div>"
+                item += "</a></div>";
+                item += "<div class='col-6'><div class='row'>";
+                item += click_link;
+                item += "<div class='isurance-text'> <h4 class='mobile-title'> " + listing.title + " </h4> </div>";
+                item += "</a></div></div>";
+                item += "</div>";
+                item += "<div class='row'>"
+                item += "<div class='col-lg-12'> <div style='padding-top: 8px;'>"
+                if (call_code) {
+                    item += "<a class='btn btn-get-quote click-to-call-btn expand-full' onclick='clickToCall(this, event)' href='#' data-trackingurl='" + listing.tracking_url + "' data-code=" + call_code + " target='_self' title='" + listing.title + "'><i class='fa fa-phone'></i> Call Now</a>";
+                } else {
+                    item += "<a class='btn btn-get-quote expand-full' href='" + listing.tracking_url + "' target='_blank'> Get Rate <i class='fa fa-caret-right'></i> <img src='https://d1knh3b6uo8q16.cloudfront.net/quote/assets/one.png' class='one-icon' alt='one'/></a>";
+                }
+                item += "<div class='hidden-features-pixel'>" + listing.features + "</div>";
+                item += "</div> </div> </div>";
+                item += "</div> </div> </div>";
+            } else {
+                item += "<div class='company-insurance-item-row row'>";
+                item += "<div class='col-md-2 img-column'>";
+                item += click_link;
+                item += "<img src='" + listing.logo_url + "' class='isurance-img'/>";
+                item += "<div class='star-img'> <img src='https://d1knh3b6uo8q16.cloudfront.net/quote/assets/stars.png' alt='Star Image'> </div>";
+                item += "</a></div>";
+                item += "<div class='col-md-7 col-lg-8 isurance-text'>";
+                item += click_link;
+                item += "<h4> " + listing.title + " </h4>";
+                item += "<div class='insurance-company-features'>" + listing.features + "</div>";
+                item += "</a></div>";
+                item += "<div class='col-md-3 col-lg-2 btn-get-rate btn-get-quote-reset-padding'>";
+                if (call_code) {
+                    item += "<a class='btn btn-get-quote click-to-call-btn slider-btn' style='font-size: 20px;' onclick='clickToCall(this, event)' href='#' data-trackingurl='" + listing.tracking_url + "' data-code=" + call_code + " target='_self' title='" + listing.title + "'><div class='slider-btn-text-wrapper'> <span> <i class='fa fa-phone'></i> Call Now </span> <span> <i class='fa fa-phone'></i> Call Now </span> </div></a>";
+                } else {
+                    item += "<a class='btn btn-get-quote slider-btn' href='" + listing.tracking_url + "' target='_blank'> <div class='slider-btn-text-wrapper'> <span> Get Rate <i class='fa fa-caret-right'></i> </span> <span> Get Rate <i class='fa fa-caret-right'></i> </span> </div><img src='https://d1knh3b6uo8q16.cloudfront.net/quote/assets/one.png' class='one-icon' alt='one'/></a>";
+                }
+                item += "</div></div>";
+            }
+            item += "</div>";
+            $("#result-listing-container").append(item);
+        }
+
+        function loadLocationByZip(zip) {
+            var city, state;
+            $.getJSON({
+                url: 'https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDgpvvGjt3PiswL8rCdqLenVa2Gs-Myd3Y&address=' + zip + '|country:us',
+                success: function (response, textStatus) {
+                    if (response.results[0] !== undefined) {
+                        var address_components = response.results[0].address_components;
+                        $.each(address_components, function (index, component) {
+                            if (component.types.includes('locality')) {
+                                city = component.long_name;
+                            }
+                            if (component.types.includes('administrative_area_level_1')) {
+                                state = component.long_name;
+                            }
+                        });
+                        updateLocation(city, state);
+                    } else {
+                        $('#city').html(' your area');
+                    }
+                },
+                error: function (er) {
+                    console.log(er);
+                }
+            });
+        }
+
+        function getUserLocation() {
+            getIpData(function (ipdata) {
+                myIp = ipdata.ip;
+                updateLocation(ipdata.city, ipdata.region);
+            });
+        }
+
+        function updateLocation(city, state) {
+            if (city && state) {
+                $('#location').html(city + ', ' + state + " (" + qparams.zip + ")");
+            } else {
+                $('#location').html('your area');
+            }
+        }
+    });
+
+    var randomString = function (length) {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (var i = 0; i < length; i++) {
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+        return text;
+    }
+
+    function generateUniqueId() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0,
+                v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    };
+
+    function showHelp(event) {
+        $('#ouibounce-modal').modal('show');
+        maskPhoneInput('phoneSubmit');
+    }
+
+    var maskPhoneInput = function (inputName) {
+        $('#' + inputName).mask('(999) 999-9999', {
+            completed: function () {
+                setTimeout(function () {
+                    $('#' + inputName).trigger('blur');
+                }, 200);
+            }
+        });
+    };
+
+    var submitCallForm = function (e) {
+        var but = $(e.target).parents('.modal-body');
+        var phone_number = $('#phoneSubmit').val();
+        if (!phoneValidate(phone_number)) {
+            return false;
+        }
+        $.ajax({
+            url: "http://api.smartfinancial.com/api/v1/consumer_callback",
+            type: "POST",
+            data: {
+                "phone": phone_number,
+                "source": "under_pop"
+            }
+        }).done(function (response) {
+            $('#bounceForm').fadeOut('slow', function () {
+                but.find('.bounceResult').addClass('alert alert-success').html('Thank you. We will contact you as soon as possible.').fadeIn('fast');
+                setTimeout(function () {
+                    $('#ouibounce-modal').modal('hide');
+                }, 3000);
+            });
+        }).fail(function (error) {
+            $('.bounceLogos').fadeOut('slow', function () {
+                but.find('.bounceResult').addClass('alert alert-error').html('There was a problem requesting your call. Please try again and if it happens again call ' + fetchPhoneNumber()).fadeIn('fast');
+            });
+        });
+        return false;
+    };
+
+    function loadPixelCode() {
+        var myAid = qparams.aid,
+            myCid = qparams.cid;
+        if (myAid === '90' && myCid === '55') {
+
+            (function (w, d, t, r, u) {
+                w[u] = w[u] || [];
+                w[u].push({
+                    'projectId': '10000',
+                    'properties': {
+                        'pixelId': '10010106'
+                    }
+                });
+                var s = d.createElement(t);
+                s.src = r;
+                s.async = true;
+                s.onload = s.onreadystatechange = function () {
+                    var y, rs = this.readyState,
+                        c = w[u];
+                    if (rs && rs != "complete" && rs != "loaded") {
+                        return
+                    }
+                    try {
+                        y = YAHOO.ywa.I13N.fireBeacon;
+                        w[u] = [];
+                        w[u].push = function (p) {
+                            y([p])
+                        };
+                        y(c)
+                    } catch (e) {
+                    }
+                };
+                var scr = d.getElementsByTagName(t)[0],
+                    par = scr.parentNode;
+                par.insertBefore(s, scr)
+            })(window, document, "script", "https://s.yimg.com/wi/ytc.js", "dotq");
+        }
+    }
+
+    var phoneValidate = function (phone_number) {
+        var regex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+        if (regex.test(phone_number)) {
+            $('#phoneSubmit').removeClass('has-error');
+            return true;
+        } else {
+            $('#phoneSubmit').addClass('has-error');
+            return false;
+        }
+    };
+
+</script>
+</html>

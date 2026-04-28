@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary: #84c229;
   --secondary: #e67917;
@@ -42,7 +41,12 @@ body .main-page {
   padding-top: 80px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 900;
   color: #1a1a2e;
@@ -50,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 28px;
+  line-height: 32px;
   font-size: 18px;
 }
 @media screen and (max-width: 992px) {
@@ -146,12 +150,6 @@ em {
     text-align: center;
   }
 }
-.hero .hero-tag {
-  display: inline-block;
-  color: #e44f2d;
-  font-weight: bold;
-  padding: 0.4rem 1.1rem 0.4rem 0;
-}
 .hero h1 {
   font-weight: 900;
   line-height: 1.05;
@@ -163,6 +161,129 @@ em {
   .hero h1 {
     margin-bottom: 12px;
   }
+}
+.hero.home-hero {
+  margin: auto;
+  text-align: center;
+}
+.hero.home-hero h1 {
+  font-size: 64px;
+  max-width: 910px;
+  margin: 12px auto;
+}
+@media screen and (max-width: 992px) {
+  .hero.home-hero h1 {
+    font-size: 36px;
+    margin: 12px 24px;
+  }
+}
+.hero.home-hero .quote-forms {
+  max-width: 700px;
+  margin: auto;
+  border-radius: 20px;
+}
+.hero.home-hero .hero-bullets {
+  justify-content: center;
+}
+.hero.home-hero .insurance-type-options ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0;
+  gap: 12px;
+}
+@media screen and (max-width: 992px) {
+  .hero.home-hero .insurance-type-options ul {
+    flex-wrap: wrap;
+  }
+}
+.hero.home-hero .insurance-type-options ul li {
+  margin: 0;
+  width: 47%;
+}
+@media screen and (max-width: 992px) {
+  .hero.home-hero .insurance-type-options ul li:nth-child(1) {
+    width: 100%;
+  }
+}
+.hero.home-hero .insurance-type-options ul li a {
+  font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 4px 20px;
+  background: #ffffff;
+  color: #1a1a2e;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid #cccccc;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s;
+  position: relative;
+}
+.hero.home-hero .insurance-type-options ul li a img {
+  width: 36px;
+  height: 36px;
+}
+@media screen and (max-width: 992px) {
+  .hero.home-hero .insurance-type-options ul li a {
+    flex-wrap: wrap;
+    border-radius: 12px;
+    padding: 12px;
+    gap: 0;
+  }
+  .hero.home-hero .insurance-type-options ul li a span {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+.hero.home-hero .insurance-type-options ul li a.active, .hero.home-hero .insurance-type-options ul li a:hover {
+  border-color: #e44f2d;
+  border-width: 2px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.hero.home-hero .insurance-type-options ul li a .type-badge {
+  background-color: #efe3ff;
+  padding: 4px 12px;
+  white-space: nowrap;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (max-width: 992px) {
+  .hero.home-hero .insurance-type-options ul li a .type-badge {
+    position: absolute;
+    width: auto;
+    right: 8px;
+    top: 8px;
+  }
+}
+.hero.hero-insurance h1 {
+  font-size: 54px;
+  max-width: 910px;
+}
+@media screen and (max-width: 992px) {
+  .hero.hero-insurance h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+}
+.hero.hero-insurance .quote-forms {
+  padding: 36px;
+}
+.hero .hero-tag {
+  display: inline-block;
+  color: #e44f2d;
+  font-weight: bold;
+  padding: 0.4rem 1.1rem 0.4rem 0;
 }
 .hero .hero-subtitle {
   font-size: 24px;
@@ -371,128 +492,11 @@ em {
   font-weight: bold;
   text-decoration: none;
 }
-.hero.home-hero {
-  margin: auto;
-  text-align: center;
-}
-.hero.home-hero .home-page-hero-h1 {
-  font-size: 64px;
-  max-width: 910px;
-  margin: 12px auto;
-}
-@media screen and (max-width: 992px) {
-  .hero.home-hero .home-page-hero-h1 {
-    font-size: 36px;
-    margin: 12px 24px;
-  }
-}
-.hero.home-hero .quote-forms {
-  max-width: 700px;
-  margin: auto;
-  border-radius: 20px;
-}
-.hero.home-hero .hero-bullets {
-  justify-content: center;
-}
-.hero.home-hero .insurance-type-options ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-  padding: 0;
-  gap: 12px;
-}
-@media screen and (max-width: 992px) {
-  .hero.home-hero .insurance-type-options ul {
-    flex-wrap: wrap;
-  }
-}
-.hero.home-hero .insurance-type-options ul li {
-  margin: 0;
-  width: 47%;
-}
-@media screen and (max-width: 992px) {
-  .hero.home-hero .insurance-type-options ul li:nth-child(1) {
-    width: 100%;
-  }
-}
-.hero.home-hero .insurance-type-options ul li a {
-  font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 4px 20px;
-  background: #ffffff;
-  color: #1a1a2e;
-  border-radius: 30px;
-  font-weight: 400;
-  font-size: 18px;
-  text-decoration: none;
-  border: 1px solid #cccccc;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.25s;
-  position: relative;
-}
-.hero.home-hero .insurance-type-options ul li a img {
-  width: 36px;
-  height: 36px;
-}
-@media screen and (max-width: 992px) {
-  .hero.home-hero .insurance-type-options ul li a {
-    flex-wrap: wrap;
-    border-radius: 12px;
-    padding: 12px;
-    gap: 0;
-  }
-  .hero.home-hero .insurance-type-options ul li a span {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-}
-.hero.home-hero .insurance-type-options ul li a.active, .hero.home-hero .insurance-type-options ul li a:hover {
-  border-color: #e44f2d;
-  border-width: 2px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.hero.home-hero .insurance-type-options ul li a .type-badge {
-  background-color: #efe3ff;
-  padding: 4px 12px;
-  white-space: nowrap;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 700;
-}
-@media screen and (max-width: 992px) {
-  .hero.home-hero .insurance-type-options ul li a .type-badge {
-    position: absolute;
-    width: auto;
-    right: 8px;
-    top: 8px;
-  }
-}
-.hero.hero-insurance h1 {
-  font-size: 54px;
-  max-width: 910px;
-}
-@media screen and (max-width: 992px) {
-  .hero.hero-insurance h1 {
-    font-size: 36px;
-    margin: 0;
-  }
-}
-.hero.hero-insurance .quote-forms {
-  padding: 36px;
-}
 
 .main-section {
   background: #ffffff;
 }
-.main-section .section-title {
+.main-section h2.section-title {
   font-size: 48px;
   font-weight: 900;
   color: #1a1a2e;
@@ -500,7 +504,7 @@ em {
   letter-spacing: -0.3px;
 }
 @media screen and (max-width: 992px) {
-  .main-section .section-title {
+  .main-section h2.section-title {
     font-size: 28px;
     margin: 0 30px;
   }
@@ -540,6 +544,44 @@ em {
   max-width: 150px;
   height: auto;
   margin: auto;
+}
+
+.round-card-section {
+  background-color: #f9fafb;
+  border-radius: 24px;
+  padding: 48px;
+  margin: 0 auto;
+  max-width: 1300px;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .round-card-section {
+    padding: 48px 24px;
+  }
+}
+.round-card-section.lightorange {
+  background-color: #fff4f2;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #000000;
+}
+@media screen and (max-width: 992px) {
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+.section-desc {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sub-heading {
+  font-weight: 700;
+  color: #000000;
 }
 
 .features-section {
@@ -586,7 +628,6 @@ em {
   color: #1a1a2e;
 }
 .features-section .steps-list .step-item p {
-  color: #555555;
   margin-bottom: 0;
   line-height: 1.6;
 }
@@ -613,8 +654,13 @@ em {
 }
 
 .trust-badges {
-  padding: 30px 0;
+  padding: 48px;
   background-color: #f8f8f8;
+}
+@media screen and (max-width: 992px) {
+  .trust-badges {
+    padding: 24px;
+  }
 }
 .trust-badges .badge-item {
   text-align: center;
@@ -628,7 +674,7 @@ em {
 .trust-badges .badge-item h6 {
   font-weight: 900;
   font-size: 28px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
   color: #1a1a2e;
   position: relative;
 }
@@ -636,10 +682,10 @@ em {
   position: absolute;
   bottom: -12px;
   margin: auto;
-  width: 120px;
+  width: 80px;
   height: 3px;
   background: #e44f2d;
-  left: calc(50% - 60px);
+  left: calc(50% - 40px);
   transform: scaleX(0);
   transform-origin: left;
   animation: lineGrow 3s ease forwards;
@@ -708,21 +754,11 @@ em {
 }
 
 .blog-section {
-  padding: 60px 0;
+  padding: 60px 0 0;
 }
 @media screen and (max-width: 992px) {
   .blog-section {
     padding: 2.25rem 0 1.25rem;
-  }
-}
-.blog-section .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #000000;
-}
-@media screen and (max-width: 992px) {
-  .blog-section .section-title {
-    font-size: 28px;
   }
 }
 .blog-section .section-subtitle {
@@ -1078,36 +1114,6 @@ em {
   margin-bottom: 20px;
 }
 
-.insurance-section .section-block {
-  background-color: #fff4f2;
-  border-radius: 24px;
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-}
-@media screen and (max-width: 992px) {
-  .insurance-section .section-block {
-    padding: 48px 24px;
-  }
-}
-.insurance-section .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #000000;
-}
-@media screen and (max-width: 992px) {
-  .insurance-section .section-title {
-    font-size: 28px;
-  }
-}
-.insurance-section .section-desc {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.insurance-section .sub-heading {
-  font-weight: 700;
-  color: #000000;
-}
 .insurance-section .info-card {
   text-align: center;
 }
@@ -1136,9 +1142,6 @@ em {
     margin: 24px 0;
   }
 }
-.insurance-section .bottom-text {
-  color: #666666;
-}
 .insurance-section .key-takeaway {
   max-width: 650px;
   margin: 0 auto;
@@ -1149,29 +1152,6 @@ em {
   margin-bottom: 6px;
 }
 
-.insurance-reasons .section-block {
-  background: #f9fafb;
-  border-radius: 24px;
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-}
-@media screen and (max-width: 992px) {
-  .insurance-reasons .section-block {
-    padding: 48px 24px;
-    margin: 0 12px;
-  }
-}
-.insurance-reasons .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #000000;
-}
-@media screen and (max-width: 992px) {
-  .insurance-reasons .section-title {
-    font-size: 28px;
-  }
-}
 .insurance-reasons .section-subtitle {
   font-size: 16px;
   max-width: 700px;
@@ -1196,7 +1176,7 @@ em {
 }
 .insurance-reasons .reason-card h5 {
   font-weight: 800;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   font-size: 28px;
   text-align: center;
 }
@@ -1222,7 +1202,7 @@ em {
   font-weight: 700;
 }
 .insurance-reasons .reason-card ul li::before {
-  content: "✓";
+  content: url(../Images/icon/list-check-mark.svg);
   position: absolute;
   left: 0;
   top: 0;
@@ -1232,6 +1212,7 @@ em {
 .insurance-reasons .reason-card .note {
   margin-top: 24px;
   font-weight: 700;
+  font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media screen and (max-width: 992px) {
   .insurance-reasons .reason-card .note {
@@ -1246,22 +1227,9 @@ em {
   text-align: left;
 }
 
-.compare-section .section-block {
-  background: #f9fafb;
-  border-radius: 24px;
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-}
-@media screen and (max-width: 992px) {
-  .compare-section .section-block {
-    padding: 48px 24px;
-    margin: 0 12px;
-  }
-}
 .compare-section .header-wrap {
   max-width: 820px;
-  margin: 0 auto 48px;
+  margin: 0 auto 24px;
 }
 .compare-section .header-wrap h2 {
   font-size: 36px;
@@ -1294,6 +1262,7 @@ em {
   text-align: center;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
+  height: 100%;
 }
 .compare-section .compare-card:hover {
   transform: translateY(-6px);
@@ -1303,10 +1272,13 @@ em {
 }
 .compare-section .compare-card .img-box img {
   max-height: 190px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 992px) {
   .compare-section .compare-card .img-box img {
-    max-height: 100%;
+    max-height: 180px;
     max-width: 100%;
   }
 }
@@ -1336,19 +1308,6 @@ em {
   margin: 0;
 }
 
-.how-often-section .section-block {
-  background-color: #fff4f2;
-  border-radius: 24px;
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-}
-@media screen and (max-width: 992px) {
-  .how-often-section .section-block {
-    padding: 48px 24px;
-    margin: 0 12px;
-  }
-}
 .how-often-section .header-wrap {
   margin-bottom: 50px;
 }
@@ -1400,21 +1359,8 @@ em {
   margin: 0;
 }
 
-.mistakes-section .section-block {
-  background: #f9fafb;
-  border-radius: 24px;
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-}
-@media screen and (max-width: 992px) {
-  .mistakes-section .section-block {
-    padding: 48px 24px;
-    margin: 0 12px;
-  }
-}
 .mistakes-section .header-wrap {
-  margin-bottom: 50px;
+  margin-bottom: 24px;
 }
 @media screen and (max-width: 992px) {
   .mistakes-section .header-wrap {
@@ -1434,10 +1380,6 @@ em {
 .mistakes-section .header-wrap .subtitle {
   font-size: 16px;
   margin: 0;
-}
-.mistakes-section .cards-wrap {
-  max-width: 1000px;
-  margin: 0 auto 50px;
 }
 .mistakes-section .mistake-card {
   background: #ffffff;
@@ -1475,31 +1417,7 @@ em {
   margin: 0;
 }
 
-.coverage-section .section-block {
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-}
-@media screen and (max-width: 992px) {
-  .coverage-section .section-block {
-    padding: 24px 0;
-    margin: 0 12px;
-  }
-}
-.coverage-section .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #000000;
-}
-@media screen and (max-width: 992px) {
-  .coverage-section .section-title {
-    font-size: 28px;
-  }
-}
-.coverage-section p {
-  margin-bottom: 48px;
-}
-.coverage-section .coverage-card {
+.coverage-section .main-insurance-card {
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -1507,40 +1425,40 @@ em {
   transform: translateY(40px);
   animation: fadeUp 0.8s ease forwards;
 }
-.coverage-section .coverage-card:nth-child(2) {
+.coverage-section .main-insurance-card:nth-child(2) {
   animation-delay: 0.2s;
 }
-.coverage-section .coverage-card:nth-child(3) {
+.coverage-section .main-insurance-card:nth-child(3) {
   animation-delay: 0.4s;
 }
-.coverage-section .coverage-card:hover {
+.coverage-section .main-insurance-card:hover {
   transform: translateY(-10px) scale(1.02);
 }
-.coverage-section .coverage-card:hover .card-img img {
+.coverage-section .main-insurance-card:hover .card-img img {
   transform: scale(1.1);
 }
-.coverage-section .coverage-card:hover .divider {
+.coverage-section .main-insurance-card:hover .divider {
   width: 80px;
 }
-.coverage-section .coverage-card .card-img {
+.coverage-section .main-insurance-card .card-img {
   overflow: hidden;
   border-radius: 12px;
 }
-.coverage-section .coverage-card .card-img img {
+.coverage-section .main-insurance-card .card-img img {
   width: 100%;
   height: auto;
   transition: transform 0.5s ease;
 }
-.coverage-section .coverage-card .card-body {
+.coverage-section .main-insurance-card .card-body {
   padding: 20px 10px;
   color: #777;
 }
-.coverage-section .coverage-card .card-body h5 {
+.coverage-section .main-insurance-card .card-body h5 {
   font-size: 28px;
   margin-bottom: 20px;
   position: relative;
 }
-.coverage-section .coverage-card .card-body h5 .line {
+.coverage-section .main-insurance-card .card-body h5 .line {
   position: absolute;
   bottom: -12px;
   margin: auto;
@@ -1552,7 +1470,7 @@ em {
   transform-origin: left;
   animation: lineGrow 3s ease forwards;
 }
-.coverage-section .coverage-card .card-body .btn {
+.coverage-section .main-insurance-card .card-body .btn {
   color: #e87059;
   border: 0;
   text-decoration: none;
@@ -1561,57 +1479,13 @@ em {
   border-radius: 25px;
   transition: background-color 0.2s, color 0.2s;
 }
-.coverage-section .coverage-card .card-body .btn:hover {
+.coverage-section .main-insurance-card .card-body .btn:hover {
   background-color: #e44f2d;
   color: #ffffff;
 }
 
 .auto-insurance-section {
   margin-bottom: 24px;
-}
-.auto-insurance-section .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #000000;
-}
-@media screen and (max-width: 992px) {
-  .auto-insurance-section .section-title {
-    font-size: 28px;
-  }
-}
-.auto-insurance-section .section-subtitle {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 992px) {
-  .auto-insurance-section .section-subtitle {
-    font-size: 16px;
-  }
-}
-.auto-insurance-section .section-block {
-  background: #f9fafb;
-  border-radius: 24px;
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-  text-align: center;
-}
-@media screen and (max-width: 992px) {
-  .auto-insurance-section .section-block {
-    padding: 48px 24px;
-    margin: 0 12px;
-  }
-}
-.auto-insurance-section .section-desc {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 992px) {
-  .auto-insurance-section .section-desc {
-    font-size: 16px;
-  }
 }
 .auto-insurance-section .flow-title {
   font-weight: 700;
@@ -1650,42 +1524,12 @@ em {
   }
 }
 .auto-insurance-section .checklist span::before {
-  content: "✔";
+  content: url(../Images/icon/list-check-mark.svg);
   color: #e44f2d;
   margin-right: 6px;
 }
 
-.auto-coverage-section {
-  background: #fff4f2;
-  border-radius: 24px;
-  padding: 60px 20px;
-}
-@media screen and (max-width: 992px) {
-  .auto-coverage-section {
-    padding: 48px 12px;
-  }
-}
-.auto-coverage-section .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #000000;
-}
-@media screen and (max-width: 992px) {
-  .auto-coverage-section .section-title {
-    font-size: 28px;
-  }
-}
-.auto-coverage-section .section-subtitle {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 992px) {
-  .auto-coverage-section .section-subtitle {
-    font-size: 16px;
-  }
-}
-.auto-coverage-section .coverage-card {
+.coverage-card {
   background: #ffffff;
   border-radius: 20px;
   padding: 30px;
@@ -1693,61 +1537,59 @@ em {
   text-align: center;
   transition: all 0.3s ease;
 }
-.auto-coverage-section .coverage-card:hover {
+.coverage-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
-.auto-coverage-section .coverage-card .icon {
+.coverage-card .icon {
   font-size: 32px;
   margin-bottom: 15px;
 }
-.auto-coverage-section .coverage-card h4 {
+.coverage-card h4 {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 8px;
 }
-.auto-coverage-section .coverage-card .tag {
+.coverage-card .tag {
   font-size: 12px;
   color: #e44f2d;
   display: block;
   margin-bottom: 10px;
   font-weight: 700;
 }
-.auto-coverage-section .coverage-card p {
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-.auto-coverage-section .coverage-card p strong {
-  font-size: 16px;
-}
-.auto-coverage-section .coverage-card ul {
+.coverage-card ul {
   list-style: none;
   padding: 0;
   margin: 15px 0;
 }
-.auto-coverage-section .coverage-card ul li {
+.coverage-card ul li {
   font-size: 16px;
   margin-bottom: 10px;
   position: relative;
   padding-left: 20px;
   text-align: left;
 }
-.auto-coverage-section .coverage-card ul li span {
+.coverage-card ul li span {
   color: #e44f2d;
 }
-.auto-coverage-section .coverage-card .note {
+.coverage-card ul li ::before {
+  content: url(../Images/icon/list-check-mark.svg);
+  margin-right: 8px;
+}
+.coverage-card .note {
   font-size: 18px;
   font-weight: 700;
 }
 
-.common-auto-coverage-section {
-  background: #f9fafb;
-  border-radius: 12px;
+.commercial-converage .coverage-card ul li {
+  text-align: center;
 }
-.common-auto-coverage-section .section-desc {
-  max-width: 720px;
-  font-size: 1rem;
+.commercial-converage .coverage-card p,
+.commercial-converage .coverage-card .note {
+  font-size: 16px;
+  font-weight: normal;
 }
+
 .common-auto-coverage-section .info-card {
   background: #ffffff;
   border-radius: 16px;
@@ -1769,7 +1611,7 @@ em {
 .common-auto-coverage-section .info-card .card-title::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 120px;
   height: 3px;
   background: #e44f2d;
   margin: 8px auto 0;
@@ -1799,30 +1641,6 @@ em {
 .home-insurance-section {
   margin-bottom: 24px;
 }
-.home-insurance-section .section-block {
-  background: #f9fafb;
-  border-radius: 24px;
-  padding: 60px 48px;
-  margin: 0 auto;
-  max-width: 1300px;
-  text-align: center;
-}
-@media screen and (max-width: 992px) {
-  .home-insurance-section .section-block {
-    padding: 48px 24px;
-    margin: 0 12px;
-  }
-}
-.home-insurance-section .section-desc {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 992px) {
-  .home-insurance-section .section-desc {
-    font-size: 16px;
-  }
-}
 .home-insurance-section .flow-title {
   font-weight: 700;
   font-size: 18px;
@@ -1845,14 +1663,14 @@ em {
 }
 .home-insurance-section .coverage-grid .coverage-card .img-wrapper img {
   width: 100%;
-  height: 170px;
+  height: 292px;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
 .home-insurance-section .coverage-grid .coverage-card h4 {
-  font-size: 1.4rem;
+  font-size: 28px;
   font-weight: 800;
   margin-bottom: 10px;
 }
@@ -1862,6 +1680,9 @@ em {
 }
 .home-insurance-section .coverage-grid .coverage-card:hover .img-wrapper img {
   transform: scale(1.05);
+}
+.home-insurance-section.cover .coverage-grid img {
+  height: 190px;
 }
 
 .not-covered {
@@ -1876,20 +1697,8 @@ em {
     margin: 0 12px;
   }
 }
-.not-covered .section-title {
-  font-size: 36px;
-  font-weight: 900;
-  color: #1a1a2e;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 992px) {
-  .not-covered .section-title {
-    font-size: 22px;
-  }
-}
 .not-covered .section-desc {
   font-size: 16px;
-  color: #555555;
   max-width: 700px;
   margin: 0 auto 30px;
 }
@@ -1930,8 +1739,123 @@ em {
   margin-right: auto;
 }
 
+.commercial-insurance-section .checklists .checklist {
+  text-align: center;
+}
+.commercial-insurance-section .checklists .checklist h6 {
+  font-weight: 800;
+  margin-top: 12px;
+  font-size: 24px;
+}
+.commercial-insurance-section .checklists .checklist p {
+  margin: 0;
+}
+.commercial-insurance-section .checklists .checklist .step-circle {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #fae6e2;
+  color: #e44f2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.commercial-insurance-section .coverage-grid .coverage-card {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  height: 100%;
+}
+@media screen and (max-width: 992px) {
+  .commercial-insurance-section .coverage-grid .coverage-card {
+    padding: 24px;
+  }
+}
+.commercial-insurance-section .coverage-grid .coverage-card .img-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.commercial-insurance-section .coverage-grid .coverage-card .img-wrapper img {
+  width: 100%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.commercial-insurance-section .coverage-grid .coverage-card h4 {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.commercial-insurance-section .coverage-grid .coverage-card p {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.commercial-insurance-section .coverage-grid .coverage-card:hover .img-wrapper img {
+  transform: scale(1.05);
+}
+
 .common-coverage-section .section-title {
   margin: 0;
+}
+.common-coverage-section .icon {
+  margin-bottom: 24px;
+}
+
+.about .checked-step-item {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 15px;
+  font-size: 18px;
+  color: #000;
+}
+.about .checked-step-item i {
+  font-size: 28px;
+  color: #e8563f;
+}
+.about .features-section .about-features-graphic {
+  width: 100%;
+  max-width: 589px;
+}
+.about .features-section .steps-list .about-step-item p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 20px;
+}
+.about .about-trust-badges {
+  padding: 2rem 0 3rem;
+}
+.about .about-trust-badges .badge-item {
+  text-align: center;
+  padding: 1.25rem 0.75rem;
+}
+.about .about-trust-badges .badge-item .badge-icon {
+  font-size: 30px;
+  margin: 0 auto 10px;
+  color: #e8563f;
+}
+.about .about-trust-badges .badge-item .badge-icon i {
+  background-color: #fae6e2;
+  border: 15px solid #fae6e2;
+  border-radius: 45px;
+}
+.about .about-trust-badges .badge-item h6 {
+  font-weight: 900;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+  position: relative;
+}
+.about .about-trust-badges .badge-item p {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 0;
+  line-height: 1.4;
 }
 
 @keyframes fadeUp {

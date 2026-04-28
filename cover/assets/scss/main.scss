@@ -3,31 +3,31 @@
 // =============================================================================
 
 :root {
-  --primary:   #84c229;
+  --primary: #84c229;
   --secondary: #e67917;
-  --neutral:   #333333;
-  --tertiary:  #207fbf;
-  --link:      #666;
+  --neutral: #333333;
+  --tertiary: #207fbf;
+  --link: #666;
 }
 
 // SCSS color variables (mirrors CSS custom props for use inside SCSS logic)
-$color-primary:     #84c229;
-$color-secondary:   #e67917;
-$color-neutral:     #333333;
-$color-tertiary:    #207fbf;
+$color-primary: #84c229;
+$color-secondary: #e67917;
+$color-neutral: #333333;
+$color-tertiary: #207fbf;
 
 // Brand accent (used heavily across CTAs, highlights, and interactive states)
-$color-accent:        #e44f2d;
-$color-accent-hover:  #a62814;
-$color-accent-light:  #fae6e2;
-$color-accent-muted:  #e87059;
+$color-accent: #e44f2d;
+$color-accent-hover: #a62814;
+$color-accent-light: #fae6e2;
+$color-accent-muted: #e87059;
 
 // Heading / dark text
 $color-heading: #1a1a2e;
 
 // Neutral grays
-$color-white:   #ffffff;
-$color-black:   #000000;
+$color-white: #ffffff;
+$color-black: #000000;
 $color-gray-50: #f9fafb;
 $color-gray-100: #f3f3f3;
 $color-gray-200: #f0f0f0;
@@ -40,22 +40,34 @@ $color-gray-800: #222222;
 $color-gray-900: #111111;
 
 // Semantic surface colors
-$color-surface-warm:    #fff4f2;
+$color-surface-warm: #fff4f2;
 $color-surface-neutral: #f9fafb;
-$color-surface-badge:   #efe3ff;
-$color-border:          #f0f0f0;
+$color-surface-badge: #efe3ff;
+$color-border: #f0f0f0;
 
 // =============================================================================
 // DESIGN TOKENS — Typography
 // =============================================================================
 
-$font-heading: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-$font-body:    "Open Sans",      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-heading:
+  "CabinetGrotesk",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  sans-serif;
+$font-body:
+  "Open Sans",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  sans-serif;
 
-$fw-regular:   400;
-$fw-bold:      700;
+$fw-regular: 400;
+$fw-bold: 700;
 $fw-extrabold: 800;
-$fw-black:     900;
+$fw-black: 900;
 
 $font-size-base: 18px;
 
@@ -64,10 +76,10 @@ $font-size-base: 18px;
 // =============================================================================
 
 $section-max-width: 1300px;
-$border-radius-sm:  12px;
-$border-radius-md:  16px;
-$border-radius-lg:  20px;
-$border-radius-xl:  24px;
+$border-radius-sm: 12px;
+$border-radius-md: 16px;
+$border-radius-lg: 20px;
+$border-radius-xl: 24px;
 $border-radius-pill: 30px;
 
 $input-height: 60px;
@@ -77,30 +89,86 @@ $input-height: 60px;
 // =============================================================================
 
 $xsm: 300px;
-$xs:  600px;
-$sm:  780px;
-$md:  992px;
-$lg:  1040px;
-$xl:  1280px;
+$xs: 600px;
+$sm: 780px;
+$md: 992px;
+$lg: 1040px;
+$xl: 1280px;
 $xxl: 1440px;
 
 // Min-width mixins (mobile-first)
-@mixin xsmmin { @media screen and (min-width: #{$xsm}) { @content; } }
-@mixin xsmin  { @media screen and (min-width: #{$xs})  { @content; } }
-@mixin smmin  { @media screen and (min-width: #{$sm})  { @content; } }
-@mixin mdmin  { @media screen and (min-width: #{$md})  { @content; } }
-@mixin lgmin  { @media screen and (min-width: #{$lg})  { @content; } }
-@mixin xlmin  { @media screen and (min-width: #{$xl})  { @content; } }
-@mixin xxlmin { @media screen and (min-width: #{$xxl}) { @content; } }
+@mixin xsmmin {
+  @media screen and (min-width: #{$xsm}) {
+    @content;
+  }
+}
+@mixin xsmin {
+  @media screen and (min-width: #{$xs}) {
+    @content;
+  }
+}
+@mixin smmin {
+  @media screen and (min-width: #{$sm}) {
+    @content;
+  }
+}
+@mixin mdmin {
+  @media screen and (min-width: #{$md}) {
+    @content;
+  }
+}
+@mixin lgmin {
+  @media screen and (min-width: #{$lg}) {
+    @content;
+  }
+}
+@mixin xlmin {
+  @media screen and (min-width: #{$xl}) {
+    @content;
+  }
+}
+@mixin xxlmin {
+  @media screen and (min-width: #{$xxl}) {
+    @content;
+  }
+}
 
 // Max-width mixins (desktop-first overrides)
-@mixin xsmmax { @media screen and (max-width: #{$xsm}) { @content; } }
-@mixin xsmax  { @media screen and (max-width: #{$xs})  { @content; } }
-@mixin smmax  { @media screen and (max-width: #{$sm})  { @content; } }
-@mixin mdmax  { @media screen and (max-width: #{$md})  { @content; } }
-@mixin lgmax  { @media screen and (max-width: #{$lg})  { @content; } }
-@mixin xlmax  { @media screen and (max-width: #{$xl})  { @content; } }
-@mixin xxlmax { @media screen and (max-width: #{$xxl}) { @content; } }
+@mixin xsmmax {
+  @media screen and (max-width: #{$xsm}) {
+    @content;
+  }
+}
+@mixin xsmax {
+  @media screen and (max-width: #{$xs}) {
+    @content;
+  }
+}
+@mixin smmax {
+  @media screen and (max-width: #{$sm}) {
+    @content;
+  }
+}
+@mixin mdmax {
+  @media screen and (max-width: #{$md}) {
+    @content;
+  }
+}
+@mixin lgmax {
+  @media screen and (max-width: #{$lg}) {
+    @content;
+  }
+}
+@mixin xlmax {
+  @media screen and (max-width: #{$xl}) {
+    @content;
+  }
+}
+@mixin xxlmax {
+  @media screen and (max-width: #{$xxl}) {
+    @content;
+  }
+}
 
 // =============================================================================
 // FONT FACES
@@ -141,7 +209,7 @@ $xxl: 1440px;
 
 body {
   font-family: $font-body;
-  font-size: $font-size-base; 
+  font-size: $font-size-base;
   color: $color-black;
 
   .main-page {
@@ -149,7 +217,12 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-heading;
   font-weight: $fw-black;
   color: $color-heading;
@@ -157,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: $font-body;
-  line-height: 28px;
+  line-height: 32px;
   font-size: $font-size-base;
 
   @include mdmax {
@@ -266,14 +339,6 @@ em {
     padding: 1.5rem 0;
     text-align: center;
   }
-
-  .hero-tag {
-    display: inline-block;
-    color: $color-accent;
-    font-weight: bold;
-    padding: 0.4rem 1.1rem 0.4rem 0;
-  }
-
   h1 {
     font-weight: $fw-black;
     line-height: 1.05;
@@ -284,6 +349,145 @@ em {
     @include mdmax {
       margin-bottom: 12px;
     }
+  }
+  // Variant: Home hero (centered layout)
+  &.home-hero {
+    margin: auto;
+    text-align: center;
+
+    h1 {
+      font-size: 64px;
+      max-width: 910px;
+      margin: 12px auto;
+
+      @include mdmax {
+        font-size: 36px;
+        margin: 12px 24px;
+      }
+    }
+
+    .quote-forms {
+      max-width: 700px;
+      margin: auto;
+      border-radius: $border-radius-lg;
+    }
+
+    .hero-bullets {
+      justify-content: center;
+    }
+
+    .insurance-type-options {
+      ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        padding: 0;
+        gap: 12px;
+
+        @include mdmax {
+          flex-wrap: wrap;
+        }
+
+        li {
+          margin: 0;
+          width: 47%;
+
+          &:nth-child(1) {
+            @include mdmax {
+              width: 100%;
+            }
+          }
+
+          a {
+            font-family: $font-heading;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 4px 20px;
+            background: $color-white;
+            color: $color-heading;
+            border-radius: $border-radius-pill;
+            font-weight: $fw-regular;
+            font-size: $font-size-base;
+            text-decoration: none;
+            border: 1px solid #cccccc;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.25s;
+            position: relative;
+
+            img {
+              width: 36px;
+              height: 36px;
+            }
+
+            @include mdmax {
+              flex-wrap: wrap;
+              border-radius: $border-radius-sm;
+              padding: 12px;
+              gap: 0;
+
+              span {
+                display: block;
+                text-align: center;
+                width: 100%;
+              }
+            }
+
+            &.active,
+            &:hover {
+              border-color: $color-accent;
+              border-width: 2px;
+              font-weight: $fw-bold;
+              cursor: pointer;
+            }
+
+            .type-badge {
+              background-color: $color-surface-badge;
+              padding: 4px 12px;
+              white-space: nowrap;
+              border-radius: 20px;
+              font-size: 12px;
+              font-weight: $fw-bold;
+
+              @include mdmax {
+                position: absolute;
+                width: auto;
+                right: 8px;
+                top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Variant: Insurance page hero
+  &.hero-insurance {
+    h1 {
+      font-size: 54px;
+      max-width: 910px;
+
+      @include mdmax {
+        font-size: 36px;
+        margin: 0;
+      }
+    }
+
+    .quote-forms {
+      padding: 36px;
+    }
+  }
+
+  .hero-tag {
+    display: inline-block;
+    color: $color-accent;
+    font-weight: bold;
+    padding: 0.4rem 1.1rem 0.4rem 0;
   }
 
   .hero-subtitle {
@@ -506,139 +710,6 @@ em {
       text-decoration: none;
     }
   }
-
-  // Variant: Home hero (centered layout)
-  &.home-hero {
-    margin: auto;
-    text-align: center;
-
-    .home-page-hero-h1 {
-      font-size: 64px;
-      max-width: 910px;
-      margin: 12px auto;
-
-      @include mdmax {
-        font-size: 36px;
-        margin: 12px 24px;
-      }
-    }
-
-    .quote-forms {
-      max-width: 700px;
-      margin: auto;
-      border-radius: $border-radius-lg;
-    }
-
-    .hero-bullets {
-      justify-content: center;
-    }
-
-    .insurance-type-options {
-      ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 25px;
-        padding: 0;
-        gap: 12px;
-
-        @include mdmax {
-          flex-wrap: wrap;
-        }
-
-        li {
-          margin: 0;
-          width: 47%;
-
-          &:nth-child(1) {
-            @include mdmax {
-              width: 100%;
-            }
-          }
-
-          a {
-            font-family: $font-heading;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 4px 20px;
-            background: $color-white;
-            color: $color-heading;
-            border-radius: $border-radius-pill;
-            font-weight: $fw-regular;
-            font-size: $font-size-base;
-            text-decoration: none;
-            border: 1px solid #cccccc;
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.25s;
-            position: relative;
-
-            img {
-              width: 36px;
-              height: 36px;
-            }
-
-            @include mdmax {
-              flex-wrap: wrap;
-              border-radius: $border-radius-sm;
-              padding: 12px;
-              gap: 0;
-
-              span {
-                display: block;
-                text-align: center;
-                width: 100%;
-              }
-            }
-
-            &.active,
-            &:hover {
-              border-color: $color-accent;
-              border-width: 2px;
-              font-weight: $fw-bold;
-              cursor: pointer;
-            }
-
-            .type-badge {
-              background-color: $color-surface-badge;
-              padding: 4px 12px;
-              white-space: nowrap;
-              border-radius: 20px;
-              font-size: 12px;
-              font-weight: $fw-bold;
-
-              @include mdmax {
-                position: absolute;
-                width: auto;
-                right: 8px;
-                top: 8px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Variant: Insurance page hero
-  &.hero-insurance {
-    h1 {
-      font-size: 54px;
-      max-width: 910px;
-
-      @include mdmax {
-        font-size: 36px;
-        margin: 0;
-      }
-    }
-
-    .quote-forms {
-      padding: 36px;
-    }
-  }
 }
 
 // =============================================================================
@@ -648,7 +719,7 @@ em {
 .main-section {
   background: $color-white;
 
-  .section-title {
+  h2.section-title {
     font-size: 48px;
     font-weight: $fw-black;
     color: $color-heading;
@@ -703,6 +774,46 @@ em {
 }
 
 // =============================================================================
+// Round Corner Common Card Section
+// =============================================================================
+
+.round-card-section {
+  background-color: $color-surface-neutral;
+  border-radius: $border-radius-xl;
+  padding: 48px;
+  margin: 0 auto;
+  max-width: $section-max-width;
+  text-align: center;
+
+  @include mdmax {
+    padding: 48px 24px;
+  }
+  &.lightorange {
+    background-color: $color-surface-warm;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: $fw-black;
+  color: $color-black;
+
+  @include mdmax {
+    font-size: 28px;
+  }
+}
+
+.section-desc {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sub-heading {
+  font-weight: $fw-bold;
+  color: $color-black;
+}
+
+// =============================================================================
 // FEATURES SECTION
 // =============================================================================
 
@@ -719,7 +830,9 @@ em {
     background-color: $color-accent-light;
     padding: 8px 20px;
     border-radius: 25px;
-    transition: background-color 0.2s, color 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
 
     &:hover {
       background-color: $color-accent;
@@ -754,7 +867,6 @@ em {
       }
 
       p {
-        color: $color-gray-500;
         margin-bottom: 0;
         line-height: 1.6;
       }
@@ -798,9 +910,11 @@ em {
 // =============================================================================
 
 .trust-badges {
-  padding: 30px 0;
+  padding: 48px;
   background-color: #f8f8f8;
-
+  @include mdmax {
+    padding: 24px;
+  }
   .badge-item {
     text-align: center;
     padding: 0 0.75rem;
@@ -812,7 +926,7 @@ em {
     h6 {
       font-weight: $fw-black;
       font-size: 28px;
-      margin-bottom: 16px;
+      margin-bottom: 26px;
       color: $color-heading;
       position: relative;
 
@@ -820,10 +934,10 @@ em {
         position: absolute;
         bottom: -12px;
         margin: auto;
-        width: 120px;
+        width: 80px;
         height: 3px;
         background: $color-accent;
-        left: calc(50% - 60px);
+        left: calc(50% - 40px);
         transform: scaleX(0);
         transform-origin: left;
         animation: lineGrow 3s ease forwards;
@@ -882,7 +996,9 @@ em {
       text-align: center;
       flex: 1;
       min-width: 160px;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition:
+        box-shadow 0.2s,
+        transform 0.2s;
       text-decoration: none;
       color: inherit;
 
@@ -913,20 +1029,10 @@ em {
 // =============================================================================
 
 .blog-section {
-  padding: 60px 0;
+  padding: 60px 0 0;
 
   @include mdmax {
     padding: 2.25rem 0 1.25rem;
-  }
-
-  .section-title {
-    font-size: 36px;
-    font-weight: $fw-black;
-    color: $color-black;
-
-    @include mdmax {
-      font-size: 28px;
-    }
   }
 
   .section-subtitle {
@@ -962,7 +1068,9 @@ em {
   }
 
   .blog-content {
-    h2 { font-size: 24px; }
+    h2 {
+      font-size: 24px;
+    }
 
     h4 {
       font-size: 1.15rem;
@@ -971,9 +1079,13 @@ em {
       color: $color-heading;
     }
 
-    p { color: $color-black; }
+    p {
+      color: $color-black;
+    }
 
-    ul { padding-left: 1.25rem; }
+    ul {
+      padding-left: 1.25rem;
+    }
   }
 
   .blog-meta {
@@ -1001,14 +1113,18 @@ em {
         font-size: $font-size-base;
         margin-right: 5px;
 
-        @include mdmax { font-size: 16px; }
+        @include mdmax {
+          font-size: 16px;
+        }
       }
 
       .meta-details {
         color: $color-heading;
         font-size: $font-size-base;
 
-        @include mdmax { font-size: 16px; }
+        @include mdmax {
+          font-size: 16px;
+        }
       }
 
       .tag {
@@ -1049,7 +1165,9 @@ em {
     margin-bottom: 0.5rem;
     color: $color-heading;
 
-    @include mdmax { font-size: 28px; }
+    @include mdmax {
+      font-size: 28px;
+    }
   }
 
   .cta-form {
@@ -1080,7 +1198,9 @@ em {
       text-decoration: none;
       color: $color-accent;
 
-      &:hover { color: $color-accent; }
+      &:hover {
+        color: $color-accent;
+      }
     }
 
     .phone-hours {
@@ -1110,7 +1230,9 @@ em {
     justify-content: space-around;
     align-items: center;
 
-    @include mdmax { width: 100%; }
+    @include mdmax {
+      width: 100%;
+    }
   }
 
   select {
@@ -1124,7 +1246,9 @@ em {
     background-size: 12px;
     height: $input-height;
 
-    @include mdmax { width: 100%; }
+    @include mdmax {
+      width: 100%;
+    }
   }
 
   input {
@@ -1137,7 +1261,9 @@ em {
     height: $input-height;
     width: calc(30% - 15px);
 
-    @include mdmax { width: 100%; }
+    @include mdmax {
+      width: 100%;
+    }
   }
 
   button {
@@ -1146,7 +1272,9 @@ em {
     width: calc(40% - 15px);
     height: $input-height;
 
-    @include mdmax { width: 100%; }
+    @include mdmax {
+      width: 100%;
+    }
 
     &:hover {
       background: $color-accent-hover;
@@ -1194,7 +1322,9 @@ em {
       color: $color-black;
       text-decoration: none;
 
-      &:hover { color: $color-accent; }
+      &:hover {
+        color: $color-accent;
+      }
     }
   }
 
@@ -1312,34 +1442,6 @@ em {
 // =============================================================================
 
 .insurance-section {
-  .section-block {
-    background-color: $color-surface-warm;
-    border-radius: $border-radius-xl;
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
-
-    @include mdmax { padding: 48px 24px; }
-  }
-
-  .section-title {
-    font-size: 36px;
-    font-weight: $fw-black;
-    color: $color-black;
-
-    @include mdmax { font-size: 28px; }
-  }
-
-  .section-desc {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .sub-heading {
-    font-weight: $fw-bold;
-    color: $color-black;
-  }
-
   .info-card {
     text-align: center;
 
@@ -1353,7 +1455,9 @@ em {
       border-radius: $border-radius-sm;
       margin-bottom: 12px;
 
-      @include mdmax { margin-bottom: 0; }
+      @include mdmax {
+        margin-bottom: 0;
+      }
     }
 
     h6 {
@@ -1367,8 +1471,6 @@ em {
       }
     }
   }
-
-  .bottom-text { color: $color-gray-600; }
 
   .key-takeaway {
     max-width: 650px;
@@ -1387,27 +1489,6 @@ em {
 // =============================================================================
 
 .insurance-reasons {
-  .section-block {
-    background: $color-surface-neutral;
-    border-radius: $border-radius-xl;
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
-
-    @include mdmax {
-      padding: 48px 24px;
-      margin: 0 12px;
-    }
-  }
-
-  .section-title {
-    font-size: 36px;
-    font-weight: $fw-black;
-    color: $color-black;
-
-    @include mdmax { font-size: 28px; }
-  }
-
   .section-subtitle {
     font-size: 16px;
     max-width: 700px;
@@ -1422,16 +1503,20 @@ em {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
 
-    &:hover { transform: translateY(-6px); }
+    &:hover {
+      transform: translateY(-6px);
+    }
 
     .icon {
       text-align: center;
-      img { height: 72px; }
+      img {
+        height: 72px;
+      }
     }
 
     h5 {
       font-weight: $fw-extrabold;
-      margin-bottom: 24px;
+      margin-bottom: 8px;
       font-size: 28px;
       text-align: center;
 
@@ -1458,7 +1543,8 @@ em {
         font-weight: $fw-bold;
 
         &::before {
-          content: "✓";
+          content: url(../Images/icon/list-check-mark.svg);
+
           position: absolute;
           left: 0;
           top: 0;
@@ -1471,12 +1557,16 @@ em {
     .note {
       margin-top: 24px;
       font-weight: $fw-bold;
-
-      @include mdmax { text-align: center; }
+      font-family: $font-heading;
+      @include mdmax {
+        text-align: center;
+      }
     }
   }
 
-  .wide-card { padding: 40px; }
+  .wide-card {
+    padding: 40px;
+  }
 
   .list-center {
     display: inline-block;
@@ -1489,22 +1579,9 @@ em {
 // =============================================================================
 
 .compare-section {
-  .section-block {
-    background: $color-surface-neutral;
-    border-radius: $border-radius-xl;
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
-
-    @include mdmax {
-      padding: 48px 24px;
-      margin: 0 12px;
-    }
-  }
-
   .header-wrap {
     max-width: 820px;
-    margin: 0 auto 48px;
+    margin: 0 auto 24px;
 
     h2 {
       font-size: 36px;
@@ -1512,7 +1589,9 @@ em {
       color: $color-gray-900;
       margin-bottom: 16px;
 
-      @include mdmax { font-size: 28px; }
+      @include mdmax {
+        font-size: 28px;
+      }
     }
 
     .desc {
@@ -1528,7 +1607,9 @@ em {
     }
   }
 
-  .compare-grid { margin: 0 auto; }
+  .compare-grid {
+    margin: 0 auto;
+  }
 
   .compare-card {
     background: $color-white;
@@ -1537,17 +1618,21 @@ em {
     text-align: center;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
+    height: 100%;
 
-    &:hover { transform: translateY(-6px); }
+    &:hover {
+      transform: translateY(-6px);
+    }
 
     .img-box {
       margin-bottom: 20px;
 
       img {
         max-height: 190px;
-
+        width: 100%;
+        object-fit: cover;
         @include mdmax {
-          max-height: 100%;
+          max-height: 180px;
           max-width: 100%;
         }
       }
@@ -1559,13 +1644,17 @@ em {
       margin-bottom: 8px;
     }
 
-    p { margin-bottom: 0; }
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .pro-tip {
     margin-top: 60px;
 
-    @include mdmax { margin-top: 24px; }
+    @include mdmax {
+      margin-top: 24px;
+    }
 
     strong {
       display: block;
@@ -1585,19 +1674,6 @@ em {
 // =============================================================================
 
 .how-often-section {
-  .section-block {
-    background-color: $color-surface-warm;
-    border-radius: $border-radius-xl;
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
-
-    @include mdmax {
-      padding: 48px 24px;
-      margin: 0 12px;
-    }
-  }
-
   .header-wrap {
     margin-bottom: 50px;
 
@@ -1606,22 +1682,30 @@ em {
       font-weight: $fw-black;
       margin-bottom: 12px;
 
-      @include mdmax { font-size: 28px; }
+      @include mdmax {
+        font-size: 28px;
+      }
     }
 
-    .subtitle { margin: 0; }
+    .subtitle {
+      margin: 0;
+    }
   }
 
   .items-row {
     margin: 0 auto 50px;
 
-    @include mdmax { margin-bottom: 24px; }
+    @include mdmax {
+      margin-bottom: 24px;
+    }
 
     .item {
       padding: 10px 12px;
       transition: transform 0.3s ease;
 
-      &:hover { transform: translateY(-4px); }
+      &:hover {
+        transform: translateY(-4px);
+      }
 
       .icon {
         margin-bottom: 16px;
@@ -1641,7 +1725,9 @@ em {
 
   .footer-note {
     margin: 0 auto;
-    p { margin: 0; }
+    p {
+      margin: 0;
+    }
   }
 }
 
@@ -1650,41 +1736,27 @@ em {
 // =============================================================================
 
 .mistakes-section {
-  .section-block {
-    background: $color-surface-neutral;
-    border-radius: $border-radius-xl;
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
+  .header-wrap {
+    margin-bottom: 24px;
 
     @include mdmax {
-      padding: 48px 24px;
-      margin: 0 12px;
+      margin-bottom: 24px;
     }
-  }
-
-  .header-wrap {
-    margin-bottom: 50px;
-
-    @include mdmax { margin-bottom: 24px; }
 
     h2 {
       font-size: 36px;
       font-weight: $fw-black;
       margin-bottom: 12px;
 
-      @include mdmax { font-size: 28px; }
+      @include mdmax {
+        font-size: 28px;
+      }
     }
 
     .subtitle {
       font-size: 16px;
       margin: 0;
     }
-  }
-
-  .cards-wrap {
-    max-width: 1000px;
-    margin: 0 auto 50px;
   }
 
   .mistake-card {
@@ -1709,7 +1781,9 @@ em {
       max-width: 260px;
       margin: 0 auto;
 
-      @include mdmax { font-size: 22px; }
+      @include mdmax {
+        font-size: 22px;
+      }
     }
   }
 
@@ -1728,42 +1802,31 @@ em {
 // =============================================================================
 
 .coverage-section {
-  .section-block {
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
-
-    @include mdmax {
-      padding: 24px 0;
-      margin: 0 12px;
-    }
-  }
-
-  .section-title {
-    font-size: 36px;
-    font-weight: $fw-black;
-    color: $color-black;
-
-    @include mdmax { font-size: 28px; }
-  }
-
-  p { margin-bottom: 48px; }
-
-  .coverage-card {
+  .main-insurance-card {
     border-radius: $border-radius-md;
     overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 0.8s ease forwards;
 
-    &:nth-child(2) { animation-delay: 0.2s; }
-    &:nth-child(3) { animation-delay: 0.4s; }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
 
     &:hover {
       transform: translateY(-10px) scale(1.02);
-      .card-img img { transform: scale(1.1); }
-      .divider { width: 80px; }
+      .card-img img {
+        transform: scale(1.1);
+      }
+      .divider {
+        width: 80px;
+      }
     }
 
     .card-img {
@@ -1807,7 +1870,9 @@ em {
         background-color: $color-accent-light;
         padding: 8px 20px;
         border-radius: 25px;
-        transition: background-color 0.2s, color 0.2s;
+        transition:
+          background-color 0.2s,
+          color 0.2s;
 
         &:hover {
           background-color: $color-accent;
@@ -1825,44 +1890,6 @@ em {
 .auto-insurance-section {
   margin-bottom: 24px;
 
-  .section-title {
-    font-size: 36px;
-    font-weight: $fw-black;
-    color: $color-black;
-
-    @include mdmax { font-size: 28px; }
-  }
-
-  .section-subtitle {
-    font-size: $font-size-base;
-    max-width: 700px;
-    margin: 0 auto;
-
-    @include mdmax { font-size: 16px; }
-  }
-
-  .section-block {
-    background: $color-surface-neutral;
-    border-radius: $border-radius-xl;
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
-    text-align: center;
-
-    @include mdmax {
-      padding: 48px 24px;
-      margin: 0 12px;
-    }
-  }
-
-  .section-desc {
-    font-size: $font-size-base;
-    max-width: 700px;
-    margin: 0 auto;
-
-    @include mdmax { font-size: 16px; }
-  }
-
   .flow-title {
     font-weight: $fw-bold;
     font-size: $font-size-base;
@@ -1878,7 +1905,9 @@ em {
         font-size: 24px;
       }
 
-      p { margin: 0; }
+      p {
+        margin: 0;
+      }
 
       .step-circle {
         width: 48px;
@@ -1895,15 +1924,17 @@ em {
       }
     }
   }
-  
+
   .checklist {
     span {
       font-size: $font-size-base;
 
-      @include mdmax { font-size: 16px; }
+      @include mdmax {
+        font-size: 16px;
+      }
 
       &::before {
-        content: "✔";
+        content: url(../Images/icon/list-check-mark.svg);
         color: $color-accent;
         margin-right: 6px;
       }
@@ -1911,90 +1942,75 @@ em {
   }
 }
 
-// =============================================================================
-// AUTO COVERAGE SECTION
-// =============================================================================
+.coverage-card {
+  background: $color-white;
+  border-radius: $border-radius-lg;
+  padding: 30px;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
 
-.auto-coverage-section {
-  background: $color-surface-warm;
-  border-radius: $border-radius-xl;
-  padding: 60px 20px;
-
-  @include mdmax { padding: 48px 12px; }
-
-  .section-title {
-    font-size: 36px;
-    font-weight: $fw-black;
-    color: $color-black;
-
-    @include mdmax { font-size: 28px; }
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   }
 
-  .section-subtitle {
-    font-size: $font-size-base;
-    max-width: 700px;
-    margin: 0 auto;
-
-    @include mdmax { font-size: 16px; }
+  .icon {
+    font-size: 32px;
+    margin-bottom: 15px;
   }
 
-  .coverage-card {
-    background: $color-white;
-    border-radius: $border-radius-lg;
-    padding: 30px;
-    height: 100%;
-    text-align: center;
-    transition: all 0.3s ease;
+  h4 {
+    font-size: 28px;
+    font-weight: $fw-extrabold;
+    margin-bottom: 8px;
+  }
 
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    }
+  .tag {
+    font-size: 12px;
+    color: $color-accent;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: $fw-bold;
+  }
 
-    .icon {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 
-    h4 {
-      font-size: 28px;
-      font-weight: $fw-extrabold;
-      margin-bottom: 8px;
-    }
-
-    .tag {
-      font-size: 12px;
-      color: $color-accent;
-      display: block;
+    li {
+      font-size: 16px;
       margin-bottom: 10px;
-      font-weight: $fw-bold;
-    }
-
-    p {
-      font-size: 14px;
-      margin-bottom: 15px;
-
-      strong { font-size: 16px; }
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0;
-
-      li {
-        font-size: 16px;
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 20px;
-        text-align: left;
-        span { color: $color-accent; }
+      position: relative;
+      padding-left: 20px;
+      text-align: left;
+      span {
+        color: $color-accent;
+      }
+      ::before {
+        content: url(../Images/icon/list-check-mark.svg);
+        margin-right: 8px;
       }
     }
+  }
 
+  .note {
+    font-size: $font-size-base;
+    font-weight: $fw-bold;
+  }
+}
+.commercial-converage {
+  .coverage-card {
+    ul {
+      li {
+        text-align: center;
+      }
+    }
+    p,
     .note {
-      font-size: $font-size-base;
-      font-weight: $fw-bold;
+      font-size: 16px;
+      font-weight: normal;
     }
   }
 }
@@ -2004,14 +2020,6 @@ em {
 // =============================================================================
 
 .common-auto-coverage-section {
-  background: $color-surface-neutral;
-  border-radius: $border-radius-sm;
-
-  .section-desc {
-    max-width: 720px;
-    font-size: 1rem;
-  }
-
   .info-card {
     background: $color-white;
     border-radius: $border-radius-md;
@@ -2025,12 +2033,14 @@ em {
       display: inline-block;
       margin-bottom: 20px;
 
-      @include mdmax { font-size: 22px; }
+      @include mdmax {
+        font-size: 22px;
+      }
 
       &::after {
         content: "";
         display: block;
-        width: 60px;
+        width: 120px;
         height: 3px;
         background: $color-accent;
         margin: 8px auto 0;
@@ -2041,9 +2051,13 @@ em {
     .card-content {
       font-size: $font-size-base;
 
-      @include mdmax { font-size: 16px; }
+      @include mdmax {
+        font-size: 16px;
+      }
 
-      p { margin-bottom: 10px; }
+      p {
+        margin-bottom: 10px;
+      }
 
       ul {
         padding-left: 18px;
@@ -2051,7 +2065,9 @@ em {
         text-align: left;
         display: inline-block;
 
-        li { margin-bottom: 6px; }
+        li {
+          margin-bottom: 6px;
+        }
       }
     }
   }
@@ -2063,28 +2079,6 @@ em {
 
 .home-insurance-section {
   margin-bottom: 24px;
-
-  .section-block {
-    background: $color-surface-neutral;
-    border-radius: $border-radius-xl;
-    padding: 60px 48px;
-    margin: 0 auto;
-    max-width: $section-max-width;
-    text-align: center;
-
-    @include mdmax {
-      padding: 48px 24px;
-      margin: 0 12px;
-    }
-  }
-
-  .section-desc {
-    font-size: $font-size-base;
-    max-width: 700px;
-    margin: 0 auto;
-
-    @include mdmax { font-size: 16px; }
-  }
 
   .flow-title {
     font-weight: $fw-bold;
@@ -2098,7 +2092,9 @@ em {
       border-radius: $border-radius-xl;
       padding: 36px;
 
-      @include mdmax { padding: 24px; }
+      @include mdmax {
+        padding: 24px;
+      }
 
       .img-wrapper {
         border-radius: $border-radius-md;
@@ -2107,7 +2103,7 @@ em {
 
         img {
           width: 100%;
-          height: 170px;
+          height: 292px;
           object-fit: cover;
           display: block;
           transition: transform 0.4s ease;
@@ -2115,7 +2111,7 @@ em {
       }
 
       h4 {
-        font-size: 1.4rem;
+        font-size: 28px;
         font-weight: $fw-extrabold;
         margin-bottom: 10px;
       }
@@ -2127,6 +2123,13 @@ em {
 
       &:hover .img-wrapper img {
         transform: scale(1.05);
+      }
+    }
+  }
+  &.cover {
+    .coverage-grid {
+      img {
+        height: 190px;
       }
     }
   }
@@ -2146,18 +2149,8 @@ em {
     margin: 0 12px;
   }
 
-  .section-title {
-    font-size: 36px;
-    font-weight: $fw-black;
-    color: $color-heading;
-    margin-bottom: 20px;
-
-    @include mdmax { font-size: 22px; }
-  }
-
   .section-desc {
     font-size: 16px;
-    color: $color-gray-500;
     max-width: 700px;
     margin: 0 auto 30px;
   }
@@ -2183,7 +2176,9 @@ em {
       font-weight: $fw-extrabold;
       color: #1e1e2f;
       margin-bottom: 5px;
-      @include mdmax { font-size: 18px; }
+      @include mdmax {
+        font-size: 18px;
+      }
     }
 
     p {
@@ -2202,14 +2197,153 @@ em {
 }
 
 // =============================================================================
+// Commercial Insurance Section
+// =============================================================================
+
+.commercial-insurance-section {
+  .checklists {
+    .checklist {
+      text-align: center;
+
+      h6 {
+        font-weight: $fw-extrabold;
+        margin-top: 12px;
+        font-size: 24px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .step-circle {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: $color-accent-light;
+        color: $color-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $fw-bold;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .coverage-grid {
+    .coverage-card {
+      text-align: center;
+      background-color: $color-white;
+      border-radius: $border-radius-xl;
+      padding: 24px;
+      height: 100%;
+      @include mdmax {
+        padding: 24px;
+      }
+
+      .img-wrapper {
+        border-radius: $border-radius-md;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+          height: 170px;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+      }
+
+      h4 {
+        font-weight: $fw-extrabold;
+        margin-bottom: 10px;
+      }
+
+      p {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      &:hover .img-wrapper img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+// =============================================================================
 // COMMON COVERAGE SECTION (used for both auto and home insurance)
 
 .common-coverage-section {
   .section-title {
     margin: 0;
   }
+  .icon {
+    margin-bottom: 24px;
+  }
 }
 
+.about {
+  .checked-step-item {
+    font-family: "Open Sans", sans-serif;
+    padding-top: 15px;
+    font-size: 18px;
+    color: #000;
+    i {
+      font-size: 28px;
+      color: #e8563f;
+    }
+}
+    .features-section .about-features-graphic {
+      width: 100%;
+      max-width: 589px;
+    }
+
+    .features-section .steps-list .about-step-item p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .about-trust-badges {
+      padding: 2rem 0 3rem;
+    }
+
+    .about-trust-badges .badge-item {
+      text-align: center;
+      padding: 1.25rem 0.75rem;
+    }
+
+    .about-trust-badges .badge-item .badge-icon {
+      font-size: 30px;
+      margin: 0 auto 10px;
+      color: #e8563f;
+    }
+
+    .about-trust-badges .badge-item .badge-icon i {
+      background-color: #fae6e2;
+      border: 15px solid #fae6e2;
+      border-radius: 45px;
+    }
+
+    .about-trust-badges .badge-item h6 {
+      font-weight: 900;
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #1a1a2e;
+      position: relative;
+    }
+
+    .about-trust-badges .badge-item p {
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+  
+}
 // =============================================================================
 // ANIMATIONS
 // =============================================================================
