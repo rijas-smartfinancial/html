@@ -281,7 +281,7 @@ em {
       content: "";
       position: absolute;
       width: 100%;
-      height: 1px;
+      height: 2px;
       background: currentColor;
       top: 100%;
       left: 0;
@@ -350,6 +350,18 @@ em {
       margin-bottom: 12px;
     }
   }
+  .secure-badge {
+    display: flex;
+    gap: 36px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 24px;
+    img {
+      height: auto;
+      width: 85px;
+    }
+
+  }
   // Variant: Home hero (centered layout)
   &.home-hero {
     margin: auto;
@@ -358,7 +370,7 @@ em {
     h1 {
       font-size: 64px;
       max-width: 910px;
-      margin: 12px auto;
+      margin: 24px auto;
 
       @include mdmax {
         font-size: 36px;
@@ -463,6 +475,12 @@ em {
           }
         }
       }
+    }
+
+    .secure-badge {
+    justify-content: center;
+    align-items: center;
+
     }
   }
 
@@ -926,7 +944,7 @@ em {
     h6 {
       font-weight: $fw-black;
       font-size: 28px;
-      margin-bottom: 26px;
+      margin-bottom: 20px;
       color: $color-heading;
       position: relative;
 
@@ -1229,7 +1247,11 @@ em {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+ &:focus {
+      border-color: $color-accent;
+      box-shadow: 0 0 0 0.2rem rgba(232, 86, 63, 0.12);
+      outline: none;
+    }
     @include mdmax {
       width: 100%;
     }
@@ -1460,9 +1482,9 @@ em {
       }
     }
 
-    h6 {
+    h5 {
       font-weight: $fw-extrabold;
-      font-size: 28px;
+      font-size: 24px;
       line-height: 1.4;
 
       @include mdmax {
@@ -1556,7 +1578,7 @@ em {
 
     .note {
       margin-top: 24px;
-      font-weight: $fw-bold;
+      font-weight: normal;
       font-family: $font-heading;
       @include mdmax {
         text-align: center;
@@ -1819,15 +1841,7 @@ em {
       animation-delay: 0.4s;
     }
 
-    &:hover {
-      transform: translateY(-10px) scale(1.02);
-      .card-img img {
-        transform: scale(1.1);
-      }
-      .divider {
-        width: 80px;
-      }
-    }
+    
 
     .card-img {
       overflow: hidden;
@@ -1848,7 +1862,7 @@ em {
         font-size: 28px;
         margin-bottom: 20px;
         position: relative;
-
+        display: inline-block;
         .line {
           position: absolute;
           bottom: -12px;
@@ -1860,7 +1874,24 @@ em {
           transform: scaleX(0);
           transform-origin: left;
           animation: lineGrow 3s ease forwards;
+    margin-top: 8px;
         }
+        &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: $color-accent;
+      top: 100%;
+      left: 0;
+      pointer-events: none;
+      transform-origin: 100% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.3s;
+          margin-top: 9px;
+    }
+
+    
       }
 
       .btn {
@@ -1879,6 +1910,21 @@ em {
           color: $color-white;
         }
       }
+    }
+
+      &:hover {
+      transform: translateY(-10px) scale(1.02);
+      .card-img img {
+        transform: scale(1.1);
+      }
+      .divider {
+        width: 80px;
+      }
+
+      h5::before {
+      transform-origin: 0% 50%;
+      transform: scale3d(1, 1, 1);
+    }
     }
   }
 }
@@ -2358,5 +2404,55 @@ em {
 @keyframes lineGrow {
   to {
     transform: scaleX(1);
+  }
+}
+.smart-toggler {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  width: 30px;
+  height: 22px;
+  position: relative;
+  border: none;
+  background: transparent;
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    left: 0;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  span:nth-child(1) {
+    top: 0;
+  }
+
+  span:nth-child(2) {
+    top: 10px;
+  }
+
+  span:nth-child(3) {
+    bottom: 0;
+  }
+
+  // ACTIVE STATE (when menu open)
+  &[aria-expanded="true"] {
+    span:nth-child(1) {
+      top: 10px;
+      transform: rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+
+    span:nth-child(3) {
+      bottom: 10px;
+      transform: rotate(-45deg);
+    }
   }
 }

@@ -12,8 +12,8 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <link href="assets/scss/styles.css" rel="stylesheet" />
-    <link href="assets/scss/homepage.css" rel="stylesheet" />
+    <link href="assets/scss/main.css" rel="stylesheet" />
+    <link href="assets/scss/magnific-popup.css" rel="stylesheet" />
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -46,6 +46,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="auto.html">Auto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="commercial.html">Commercial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="tel:855-214-2291" class="btn-phone nav-link">
                             <i class="bx bx-phone-call"></i>
                             855-214-2291
@@ -55,268 +67,298 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="hero-tag">Commercial Insurance Quotes</span>
-                    <h1 class="auto-page-hero-h1">Compare business insurance quotes from top carriers</h1>
-                    <p class="hero-subtitle">See commercial insurance rates side by side in minutes</p>
-                    <ul class="hero-bullets">
-                        <li>
-                            <i class="bx bx-check"></i>
-                            No Spam
-                        </li>
-                        <li>
-                            <i class="bx bx-check"></i>
-                            No Robocalls
-                        </li>
-                        <li>
-                            <i class="bx bx-check"></i>
-                            100% real quotes
-                        </li>
-                    </ul>
-                    <div class="quote-forms">
-                        <h5>Get started below for free</h5>
-                        <div class="hero-form quote-form" id="get-quote">
-                            <input pattern="[0-9]*" id="zipcode" onkeyup="this.value=this.value.replace(/[^\d]/,'')"
-                                type="tel" name="zip" placeholder="Zip Code" minlength="5" maxlength="5"
-                                class="form-control zip-input">
-                            <button type="submit" class="btn btn-primary btn-lg action-button submit-btn">
-                                <span class="btn-text old-text">Get My Quote <i
-                                        class="bx bx-right-arrow-alt arrow-icon"></i></span>
-                                <span class="btn-text new-text">Get My Quote <i
-                                        class="bx bx-right-arrow-alt arrow-icon"></i></span>
-                            </button>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="main-page">
+                <!-- Hero Section -->
+                <section class="hero">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <span class="hero-tag">Commercial Insurance Quotes</span>
+                                <h1 class="auto-page-hero-h1">Compare business insurance quotes from top carriers</h1>
+                                <p class="hero-subtitle">See commercial insurance rates side by side in minutes</p>
+                                <ul class="hero-bullets">
+                                    <li>
+                                        <i class="bx bx-check"></i>
+                                        No Spam
+                                    </li>
+                                    <li>
+                                        <i class="bx bx-check"></i>
+                                        No Robocalls
+                                    </li>
+                                    <li>
+                                        <i class="bx bx-check"></i>
+                                        100% real quotes
+                                    </li>
+                                </ul>
+                                <div class="quote-forms">
+                                    <h5>Get started below for free</h5>
+                                    <div class="hero-form quote-form" id="get-quote">
+                                        <input pattern="[0-9]*" id="zipcode"
+                                            onkeyup="this.value=this.value.replace(/[^\d]/,'')" type="tel" name="zip"
+                                            placeholder="Zip Code" minlength="5" maxlength="5"
+                                            class="form-control zip-input">
+                                        <button type="submit" class="btn btn-primary btn-lg action-button submit-btn">
+                                            <span class="btn-text old-text">Get My Quote <i
+                                                    class="bx bx-right-arrow-alt arrow-icon"></i></span>
+                                            <span class="btn-text new-text">Get My Quote <i
+                                                    class="bx bx-right-arrow-alt arrow-icon"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="hero-phone">
+                                    Rather talk on the phone? <a href="tel:855-214-2291">855-214-2291</a>
+                                </p>
+                                  <div class="secure-badge">
+                                <img src="assets/Images/secure-badge.png" alt="Secure and private insurance shopping" />
+                                <img src="assets/Images/bbb.png" alt="BBB" />
+                                <img src="assets/Images/soc2.png" alt="SOC II" />
+                            </div>
+                            </div>
+                            <div class="col-lg-6 text-center text-lg-end">
+                                <div class="hero-image-wrapper">
+                                    <img src="assets/images/commercial-graphic.png"
+                                        alt="auto and home insurance comparison" class="hero-graphic" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="hero-phone">
-                        Rather talk on the phone? <a href="tel:855-214-2291">855-214-2291</a>
-                    </p>
+                </section>
+
+                <div class="main-section">
+
+                    <!-- Partners Bar -->
+                    <section class="partners">
+                        <div class="container text-center">
+                            <p>We partner with over 200+ top rated insurance providers</p>
+                            <div class="partner-logos">
+                                <div class="col-lg-12">
+                                    <div class="row justify-content-center" style="align-items: center">
+                                        <div class="col-lg-2 col-md-4 col-6">
+                                            <img src="assets/images/national_general.png" alt="National General" />
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6">
+                                            <img src="assets/images/hiscox.png" alt="Hiscox" />
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6">
+                                            <img src="assets/images/liberty_mutual.jpg" alt="Liberty Mutual" />
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6">
+                                            <img src="assets/images/nationwide.png" alt="Nationwide" />
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6">
+                                            <img src="assets/images/thimble.png" alt="Thimble" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Features / Steps -->
+                    <section class="features-section">
+                        <div class="container">
+                            <div class="text-center mb-lg-5 mb-3">
+                                <h2 class="section-title tp_fade_anim" data-delay=".2">The best coverage at the best
+                                    price</h2>
+                                <p class="section-subtitle tp_fade_anim" data-delay=".4">Cover is designed to cut
+                                    through the clutter & make shopping easy</p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 text-center">
+                                    <img src="assets/images/commercial-coverage.png"
+                                        alt="Compare commercial insurance rates easily"
+                                        class="features-graphic tp_fade_anim" data-fade-from="left" data-delay=".6" />
+                                </div>
+                                <div class="col-lg-6 mb-4 mb-lg-0">
+                                    <div class="steps-list">
+                                        <div class="step-item tp_fade_anim" data-delay=".2">
+                                            <div class="step-number">1</div>
+                                            <div>
+                                                <h5>Answer a Few Questions</h5>
+                                                <p>Tell us what kind of coverage you're looking for and a few basic
+                                                    details about yourself.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item tp_fade_anim" data-delay=".4">
+                                            <div class="step-number">2</div>
+                                            <div>
+                                                <h5>Instantly Compare Real Rates</h5>
+                                                <p>We'll find the best rates in your area from trusted insurance
+                                                    providers. We'll even check to see if you qualify for discounts.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item tp_fade_anim" data-delay=".6">
+                                            <div class="step-number">3</div>
+                                            <div>
+                                                <h5>Choose the Best Option</h5>
+                                                <p>Pick the coverage that fits your needs and budget. No pressure, no
+                                                    obligations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="todays-best-car tp_fade_anim" data-delay=".7"
+                                            data-fade-from="top" data-ease="bounce"
+                                            onclick="submitForm('/get-fast-quote-commercial.html', '', 'commercial', 7); return false;">
+                                            See today's insurance rates <i class="bx bx-right-arrow-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Trust Badges -->
+                    <section class="trust-badges">
+                        <div class="container">
+                            <div class="row text-center g-4">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="badge-item">
+                                        <div class="badge-icon">
+                                            <img src="assets/Images/custom-icon/shield-heart.svg"
+                                                alt="Safe and secure" />
+                                        </div>
+                                        <h6>Safe & Secure <span class="line"></span></h6>
+                                        <p>We take your privacy seriously</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="badge-item">
+                                        <div class="badge-icon">
+                                            <img src="assets/Images/custom-icon/lightening-tag.svg"
+                                                alt="Real rates instantly" />
+                                        </div>
+                                        <h6>Real rates instantly <span class="line"></span></h6>
+                                        <p>Personalized, accurate quotes</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="badge-item">
+                                        <div class="badge-icon">
+                                            <img src="assets/Images/custom-icon/shield-doc.svg"
+                                                alt="Top rated carriers" />
+                                        </div>
+                                        <h6>Top rated carriers <span class="line"></span></h6>
+                                        <p>Trusted, reputable providers in your state</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="badge-item">
+                                        <div class="badge-icon">
+                                            <img src="assets/Images/custom-icon/phone-verified.svg"
+                                                alt="Fast & simple" />
+                                        </div>
+                                        <h6>Fast & simple <span class="line"></span></h6>
+                                        <p>Designed for clarity, not confusion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- CTA Section -->
+                    <section class="cta-section">
+                        <div class="container">
+                            <h2>Ready to get covered?</h2>
+                            <p>Compare real quotes from the nation's best insurance companies.</p>
+                            <div class="cta-form bottom-quote-form quote-form">
+                                <select id="insurance-type-select">
+                                    <option value="auto">Auto</option>
+                                    <option value="home">Home</option>
+                                    <option value="commercial" selected>Commercial</option>
+                                </select>
+                                <input pattern="[0-9]*" id="zipcode" onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+                                    type="tel" name="zip" placeholder="Zip Code" minlength="5" maxlength="5"
+                                    class="form-control zip-input">
+                                <button type="submit" class="btn btn-primary btn-lg action-button submit-btn">
+                                    <span class="btn-text old-text">Get started for free <i
+                                            class="bx bx-right-arrow-alt arrow-icon"></i></span>
+                                    <span class="btn-text new-text">Get started for free <i
+                                            class="bx bx-right-arrow-alt arrow-icon"></i></span>
+                                </button>
+                            </div>
+                            <div class="cta-phone-bar">
+                                <div>Rather talk on the phone? <a href="tel:855-214-2291">855-214-2291</a></div>
+                                <div class="phone-hours">We're here to help • Monday - Friday 9:00am to 6:00pm EST</div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="col-lg-6 text-center text-lg-end">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/images/commercial-graphic.png" alt="auto and home insurance comparison"
-                            class="hero-graphic" />
+                <footer class="site-footer">
+                    <div class="container">
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-4">
+                                <img src="assets/images/logo.png" alt="Cover" class="footer-logo" />
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h6 class="footer-heading">Insurance Quotes</h6>
+                                <ul class="footer-links">
+                                    <li><a href="./auto.html">Auto Insurance</a></li>
+                                    <li><a href="./home.html">Home Insurance</a></li>
+                                    <li><a href="./commercial.html">Commercial Insurance</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h6 class="footer-heading">Company</h6>
+                                <ul class="footer-links">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <h6 class="footer-heading">Information</h6>
+                                <ul class="footer-links">
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="terms-of-use.html">Terms of use</a></li>
+                                    <li><a href="ccpa-opt-out.html">Do not sell my personal information</a></li>
+                                    <li><a href="privacy-policy.html#special-notice-california">California Privacy
+                                            Choices</a></li>
+                                    <li><a href="privacy-policy.html#cookies-and-technologies">Cookies & Other
+                                            technology</a></li>
+                                    <li><a href="washington-mhmda-policy.html">Washington Consumer MHMDA Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p>
+                                © 2026 Cover Technologies, LLC dba Cover.com. All rights reserved.
+                            </p>
+                            <p>
+                                Cover.com is an insurance comparison marketplace. We provide consumers access to real
+                                time insurance
+                                quotes and services through a network of licensed insurance carriers and agencies across
+                                the United
+                                States.
+                            </p>
+                            <p>
+                                Activity on this website may be monitored, recorded, and retained for quality and
+                                security purposes.
+                            </p>
+                            <p>
+                                Rates, coverage options, and savings vary by location, insurer, and individual
+                                circumstances.
+                                Not all carriers operate in every state, and not all applicants will qualify for the
+                                lowest
+                                advertised
+                                rates. Cover.com matches consumers with participating insurers and licensed agents based
+                                on
+                                information
+                                provided by the user.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </footer>
+            </main>
         </div>
-    </section>
-
-    <div class="main-section">
-        <!-- Partners Bar -->
-        <section class="partners">
-            <div class="container text-center">
-                <p>We partner with over 200+ top rated insurance providers</p>
-                <div class="partner-logos">
-                    <div class="col-lg-12">
-                        <div class="row justify-content-center" style="align-items: center">
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <img src="assets/images/national_general.png" alt="National General" />
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <img src="assets/images/hiscox.png" alt="Hiscox" />
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <img src="assets/images/liberty_mutual.jpg" alt="Liberty Mutual" />
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <img src="assets/images/nationwide.png" alt="Nationwide" />
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-6">
-                                <img src="assets/images/thimble.png" alt="Thimble" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features-section">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-title">The best coverage at the best price</h2>
-                    <p class="section-subtitle">Cover is designed to cut through the clutter & make shopping easy</p>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-6 text-center">
-                        <img src="assets/images/commercial2-graphic.png" alt="Compare auto insurance rates easily"
-                            class="features-graphic" />
-                    </div>
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="steps-list">
-                            <div class="step-item">
-                                <div class="step-number">1</div>
-                                <div>
-                                    <h5>Answer a Few Questions</h5>
-                                    <p>Tell us what kind of coverage you're looking for and a few basic details about
-                                        yourself.</p>
-                                </div>
-                            </div>
-                            <div class="step-item">
-                                <div class="step-number">2</div>
-                                <div>
-                                    <h5>Instantly Compare Real Rates</h5>
-                                    <p>
-                                        We’ll find the best rates in your area from trusted insurance providers.
-                                        We’ll even check to see if you qualify for discounts.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="step-item">
-                                <div class="step-number">3</div>
-                                <div>
-                                    <h5>Choose the Best Option</h5>
-                                    <p>
-                                        Pick the coverage that fits your needs and budget. No pressure, no obligations.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="font-size: 26px; padding-left: 50px;">
-                            <a href="#" class="todays-best-car"
-                                onclick="submitForm('/get-fast-quote-commercial.html', '', 'commercial', 7); return false;">
-                                Check today’s best business insurance rates <i class="bx bx-right-arrow-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trust Badges -->
-        <section class="trust-badges">
-            <div class="container">
-                <div class="row text-center g-4">
-                    <div class="col-12 col-md-3">
-                        <div class="badge-item">
-                            <div class="badge-icon">
-                                <i class="bx bx-check-shield"></i>
-                            </div>
-                            <h6>Safe & Secure</h6>
-                            <p>We take your privacy seriously</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="badge-item">
-                            <div class="badge-icon">
-                                <i class="bx bx-dollar-circle"></i>
-                            </div>
-                            <h6>Real rates instantly</h6>
-                            <p>Personalized, accurate quotes</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="badge-item">
-                            <div class="badge-icon">
-                                <i class="bx bx-trophy"></i>
-                            </div>
-                            <h6>Top rated carriers</h6>
-                            <p>Trusted, reputable providers in your state</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="badge-item">
-                            <div class="badge-icon">
-                                <i class="bx bx-sun"></i>
-                            </div>
-                            <h6>Fast & simple</h6>
-                            <p>Designed for clarity, not confusion</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <h2>Ready to get covered?</h2>
-                <p>Compare real quotes from the nation’s best insurance companies.</p>
-                <div class="cta-form bottom-quote-form quote-form">
-                    <select id="insurance-type-select">
-                        <option value="auto">Auto</option>
-                        <option value="home">Home</option>
-                        <option value="commercial" selected>Commercial</option>
-                    </select>
-                    <input pattern="[0-9]*" id="zipcode" onkeyup="this.value=this.value.replace(/[^\d]/,'')" type="tel"
-                        name="zip" placeholder="Zip Code" minlength="5" maxlength="5" class="form-control zip-input">
-                    <button type="submit" class="btn btn-primary btn-lg action-button submit-btn">
-                        <span class="btn-text old-text">Get started for free <i
-                                class="bx bx-right-arrow-alt arrow-icon"></i></span>
-                        <span class="btn-text new-text">Get started for free <i
-                                class="bx bx-right-arrow-alt arrow-icon"></i></span>
-                    </button>
-                </div>
-                <div class="cta-phone-bar">
-                    <div>Rather talk on the phone? <a href="tel:855-214-2291">855-214-2291</a></div>
-                    <div class="phone-hours">We’re here to help • Monday - Friday 9:00am to 6:00pm EST</div>
-                </div>
-            </div>
-        </section>
     </div>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-4">
-                    <img src="assets/images/logo.png" alt="Cover" class="footer-logo" />
-                </div>
-                <div class="col-6 col-md-3">
-                    <h6 class="footer-heading">Insurance Quotes</h6>
-                    <ul class="footer-links">
-                        <li><a href="./auto.html">Auto Insurance</a></li>
-                        <li><a href="./home.html">Home Insurance</a></li>
-                        <li><a href="./commercial.html">Commercial Insurance</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h6 class="footer-heading">Company</h6>
-                    <ul class="footer-links">
-                        <li><a href="about-us.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h6 class="footer-heading">Information</h6>
-                    <ul class="footer-links">
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-use.html">Terms of use</a></li>
-                        <li><a href="ccpa-opt-out.html">Do not sell my personal information</a></li>
-                        <li><a href="privacy-policy.html#special-notice-california">California Privacy Choices</a></li>
-                        <li><a href="privacy-policy.html#cookies-and-technologies">Cookies & Other technology</a></li>
-                        <li><a href="washington-mhmda-policy.html">Washington Consumer MHMDA Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>
-                    © 2026 Cover Technologies, LLC dba Cover.com. All rights reserved.
-                </p>
-                <p>
-                    Cover.com is an insurance comparison marketplace. We provide consumers access to real time insurance
-                    quotes and services through a network of licensed insurance carriers and agencies across the United
-                    States.
-                </p>
-                <p>
-                    Activity on this website may be monitored, recorded, and retained for quality and security purposes.
-                </p>
-                <p>
-                    Rates, coverage options, and savings vary by location, insurer, and individual circumstances.
-                    Not all carriers operate in every state, and not all applicants will qualify for the lowest
-                    advertised
-                    rates. Cover.com matches consumers with participating insurers and licensed agents based on
-                    information
-                    provided by the user.
-                </p>
-            </div>
-        </div>
-    </footer>
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/plugin.js"></script>
+<script src="assets/js/main.js"></script>
 <script src="https://d1knh3b6uo8q16.cloudfront.net/common/sf_landing.js"></script>
 <script src="https://d1knh3b6uo8q16.cloudfront.net/common/new_sfanalytics.js"></script>
 <script src="https://d1knh3b6uo8q16.cloudfront.net/common/cookiebanner.min.js"></script>

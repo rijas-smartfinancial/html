@@ -99,7 +99,7 @@ em {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: currentColor;
   top: 100%;
   left: 0;
@@ -162,6 +162,17 @@ em {
     margin-bottom: 12px;
   }
 }
+.hero .secure-badge {
+  display: flex;
+  gap: 36px;
+  justify-content: start;
+  align-items: center;
+  margin-top: 24px;
+}
+.hero .secure-badge img {
+  height: auto;
+  width: 85px;
+}
 .hero.home-hero {
   margin: auto;
   text-align: center;
@@ -169,7 +180,7 @@ em {
 .hero.home-hero h1 {
   font-size: 64px;
   max-width: 910px;
-  margin: 12px auto;
+  margin: 24px auto;
 }
 @media screen and (max-width: 992px) {
   .hero.home-hero h1 {
@@ -265,6 +276,10 @@ em {
     right: 8px;
     top: 8px;
   }
+}
+.hero.home-hero .secure-badge {
+  justify-content: center;
+  align-items: center;
 }
 .hero.hero-insurance h1 {
   font-size: 54px;
@@ -674,7 +689,7 @@ em {
 .trust-badges .badge-item h6 {
   font-weight: 900;
   font-size: 28px;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   color: #1a1a2e;
   position: relative;
 }
@@ -935,6 +950,13 @@ em {
   justify-content: space-around;
   align-items: center;
 }
+.bottom-quote-form input:focus,
+.bottom-quote-form button:focus,
+.bottom-quote-form select:focus {
+  border-color: #e44f2d;
+  box-shadow: 0 0 0 0.2rem rgba(232, 86, 63, 0.12);
+  outline: none;
+}
 @media screen and (max-width: 992px) {
   .bottom-quote-form input,
   .bottom-quote-form button,
@@ -1131,13 +1153,13 @@ em {
     margin-bottom: 0;
   }
 }
-.insurance-section .info-card h6 {
+.insurance-section .info-card h5 {
   font-weight: 800;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.4;
 }
 @media screen and (max-width: 992px) {
-  .insurance-section .info-card h6 {
+  .insurance-section .info-card h5 {
     font-size: 22px;
     margin: 24px 0;
   }
@@ -1211,7 +1233,7 @@ em {
 }
 .insurance-reasons .reason-card .note {
   margin-top: 24px;
-  font-weight: 700;
+  font-weight: normal;
   font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media screen and (max-width: 992px) {
@@ -1431,15 +1453,6 @@ em {
 .coverage-section .main-insurance-card:nth-child(3) {
   animation-delay: 0.4s;
 }
-.coverage-section .main-insurance-card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-.coverage-section .main-insurance-card:hover .card-img img {
-  transform: scale(1.1);
-}
-.coverage-section .main-insurance-card:hover .divider {
-  width: 80px;
-}
 .coverage-section .main-insurance-card .card-img {
   overflow: hidden;
   border-radius: 12px;
@@ -1457,6 +1470,7 @@ em {
   font-size: 28px;
   margin-bottom: 20px;
   position: relative;
+  display: inline-block;
 }
 .coverage-section .main-insurance-card .card-body h5 .line {
   position: absolute;
@@ -1469,6 +1483,21 @@ em {
   transform: scaleX(0);
   transform-origin: left;
   animation: lineGrow 3s ease forwards;
+  margin-top: 8px;
+}
+.coverage-section .main-insurance-card .card-body h5::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #e44f2d;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+  margin-top: 9px;
 }
 .coverage-section .main-insurance-card .card-body .btn {
   color: #e87059;
@@ -1482,6 +1511,19 @@ em {
 .coverage-section .main-insurance-card .card-body .btn:hover {
   background-color: #e44f2d;
   color: #ffffff;
+}
+.coverage-section .main-insurance-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+.coverage-section .main-insurance-card:hover .card-img img {
+  transform: scale(1.1);
+}
+.coverage-section .main-insurance-card:hover .divider {
+  width: 80px;
+}
+.coverage-section .main-insurance-card:hover h5::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
 }
 
 .auto-insurance-section {
@@ -1868,4 +1910,44 @@ em {
   to {
     transform: scaleX(1);
   }
+}
+.smart-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.smart-toggler {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  border: none;
+  background: transparent;
+}
+.smart-toggler span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  left: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.smart-toggler span:nth-child(1) {
+  top: 0;
+}
+.smart-toggler span:nth-child(2) {
+  top: 10px;
+}
+.smart-toggler span:nth-child(3) {
+  bottom: 0;
+}
+.smart-toggler[aria-expanded=true] span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+.smart-toggler[aria-expanded=true] span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+.smart-toggler[aria-expanded=true] span:nth-child(3) {
+  bottom: 10px;
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=main.css.map */
