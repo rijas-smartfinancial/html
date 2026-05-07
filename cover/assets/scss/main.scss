@@ -22,9 +22,6 @@ $color-accent-hover: #a62814;
 $color-accent-light: #fae6e2;
 $color-accent-muted: #e87059;
 
-// Heading / dark text
-$color-heading: #1a1a2e;
-
 // Neutral grays
 $color-white: #ffffff;
 $color-black: #000000;
@@ -211,6 +208,9 @@ body {
   font-family: $font-body;
   font-size: $font-size-base;
   color: $color-black;
+  @include mdmax {
+    font-size: 16px;
+  }
 
   .main-page {
     padding-top: 80px;
@@ -225,9 +225,75 @@ h5,
 h6 {
   font-family: $font-heading;
   font-weight: $fw-black;
-  color: $color-heading;
+  color: $color-black;
 }
-
+h1 {
+    font-weight: $fw-black;
+      font-size: 64px;
+      margin-bottom: 24px;
+      line-height: 67.2px;
+      letter-spacing: -0.5px;
+      @include mdmax {
+        font-size: 32px;
+        margin-bottom: 12px;
+        line-height: 33.6px;
+       }
+}
+h2 {
+    font-weight: $fw-black;
+      font-size: 48px;
+      margin-bottom: 24px;
+      line-height: 57px;
+      @include mdmax {
+        font-size: 28px;
+        margin-bottom: 12px;
+        line-height: 32.5px;
+       }
+}
+h3 {
+    font-weight: $fw-black;
+      font-size: 36px;
+      margin-bottom: 20px;
+      line-height: 42px;
+      @include mdmax {
+        font-size: 26px;
+        margin-bottom: 15px;
+        line-height: 31.5px;
+       }
+}
+h4 {
+    font-weight: $fw-extrabold;
+      font-size: 28px;
+      margin-bottom: 15px;
+      line-height: 33.6px;
+      @include mdmax {
+        font-size: 22px;
+        margin-bottom: 10px;
+        line-height: 26.4px;
+       }
+}
+h5 {
+    font-weight: $fw-extrabold;
+      font-size: 28px;
+      margin-bottom: 20px;
+      line-height: 28px;
+      @include mdmax {
+        font-size: 20px;
+        margin-bottom: 10px;
+        line-height: 24px;
+       }
+}
+h6 {
+    font-weight: $fw-extrabold;
+      font-size: 24px;
+      margin-bottom: 15px;
+      line-height: 28px;
+      @include mdmax {
+        font-size: 20px;
+        margin-bottom: 10px;
+        line-height: 24px;
+       }
+}
 p {
   font-family: $font-body;
   line-height: 32px;
@@ -235,6 +301,7 @@ p {
 
   @include mdmax {
     font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -340,9 +407,6 @@ em {
     text-align: center;
   }
   h1 {
-    font-weight: $fw-black;
-    line-height: 1.05;
-    color: $color-heading;
     margin-bottom: 24px;
     letter-spacing: -0.5px;
 
@@ -356,11 +420,18 @@ em {
     justify-content: start;
     align-items: center;
     margin-top: 24px;
-    img {
-      height: auto;
-      width: 85px;
+    @include mdmax {
+      justify-content: center;
+      gap: 20px;
     }
-
+    img {
+      height: 35px;
+      width: auto;
+    }
+    .secure {
+      height: 24px;
+      width: auto;
+    }
   }
   // Variant: Home hero (centered layout)
   &.home-hero {
@@ -368,13 +439,11 @@ em {
     text-align: center;
 
     h1 {
-      font-size: 64px;
       max-width: 910px;
       margin: 24px auto;
 
       @include mdmax {
-        font-size: 36px;
-        margin: 12px 24px;
+        margin: 12px;
       }
     }
 
@@ -421,7 +490,7 @@ em {
             gap: 0.5rem;
             padding: 4px 20px;
             background: $color-white;
-            color: $color-heading;
+            color: $color-black;
             border-radius: $border-radius-pill;
             font-weight: $fw-regular;
             font-size: $font-size-base;
@@ -478,9 +547,8 @@ em {
     }
 
     .secure-badge {
-    justify-content: center;
-    align-items: center;
-
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -491,7 +559,7 @@ em {
       max-width: 910px;
 
       @include mdmax {
-        font-size: 36px;
+        font-size: 32px;
         margin: 0;
       }
     }
@@ -530,7 +598,7 @@ em {
     margin-bottom: 2.25rem; // 36px
 
     @include mdmax {
-      gap: 0;
+      gap: 5px;
       margin: 0 auto 1.25rem;
       justify-content: center;
     }
@@ -549,6 +617,9 @@ em {
       i {
         font-size: 28px;
         color: $color-accent;
+        @include mdmax {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -585,7 +656,7 @@ em {
 
   .hero-form {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     flex-wrap: wrap;
     justify-content: space-between;
 
@@ -622,14 +693,10 @@ em {
 
     h5 {
       color: $color-accent;
-      font-family: $font-body;
-      font-size: 24px;
-      font-weight: $fw-extrabold;
       margin-bottom: 24px;
 
       @include mdmax {
-        font-size: 20px;
-        letter-spacing: -1px;
+        font-size: 22px;
       }
     }
 
@@ -650,7 +717,7 @@ em {
     }
 
     input {
-      width: calc(45% - 15px);
+      width: 44%;
       border-color: $color-gray-400;
       background-image: url("../../assets/images/icon/location-black.svg");
       background-repeat: no-repeat;
@@ -738,14 +805,10 @@ em {
   background: $color-white;
 
   h2.section-title {
-    font-size: 48px;
-    font-weight: $fw-black;
-    color: $color-heading;
     margin-bottom: 0.5rem;
     letter-spacing: -0.3px;
 
     @include mdmax {
-      font-size: 28px;
       margin: 0 30px;
     }
   }
@@ -812,13 +875,8 @@ em {
 }
 
 .section-title {
-  font-size: 36px;
-  font-weight: $fw-black;
   color: $color-black;
 
-  @include mdmax {
-    font-size: 28px;
-  }
 }
 
 .section-desc {
@@ -843,7 +901,7 @@ em {
   }
 
   .todays-best-car {
-    color: $color-accent-muted;
+    color: $color-accent;
     text-decoration: none;
     background-color: $color-accent-light;
     padding: 8px 20px;
@@ -859,6 +917,9 @@ em {
   }
 
   .steps-list {
+    @include mdmax {
+      margin-top: 24px;
+    }
     .step-item {
       display: flex;
       gap: 1.1rem;
@@ -878,16 +939,16 @@ em {
         justify-content: center;
       }
 
-      h5 {
-        font-weight: $fw-extrabold;
-        margin-bottom: 0.3rem;
-        color: $color-heading;
-      }
+     
 
       p {
         margin-bottom: 0;
         line-height: 1.6;
+        b {
+          font-weight: $fw-extrabold;
+        }
       }
+
     }
   }
 
@@ -911,6 +972,9 @@ em {
 
   .w-auto {
     max-width: 420px;
+    @include mdmax {
+      max-width: 100%;
+    }
   }
 
   .video-col {
@@ -941,11 +1005,7 @@ em {
       padding: 1rem 0.5rem;
     }
 
-    h6 {
-      font-weight: $fw-black;
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: $color-heading;
+    h5 {
       position: relative;
 
       .line {
@@ -972,6 +1032,7 @@ em {
       font-size: $font-size-base;
       color: $color-black;
       margin-bottom: 0;
+      margin-top: 24px;
       line-height: 1.4;
     }
   }
@@ -990,7 +1051,7 @@ em {
 
     h5 {
       font-weight: $fw-extrabold;
-      color: $color-heading;
+      color: $color-black;
     }
 
     p {
@@ -1025,7 +1086,7 @@ em {
         font-weight: $fw-bold;
         margin: 0;
         padding: 0.85rem 0.75rem;
-        color: $color-heading;
+        color: $color-black;
       }
 
       &:hover {
@@ -1072,35 +1133,21 @@ em {
   }
 
   .blog-title {
-    font-size: 48px;
-    font-weight: $fw-black;
     margin-bottom: 1.25rem;
-    color: $color-black;
-    line-height: 1.2;
     text-align: center;
 
     @include mdmax {
-      font-size: 28px;
-      margin: 0 24px 24px;
+      margin: 0 0 24px;
+      letter-spacing: -0.5px;
     }
   }
 
   .blog-content {
-    h2 {
-      font-size: 24px;
-    }
+
 
     h4 {
-      font-size: 1.15rem;
-      font-weight: $fw-extrabold;
       margin-bottom: 15px;
-      color: $color-heading;
     }
-
-    p {
-      color: $color-black;
-    }
-
     ul {
       padding-left: 1.25rem;
     }
@@ -1127,7 +1174,7 @@ em {
 
       .author-name {
         font-weight: $fw-bold;
-        color: $color-heading;
+        color: $color-black;
         font-size: $font-size-base;
         margin-right: 5px;
 
@@ -1137,29 +1184,36 @@ em {
       }
 
       .meta-details {
-        color: $color-heading;
+        color: $color-black; 
         font-size: $font-size-base;
-
+        display: flex;
+        align-items: center;
         @include mdmax {
           font-size: 16px;
+          display: block;
         }
       }
 
       .tag {
         background-color: $color-surface-badge;
-        color: $color-heading;
+        color: $color-black;
         font-size: 16px;
         font-weight: 500;
         padding: 5px 15px 5px 10px;
         border-radius: 80px;
         margin-left: 10px;
         white-space: nowrap;
-        display: inline-flex;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: 26px;
+          vertical-align: top;
+          color: #BA86FD;
+        }
         @include mdmax {
-          display: block;
           margin-left: 0;
-          max-width: 160px;
+          max-width: 150px;
           font-size: 14px;
           margin-top: 12px;
         }
@@ -1181,7 +1235,7 @@ em {
     font-size: 48px;
     font-weight: $fw-black;
     margin-bottom: 0.5rem;
-    color: $color-heading;
+    color: $color-black;
 
     @include mdmax {
       font-size: 28px;
@@ -1247,7 +1301,7 @@ em {
     display: flex;
     justify-content: space-around;
     align-items: center;
- &:focus {
+    &:focus {
       border-color: $color-accent;
       box-shadow: 0 0 0 0.2rem rgba(232, 86, 63, 0.12);
       outline: none;
@@ -1298,10 +1352,21 @@ em {
       width: 100%;
     }
 
-    &:hover {
-      background: $color-accent-hover;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-accent-hover;
       border: none;
     }
+  }
+  .btn-check:checked + .btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check) + .btn:active {
+    color: var(--bs-btn-active-color);
+    background-color: $color-accent-hover;
+    border-color: $color-accent-hover;
   }
 }
 
@@ -1325,7 +1390,7 @@ em {
     font-weight: $fw-extrabold;
     letter-spacing: 0.5px;
     margin-bottom: 0.85rem;
-    color: $color-heading;
+    color: $color-black;
   }
 
   .footer-links {
@@ -1379,6 +1444,7 @@ em {
     transform: translateY(50%);
     text-align: center;
     transition: none;
+    line-height: 30px;
   }
 
   .old-text {
@@ -1483,13 +1549,8 @@ em {
     }
 
     h5 {
-      font-weight: $fw-extrabold;
-      font-size: 24px;
-      line-height: 1.4;
-
       @include mdmax {
-        font-size: 22px;
-        margin: 24px 0;
+        margin: 12px 0 24px 0;
       }
     }
   }
@@ -1519,12 +1580,14 @@ em {
 
   .reason-card {
     background: $color-white;
-    padding: 30px 25px;
+    padding: 30px 24px;
     border-radius: $border-radius-md;
     height: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
-
+    @include mdmax {
+      padding: 24px 20px;
+    }
     &:hover {
       transform: translateY(-6px);
     }
@@ -1578,7 +1641,7 @@ em {
 
     .note {
       margin-top: 24px;
-      font-weight: normal;
+      font-weight: $fw-bold;
       font-family: $font-heading;
       @include mdmax {
         text-align: center;
@@ -1588,6 +1651,9 @@ em {
 
   .wide-card {
     padding: 40px;
+    @include mdmax {
+      padding: 24px;
+    }
   }
 
   .list-center {
@@ -1606,14 +1672,7 @@ em {
     margin: 0 auto 24px;
 
     h2 {
-      font-size: 36px;
-      font-weight: $fw-black;
-      color: $color-gray-900;
       margin-bottom: 16px;
-
-      @include mdmax {
-        font-size: 28px;
-      }
     }
 
     .desc {
@@ -1627,10 +1686,6 @@ em {
       font-weight: $fw-bold;
       color: $color-gray-800;
     }
-  }
-
-  .compare-grid {
-    margin: 0 auto;
   }
 
   .compare-card {
@@ -1700,13 +1755,8 @@ em {
     margin-bottom: 50px;
 
     h2 {
-      font-size: 36px;
-      font-weight: $fw-black;
       margin-bottom: 12px;
 
-      @include mdmax {
-        font-size: 28px;
-      }
     }
 
     .subtitle {
@@ -1736,12 +1786,6 @@ em {
           object-fit: contain;
         }
       }
-
-      h6 {
-        font-size: 28px;
-        font-weight: $fw-extrabold;
-        color: $color-gray-800;
-      }
     }
   }
 
@@ -1766,13 +1810,7 @@ em {
     }
 
     h2 {
-      font-size: 36px;
-      font-weight: $fw-black;
       margin-bottom: 12px;
-
-      @include mdmax {
-        font-size: 28px;
-      }
     }
 
     .subtitle {
@@ -1789,22 +1827,16 @@ em {
     height: 100%;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
 
+    h5 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
     .icon {
       margin-bottom: 18px;
       img {
         height: 42px;
         object-fit: contain;
-      }
-    }
-
-    h6 {
-      font-size: 28px;
-      font-weight: $fw-extrabold;
-      max-width: 260px;
-      margin: 0 auto;
-
-      @include mdmax {
-        font-size: 22px;
       }
     }
   }
@@ -1841,8 +1873,6 @@ em {
       animation-delay: 0.4s;
     }
 
-    
-
     .card-img {
       overflow: hidden;
       border-radius: $border-radius-sm;
@@ -1859,7 +1889,6 @@ em {
       color: #777;
 
       h5 {
-        font-size: 28px;
         margin-bottom: 20px;
         position: relative;
         display: inline-block;
@@ -1874,28 +1903,26 @@ em {
           transform: scaleX(0);
           transform-origin: left;
           animation: lineGrow 3s ease forwards;
-    margin-top: 8px;
+          margin-top: 8px;
         }
         &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: $color-accent;
-      top: 100%;
-      left: 0;
-      pointer-events: none;
-      transform-origin: 100% 50%;
-      transform: scale3d(0, 1, 1);
-      transition: transform 0.3s;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background: $color-accent;
+          top: 100%;
+          left: 0;
+          pointer-events: none;
+          transform-origin: 100% 50%;
+          transform: scale3d(0, 1, 1);
+          transition: transform 0.3s;
           margin-top: 9px;
-    }
-
-    
+        }
       }
 
       .btn {
-        color: $color-accent-muted;
+        color: $color-accent;
         border: 0;
         text-decoration: none;
         background-color: $color-accent-light;
@@ -1912,7 +1939,7 @@ em {
       }
     }
 
-      &:hover {
+    &:hover {
       transform: translateY(-10px) scale(1.02);
       .card-img img {
         transform: scale(1.1);
@@ -1922,9 +1949,9 @@ em {
       }
 
       h5::before {
-      transform-origin: 0% 50%;
-      transform: scale3d(1, 1, 1);
-    }
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+      }
     }
   }
 }
@@ -1940,15 +1967,33 @@ em {
     font-weight: $fw-bold;
     font-size: $font-size-base;
   }
+  .checklist {
+    justify-content: center;
+    @include mdmax {
+      flex-direction: column;
+      align-items: start;
+    }
+    span {
+      font-size: $font-size-base;
+
+      @include mdmax {
+        font-size: 16px;
+      }
+
+      &::before {
+        content: url(../Images/icon/list-check-mark.svg);
+        color: $color-accent;
+        margin-right: 6px;
+      }
+    }
+  }
 
   .steps {
     .step {
       text-align: center;
 
       h6 {
-        font-weight: $fw-extrabold;
         margin-top: 12px;
-        font-size: 24px;
       }
 
       p {
@@ -1971,35 +2016,24 @@ em {
     }
   }
 
-  .checklist {
-    span {
-      font-size: $font-size-base;
-
-      @include mdmax {
-        font-size: 16px;
-      }
-
-      &::before {
-        content: url(../Images/icon/list-check-mark.svg);
-        color: $color-accent;
-        margin-right: 6px;
-      }
-    }
-  }
+  
 }
-
-.coverage-card {
-  background: $color-white;
-  border-radius: $border-radius-lg;
-  padding: 30px;
-  height: 100%;
-  text-align: center;
+.card_hoveranim {
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   }
+}
+
+.coverage-card {
+  background: $color-white;
+  border-radius: $border-radius-lg;
+  padding: 24px;
+  height: 100%;
+  text-align: center;
+
 
   .icon {
     font-size: 32px;
@@ -2007,10 +2041,9 @@ em {
   }
 
   h4 {
-    font-size: 28px;
-    font-weight: $fw-extrabold;
     margin-bottom: 8px;
   }
+  
 
   .tag {
     font-size: 12px;
@@ -2029,12 +2062,12 @@ em {
       font-size: 16px;
       margin-bottom: 10px;
       position: relative;
-      padding-left: 20px;
+      padding-left: 0;
       text-align: left;
       span {
         color: $color-accent;
       }
-      ::before {
+      &::before {
         content: url(../Images/icon/list-check-mark.svg);
         margin-right: 8px;
       }
@@ -2044,13 +2077,28 @@ em {
   .note {
     font-size: $font-size-base;
     font-weight: $fw-bold;
+    @include mdmax {
+      font-size: 16px;
+    }
   }
 }
 .commercial-converage {
   .coverage-card {
     ul {
+
+      padding: 0;
       li {
+         margin: 5px 0;
+      padding: 0;
         text-align: center;
+        @include mdmax {
+          text-align: left;
+          display: flex;
+        }
+
+        b {
+          display: flex;
+        }
       }
     }
     p,
@@ -2153,14 +2201,13 @@ em {
           object-fit: cover;
           display: block;
           transition: transform 0.4s ease;
+          @include mdmax {
+            height: 180px;
+          }
         }
       }
 
-      h4 {
-        font-size: 28px;
-        font-weight: $fw-extrabold;
-        margin-bottom: 10px;
-      }
+  
 
       p {
         max-width: 480px;
@@ -2170,7 +2217,18 @@ em {
       &:hover .img-wrapper img {
         transform: scale(1.05);
       }
+      
     }
+    // home insurance coverage card
+      &.replacement-cost {
+        .img-wrapper {
+          img {
+            @include mdmax {
+              height: 190px;  
+            }
+          }
+        }
+      }
   }
   &.cover {
     .coverage-grid {
@@ -2192,7 +2250,6 @@ em {
   margin-bottom: 24px;
   @include mdmax {
     padding: 48px 24px;
-    margin: 0 12px;
   }
 
   .section-desc {
@@ -2214,17 +2271,14 @@ em {
         height: 190px;
         object-fit: cover;
         transition: transform 0.4s ease;
+        @include mdmax {
+          height: 318px;
+        }
       }
     }
 
     h6 {
-      font-size: 24px;
-      font-weight: $fw-extrabold;
-      color: #1e1e2f;
       margin-bottom: 5px;
-      @include mdmax {
-        font-size: 18px;
-      }
     }
 
     p {
@@ -2252,9 +2306,7 @@ em {
       text-align: center;
 
       h6 {
-        font-weight: $fw-extrabold;
         margin-top: 12px;
-        font-size: 24px;
       }
 
       p {
@@ -2302,7 +2354,7 @@ em {
         }
       }
 
-      h4 {
+      h5 {
         font-weight: $fw-extrabold;
         margin-bottom: 10px;
       }
@@ -2340,55 +2392,44 @@ em {
       font-size: 28px;
       color: #e8563f;
     }
-}
-    .features-section .about-features-graphic {
-      width: 100%;
-      max-width: 589px;
-    }
+  }
+  .features-section .about-features-graphic {
+    width: 100%;
+    max-width: 589px;
+  }
 
-    .features-section .steps-list .about-step-item p {
-      font-family: "Open Sans", sans-serif;
-      font-size: 18px;
-      color: #000;
-      margin-bottom: 20px;
-    }
+  .features-section .steps-list .about-step-item p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+  }
 
-    .about-trust-badges {
-      padding: 2rem 0 3rem;
-    }
-
-    .about-trust-badges .badge-item {
+  .about-trust-badges {
+    padding: 2rem 0 3rem;
+    .badge-item {
       text-align: center;
       padding: 1.25rem 0.75rem;
+      .badge-icon {
+        font-size: 30px;
+        margin: 0 auto 10px;
+        color: #e8563f;
+        i {
+          background-color: #fae6e2;
+          border: 15px solid #fae6e2;
+          border-radius: 45px;
+        }
+      }
+      h5 {
+        margin-bottom: 10px;
+        position: relative;
+      }
+      p {
+        margin-bottom: 0;
+        line-height: 1.4;
+      }
     }
-
-    .about-trust-badges .badge-item .badge-icon {
-      font-size: 30px;
-      margin: 0 auto 10px;
-      color: #e8563f;
-    }
-
-    .about-trust-badges .badge-item .badge-icon i {
-      background-color: #fae6e2;
-      border: 15px solid #fae6e2;
-      border-radius: 45px;
-    }
-
-    .about-trust-badges .badge-item h6 {
-      font-weight: 900;
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #1a1a2e;
-      position: relative;
-    }
-
-    .about-trust-badges .badge-item p {
-      font-size: 18px;
-      color: #000;
-      margin-bottom: 0;
-      line-height: 1.4;
-    }
-  
+  }
 }
 // =============================================================================
 // ANIMATIONS

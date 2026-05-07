@@ -37,6 +37,11 @@ body {
   font-size: 18px;
   color: #000000;
 }
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+}
 body .main-page {
   padding-top: 80px;
 }
@@ -49,7 +54,92 @@ h5,
 h6 {
   font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 900;
-  color: #1a1a2e;
+  color: #000000;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 64px;
+  margin-bottom: 24px;
+  line-height: 67.2px;
+  letter-spacing: -0.5px;
+}
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    line-height: 33.6px;
+  }
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 48px;
+  margin-bottom: 24px;
+  line-height: 57px;
+}
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    line-height: 32.5px;
+  }
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 42px;
+}
+@media screen and (max-width: 992px) {
+  h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    line-height: 31.5px;
+  }
+}
+
+h4 {
+  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: 15px;
+  line-height: 33.6px;
+}
+@media screen and (max-width: 992px) {
+  h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 26.4px;
+  }
+}
+
+h5 {
+  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+@media screen and (max-width: 992px) {
+  h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 24px;
+  }
+}
+
+h6 {
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 15px;
+  line-height: 28px;
+}
+@media screen and (max-width: 992px) {
+  h6 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 24px;
+  }
 }
 
 p {
@@ -60,6 +150,7 @@ p {
 @media screen and (max-width: 992px) {
   p {
     font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -151,9 +242,6 @@ em {
   }
 }
 .hero h1 {
-  font-weight: 900;
-  line-height: 1.05;
-  color: #1a1a2e;
   margin-bottom: 24px;
   letter-spacing: -0.5px;
 }
@@ -169,23 +257,31 @@ em {
   align-items: center;
   margin-top: 24px;
 }
+@media screen and (max-width: 992px) {
+  .hero .secure-badge {
+    justify-content: center;
+    gap: 20px;
+  }
+}
 .hero .secure-badge img {
-  height: auto;
-  width: 85px;
+  height: 35px;
+  width: auto;
+}
+.hero .secure-badge .secure {
+  height: 24px;
+  width: auto;
 }
 .hero.home-hero {
   margin: auto;
   text-align: center;
 }
 .hero.home-hero h1 {
-  font-size: 64px;
   max-width: 910px;
   margin: 24px auto;
 }
 @media screen and (max-width: 992px) {
   .hero.home-hero h1 {
-    font-size: 36px;
-    margin: 12px 24px;
+    margin: 12px;
   }
 }
 .hero.home-hero .quote-forms {
@@ -228,7 +324,7 @@ em {
   gap: 0.5rem;
   padding: 4px 20px;
   background: #ffffff;
-  color: #1a1a2e;
+  color: #000000;
   border-radius: 30px;
   font-weight: 400;
   font-size: 18px;
@@ -287,7 +383,7 @@ em {
 }
 @media screen and (max-width: 992px) {
   .hero.hero-insurance h1 {
-    font-size: 36px;
+    font-size: 32px;
     margin: 0;
   }
 }
@@ -323,7 +419,7 @@ em {
 }
 @media screen and (max-width: 992px) {
   .hero .hero-bullets {
-    gap: 0;
+    gap: 5px;
     margin: 0 auto 1.25rem;
     justify-content: center;
   }
@@ -343,6 +439,11 @@ em {
 .hero .hero-bullets li i {
   font-size: 28px;
   color: #e44f2d;
+}
+@media screen and (max-width: 992px) {
+  .hero .hero-bullets li i {
+    font-size: 20px;
+  }
 }
 .hero .hero-image-wrapper {
   position: relative;
@@ -372,7 +473,7 @@ em {
 }
 .hero .hero-form {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -410,15 +511,11 @@ em {
 }
 .hero .quote-forms h5 {
   color: #e44f2d;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 24px;
-  font-weight: 800;
   margin-bottom: 24px;
 }
 @media screen and (max-width: 992px) {
   .hero .quote-forms h5 {
-    font-size: 20px;
-    letter-spacing: -1px;
+    font-size: 22px;
   }
 }
 .hero .quote-forms form {
@@ -436,7 +533,7 @@ em {
   align-items: center;
 }
 .hero .quote-forms input {
-  width: calc(45% - 15px);
+  width: 44%;
   border-color: #bbbaba;
   background-image: url("../../assets/images/icon/location-black.svg");
   background-repeat: no-repeat;
@@ -512,15 +609,11 @@ em {
   background: #ffffff;
 }
 .main-section h2.section-title {
-  font-size: 48px;
-  font-weight: 900;
-  color: #1a1a2e;
   margin-bottom: 0.5rem;
   letter-spacing: -0.3px;
 }
 @media screen and (max-width: 992px) {
   .main-section h2.section-title {
-    font-size: 28px;
     margin: 0 30px;
   }
 }
@@ -579,14 +672,7 @@ em {
 }
 
 .section-title {
-  font-size: 36px;
-  font-weight: 900;
   color: #000000;
-}
-@media screen and (max-width: 992px) {
-  .section-title {
-    font-size: 28px;
-  }
 }
 
 .section-desc {
@@ -608,7 +694,7 @@ em {
   }
 }
 .features-section .todays-best-car {
-  color: #e87059;
+  color: #e44f2d;
   text-decoration: none;
   background-color: #fae6e2;
   padding: 8px 20px;
@@ -618,6 +704,11 @@ em {
 .features-section .todays-best-car:hover {
   background-color: #e44f2d;
   color: #ffffff;
+}
+@media screen and (max-width: 992px) {
+  .features-section .steps-list {
+    margin-top: 24px;
+  }
 }
 .features-section .steps-list .step-item {
   display: flex;
@@ -637,14 +728,12 @@ em {
   align-items: center;
   justify-content: center;
 }
-.features-section .steps-list .step-item h5 {
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  color: #1a1a2e;
-}
 .features-section .steps-list .step-item p {
   margin-bottom: 0;
   line-height: 1.6;
+}
+.features-section .steps-list .step-item p b {
+  font-weight: 800;
 }
 .features-section .features-graphic {
   width: 100%;
@@ -660,6 +749,11 @@ em {
 }
 .rates-section .w-auto {
   max-width: 420px;
+}
+@media screen and (max-width: 992px) {
+  .rates-section .w-auto {
+    max-width: 100%;
+  }
 }
 .rates-section .video-col .videoplayer {
   width: 100%;
@@ -686,14 +780,10 @@ em {
     padding: 1rem 0.5rem;
   }
 }
-.trust-badges .badge-item h6 {
-  font-weight: 900;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #1a1a2e;
+.trust-badges .badge-item h5 {
   position: relative;
 }
-.trust-badges .badge-item h6 .line {
+.trust-badges .badge-item h5 .line {
   position: absolute;
   bottom: -12px;
   margin: auto;
@@ -714,6 +804,7 @@ em {
   font-size: 18px;
   color: #000000;
   margin-bottom: 0;
+  margin-top: 24px;
   line-height: 1.4;
 }
 
@@ -725,7 +816,7 @@ em {
 }
 .content-section .content-card h5 {
   font-weight: 800;
-  color: #1a1a2e;
+  color: #000000;
 }
 .content-section .content-card p {
   font-size: 0.9rem;
@@ -755,7 +846,7 @@ em {
   font-weight: 700;
   margin: 0;
   padding: 0.85rem 0.75rem;
-  color: #1a1a2e;
+  color: #000000;
 }
 .content-section .insurance-type-cards .type-card:hover {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
@@ -794,30 +885,17 @@ em {
   text-align: center;
 }
 .blog-section .blog-title {
-  font-size: 48px;
-  font-weight: 900;
   margin-bottom: 1.25rem;
-  color: #000000;
-  line-height: 1.2;
   text-align: center;
 }
 @media screen and (max-width: 992px) {
   .blog-section .blog-title {
-    font-size: 28px;
-    margin: 0 24px 24px;
+    margin: 0 0 24px;
+    letter-spacing: -0.5px;
   }
 }
-.blog-section .blog-content h2 {
-  font-size: 24px;
-}
 .blog-section .blog-content h4 {
-  font-size: 1.15rem;
-  font-weight: 800;
   margin-bottom: 15px;
-  color: #1a1a2e;
-}
-.blog-section .blog-content p {
-  color: #000000;
 }
 .blog-section .blog-content ul {
   padding-left: 1.25rem;
@@ -843,7 +921,7 @@ em {
 }
 .blog-section .blog-meta .meta-info .author-name {
   font-weight: 700;
-  color: #1a1a2e;
+  color: #000000;
   font-size: 18px;
   margin-right: 5px;
 }
@@ -853,30 +931,39 @@ em {
   }
 }
 .blog-section .blog-meta .meta-info .meta-details {
-  color: #1a1a2e;
+  color: #000000;
   font-size: 18px;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 992px) {
   .blog-section .blog-meta .meta-info .meta-details {
     font-size: 16px;
+    display: block;
   }
 }
 .blog-section .blog-meta .meta-info .tag {
   background-color: #efe3ff;
-  color: #1a1a2e;
+  color: #000000;
   font-size: 16px;
   font-weight: 500;
   padding: 5px 15px 5px 10px;
   border-radius: 80px;
   margin-left: 10px;
   white-space: nowrap;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog-section .blog-meta .meta-info .tag i {
+  font-size: 26px;
+  vertical-align: top;
+  color: #BA86FD;
 }
 @media screen and (max-width: 992px) {
   .blog-section .blog-meta .meta-info .tag {
-    display: block;
     margin-left: 0;
-    max-width: 160px;
+    max-width: 150px;
     font-size: 14px;
     margin-top: 12px;
   }
@@ -891,7 +978,7 @@ em {
   font-size: 48px;
   font-weight: 900;
   margin-bottom: 0.5rem;
-  color: #1a1a2e;
+  color: #000000;
 }
 @media screen and (max-width: 992px) {
   .cta-section h2 {
@@ -1008,9 +1095,18 @@ em {
     width: 100%;
   }
 }
-.bottom-quote-form button:hover {
-  background: #a62814;
+.bottom-quote-form button:hover, .bottom-quote-form button:active, .bottom-quote-form button:focus {
+  background-color: #a62814;
   border: none;
+}
+.bottom-quote-form .btn-check:checked + .btn,
+.bottom-quote-form .btn.active,
+.bottom-quote-form .btn.show,
+.bottom-quote-form .btn:first-child:active,
+.bottom-quote-form :not(.btn-check) + .btn:active {
+  color: var(--bs-btn-active-color);
+  background-color: #a62814;
+  border-color: #a62814;
 }
 
 .site-footer {
@@ -1028,7 +1124,7 @@ em {
   font-weight: 800;
   letter-spacing: 0.5px;
   margin-bottom: 0.85rem;
-  color: #1a1a2e;
+  color: #000000;
 }
 .site-footer .footer-links {
   list-style: none;
@@ -1071,6 +1167,7 @@ em {
   transform: translateY(50%);
   text-align: center;
   transition: none;
+  line-height: 30px;
 }
 .action-button .old-text {
   top: 0;
@@ -1153,15 +1250,9 @@ em {
     margin-bottom: 0;
   }
 }
-.insurance-section .info-card h5 {
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 1.4;
-}
 @media screen and (max-width: 992px) {
   .insurance-section .info-card h5 {
-    font-size: 22px;
-    margin: 24px 0;
+    margin: 12px 0 24px 0;
   }
 }
 .insurance-section .key-takeaway {
@@ -1181,11 +1272,16 @@ em {
 }
 .insurance-reasons .reason-card {
   background: #ffffff;
-  padding: 30px 25px;
+  padding: 30px 24px;
   border-radius: 16px;
   height: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
+}
+@media screen and (max-width: 992px) {
+  .insurance-reasons .reason-card {
+    padding: 24px 20px;
+  }
 }
 .insurance-reasons .reason-card:hover {
   transform: translateY(-6px);
@@ -1233,7 +1329,7 @@ em {
 }
 .insurance-reasons .reason-card .note {
   margin-top: 24px;
-  font-weight: normal;
+  font-weight: 700;
   font-family: "CabinetGrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 @media screen and (max-width: 992px) {
@@ -1243,6 +1339,11 @@ em {
 }
 .insurance-reasons .wide-card {
   padding: 40px;
+}
+@media screen and (max-width: 992px) {
+  .insurance-reasons .wide-card {
+    padding: 24px;
+  }
 }
 .insurance-reasons .list-center {
   display: inline-block;
@@ -1254,15 +1355,7 @@ em {
   margin: 0 auto 24px;
 }
 .compare-section .header-wrap h2 {
-  font-size: 36px;
-  font-weight: 900;
-  color: #111111;
   margin-bottom: 16px;
-}
-@media screen and (max-width: 992px) {
-  .compare-section .header-wrap h2 {
-    font-size: 28px;
-  }
 }
 .compare-section .header-wrap .desc {
   font-size: 16px;
@@ -1273,9 +1366,6 @@ em {
   font-size: 18px;
   font-weight: 700;
   color: #222222;
-}
-.compare-section .compare-grid {
-  margin: 0 auto;
 }
 .compare-section .compare-card {
   background: #ffffff;
@@ -1334,14 +1424,7 @@ em {
   margin-bottom: 50px;
 }
 .how-often-section .header-wrap h2 {
-  font-size: 36px;
-  font-weight: 900;
   margin-bottom: 12px;
-}
-@media screen and (max-width: 992px) {
-  .how-often-section .header-wrap h2 {
-    font-size: 28px;
-  }
 }
 .how-often-section .header-wrap .subtitle {
   margin: 0;
@@ -1369,11 +1452,6 @@ em {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.how-often-section .items-row .item h6 {
-  font-size: 28px;
-  font-weight: 800;
-  color: #222222;
-}
 .how-often-section .footer-note {
   margin: 0 auto;
 }
@@ -1390,14 +1468,7 @@ em {
   }
 }
 .mistakes-section .header-wrap h2 {
-  font-size: 36px;
-  font-weight: 900;
   margin-bottom: 12px;
-}
-@media screen and (max-width: 992px) {
-  .mistakes-section .header-wrap h2 {
-    font-size: 28px;
-  }
 }
 .mistakes-section .header-wrap .subtitle {
   font-size: 16px;
@@ -1411,6 +1482,10 @@ em {
   height: 100%;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
 }
+.mistakes-section .mistake-card h5 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
 .mistakes-section .mistake-card .icon {
   margin-bottom: 18px;
 }
@@ -1418,17 +1493,6 @@ em {
   height: 42px;
   -o-object-fit: contain;
      object-fit: contain;
-}
-.mistakes-section .mistake-card h6 {
-  font-size: 28px;
-  font-weight: 800;
-  max-width: 260px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 992px) {
-  .mistakes-section .mistake-card h6 {
-    font-size: 22px;
-  }
 }
 .mistakes-section .footer-note {
   max-width: 750px;
@@ -1467,7 +1531,6 @@ em {
   color: #777;
 }
 .coverage-section .main-insurance-card .card-body h5 {
-  font-size: 28px;
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
@@ -1500,7 +1563,7 @@ em {
   margin-top: 9px;
 }
 .coverage-section .main-insurance-card .card-body .btn {
-  color: #e87059;
+  color: #e44f2d;
   border: 0;
   text-decoration: none;
   background-color: #fae6e2;
@@ -1533,13 +1596,33 @@ em {
   font-weight: 700;
   font-size: 18px;
 }
+.auto-insurance-section .checklist {
+  justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  .auto-insurance-section .checklist {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.auto-insurance-section .checklist span {
+  font-size: 18px;
+}
+@media screen and (max-width: 992px) {
+  .auto-insurance-section .checklist span {
+    font-size: 16px;
+  }
+}
+.auto-insurance-section .checklist span::before {
+  content: url(../Images/icon/list-check-mark.svg);
+  color: #e44f2d;
+  margin-right: 6px;
+}
 .auto-insurance-section .steps .step {
   text-align: center;
 }
 .auto-insurance-section .steps .step h6 {
-  font-weight: 800;
   margin-top: 12px;
-  font-size: 24px;
 }
 .auto-insurance-section .steps .step p {
   margin: 0;
@@ -1557,39 +1640,27 @@ em {
   font-weight: 700;
   font-size: 1.2rem;
 }
-.auto-insurance-section .checklist span {
-  font-size: 18px;
+
+.card_hoveranim {
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 992px) {
-  .auto-insurance-section .checklist span {
-    font-size: 16px;
-  }
-}
-.auto-insurance-section .checklist span::before {
-  content: url(../Images/icon/list-check-mark.svg);
-  color: #e44f2d;
-  margin-right: 6px;
+.card_hoveranim:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 .coverage-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 30px;
+  padding: 24px;
   height: 100%;
   text-align: center;
-  transition: all 0.3s ease;
-}
-.coverage-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 .coverage-card .icon {
   font-size: 32px;
   margin-bottom: 15px;
 }
 .coverage-card h4 {
-  font-size: 28px;
-  font-weight: 800;
   margin-bottom: 8px;
 }
 .coverage-card .tag {
@@ -1608,13 +1679,13 @@ em {
   font-size: 16px;
   margin-bottom: 10px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 0;
   text-align: left;
 }
 .coverage-card ul li span {
   color: #e44f2d;
 }
-.coverage-card ul li ::before {
+.coverage-card ul li::before {
   content: url(../Images/icon/list-check-mark.svg);
   margin-right: 8px;
 }
@@ -1622,9 +1693,28 @@ em {
   font-size: 18px;
   font-weight: 700;
 }
+@media screen and (max-width: 992px) {
+  .coverage-card .note {
+    font-size: 16px;
+  }
+}
 
+.commercial-converage .coverage-card ul {
+  padding: 0;
+}
 .commercial-converage .coverage-card ul li {
+  margin: 5px 0;
+  padding: 0;
   text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .commercial-converage .coverage-card ul li {
+    text-align: left;
+    display: flex;
+  }
+}
+.commercial-converage .coverage-card ul li b {
+  display: flex;
 }
 .commercial-converage .coverage-card p,
 .commercial-converage .coverage-card .note {
@@ -1711,10 +1801,10 @@ em {
   display: block;
   transition: transform 0.4s ease;
 }
-.home-insurance-section .coverage-grid .coverage-card h4 {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 10px;
+@media screen and (max-width: 992px) {
+  .home-insurance-section .coverage-grid .coverage-card .img-wrapper img {
+    height: 180px;
+  }
 }
 .home-insurance-section .coverage-grid .coverage-card p {
   max-width: 480px;
@@ -1722,6 +1812,11 @@ em {
 }
 .home-insurance-section .coverage-grid .coverage-card:hover .img-wrapper img {
   transform: scale(1.05);
+}
+@media screen and (max-width: 992px) {
+  .home-insurance-section .coverage-grid.replacement-cost .img-wrapper img {
+    height: 190px;
+  }
 }
 .home-insurance-section.cover .coverage-grid img {
   height: 190px;
@@ -1736,7 +1831,6 @@ em {
 @media screen and (max-width: 992px) {
   .not-covered {
     padding: 48px 24px;
-    margin: 0 12px;
   }
 }
 .not-covered .section-desc {
@@ -1759,16 +1853,13 @@ em {
      object-fit: cover;
   transition: transform 0.4s ease;
 }
-.not-covered .exclude-card h6 {
-  font-size: 24px;
-  font-weight: 800;
-  color: #1e1e2f;
-  margin-bottom: 5px;
-}
 @media screen and (max-width: 992px) {
-  .not-covered .exclude-card h6 {
-    font-size: 18px;
+  .not-covered .exclude-card .img-wrapper img {
+    height: 318px;
   }
+}
+.not-covered .exclude-card h6 {
+  margin-bottom: 5px;
 }
 .not-covered .exclude-card p {
   margin: 0;
@@ -1785,9 +1876,7 @@ em {
   text-align: center;
 }
 .commercial-insurance-section .checklists .checklist h6 {
-  font-weight: 800;
   margin-top: 12px;
-  font-size: 24px;
 }
 .commercial-insurance-section .checklists .checklist p {
   margin: 0;
@@ -1830,7 +1919,7 @@ em {
   display: block;
   transition: transform 0.4s ease;
 }
-.commercial-insurance-section .coverage-grid .coverage-card h4 {
+.commercial-insurance-section .coverage-grid .coverage-card h5 {
   font-weight: 800;
   margin-bottom: 10px;
 }
@@ -1886,16 +1975,11 @@ em {
   border: 15px solid #fae6e2;
   border-radius: 45px;
 }
-.about .about-trust-badges .badge-item h6 {
-  font-weight: 900;
-  font-size: 28px;
+.about .about-trust-badges .badge-item h5 {
   margin-bottom: 10px;
-  color: #1a1a2e;
   position: relative;
 }
 .about .about-trust-badges .badge-item p {
-  font-size: 18px;
-  color: #000;
   margin-bottom: 0;
   line-height: 1.4;
 }
