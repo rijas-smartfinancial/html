@@ -331,7 +331,10 @@ em {
   }
 
   .navbar-brand img {
-    height: 42px;
+    height: 52px;
+    @include mdmax {
+      height: 32px;
+    }
   }
 
   .nav-item {
@@ -343,7 +346,7 @@ em {
     font-size: $font-size-base;
     color: $color-gray-900;
     position: relative;
-
+    display: inline-block;
     &::before {
       content: "";
       position: absolute;
@@ -358,7 +361,7 @@ em {
       transition: transform 0.3s;
     }
 
-    &:hover::before {
+    &:hover::before, &.active::before  {
       transform-origin: 0% 50%;
       transform: scale3d(1, 1, 1);
     }
@@ -379,6 +382,8 @@ em {
 
       @include mdmax {
         margin-top: 24px;
+        font-size: 14px;
+        padding: 0.45rem 1rem;
       }
 
       &:hover {
@@ -451,6 +456,7 @@ em {
       max-width: 700px;
       margin: auto;
       border-radius: $border-radius-lg;
+     
     }
 
     .hero-bullets {
@@ -598,7 +604,7 @@ em {
     margin-bottom: 2.25rem; // 36px
 
     @include mdmax {
-      gap: 5px;
+      gap: 10px;
       margin: 0 auto 1.25rem;
       justify-content: center;
     }
@@ -612,6 +618,7 @@ em {
 
       @include mdmax {
         font-size: 12px;
+        gap: 0.2rem;
       }
 
       i {
@@ -651,6 +658,9 @@ em {
       transform: scaleX(0);
       transform-origin: left;
       animation: lineGrow 3s ease forwards;
+      @include mdmax {
+        bottom: -4px;
+      }
     }
   }
 
@@ -689,6 +699,7 @@ em {
 
     @include mdmax {
       padding: 24px 36px;
+      max-width: 100%;
     }
 
     h5 {
@@ -1321,7 +1332,7 @@ em {
     background-position: right 20px center;
     background-size: 12px;
     height: $input-height;
-
+    color: #000;
     @include mdmax {
       width: 100%;
     }
@@ -1382,6 +1393,9 @@ em {
   .footer-logo {
     height: 42px;
     margin-bottom: 1rem;
+    @include mdmax {
+      height: 32px;
+    }
   }
 
   .footer-heading {
@@ -1716,8 +1730,6 @@ em {
     }
 
     h5 {
-      font-size: 28px;
-      font-weight: $fw-extrabold;
       margin-bottom: 8px;
     }
 
@@ -1828,7 +1840,6 @@ em {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
 
     h5 {
-      font-size: 24px;
       margin-bottom: 8px;
     }
 
@@ -1876,6 +1887,7 @@ em {
     .card-img {
       overflow: hidden;
       border-radius: $border-radius-sm;
+      display: block;
 
       img {
         width: 100%;
@@ -2056,20 +2068,33 @@ em {
   ul {
     list-style: none;
     padding: 0;
-    margin: 15px 0;
+    margin: 0;
 
     li {
       font-size: 16px;
-      margin-bottom: 10px;
       position: relative;
       padding-left: 0;
       text-align: left;
+
+      margin: 5px 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      margin-bottom: 0;
+    }
+    @include mdmax {
+      justify-content: start;
+    }
       span {
         color: $color-accent;
       }
       &::before {
         content: url(../Images/icon/list-check-mark.svg);
         margin-right: 8px;
+            height: 18px;
       }
     }
   }
@@ -2384,10 +2409,11 @@ em {
 
 .about {
   .checked-step-item {
-    font-family: "Open Sans", sans-serif;
     padding-top: 15px;
-    font-size: 18px;
     color: #000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     i {
       font-size: 28px;
       color: #e8563f;
@@ -2396,13 +2422,6 @@ em {
   .features-section .about-features-graphic {
     width: 100%;
     max-width: 589px;
-  }
-
-  .features-section .steps-list .about-step-item p {
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 20px;
   }
 
   .about-trust-badges {
@@ -2426,7 +2445,6 @@ em {
       }
       p {
         margin-bottom: 0;
-        line-height: 1.4;
       }
     }
   }
