@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+        }
+
+        p,
+        li {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 122%;
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        h2,
+        h3,
+        h4 {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        img {
+            display: block;
+        }
+
+        td {
+            font-size: 15px;
+        }
+
+        .goal-section {
+            padding: 76px 21px 42px;
+            margin-top: -106px;
+            border-radius: 17px;
+            background: linear-gradient(180deg, #634F8B 0%, #3F2F5E 100%);
+        }
+
+        .goal-section .goal-item {
+            text-align: center;
+            background-color: transparent;
+            color: #03263B;
+        }
+
+        .goal-item .goal-item-logo img {
+            margin: auto;
+        }
+
+        .goal-item .goal-title {
+            color: #E83889;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .goal-item-description {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .goal-features {
+            margin: 0;
+        }
+
+        .goal-items {
+            display: flex;
+            justify-content: space-between;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .goal-items .goal-item {
+            text-align: left;
+            padding: 15px;
+            background-color: #2F1A57;
+            z-index: 0;
+            position: relative;
+            border-radius: 10px;
+            width: calc(50% - 38px);
+            color: #FFF;
+        }
+
+        .goal-items .goal-item .title {
+            font-family: Raleway, sans-serif;
+            font-weight: 800;
+            font-style: ExtraBold;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -2%;
+            color: #fff;
+            margin-bottom: 15px;
+
+        }
+
+        .goal-items .goal-item img {
+            margin: 0 0 5px;
+        }
+
+        .goal-items .goal-item .line {
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+        }
+
+        .goal-items .goal-item p {
+            font-size: 12px;
+            line-height: 144%;
+            letter-spacing: -2%;
+            color: #fff;
+        }
+
+        .goal-feature-item {
+
+            text-align: left;
+            padding: 15px;
+            background-color: #2F1A57;
+            margin-bottom: 10px;
+            z-index: 0;
+            position: relative;
+            border-radius: 10px;
+
+        }
+
+        .goal-feature-item .title {
+            font-family: Raleway, sans-serif;
+            font-weight: 800;
+            font-style: ExtraBold;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: -2%;
+            color: #fff;
+            margin-bottom: 15px;
+
+        }
+
+        .goal-feature-item img {
+            margin: 0 0 5px;
+        }
+
+        .goal-feature-item .line {
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+        }
+
+        .goal-feature-item p {
+            font-size: 12px;
+            line-height: 144%;
+            letter-spacing: -2%;
+            color: #fff;
+        }
+
+
+        .news {
+            padding: 0;
+        }
+
+        .news hr {
+            border-top: dashed 1px;
+            width: 92%;
+            margin: auto;
+        }
+
+        .news .news-item {
+            border-left: solid 1px black;
+            padding-left: 15px;
+            margin: 20px auto 30px auto;
+            width: 90%;
+        }
+
+        .news-item .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .news-item .title img {
+            margin-right: 6px;
+        }
+
+        .news-item .title span {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .news-item p,
+        .news-item li {
+            margin-top: 0;
+            padding-right: 20px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .new-hire-dept-name {
+            text-align: center;
+            color: white;
+            background-color: #E83889;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .arrow {
+            margin: 0 auto 15px auto;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 7px solid #E83889;
+        }
+
+        .recog-item {
+            margin-bottom: 25px;
+        }
+
+        .recog-des p {
+            margin: 0;
+        }
+
+        .pa-wrapper {
+            background-color: white;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 4px 0px #0000001C;
+
+        }
+
+        .pa-wrapper .content {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content p {
+            margin-top: 10px;
+        }
+
+        .pa-wrapper .title {
+            background-color: #45277E;
+            padding: 10px 0;
+            color: #FFFFFF;
+            text-align: center;
+        }
+    </style>
+    <title>News Letter q1_2026</title>
+</head>
+
+<body>
+    <table width="98%" style="margin:0; font-family: 'Roboto', sans-serif; font-weight: 300; background-color: #FFF;">
+        <tbody>
+            <tr>
+                <td>
+                    <table align="center" cellpadding="0" cellspacing="0"
+                        style="width:600px; margin-bottom:20px; margin-top:20px; font-size:15px;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div
+                                        style="padding: 8px; background: #FFF; box-shadow: 0px 4px 4px 0px #0000001C; margin-bottom: 10px; ">
+                                        <div>
+                                            <img style="width: auto; margin: auto;" src="./q1_2026/title.png"
+                                                alt="q3" />
+                                            <div style=" letter-spacing: 23%; text-align: center;">
+                                                Q1 • 2026</div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div
+                                        style="background: linear-gradient(180deg, #45277E, #231047 30%) ; padding: 38px 0 0;">
+                                        <div style="position: relative; display: flex; ">
+                                            <div style="width: 60%;">
+                                                <div style="padding: 0 20px;">
+                                                    <h1
+                                                        style="color: #FFF;text-shadow: 0 1.785px 1.785px rgba(0, 0, 0, 0.12);font-family: Raleway;font-size: 21.54px;font-style: normal;font-weight: 600;line-height: 108%;letter-spacing: 2.369px;text-transform: uppercase;">
+                                                        BUILD YOUR FUTURE
+                                                        </p>
+                                                        <div
+                                                            style="width: 281px; height: 4px; background: rgba(255, 255, 255, 0.21);">
+                                                        </div>
+                                                        <h1
+                                                            style="color: #D30663; font-size:42px; margin: 0 0 10px;font-weight: bold;">
+                                                            UNDERSTANDING YOUR 401(K)
+                                                        </h1>
+                                                        <p
+                                                            style="color: #fff; margin: 0 0 10px; font-size: 14px; line-height: 137%;">
+                                                            At SmartFinancial, we're committed to helping our
+                                                            employees feel
+                                                            confident about their financial future. During our
+                                                            recent 401(k)
+                                                            Week, we hosted a series of information sessions
+                                                            designed to
+                                                            break
+                                                            down how our retirement plan works, answer common
+                                                            questions, and
+                                                            provide guidance on making the most of this valuable
+                                                            benefit.
+                                                        </p>
+                                                </div>
+
+                                            </div>
+                                            <div style="width: 40%; display: flex; justify-content: flex-end;">
+                                                <img src="./q1_2026/hero.png"
+                                                    style="top:-38px; position: relative; width: 564px;margin-left: -400px; margin-right: 20px;"
+                                                    alt="">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="goal-section">
+                                            <div class="goal-item">
+                                                <div class="goal-features">
+                                                    <p
+                                                        style="color: #fff; margin: 0 0 10px; font-size: 14px; line-height: 126%;">
+                                                        We were also excited to introduce our 401(k) advisor through
+                                                        SFP
+                                                        Wealth, Ryan Curley, who is available to support employees
+                                                        with
+                                                        personalized, one-on-one guidance tailored to individual
+                                                        financial goals.
+                                                    </p>
+                                                    <div class="goal-items">
+                                                        <div class="goal-item">
+                                                            <img src="./q1_2026/icons/1-1.png" alt="1.1" />
+                                                            <div class="title">What is a 401(k)?</div>
+
+                                                            <p>A 401(k) is a retirement savings plan that
+                                                                allows you to set aside money for your
+                                                                future while taking advantage of important
+                                                                tax benefits. It's one of the most effective
+                                                                tools available to help build long-term
+                                                                financial security.</p>
+                                                        </div>
+                                                        <div class="goal-item">
+                                                            <img src="./q1_2026/icons/1-3.png" alt="1.1" />
+                                                            <div class="title">How it works</div>
+
+                                                            <p>With a 401(k), you choose a percentage of
+                                                                your paycheck to contribute, and those
+                                                                contributions are automatically deducted
+                                                                each pay period—making saving simple and
+                                                                consistent. Your contributions are then
+                                                                invested, giving your money the opportunity
+                                                                to grow over time.</p>
+                                                        </div>
+                                                        <div class="goal-item">
+                                                            <img src="./q1_2026/icons/1-2.png" alt="1.1" />
+                                                            <div class="title">Why it matters</div>
+
+                                                            <p>Starting early and contributing consistently
+                                                                can have a significant impact thanks to the
+                                                                power of compound growth. This means you're
+                                                                earning returns not only on what you
+                                                                contribute, but also on the earnings those
+                                                                contributions generate—helping your savings
+                                                                grow faster over time.
+                                                                <br><br>
+                                                                Even small contributions can add up, and
+                                                                gradually increasing your contribution rate
+                                                                can make a meaningful difference in your
+                                                                long-term financial readiness.
+                                                            </p>
+                                                        </div>
+                                                        <div class="goal-item">
+                                                            <img src="./q1_2026/icons/1-4.png" alt="1.1" />
+                                                            <div class="title">Maximize Your Benefit</div>
+
+                                                            <p>Even more importantly, SmartFinancial offers
+                                                                a company match to help boost your savings.
+                                                                The company matches 50% of your
+                                                                contributions up to 3% of your pay. That
+                                                                means if you contribute 3% or more, you’ll
+                                                                receive the full 1.5% match—essentially free
+                                                                money added to your account just for
+                                                                participating.
+                                                                <br><br>
+                                                                Taking full advantage of the match is one of
+                                                                the easiest ways to accelerate your
+                                                                retirement savings.
+                                                            </p>
+                                                        </div>
+
+                                                        <div
+                                                            style="background-color: #5A4583; display: flex; align-items: center; padding: 21px 15px; border-radius: 13px; text-align: left; gap: 15px; flex-wrap: wrap;">
+                                                            <div style="width: 51%;">
+                                                                <p
+                                                                    style="font-size: 13px; letter-spacing: -2%; color: #ffffff; margin: 0;">
+                                                                    WATCH: <br>
+                                                                <h2 style="color: #ffffff; margin: 0;">Your 401(k)
+                                                                    Plan
+                                                                    Overview
+                                                                </h2>
+
+                                                                <p
+                                                                    style="font-size: 12px; line-height: 136%; color: #ffffff; margin: 0;">
+                                                                    If you’d like a quick, easy-to-follow
+                                                                    walkthrough of
+                                                                    how the plan works, you can watch this short
+                                                                    video:
+                                                                </p>
+                                                                <p>
+                                                                    <a href="https://venrollment.com/v/smartfinancial-401-k-plan"
+                                                                        target="_blank"
+                                                                        style="background: linear-gradient(#E83A89,#BE1562 100%); border-radius: 31px; box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.21);
+                                                                                      padding: 10px 35px;color: #FFF; font-size: 12px;line-height: 144%; text-decoration: none;">
+                                                                        PLAY THE VIDEO ➔ </a>
+                                                                </p>
+
+                                                            </div>
+                                                            <div style="z-index: 1; position: relative;">
+                                                                <a href="https://venrollment.com/v/smartfinancial-401-k-plan"
+                                                                    target="_blank"><img src="./q1_2026/401k.png"
+                                                                        alt="img" /></a>
+
+                                                            </div>
+                                                            <div style="width: 100%;">
+                                                                <div
+                                                                    style="color: #FFF;font-family: Roboto;font-size: 12px;font-style: normal;font-weight: 300;line-height: 144%;">
+                                                                    Or Click Here 👉 <a
+                                                                        href="https://venrollment.com/v/smartfinancial-401-k-plan"
+                                                                        target="_blank"
+                                                                        style="color: #FFF;font-family: Roboto;font-size: 12px;font-style: normal;font-weight: 300;line-height: 144%; text-decoration: none;">https://venrollment.com/v/smartfinancial-401-k-plan</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="goal-item">
+                                                            <img src="./q1_2026/icons/Icon (9).png" alt="">
+                                                            <div class="title">Accessing Your Account</div>
+                                                            <p style="font-size: 11px ;">Our 401(k) plan is
+                                                                administered through
+                                                                Paychex. You can log in to your account at
+                                                                any time to review your balance, adjust your
+                                                                contribution rate, or update your investment
+                                                                selections:</p>
+                                                            <p>
+                                                                <a href="https://login.flex.paychex.com/login_static/UsernameOnly.html?lang=en&landingRedirect=true&downtime=false"
+                                                                    target="_blank"
+                                                                    style="color: #E83A89;font-family: Roboto;font-size: 14px;font-style: normal;font-weight: 500;line-height: 144%;letter-spacing: -0.28px;text-decoration-line: underline;     overflow-wrap: break-word;">https://login.flex.paychex.com/login_static/UsernameOnly.html?lang=en&landingRedirect=true&downtime=false</a>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="goal-item">
+                                                            <img src="./q1_2026/icons/Icon (10).png" alt="1.1" />
+                                                            <div class="title">We're here to help</div>
+
+                                                            <p style="font-size: 11px;">If you weren't able
+                                                                to attend a session
+                                                                during 401(k) Week—or if you'd like more
+                                                                personalized guidance—support is always
+                                                                available. Ryan Curley, through SFP Wealth,
+                                                                is here as a dedicated resource to help you
+                                                                understand your options, review your current
+                                                                strategy, and build a plan that aligns with
+                                                                your goals.
+                                                            </p>
+                                                            <p style="font-size: 11px;">You can reach him
+                                                                directly at
+                                                                <a href="mailto:RCurley@sfpwealth.com"
+                                                                    style="color: #E83A89;font-family: Roboto;font-size: 14px;font-style: normal;font-weight: 700;line-height: 144%;letter-spacing: -0.28px;">RCurley@sfpwealth.com.</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div style="display: flex; align-items: center; padding: 0 30px;">
+                                            <p
+                                                style="color: #FFF;font-family: Roboto;font-size: 16px;font-style: normal;line-height: 144%; letter-spacing: -0.32px;">
+                                                Taking the time to invest in and understand your 401(k) today is an
+                                                important step toward a more secure financial future.
+                                            </p>
+                                            <div style="position: relative; z-index: 1;">
+                                                <img src="./q1_2026/invest.png" style="margin-top: -40px;" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!--section 03-->
+                            <tr>
+                                <td>
+                                    <hr style="background-color: #FFF; height: 28px; border: 0;">
+
+
+                                    <div style="background-color: #00001E; padding:24px 0 0; text-align: center;">
+                                        <img src="q1_2026/leadcon-titl2.png" style="margin: auto;" alt="">
+
+                                        <div style="padding: 30px;">
+                                            <p style="color: #FFF;">
+
+                                                The SmartFinancial team recently made a splash at Leadscon 2026 in Las
+                                                Vegas, joining industry leaders to explore the latest trends in
+                                                Insurance
+                                                marketing. It was a fantastic opportunity for the team to connect with
+                                                partners, share insights, and showcase our commitment to driving
+                                                innovation
+                                                in the insurance space. We returned with fresh ideas and strengthened
+                                                relationships that will help fuel our growth throughout the rest of the
+                                                year!</p>
+                                        </div>
+
+
+                                        <div
+                                            style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; position: relative; z-index: 1;">
+                                            <img src="./q1_2026/leadcon-1.png" alt="lead">
+                                            <img src="./q1_2026/leadcon-2.png" alt="leader">
+                                            <img src="./q1_2026/leadcon-3.png" alt="">
+
+                                            <img src="./q1_2026/leadcon-4.png" alt="lr">
+
+
+                                        </div>
+
+
+
+                                        <img src="./q1_2026/leadcon-image.png" alt="ll" style="
+    position: relative;
+    margin-top: -150px;
+    z-index: 0;
+">
+
+
+                                    </div>
+
+
+                                    <div style="padding: 40px;">
+                                        <div style="display: flex; border-radius: 28px; border: 2px solid #E83A89;">
+                                            <div>
+                                                <img src="./q1_2026/Frame 2109.png" alt="">
+                                            </div>
+                                            <div style="padding: 20px; text-align: center; ">
+                                                <p
+                                                    style="color: #2C2C2C; text-align: center;font-size: 16px; font-style: normal; line-height: 151%;letter-spacing: -0.32px; margin-bottom: 0;">
+                                                    <strong>
+                                                        Welcome back to Penny’s Corner,
+                                                    </strong>
+                                                    <br>
+                                                    where we share a high-level view of SmartFinancial’s direction and
+                                                    progress. Since last quarter, we’ve successfully completed the two
+                                                    major
+                                                    operational initiatives we set out to execute - the full migration
+                                                    of
+                                                    our retail accounts to the Pro platform and the transition to our
+                                                    new
+                                                    contact center dialer, Five9. Both mark important steps forward in
+                                                    improving efficiency, scalability, and performance across the
+                                                    organization.
+                                                    <br><br>
+                                                    This quarter also brought broader industry headwinds that have
+                                                    impacted
+                                                    volume and performance. While unexpected, these cycles occur from
+                                                    time
+                                                    to time and test our focus and resolve. The team responded quickly,
+                                                    and
+                                                    with some well-timed, strategic improvements to our business, we
+                                                    were
+                                                    able to mitigate the impact and position ourselves for outsized
+                                                    growth
+                                                    as volume gradually returns.
+                                                    Looking ahead, we’re continuing to invest in our infrastructure and
+                                                    growth. We will be expanding our headquarters into a larger space
+                                                    upstairs this summer, alongside the continued expansion of our
+                                                    contact
+                                                    center operations with our third facility in Las Vegas. These
+                                                    investments reflect our long-term commitment to scale and
+                                                    operational
+                                                    excellence.
+                                                    <br><br>
+                                                    As we continue to mature as a company, our focus remains clear:
+                                                    disciplined execution, operational efficiency, and positioning
+                                                    SmartFinancial for sustained, profitable growth.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src=" ./q1_2026/leadership.png" alt="Leadership">
+                                        <div style="text-align: center; 
+                                                                background-color:#F6F6F6; padding: 30px;">
+                                            <p
+                                                style="color: #000;  font-size: 16px; line-height: 1.3; margin: 1; text-align: center; padding: 24px; margin: 0;">
+                                                We recently launched <strong style="color: #E83A89;">Penny's
+                                                    Leadership
+                                                    Lunch
+                                                    n' Learn</strong>, a new initiative
+                                                focused
+                                                on
+                                                strengthening connections and development
+                                                among
+                                                SmartFinancial's people leaders. The program
+                                                brings
+                                                leaders together for short, high-impact
+                                                sessions
+                                                that fit into busy schedules while
+                                                delivering
+                                                meaningful, practical growth. Each session
+                                                pairs
+                                                a
+                                                focused leadership topic with open,
+                                                peer-driven
+                                                discussion around real-world challenges,
+                                                equipping
+                                                participants with tools to enhance
+                                                communication,
+                                                self-awareness, and people-first leadership.
+                                                We
+                                                believe that when leaders invest in their
+                                                own
+                                                development, it creates a ripple
+                                                effect—boosting
+                                                team engagement, elevating the employee
+                                                experience,
+                                                and driving stronger organizational
+                                                outcomes.
+                                                <br><br>
+                                                Beyond skill-building, the program also
+                                                fosters
+                                                cross-functional connections and shared
+                                                learning,
+                                                helping leaders grow together. We're proud
+                                                to
+                                                recognize and thank the leaders who
+                                                participated
+                                                in
+                                                our first cohort for their commitment to
+                                                continuous
+                                                growth and for helping lay the foundation
+                                                for
+                                                leadership development at SmartFinancial.
+                                            </p>
+                                            <div
+                                                style="display: flex; justify-content: center; text-align: left; gap: 40px;">
+                                                <div
+                                                    style="margin-left: 1; color: #E83A89; font-weight: 700; line-height: 152%;">
+                                                    Robert Jackson <br>
+                                                    Karl Leesment <br>
+                                                    Andrew Rasson <br>
+                                                    Tony Nguyen <br>
+                                                    Ana Garza <br>
+
+
+                                                </div>
+                                                <div style="width: 2px; background-color: #FFF;"></div>
+                                                <div style="color: #E83A89; font-weight: 700; line-height: 152%;">Jairus
+                                                    Garcia <br>
+                                                    Mike Pennewill <br>
+                                                    Naeem Shariff <br>
+                                                    Chas Vitabile <br>
+                                                    Ty Ellis
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </td>
+                            </tr>
+
+                            <!--section 04-->
+                            <tr>
+                                <td style="padding:20px 0;">
+
+                                    <div style="background-color: #FEF1DF; padding: 0">
+
+                                        <img src="./q1_2026/zigzag-top.jpg" style="margin: 0 auto" alt="sp" />
+                                        <div style="padding: 0 25px;">
+                                            <img src="./q1_2026/department-news-title.png"
+                                                style="margin: 20px 0; width: 100%;" alt="sp" />
+                                        </div>
+
+                                        <div class="news">
+                                            <div class="news-item">
+                                                <div class="title">
+                                                    <img src="./q1_2026/icons/2-1.png" alt="n" />
+                                                    <span>Contact Center</span>
+                                                </div>
+                                                <p>
+                                                    This quarter marked an exciting milestone as we successfully
+                                                    transitioned to our new dialer, Five9. The switch delivered
+                                                    immediate improvements across key performance metrics, and we've
+                                                    continued focusing on dialer optimization to further enhance lead
+                                                    monetization and overall performance.
+                                                    <br>
+                                                </p>
+                                                <p>
+                                                    Despite seasonal headwinds and lower volume, Q1 showcased the
+                                                    contact Center's resilience and strong growth. The team made
+                                                    significant gains in operational efficiency while prioritizing
+                                                    increased contact rates and improved call conversion. Through strong
+                                                    collaboration and a shared commitment to success, the quarter closed
+                                                    on a steady and optimistic note.
+                                                    A special thank you goes out to all of our agents and leaders for
+                                                    their dedication and hard work—your efforts continue to drive our
+                                                    success.
+
+                                                </p>
+                                                <p>We're also proud to celebrate continued team growth, successfully
+                                                    onboarding two groups of contractors into full SmartFinancial
+                                                    employees:</p>
+                                                <div>
+                                                    <ul>
+                                                        <li><strong>Nine conversions in January 2026</strong></li>
+                                                        <li><strong>Eight conversions in February 2026</strong></li>
+                                                    </ul>
+                                                </div>
+                                                <p>This achievement reflects the strength of our team and the continued
+                                                    investment in our people and performance.</p>
+
+                                                <div class="divider"></div>
+                                            </div>
+                                            <hr>
+                                            <div class="news-item">
+                                                <div class="title">
+                                                    <img src="./q1_2026/icons/Icon (6).png" alt="n" />
+                                                    <span>Customer Success</span>
+                                                </div>
+                                                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                                                    <div>
+                                                        <p>
+
+                                                            The Customer Success (CS) team continues to set the
+                                                            standard for performance and growth, surpassing $2M in
+                                                            weekly revenue while expanding to over 3,900 active
+                                                            users, with 4,000 now within reach. This achievement
+                                                            reflects the team's strong execution and focus on
+                                                            delivering results at a high level.
+
+                                                        </p>
+
+                                                        <p>
+                                                            Thank you to the entire CS team for your continued
+                                                            commitment and dedication to providing a world-class
+                                                            experience for the thousands of insurance agents we support
+                                                            across the nation.
+
+
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <hr>
+                                            <div class="news-item">
+                                                <div class="title">
+                                                    <img src="./q1_2026/icons/2-2.png" alt="n" />
+                                                    <span>Strategic Partnerships</span>
+                                                </div>
+                                                <p>
+                                                    2026 is off to a strong start for the Strategic Partnerships team!
+                                                    New Strategic Partnership Executives, Luke Jean and Toney Osborn,
+                                                    have been actively traveling across the country alongside Director
+                                                    Andrew Rasson, representing SmartFinancial at key industry events.
+
+                                                </p>
+                                                <p>
+                                                    In Q1, the team attended a total of 13 events with our carrier
+                                                    partners, building strong relationships and expanding our reach. A
+                                                    standout highlight was the Soaring Eagle State Farm Conference,
+                                                    where the team closed an impressive 28 sales.
+
+                                                </p>
+                                                <p>
+                                                    In addition to event participation, the SPE team delivered 24 agent
+                                                    lead webinars, averaging eight webinars per month—continuing to
+                                                    provide valuable education and engagement opportunities for our
+                                                    partners.
+                                                </p>
+                                                <p>We're excited to carry this momentum into a strong Q2. Great work,
+                                                    SPE team!</p>
+                                                <br>
+                                                <img src="./q1_2026/strategic-partnership.png"
+                                                    alt="Strategic Partnerships">
+                                            </div>
+                                            <hr>
+                                            <div class="news-item">
+                                                <div class="title">
+                                                    <img src="./q1_2026/icons/2-3.png" alt="n" />
+                                                    <span>Retail Sales</span>
+                                                </div>
+                                                <p>Huge congratulations to our incredible
+                                                    sales team for continuing toraise the bar! The team shattered
+                                                    records once again, closing an<b>impressive 807 deals in
+                                                        February.</b></p>
+
+                                                <div>
+                                                    <p>
+                                                        A special shoutout goes to <b>Cristal Poole and Jurell Arana</b>
+                                                        for achieving outstanding personal bests, each closing 25
+                                                        deals—an incredible accomplishment that reflects their
+                                                        dedication and hard work.
+                                                    </p>
+                                                    <p>Your hard work, dedication, and unstoppable spirit are truly
+                                                        inspiring. Let's keep this momentum going and reach even greater
+                                                        heights together!
+                                                    </p>
+                                                </div>
+                                                <br>
+                                                <img src="./q1_2026/retailsales-1.png" alt="">
+                                            </div>
+                                            <img src="./q1_2026/zigzag-bottom.jpg" style="margin: 0 auto" alt="sp" />
+                                        </div>
+                                </td>
+                            </tr>
+                            <!--section 05-->
+                            <tr style="margin: 0 auto; text-align: center;">
+                                <td>
+                                    <div
+                                        style="background-color: #45277E; color: white; margin-top: 20px; padding: 20px 0">
+                                        <img style="margin: 20px auto 20px auto;" src="./q1_2026/people.png"
+                                            alt="people">
+                                        <div
+                                            style="text-align: center; font-size: 22px; font-family: 'Raleway', sans-serif; margin-bottom: 10px">
+                                            <b>Welcome to the Team!</b>
+                                        </div>
+                                        <div style="font-size: 17px; padding: 0 20px">Join us in welcoming our newest
+                                            team members! We're excited to have them on board and look forward to all
+                                            the great things we'll accomplish together.</div>
+                                        <div
+                                            style="display: flex; margin: 30px auto; padding: 0 20px; text-align: center">
+                                            <div style="padding: 0 25px; width: 50%">
+                                                <div class="new-hire-dept-name">
+                                                    Inside Sales
+                                                </div>
+                                                <div class="arrow"></div>
+                                                <div class="team-members" style="margin-bottom: 15px;">
+                                                    Malaak Khalil <br>
+                                                    Remington Elmer <br>
+                                                    Todd Marier <br>
+                                                    Jeremy Ellis <br>
+                                                    Ryan Brooklier <br>
+                                                    Max Lund <br>
+                                                    Benjamin Bietz <br>
+                                                    Miguel Valembrun Jr. <br>
+                                                    Omar Almasri
+                                                </div>
+
+                                                <div class="new-hire-dept-name">
+                                                    Contact Center
+                                                </div>
+                                                <div class="arrow"></div>
+                                                <div class="team-members">
+                                                    Julie Kelly <br>
+                                                    Aaqilah Richmond <br>
+                                                    Queuna Fugget-George <br>
+                                                    Amberly Schoolfield <br>
+                                                    Peter Blake <br>
+                                                    Roger Scheu <br>
+                                                    Trenise Robertson <br>
+                                                    Jolicia Harris <br>
+                                                    Asia Caballero <br>
+                                                    Reshaona Yates <br>
+                                                    Keiara Coley <br>
+                                                    Valerie Bryan <br>
+                                                    Ja'Queshia Morgan <br>
+                                                    Sandra Brehm <br>
+                                                    Corbin Thorpe
+                                                </div>
+
+
+                                            </div>
+                                            <div style="padding: 0 25px; width: 50%">
+
+
+                                                <div class="new-hire-dept-name">
+                                                    Benepath
+                                                </div>
+                                                <div class="arrow"></div>
+                                                <div class="team-members" style="margin-bottom: 15px;">
+                                                    Dakar Hairston
+                                                </div>
+                                                <div class="new-hire-dept-name" style="margin-top: 30px;">
+                                                    Engineering
+                                                </div>
+                                                <div class="arrow"></div>
+                                                <div class="team-members" style="margin-bottom: 15px;">
+                                                    Sanju Desai
+                                                </div>
+                                                <img src="./q1_2026/welcome-team.png" alt="Welcome Team">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div style="background-color: #f8f8f8; padding: 30px 18px 10px; text-align: center">
+                                        <img src="./q1_2026/icons/recognition.png" style="margin: auto;"
+                                            alt="2025-recognition" />
+                                        <div
+                                            style="font-family: Raleway;font-weight: 700; font-size: 20px; font-style: Bold; margin-bottom: 30px;">
+                                            Employee Recognition</div>
+                                        <!--recognition item-->
+                                        <div class="recog-item">
+                                            <div
+                                                style="background-color: #46198E; padding: 8px 20px; border-radius: 12px 12px 0 0; color: white; font-size: 18px; font-weight: bold; display: flex; align-items: center;     max-width: fit-content;">
+                                                <img src="./q1_2026/icons/Icon (3).png"
+                                                    style="margin-right :10px; height: fit-content;" alt="icon" />
+                                                Customer Success
+                                            </div>
+                                            <div
+                                                style="background-color: white; display: flex; border-radius: 0 8px 8px 8px; padding: 20px; text-align: left; box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.17);">
+                                                <img src="./q1_2026/er-myrah.png"
+                                                    style="margin-right: 20px; height: fit-content;" alt="icon" />
+                                                <div>
+                                                    <p style="margin: 0">
+                                                        <b>Myrah Dwight</b> is a top-performing Account Manager on Team
+                                                        LOTR and a consistent million-dollar producer, on track to reach
+                                                        that milestone again in 2026. Known as the “queen of referrals,”
+                                                        she builds strong relationships that fuel ongoing growth for
+                                                        both her agents and SmartFinancial.
+
+                                                    </p>
+                                                    <p>
+                                                        Thank you, Myrah, for your dedication, drive, and unwavering
+                                                        commitment to your agent's success!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--recognition item-->
+                                        <div class="recog-item">
+                                            <div
+                                                style="background-color: #46198E; padding: 8px 20px; border-radius: 12px 12px 0 0; color: white; font-size: 18px; font-weight: bold; display: flex; align-items: center;     max-width: fit-content;">
+                                                <img src="./q1_2026/icons/sales-icon.png"
+                                                    style="margin-right :10px; height: fit-content;" alt="icon" />
+                                                Retail Sales
+                                            </div>
+                                            <div
+                                                style="background-color: white; display: flex; border-radius: 0 8px 8px 8px; padding: 20px; text-align: left; box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.17);">
+                                                <img src="./q1_2026/er-brandon.png"
+                                                    style="margin-right: 20px; height: fit-content;" alt="icon" />
+                                                <div>
+                                                    <p style="margin: 0">
+                                                        <b>Brandon Kaiser</b> delivered an outstanding first month,
+                                                        closing 74 sales and setting an elite standard right out of the
+                                                        gate. From day one, he has been fully dialed in on the
+                                                        fundamentals—consistently hitting his metrics and driving strong
+                                                        results.
+                                                    </p>
+                                                    <p>
+                                                        With a background in owning his own insurance agency, Brandon
+                                                        continues to raise the bar and is already making a significant
+                                                        impact on the team.
+                                                    </p>
+                                                    <p>Thank you, Brandon, for your focus, drive, and commitment to
+                                                        excellence—this is just the beginning!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--recognition item-->
+                                        <div class="recog-item">
+                                            <div
+                                                style="background-color: #46198E; padding: 8px 20px; border-radius: 12px 12px 0 0; color: white; font-size: 18px; font-weight: bold; display: flex; align-items: center;     max-width: fit-content;">
+                                                <img src="./q1_2026/icons/Icon (2).png"
+                                                    style="margin-right :10px; height: fit-content;" alt="icon" />
+                                                Marketing
+                                            </div>
+                                            <div
+                                                style="background-color: white;  display: flex; border-radius: 0 8px 8px 8px; padding: 20px; text-align: left; box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.17);">
+                                                <img src="./q1_2026/er-preston.png"
+                                                    style="margin-right: 20px; height: fit-content;" alt="icon" />
+                                                <div>
+                                                    <p style="margin: 0">
+                                                        <b>Preston Micalizio</b> consistently produces high-quality
+                                                        content across a wide range of topics, from consumer to
+                                                        commercial insurance. He adapts quickly and professionally when
+                                                        priorities shift, always stepping in to support the team and the
+                                                        greater goal.
+                                                    </p>
+                                                    <p>
+                                                        Thank you, Preston, for your hard work, positive attitude, and
+                                                        commitment to excellence!
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--recognition item-->
+                                        <div class="recog-item" style="margin-top: 30px">
+                                            <div
+                                                style="background-color: #46198E; padding: 8px 20px; border-radius: 12px 12px 0 0; color: white; font-size: 18px; font-weight: bold; display: flex; align-items: center;     max-width: fit-content;">
+                                                <img src="./q1_2026/icons/sales-icon.png"
+                                                    style="margin-right :10px; height: fit-content;" alt="icon" />
+                                                Contact Center
+                                            </div>
+                                            <div
+                                                style="background-color: white;  display: flex; border-radius: 0 8px 8px 8px; padding: 20px; text-align: left; box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.17);">
+                                                <img src="./q1_2026/er-rikki.png"
+                                                    style="margin-right: 20px; height: fit-content;" alt="icon" />
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <p>
+                                                                Congratulations to <b>Rikki Bonner</b> and her team! The
+                                                                Calls
+                                                                Team's 4-week March Madness contest focused on key call
+                                                                center KPIs,
+                                                                and Rikki's team stayed in the Top 2 every single
+                                                                week—an incredibly
+                                                                consistent performance.
+
+
+                                                            </p>
+                                                            <p>
+                                                                Since joining SmartFinancial in late December, Rikki has
+                                                                come in
+                                                                strong and made an immediate impact, setting the tone
+                                                                like a true
+                                                                first-round pick.
+                                                            </p>
+                                                            <p>
+                                                                Great job, Rikki—and congratulations to her team for
+                                                                winning the
+                                                                overall contest!
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                    </div>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!--Section 6-->
+                            <tr>
+                                <td>
+                                    <div
+                                        style="background-color: #FFFFFF; padding: 40px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 2px;">
+                                        <img src="./q1_2026/icons/photo-icon.png" alt="2023-recognition" />
+                                        <strong style="font-size: 28px; font-weight: normal;">Photo Album</strong>
+                                        <br>
+                                        <img style=" margin-bottom: 6px;" src="./q1_2026/pa-1.png" alt="img">
+                                        <img style=" margin-bottom: 6px;" src="./q1_2026/pa-2.png" alt="img">
+                                        <img style=" margin-bottom: 6px;" src="./q1_2026/pa-3.png" alt="img">
+                                        <img style=" margin-bottom: 6px;" src="./q1_2026/pa-4.png" alt="img">
+                                        <img style=" margin-bottom: 6px;" src="./q1_2026/pa-5.png" alt="img">
+                                        <img style=" margin-bottom: 6px;" src="./q1_2026/pa-6.png" alt="img">
+                                        <img style=" margin-bottom: 6px;" src="./q1_2026/pa-7.png" alt="img">
+                                    </div>
+
+                                    <div style="background-color: white; text-align: center; padding: 40px 0 60px ;">
+                                        <a href="https://smartfinancial.com/" target="_blank">
+                                            <img src="./q1_2026/logo-2.png" alt="smartfinancial"
+                                                style="height: fit-content; margin: auto;" />
+                                        </a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
