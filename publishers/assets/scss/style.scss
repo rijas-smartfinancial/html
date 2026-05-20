@@ -1,0 +1,684 @@
+
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+
+$xs:  576px;
+$sm:  768px;
+$md:  992px;
+$lg:  1200px;
+$xl:  1400px;
+$xxl: 1440px;
+
+// Min-width mixins (mobile-first)
+@mixin xsmin  { @media screen and (min-width: $xs)  { @content; } }
+@mixin smmin  { @media screen and (min-width: $sm)  { @content; } }
+@mixin mdmin  { @media screen and (min-width: $md)  { @content; } }
+@mixin lgmin  { @media screen and (min-width: $lg)  { @content; } }
+@mixin xlmin  { @media screen and (min-width: $xl)  { @content; } }
+@mixin xxlmin { @media screen and (min-width: $xxl) { @content; } }
+
+// Max-width mixins (desktop-first — upper bound = breakpoint − 1px)
+@mixin xsmax  { @media screen and (max-width: #{$xs  - 1px}) { @content; } }
+@mixin smmax  { @media screen and (max-width: #{$sm  - 1px}) { @content; } }
+@mixin mdmax  { @media screen and (max-width: #{$md  - 1px}) { @content; } }
+@mixin lgmax  { @media screen and (max-width: #{$lg  - 1px}) { @content; } }
+@mixin xlmax  { @media screen and (max-width: #{$xl  - 1px}) { @content; } }
+@mixin xxlmax { @media screen and (max-width: #{$xxl - 1px}) { @content; } }
+
+
+// ============================================================
+// Variables
+// ============================================================
+
+// Brand colors (from typography.png)
+$primary:        #E73989;
+$primary-dark:   #c0206d;
+$dark:           #210D41;
+$sky:            #01BAEF;
+$black:          #000000;
+$mist:           #F8F8F8;
+
+// UI colors
+$dark-bg:        #0D0020;
+$hero-bg:        #F8F8F8;
+$section-bg:     #F7F4FF;
+$card-border:    #E8E2F5;
+$body-color:     #4a4a6a;
+$heading-color:  #1a122e;
+
+// Radius / spacing
+$radius-sm:      8px;
+$radius:         16px;
+$radius-lg:      24px;
+$transition:     all 0.3s ease;
+$section-py:     96px;
+
+// ============================================================
+// Typography scale  (brand guide — typography.png)
+//   Mobile   → Desktop   (ExtraBold 800, 120% lh | Regular 400, 140% lh)
+// ============================================================
+
+// Heading sizes use clamp(mobile, fluid-vw, desktop)
+$h1-size: clamp(2.25rem,  3.5vw, 2.625rem); // 36px → 42px
+$h2-size: clamp(1.75rem,  3vw,   2.375rem); // 28px → 38px
+$h3-size: clamp(1.5rem,   2.5vw, 2rem);     // 24px → 32px
+$h4-size: clamp(1.125rem, 1.6vw, 1.375rem); // 18px → 22px
+$p-size:  clamp(1rem,     1.2vw, 1.125rem); // 16px → 18px
+
+
+// ============================================================
+// Base
+// ============================================================
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  font-size: $p-size;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $body-color;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 0;
+  font-family: 'Raleway', system-ui, -apple-system, sans-serif;
+}
+
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+
+p {
+  font-size: $p-size;
+  line-height: 1.4;
+}
+
+img { max-width: 100%; }
+
+// ============================================================
+// Utilities
+// ============================================================
+.py-section {
+  padding-top: $section-py;
+  padding-bottom: $section-py;
+  @include smmax {
+    padding-top: $section-py * 0.625;
+    padding-bottom: $section-py * 0.625;
+  }
+}
+
+.section-title {
+  font-size: $h2-size;
+  font-weight: 800;
+  color: $heading-color;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-desc {
+  font-size: $p-size;
+  color: $black;
+  line-height: 1.75;
+  max-width: 980px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.text-primary-pink { color: $primary; }
+
+// ============================================================
+// Buttons
+// ============================================================
+.btn-pink {
+  background: 
+linear-gradient(180deg, #E83889 90%, #B8386E 100%);
+  color: #fff;
+  border: 2px solid $primary;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 1.1rem 2rem;
+  transition: $transition;
+  border: 0;
+
+@include mdmax { padding: 0.875rem 1.35rem; }
+
+  &:hover, &:focus {
+      background: linear-gradient(180deg, #E83889 0%, #E83889 100%);
+    border-color: $primary-dark;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba($primary, 0.35);
+  }
+}
+
+.btn-outline-secondary {
+  border-color: $primary;
+  color:  $primary;
+  font-weight: 600;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 1.1rem 2rem;
+  @include mdmax { padding: 0.875rem 1.35rem; }
+
+  &:hover {
+    background: transparent;
+    border-color: $primary-dark;
+    color: $primary-dark;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba($primary, 0.35);
+  }
+}
+
+.btn-outline-dark {
+  border-color: $heading-color;
+  color: $heading-color;
+  font-weight: 600;
+
+  &:hover {
+    background: $heading-color;
+    color: #fff;
+  }
+}
+
+// ============================================================
+// Navbar
+// ============================================================
+.sf-navbar {
+  background: $dark;
+  padding: 18px 48px;
+  z-index: 1050;  
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  @include mdmax { padding: 15px; }
+
+  &.scrolled {
+    background: darken($dark, 4%);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+
+  .navbar-brand img { height: 56px; 
+  @include mdmax { height: 32px; } }
+
+  .btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .nav-phone {
+    opacity: 0.85;
+    transition: opacity 0.2s;
+    background-color: $sky;
+    color: #fff;
+    &:hover { opacity: 1; }
+    img { height: 22px; }
+  }
+}
+
+// ============================================================
+// Hero
+// ============================================================
+.hero-section {
+  background: $hero-bg;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.hero-row {
+.hero-title {
+  font-size: $h1-size;
+  font-weight: 800;
+  color: $heading-color;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-desc {
+  font-size: $p-size;
+  color: #000000;
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  @include mdmax { margin: 0 auto 2rem; }
+}
+
+.hero-ctas {
+  @include mdmax { justify-content: center; }
+}
+
+
+
+.hero-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-right {
+  @include mdmax {
+    text-align: center;
+    padding: 40px 15px 40px;
+  }
+}
+}
+
+
+
+
+
+
+// ============================================================
+// Earn More
+// ============================================================
+.earn-section {
+  background: #fff;
+
+
+.dashboard-wrap {
+  margin: 3rem auto;
+  max-width: 960px;
+  @include mdmax {
+    margin: 2rem auto;
+  }
+}
+
+.dashboard-img {
+  border-radius: $radius;
+}
+
+.feature-item {
+  padding: 1.5rem 1rem;
+
+  .feature-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: $heading-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+}
+
+// ============================================================
+// Maximize Revenue
+// ============================================================
+.maximize-section {
+  background: #FFF;
+
+
+.maximize-card {
+  background: #F8F8F8;
+  border-radius: $radius;
+  padding: 2rem;
+  border: 1px solid #F8F8F8;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba($primary, 0.09);
+    border-color: rgba($primary, 0.25);
+    transform: translateY(-3px) !important;
+    ;
+  }
+}
+
+.maximize-icon-wrap {
+  width: 100%;
+  height: 52px;
+  background: $hero-bg;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.maximize-icon {
+  width: 36px;
+  height: 36px;
+  margin: auto;
+}
+
+.maximize-title {
+  font-size: $h3-size;
+  font-weight: 800;
+  color: $heading-color;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: $p-size;
+    color: $black;
+    margin-bottom: 0.875rem;
+    line-height: 1.6;
+
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='17' viewBox='0 0 21 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06065 8.23471L6.93615 14.1101L19.0606 1.01929' stroke='%232F9EE9' stroke-width='3'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px;
+    }
+  }
+}
+}
+// ============================================================
+// Everything You Need
+// ============================================================
+.needs-section {
+  background: $mist;
+
+
+.needs-card {
+  background: #fff;
+  border-radius: $radius;
+  padding: 2rem;
+  height: 100%;
+  text-align: center;
+  transition: $transition;
+  @include mdmax { padding: 1rem; }
+
+  &:hover {
+    border-color: rgba($primary, 0.3);
+    box-shadow: 0 8px 32px rgba($primary, 0.09);
+    transform: translateY(-3px) !important;
+  }
+
+  h5 {
+    font-size: $h4-size;
+    font-weight: 800;
+    color: $heading-color;
+    margin-bottom: 0.625rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $black;
+    margin: 0;
+    line-height: 1.65;
+  }
+}
+
+.needs-icon-bg {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+
+.needs-icon {
+  width: 70px;
+  height: 70px;
+}
+}
+// ============================================================
+// 3 Steps
+// ============================================================
+.steps-section {
+  background: #FFF;
+
+.section-desc {
+  text-align: center;
+}
+.step-card {
+  padding: 2rem;
+  text-align: center;
+  @include mdmax { padding: 0; }
+}
+
+
+.step-img-wrap {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.step-img {
+  max-height: 253px;
+  object-fit: contain;
+}
+
+.step-title {
+  font-size: $h3-size;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+}
+// ============================================================
+// Testimonial
+// ============================================================
+.testimonial-section {
+  overflow: hidden;
+  background-color: $mist;
+  padding: 60px 0;
+  @include mdmax { padding: 30px 0; }
+  .card 
+  {
+    border-radius: 24px;
+    overflow: hidden;
+    border: none;
+  }
+
+
+.testimonial-img-col {
+  min-height: 520px;
+  overflow: hidden;
+  @include mdmax { min-height: 320px;
+   }
+}
+
+.testimonial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-content-col {
+  background: #fff;
+  padding: 80px 72px;
+  @include mdmax { padding: 56px 32px; }
+  @include xsmax { padding: 48px 24px; }
+}
+
+
+.stars-img {
+  height: 26px;
+}
+
+.testimonial-lead {
+  font-size: $h3-size;
+  font-weight: 800;
+  color: $heading-color;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+  font-size: $p-size;
+  color: $black;
+  line-height: 1.8;
+  border: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.testimonial-link {
+  color: $primary;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: $p-size;
+  &:hover { text-decoration: underline; }
+}
+}
+
+// ============================================================
+// CTA Banner
+// ============================================================
+.cta-banner {
+  background-color: #FFF;
+  padding: 60px 0;
+  @include mdmax { padding: 30px 0; }
+    .card {
+    background-color: #FFEEF6;
+    border-radius: 12px;
+    border: 0;
+    padding: 36px 72px;
+    @include mdmax { padding: 24px; text-align: center; }
+}
+
+  .cta-title {
+    font-size: $h3-size;
+    font-weight: 800;
+    color: $heading-color;
+  }
+
+  .cta-sub {
+    font-size: $p-size;
+    color: $black;
+  }
+}
+
+// ============================================================
+// Publisher Team
+// ============================================================
+.team-section {
+  background: #fff;
+  padding: 60px 0;
+  @include mdmax { padding: 30px 0; }
+
+
+.team-member {
+  text-align: center;
+
+  .team-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.875rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h6 {
+    font-size: $h4-size;
+    font-weight: 800;
+    color: $heading-color;
+    margin-bottom: 0.25rem;
+  }
+
+  .team-role {
+    font-size: $p-size;
+    color: #000;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+}
+}
+
+// ============================================================
+// Footer CTA
+// ============================================================
+.footer-cta-section {
+  overflow: hidden;
+  padding: 60px 0;
+  @include mdmax { padding: 30px 0; }
+    h2 {
+    font-size: $h2-size;
+    font-weight: 800;
+    color: $heading-color;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: $p-size;
+    color: $black;
+    margin-top: 0.75rem;
+  }
+}
+
+
+
+// ============================================================
+// Footer
+// ============================================================
+.sf-footer {
+  background: $mist;
+  padding: 3rem 0 2rem;
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+
+    a {
+      transition: color 0.2s;
+      &:hover { transform: scale(1.1);}
+    }
+  }
+
+  .footer-logo { margin-bottom: 1rem; }
+
+  .footer-contact {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5rem;
+
+    @include mdmax { text-align: center; display: flex; flex-direction: column;  gap: 10px;}
+
+    a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+      &:hover { color: $primary; }
+    }
+  }
+
+  .sep { margin: 0 0.625rem; opacity: 0.35; }
+}
+
+// ============================================================
+// GSAP Initial States
+// ============================================================
+.reveal-up {
+  transform: translateY(44px);
+  will-change: transform, opacity;
+}

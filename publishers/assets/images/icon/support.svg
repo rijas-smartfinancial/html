@@ -1,0 +1,8 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="17" y="7" width="36.0678" height="56" rx="4" fill="white" stroke="#210D41" stroke-width="3"/>
+<mask id="path-2-inside-1_187_89" fill="white">
+<rect x="22" y="13" width="26" height="39" rx="2"/>
+</mask>
+<rect x="22" y="13" width="26" height="39" rx="2" fill="#210D41" stroke="#210D41" stroke-width="6" mask="url(#path-2-inside-1_187_89)"/>
+<ellipse cx="35.0332" cy="56.7097" rx="2.70508" ry="2.70968" fill="#E83889"/>
+</svg>
