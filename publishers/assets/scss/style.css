@@ -376,20 +376,13 @@ img {
   text-align: center;
 }
 .steps-section .step-card {
-  padding: 2rem;
   text-align: center;
-}
-@media screen and (max-width: 991px) {
-  .steps-section .step-card {
-    padding: 0;
-  }
 }
 .steps-section .step-img-wrap {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 .steps-section .step-img {
-  max-height: 253px;
   -o-object-fit: contain;
      object-fit: contain;
 }

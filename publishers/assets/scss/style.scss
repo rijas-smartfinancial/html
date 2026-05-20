@@ -456,9 +456,8 @@ linear-gradient(180deg, #E83889 90%, #B8386E 100%);
   text-align: center;
 }
 .step-card {
-  padding: 2rem;
   text-align: center;
-  @include mdmax { padding: 0; }
+
 }
 
 
@@ -468,7 +467,6 @@ linear-gradient(180deg, #E83889 90%, #B8386E 100%);
 }
 
 .step-img {
-  max-height: 253px;
   object-fit: contain;
 }
 

@@ -149,6 +149,14 @@ gsap.to('.steps-section .step-card', {
   stagger: 0.18,
   scrollTrigger: { trigger: '.steps-section .row', start: 'top 82%', once: true }
 });
+gsap.to('.steps-section.reveal-up', {
+  y: 0,
+  opacity: 1,
+  duration: 0.7,
+  ease: 'power3.out',
+  stagger: 0.15,
+  scrollTrigger: { trigger: '.steps-section', start: 'top 85%', once: true }
+});
 
 /* ------------------------------------------------------------
    Testimonial – slide in from sides
