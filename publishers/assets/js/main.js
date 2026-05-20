@@ -194,24 +194,6 @@ gsap.to('.team-section .team-member', {
   scrollTrigger: { trigger: '.team-section .row', start: 'top 82%', once: true }
 });
 
-/* ------------------------------------------------------------
-   Footer CTA
-   ------------------------------------------------------------ */
-gsap.to('.footer-cta-left .reveal-up', {
-  y: 0,
-  opacity: 1,
-  duration: 0.75,
-  ease: 'power3.out',
-  stagger: 0.15,
-  scrollTrigger: { trigger: '.footer-cta-section', start: 'top 82%', once: true }
-});
-
-gsap.from('.footer-cta-right .fcta-img', {
-  scale: 1.06,
-  duration: 1.2,
-  ease: 'power3.out',
-  scrollTrigger: { trigger: '.footer-cta-section', start: 'top 82%', once: true }
-});
 
 /* ------------------------------------------------------------
    Parallax on hero image (subtle)
