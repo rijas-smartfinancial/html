@@ -44,8 +44,8 @@ $dark-bg:        #0D0020;
 $hero-bg:        #F8F8F8;
 $section-bg:     #F7F4FF;
 $card-border:    #E8E2F5;
-$body-color:     #4a4a6a;
-$heading-color:  #1a122e;
+$body-color:     #000000;
+$heading-color:  #000000;
 
 // Radius / spacing
 $radius-sm:      8px;
@@ -126,7 +126,7 @@ img { max-width: 100%; }
 
 .section-desc {
   font-size: $p-size;
-  color: $black;
+  color: $body-color;
   line-height: 1.75;
   max-width: 980px;
   margin-bottom: 0;
@@ -427,14 +427,15 @@ linear-gradient(180deg, #E83889 90%, #B8386E 100%);
   }
 
   p {
-    font-size: 0.875rem;
+    font-size: 18px;
     color: $black;
     margin: 0;
     line-height: 1.65;
+    @include mdmax { font-size: 16px;}
   }
 }
 
-.needs-icon-bg {
+.needs-icon-bg { 
   width: 70px;
   height: 70px;
   margin: auto;
