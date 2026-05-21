@@ -535,12 +535,11 @@ linear-gradient(180deg, #E83889 90%, #B8386E 100%);
   margin: 0 0 1.25rem;
 }
 
-.testimonial-link {
+.testimonial-pink {
   color: $primary;
   font-weight: 600;
   text-decoration: none;
   font-size: $p-size;
-  &:hover { text-decoration: underline; }
 }
 }
 
