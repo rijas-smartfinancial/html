@@ -1,0 +1,113 @@
+.awards-section {
+  background: #fff;
+  border-top: 1px solid var(--sf-border);
+  overflow: hidden;
+  position: relative;
+
+  // Fade edges so items glide in/out smoothly
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, transparent 100%);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, #fff 0%, transparent 100%);
+  }
+}
+
+// ── Ticker ────────────────────────────────────────────────────────────────────
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  padding: 28px 0;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 28s linear infinite;
+
+  // Pause on hover for accessibility
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.ticker-set {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 0 28px; // gives the seam between set A and B equal spacing
+}
+
+// ── Award item ────────────────────────────────────────────────────────────────
+
+.award-item {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-img {
+  height: 64px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+  // Desaturate slightly, pop on hover
+  filter: grayscale(0.1) opacity(0.88);
+  transition: filter 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.06);
+  }
+}
+
+// ── Animation ─────────────────────────────────────────────────────────────────
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 768px) {
+  .awards-section {
+    &::before,
+    &::after {
+      width: 60px;
+    }
+  }
+
+  .ticker-set {
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .award-img {
+    height: 48px;
+    max-width: 120px;
+  }
+
+  .ticker-wrap {
+    padding: 20px 0;
+  }
+}
