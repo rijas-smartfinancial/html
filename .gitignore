@@ -1,1 +1,4 @@
 InsuranceSaveNow-Home/.vscode/settings.json
+
+# Local Netlify folder
+.netlify
