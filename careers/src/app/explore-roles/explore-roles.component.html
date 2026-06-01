@@ -1,0 +1,38 @@
+<section class="explore-roles">
+
+  <!-- ── Text + CTA — animates in when section enters viewport ────────────── -->
+  <div #textBlock class="explore-roles__text">
+
+    <h2 class="explore-roles__heading">
+      Make a Difference &amp;<br>
+      Have Fun While Doing It
+    </h2>
+
+    <p class="explore-roles__body">
+      We're a team of dedicated people who are excited to come to work every day
+      and work hard. SmartFinancial offers a fun and engaging company culture in
+      which everyone is encouraged to share ideas and work together.
+    </p>
+
+    <a href="#open-roles" class="explore-roles__cta">Explore Roles</a>
+
+  </div>
+
+  <!-- ── Photo grid — each card fades in with staggered delay ─────────────── -->
+  <div class="explore-roles__grid">
+    <div
+      *ngFor="let photo of photos"
+      #photoEl
+      class="explore-roles__photo"
+    >
+      <img
+        [src]="photo.src"
+        [alt]="photo.alt"
+        class="explore-roles__img"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+</section>
+

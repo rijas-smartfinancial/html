@@ -1,24 +1,11 @@
 <section class="awards-section" aria-label="Awards and Recognition">
 
-  <div class="ticker-wrap">
-    <!-- Track contains two identical sets — second is aria-hidden for seamless loop -->
-    <div class="ticker-track">
-
-      <!-- Set A -->
-      <div class="ticker-set" aria-hidden="false">
-        <figure *ngFor="let award of awards" class="award-item" [attr.title]="award.alt">
-          <img [src]="award.src" [alt]="award.alt" class="award-img" loading="lazy" />
-        </figure>
-      </div>
-
-      <!-- Set B — duplicate, purely visual -->
-      <div class="ticker-set" aria-hidden="true">
-        <figure *ngFor="let award of awards" class="award-item">
-          <img [src]="award.src" [alt]="''" class="award-img" />
-        </figure>
-      </div>
-
-    </div>
-  </div>
+  <swiper-container #awardsSwiper init="false" class="awards-swiper">
+    <swiper-slide *ngFor="let award of awards" class="award-slide">
+      <figure class="award-item" [attr.title]="award.alt">
+        <img [src]="award.src" [alt]="award.alt" class="award-img" loading="lazy" />
+      </figure>
+    </swiper-slide>
+  </swiper-container>
 
 </section>
