@@ -1,0 +1,298 @@
+// =============================================================================
+// Celebrate Harder Section
+// =============================================================================
+
+.celebrate {
+  background: #fff;
+  padding: 80px 24px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+// ── Header ────────────────────────────────────────────────────────────────────
+
+.celebrate__header {
+  max-width: 620px;
+  margin: 0 auto 48px;
+}
+
+.celebrate__mascot {
+  display: block;
+  width: 72px;
+  height: auto;
+  margin: 0 auto 14px;
+}
+
+.celebrate__heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5.5vw, 56px);
+  font-weight: var(--weight-extrabold);
+  color: var(--sf-dark);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.celebrate__sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.72;
+  color: var(--sf-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+// ── Swiper slider ─────────────────────────────────────────────────────────────
+
+.celebrate__swiper-wrap {
+  position: relative;
+  display: inline-block; // shrink-wrap around the swiper so mousemove coords are accurate
+  cursor: none;
+
+  @media (hover: none) {
+    cursor: auto;
+  }
+}
+
+// .celebrate__swiper {
+//   width: 100%;
+//   padding: 30px !important;
+// }
+   .celebrate__swiper {
+      width: 520px;
+      height: 560px;
+    }
+
+    .celebrate__slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      border: 4px solid #fff;
+    }
+
+.celebrate__slide {
+  //  width: 340px;
+  //   height: 480px;
+  border-radius: 20px;
+  // overflow: hidden;
+  background: var(--sf-bg-alt);
+  position: relative;
+  // box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+  // transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+  //             box-shadow 0.4s ease,
+  //             opacity 0.4s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  // &.swiper-slide-active {
+  //   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  //   z-index: 3;
+  // }
+
+  // &.swiper-slide-prev {
+  //   transform: rotate(-9deg);
+  //   opacity: 0.75;
+  // }
+
+  // &.swiper-slide-next {
+  //   transform: rotate(9deg);
+  //   opacity: 0.75;
+  // }
+
+  // @media (max-width: 640px) {
+  //   width: 240px !important;
+  //   height: 340px;
+  // }
+}
+
+// ── Main card thumbnail & preview ─────────────────────────────────────────────
+
+.celebrate__thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: opacity 0.45s ease;
+
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+.celebrate__preview {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  &--on {
+    opacity: 1;
+  }
+}
+
+.celebrate__preview-iframe {
+  // Landscape 16:9 video covering a portrait card (320×430):
+  // height-constrained: width = 430 × (16/9) ≈ 764px → ≈ 239% of 320px
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
+// ── Drag badge ────────────────────────────────────────────────────────────────
+
+.celebrate__drag-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  will-change: transform;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  @media (hover: none) {
+    display: none;
+  }
+
+  &--on {
+    opacity: 1;
+  }
+}
+
+.celebrate__drag-img {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
+// ── Caption + play button ─────────────────────────────────────────────────────
+
+.celebrate__caption {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: var(--weight-extrabold);
+  color: var(--sf-dark);
+  margin: 8px 0 16px;
+}
+
+.celebrate__play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: var(--sf-pink);
+  border: solid #d42f7a;
+  border-width: 0 0 4px 0;
+  border-radius: 5px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+
+  &:hover {
+    background: var(--sf-pink-dark);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ── Modal ─────────────────────────────────────────────────────────────────────
+
+.celebrate__modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: celebrateFadeIn 0.22s ease forwards;
+}
+
+.celebrate__modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 48px 100px rgba(0, 0, 0, 0.6);
+  animation: celebrateScaleIn 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.celebrate__modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.celebrate__modal-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+@keyframes celebrateFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes celebrateScaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+

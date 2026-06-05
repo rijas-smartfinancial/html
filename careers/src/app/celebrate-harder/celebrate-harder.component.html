@@ -1,0 +1,120 @@
+<section class="celebrate">
+
+  <!-- Header -->
+  <div class="celebrate__header">
+    <img
+      class="celebrate__mascot"
+      src="assets/images/penny.png"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+    >
+    <h2 class="celebrate__heading">We work hard &amp; celebrate harder</h2>
+    <p class="celebrate__sub">
+      From beach days to holiday nights, here's what it looks like when the SmartFinancial team gets together.
+    </p>
+  </div>
+
+  <!-- Swiper slider -->
+  <div
+    class="celebrate__swiper-wrap"
+    (mouseenter)="onSwiperEnter()"
+    (mouseleave)="onSwiperLeave()"
+    (mousemove)="onMouseMove($event)"
+    (mousedown)="onSwiperMouseDown()"
+    (mouseup)="onSwiperMouseUp()"
+  >
+    <swiper-container
+      #swiperEl
+      class="celebrate__swiper"
+      effect="cards"
+    >
+      <swiper-slide *ngFor="let slide of slides; let i = index" class="celebrate__slide">
+        <ng-container *ngIf="slide.hasVideo; else regularSlide">
+          <img
+            class="celebrate__thumb"
+            [src]="slide.img"
+            [alt]="slide.alt"
+            loading="lazy"
+            [class.celebrate__thumb--hidden]="isHovered && activeIndex === i"
+          >
+          <div class="celebrate__preview" [class.celebrate__preview--on]="isHovered && activeIndex === i">
+            <iframe
+              *ngIf="showPreview && activeIndex === i"
+              class="celebrate__preview-iframe"
+              src="https://player.vimeo.com/video/1010721302?background=1&autoplay=1&muted=1&loop=1&autopause=0&quality=auto&dnt=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="Beach Party preview"
+            ></iframe>
+          </div>
+        </ng-container>
+        <ng-template #regularSlide>
+          <img [src]="slide.img" [alt]="slide.alt" loading="lazy">
+        </ng-template>
+      </swiper-slide>
+    </swiper-container>
+
+    <!-- Drag badge — lerp-follows cursor -->
+    <div
+      #dragBadge
+      class="celebrate__drag-badge"
+      [class.celebrate__drag-badge--on]="isHovered"
+      aria-hidden="true"
+    >
+      <img
+        *ngIf="!isDragging"
+        class="celebrate__drag-img"
+        src="assets/images/grab-cursor.svg"
+        alt=""
+      >
+      <img
+        *ngIf="isDragging"
+        class="celebrate__drag-img"
+        src="assets/images/grabbed-cursor.svg"
+        alt=""
+      >
+    </div>
+  </div>
+
+  <!-- Caption + play button -->
+  <p class="celebrate__caption"><strong>{{ activeSlide.caption }}</strong></p>
+  <button
+    *ngIf="activeSlide.hasVideo"
+    class="celebrate__play-btn"
+    (click)="openModal()"
+    type="button"
+  >
+    <svg width="12" height="13" viewBox="0 0 12 14" fill="none">
+      <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"
+        fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    Play Video
+  </button>
+
+  <!-- Video modal -->
+  <div class="celebrate__modal" *ngIf="modalOpen" (click)="closeModal()">
+    <div class="celebrate__modal-box" (click)="$event.stopPropagation()">
+      <button
+        class="celebrate__modal-close"
+        (click)="closeModal()"
+        type="button"
+        aria-label="Close video"
+      >
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="celebrate__modal-video">
+        <iframe
+          src="https://player.vimeo.com/video/1010721302?autoplay=1&dnt=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Beach Party 2025"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+</section>

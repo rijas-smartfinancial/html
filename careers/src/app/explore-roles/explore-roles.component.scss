@@ -2,7 +2,7 @@
   background: #fff;
   padding: 60px 0 60px;
   overflow: hidden;
-}
+
 
 // ── Text block ────────────────────────────────────────────────────────────────
 
@@ -146,4 +146,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 6px;
   }
+}
+
 }
