@@ -1,145 +1,429 @@
 <div id="insurance-page">
-<section
-  class="hero"
-  (mousemove)="onMouseMove($event)"
-  (mouseleave)="onMouseLeave()"
-  (click)="togglePause()"
->
+  <section class="hero" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()" (click)="togglePause()">
 
-  <!-- ── Vimeo background video ─────────────────────────────────────────── -->
-  <div class="hero__video-wrap">
-    <iframe
-      #iframeEl
-      class="hero__iframe"
-      src="https://player.vimeo.com/video/1010721302?background=1&autopause=0&quality=auto&dnt=1"
-      frameborder="0"
-      allow="autoplay; fullscreen; picture-in-picture"
-      title="SmartFinancial 2024 Beach Party"
-    ></iframe>
-  </div>
+    <!-- ── Vimeo background video ─────────────────────────────────────────── -->
+    <div class="hero__video-wrap">
+      <iframe #iframeEl class="hero__iframe"
+        src="https://player.vimeo.com/video/1010721302?background=1&autopause=0&quality=auto&dnt=1" frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture" title="SmartFinancial 2024 Beach Party"></iframe>
+    </div>
 
-  <!-- ── Dark gradient overlay ──────────────────────────────────────────── -->
-  <div class="hero__overlay"></div>
+    <!-- ── Dark gradient overlay ──────────────────────────────────────────── -->
+    <div class="hero__overlay"></div>
 
-  <!-- ── Cursor-following Play badge ───────────────────────────────────── -->
-  <!-- Position is driven purely by rAF lerp in the component class        -->
-  <div
-    #badgeEl
-    class="hero__badge"
-    [class.hero__badge--visible]="badgeVisible"
-    aria-hidden="true"
-  >
-    <!-- Icon swaps with video state -->
-    <ng-container *ngIf="!isPaused">
-      <svg class="hero__badge-icon" viewBox="0 0 12 14" fill="none">
-        <rect x="0" y="0" width="3.5" height="14" rx="1.5" fill="currentColor"/>
-        <rect x="8.5" y="0" width="3.5" height="14" rx="1.5" fill="currentColor"/>
-      </svg>
-      <span class="hero_badge-text">Pause Videos</span>
-    </ng-container>
-    <ng-container *ngIf="isPaused">
-      <svg class="hero__badge-icon" viewBox="0 0 12 14" fill="none">
-        <path
-          d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"
-          fill="currentColor"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <span class="hero_badge-text">Play Video</span>
-    </ng-container>
-  </div>
+    <!-- ── Cursor-following Play badge ───────────────────────────────────── -->
+    <!-- Position is driven purely by rAF lerp in the component class        -->
+    <div #badgeEl class="hero__badge" [class.hero__badge--visible]="badgeVisible" aria-hidden="true">
+      <!-- Icon swaps with video state -->
+      <ng-container *ngIf="!isPaused">
+        <svg class="hero__badge-icon" viewBox="0 0 12 14" fill="none">
+          <rect x="0" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
+          <rect x="8.5" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
+        </svg>
+        <span class="hero_badge-text">Pause Videos</span>
+      </ng-container>
+      <ng-container *ngIf="isPaused">
+        <svg class="hero__badge-icon" viewBox="0 0 12 14" fill="none">
+          <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.5"
+            stroke-linejoin="round" />
+        </svg>
+        <span class="hero_badge-text">Play Video</span>
+      </ng-container>
+    </div>
 
-  <!-- ── Pause / Play button — bottom left ─────────────────────────────── -->
-  <button
-    class="hero__pause-btn"
-    (click)="togglePause(); $event.stopPropagation()"
-    [attr.aria-label]="isPaused ? 'Play video' : 'Pause video'"
-    type="button"
-  >
-    <!-- Pause icon -->
-    <ng-container *ngIf="!isPaused">
-      <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
-        <rect x="0" y="0" width="3.5" height="14" rx="1.5" fill="currentColor"/>
-        <rect x="8.5" y="0" width="3.5" height="14" rx="1.5" fill="currentColor"/>
-      </svg>
-      <span>Pause Video</span>
-    </ng-container>
+    <!-- ── Pause / Play button — bottom left ─────────────────────────────── -->
+    <button class="hero__pause-btn" (click)="togglePause(); $event.stopPropagation()"
+      [attr.aria-label]="isPaused ? 'Play video' : 'Pause video'" type="button">
+      <!-- Pause icon -->
+      <ng-container *ngIf="!isPaused">
+        <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+          <rect x="0" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
+          <rect x="8.5" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
+        </svg>
+        <span>Pause Video</span>
+      </ng-container>
 
-    <!-- Play icon -->
-    <ng-container *ngIf="isPaused">
-      <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
-        <path
-          d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z"
-          fill="currentColor"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <span>Play Video</span>
-    </ng-container>
-  </button>
+      <!-- Play icon -->
+      <ng-container *ngIf="isPaused">
+        <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+          <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.5"
+            stroke-linejoin="round" />
+        </svg>
+        <span>Play Video</span>
+      </ng-container>
+    </button>
 
-  <!-- ── Hero content — slides up once video starts playing ────────────── -->
-  <div class="hero__content" [class.hero__content--visible]="contentVisible">
-    <span class="hero__eyebrow label-eyebrow">SmartFinancial Careers</span>
-    <h1 class="hero__headline">Build something that matters.</h1>
-    <p class="hero__sub">Join the team at SmartFinancial</p>
-  </div>
+    <!-- ── Hero content — slides up once video starts playing ────────────── -->
+    <div class="hero__content" [class.hero__content--visible]="contentVisible">
+      <span class="hero__eyebrow label-eyebrow">SmartFinancial Careers</span>
+      <h1 class="hero__headline">Build something that matters.</h1>
+      <p class="hero__sub">Join the team at SmartFinancial</p>
+    </div>
 
-</section>
+  </section>
 
-<section class="awards-section" aria-label="Awards and Recognition">
+  <section class="awards-section" aria-label="Awards and Recognition">
 
-  <swiper-container #awardsSwiper init="false" class="awards-swiper">
-    <swiper-slide *ngFor="let award of pressawards" class="award-slide">
-      <figure class="award-item" [attr.title]="award.alt">
-        <img [src]="award.src" [alt]="award.alt" class="award-img" loading="lazy" />
-      </figure>
-    </swiper-slide>
-  </swiper-container>
+    <swiper-container #awardsSwiper init="false" class="awards-swiper">
+      <swiper-slide *ngFor="let award of pressawards" class="award-slide">
+        <figure class="award-item" [attr.title]="award.alt">
+          <img [src]="award.src" [alt]="award.alt" class="award-img" loading="lazy" />
+        </figure>
+      </swiper-slide>
+    </swiper-container>
 
-</section>
-<section class="explore-roles">
+  </section>
+  <!-- Explore Roles  -->
+  <section class="section-wrapper explore-roles">
 
-  <!-- ── Text + CTA — animates in when section enters viewport ────────────── -->
-  <div #textBlock class="explore-roles__text">
+    <!-- ── Text + CTA — animates in when section enters viewport ────────────── -->
+    <div #textBlock class="explore-roles__text">
 
-    <h2 class="explore-roles__heading">
-      Make a Difference &amp;<br>
-      Have Fun While Doing It
-    </h2>
+      <h2 class="explore-roles__heading section_heading">
+        Make a Difference &amp;<br>
+        Have Fun While Doing It
+      </h2>
 
-    <p class="explore-roles__body">
-      We're a team of dedicated people who are excited to come to work every day
-      and work hard. SmartFinancial offers a fun and engaging company culture in
-      which everyone is encouraged to share ideas and work together.
-    </p>
+      <p class="explore-roles__body">
+        We're a team of dedicated people who are excited to come to work every day
+        and work hard. SmartFinancial offers a fun and engaging company culture in
+        which everyone is encouraged to share ideas and work together.
+      </p>
 
-    <a href="#open-roles" class="explore-roles__cta">Explore Roles</a>
+      <a href="#open-roles" class="explore-roles__cta">Explore Roles</a>
 
-  </div>
+    </div>
 
-  <!-- ── Photo grid — each card fades in with staggered delay ─────────────── -->
-  <div class="explore-roles__grid">
-    <div
-      *ngFor="let photo of photos"
-      #photoEl
-      class="explore-roles__photo"
-    >
-      <img
-        [src]="photo.src"
-        [alt]="photo.alt"
-        class="explore-roles__img"
-        loading="lazy"
-      />
+    <!-- ── Photo grid — each card fades in with staggered delay ─────────────── -->
+    <div class="explore-roles__grid">
+      <div *ngFor="let photo of photos" #photoEl class="explore-roles__photo">
+        <img [src]="photo.src" [alt]="photo.alt" class="explore-roles__img" loading="lazy" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Our Values ──────────────────────────────────────────────────────────── -->
+  <section class="section-wrapper our-values">
+    <div class="our-values__header">
+      <h2 class="section_heading our-values__heading">Our Values</h2>
+    </div>
+    <div class="our-values__grid">
+      <!-- Customer Obsessed -->
+      <div class="our-values__card">
+        <div class="our-values__icon-box">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 8h26a2 2 0 012 2v15a2 2 0 01-2 2H14l-7 5v-5a2 2 0 01-2-2V10a2 2 0 012-2z" stroke="currentColor"
+              stroke-width="2" stroke-linejoin="round" />
+            <path d="M20 13l1.3 2.8 3 .2-2.2 2 .8 3-2.9-1.8-2.9 1.8.8-3-2.2-2 3-.2z" stroke="currentColor"
+              stroke-width="1.5" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h3 class="our-values__title">Customer Obsessed</h3>
+        <p class="our-values__body">Every product we build, every decision we make, goes back to one question: does this
+          deliver maximum value for our customers?</p>
+      </div>
+      <!-- Bootstrapper Mindset -->
+      <div class="our-values__card">
+        <div class="our-values__icon-box">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23 7L11 22h11l-3 11 15-16H23L23 7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+              stroke-linecap="round" />
+          </svg>
+        </div>
+        <h3 class="our-values__title">Bootstrapper mindset</h3>
+        <p class="our-values__body">Scrappiness is in our DNA, and it's made us stronger. We move fast, cut what doesn't
+          work and solve problems with what we've got.</p>
+      </div>
+
+      <!-- The bar is always moving -->
+      <div class="our-values__card">
+        <div class="our-values__icon-box">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="22" width="6" height="10" rx="1" stroke="currentColor" stroke-width="2" />
+            <rect x="17" y="16" width="6" height="16" rx="1" stroke="currentColor" stroke-width="2" />
+            <rect x="26" y="10" width="6" height="22" rx="1" stroke="currentColor" stroke-width="2" />
+            <path d="M6 34h28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h3 class="our-values__title">The bar is always moving</h3>
+        <p class="our-values__body">We celebrate wins but not for too long. If you're the type who finishes a project
+          and already sees how you'd do it differently, you'll fit right in.</p>
+      </div>
+      <!-- Results over activity -->
+      <div class="our-values__card">
+        <div class="our-values__icon-box">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="24" height="24" rx="3" stroke="currentColor" stroke-width="2" />
+            <path d="M14 20l5 5 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h3 class="our-values__title">Results over activity</h3>
+        <p class="our-values__body">We don't do meetings that should've been just a quick email or processes that exist
+          just because they've always existed. Impact matters more than activity.</p>
+      </div>
+      <!-- Think like an owner -->
+      <div class="our-values__card">
+        <div class="our-values__icon-box">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 8a9 9 0 016.5 15.3c-.9.9-1.5 2-1.5 3.1V28H15v-1.6c0-1.1-.6-2.2-1.5-3.1A9 9 0 0120 8z"
+              stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            <path d="M15.5 31h9M17 34h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h3 class="our-values__title">Think like an owner</h3>
+        <p class="our-values__body">We think long term, move with urgency, and take responsibility for outcomes. If
+          something is broken, we fix it. If there's a better way, we build it.</p>
+      </div>
+      <!-- Get stuff done -->
+      <div class="our-values__card">
+        <div class="our-values__icon-box">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 8c3.5.8 6 3 7 7 .5 2 .5 5 .5 5s-3 .5-5-.5c-1.5-.8-2.5-2-3.5-3L16 24l-4 1 1-4 7-7c-1-1-2.2-2-3-3.5-1-2-.5-5-.5-5s3 0 5 .5L24 8z"
+              stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            <circle cx="23" cy="17" r="2" stroke="currentColor" stroke-width="1.5" />
+            <path d="M11 30l4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h3 class="our-values__title">Get stuff done</h3>
+        <p class="our-values__body">No problem is too big. We find a way every time. Doing and learning beats perfect
+          and waiting.</p>
+      </div>
+    </div>
+  </section>
+
+  <app-celebrate-harder></app-celebrate-harder>
+  <!-- ── Team Member Perks ──────────────────────────────────────────────────── -->
+  <section class="section-wrapper perks">
+
+    <div class="perks__header">
+      <h2 class="section_heading perks__heading">Team Member Perks</h2>
+    </div>
+
+    <div class="perks__grid">
+
+      <!-- Competitive Salaries -->
+      <div class="perks__card">
+        <div class="perks__icon">
+         <img src="/assets/images/careers/perks_icons/comp-sal.png" alt="Competitive Salaries at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Competitive Salaries</h3>
+        <p class="perks__body">We offer compensation packages that reflect your experience and keep you competitive within the industry.</p>
+      </div>
+
+      <!-- Growth Opportunities -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/growth.png" alt="Growth Opportunities at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Growth Opportunities</h3>
+        <p class="perks__body">We're committed to helping our team members grow. There are clear paths to take on new challenges and advance your career.</p>
+      </div>
+
+      <!-- Health Insurance -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/health-insurance-icon.png"
+               alt="Health Insurance at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Health Insurance</h3>
+        <p class="perks__body">We provide comprehensive medical, dental, and vision coverage so you and your family are taken care of.</p>
+      </div>
+
+      <!-- 401K + Company Match -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/401k.png" alt="401K + Company Match at SmartFinancial">
+        </div>
+        <h3 class="perks__title">401K + Company Match</h3>
+        <p class="perks__body">We match your 401K contributions to help you build long-term financial security alongside your career.</p>
+      </div>
+
+      <!-- Company Paid Life Insurance -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/life-insurance-icon.png"
+               alt="Health and Wellness Programs at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Company Paid Life Insurance</h3>
+        <p class="perks__body">Life insurance is fully covered by the company, giving you and your loved ones added peace of mind.</p>
+      </div>
+
+      <!-- Paid Holidays & Time Off -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/vacation.png" alt="Paid Time Off at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Paid Holidays &amp; Time Off</h3>
+        <p class="perks__body">We offer paid holidays and generous time off so you can rest, recharge, and spend time on what matters most.</p>
+      </div>
+
+      <!-- Remote Options -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/wfh.png" alt="Remote Options at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Remote Options</h3>
+        <p class="perks__body">We offer flexible work arrangements so team members can work in the environment where they do their best work.</p>
+      </div>
+
+      <!-- Company Breakfast and Lunches -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/meals.png" alt="Company Breakfast and Lunches at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Company Breakfast and Lunches</h3>
+        <p class="perks__body">We provide regular team meals as a way to bring people together and keep everyone fueled throughout the day.</p>
+      </div>
+
+      <!-- Company DoorDash Accounts -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/doordash-icon.png" alt="Paid Holidays at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Company DoorDash Accounts</h3>
+        <p class="perks__body">Team members have access to company DoorDash accounts so a good meal is always within reach.</p>
+      </div>
+
+      <!-- Virtual Get Togethers -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/virtual.png" alt="Virtual Get Togethers at SmartFinancial">
+        </div>
+        <h3 class="perks__title">Virtual Get Togethers</h3>
+        <p class="perks__body">We make it a priority to keep remote teammates connected through regular virtual events and team hangouts.</p>
+      </div>
+
+      <!-- Specialized Training Programs -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/programs.png" alt="Specialized Training Programs at SmartFinancial">
+          </div>
+        <h3 class="perks__title">Specialized Training Programs</h3>
+        <p class="perks__body">We invest in our team's development by providing access to specialized training and learning resources.</p>
+      </div>
+
+      <!-- Fun Company Outings -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/outings.png" alt="Specialized Training Programs at SmartFinancial">
+          
+        </div>
+        <h3 class="perks__title">Fun Company Outings</h3>
+        <p class="perks__body">We regularly bring the team together for outings and events that foster connection outside of the day-to-day.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Testimonials -->
+
+  <section id="staff-testimonial" class="section-wrapper testimonials-section">
+    <div class="testimonials__header">
+      <h2 class="section_heading">What Our Team Loves About SmartFinancial</h2>
+      <p class="testimonials__subtitle">
+        Our people are SmartFinancial’s greatest asset so we have built a company environment that promotes
+        open-mindedness. Hear some of our employees share their thoughts on working at SmartFinancial:
+      </p>
+      
+    </div>
+    <div class="testimonials-video"><iframe  width="600" src="https://player.vimeo.com/video/916777121?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="SmartFinancial Employee Testimonials"></iframe></div>
+    
+     
+    <swiper-container #testimonialsSwiper init="false" class="testimonials-swiper">
+      <swiper-slide *ngFor="let testimonial of testimonials" class="testimonial-slide">
+        <div class="testimonial-card">
+          <div class="header-title">
+            <img src="/assets/images/careers/{{ testimonial.image }}" alt="SmartFinancial Staff" class="testimonial-avatar"> <h4 class="testimonial-title">{{ testimonial.title }}</h4>
+          </div>
+         
+          <p class="testimonial-text">{{ testimonial.text }}</p>
+          <div class="testimonial-writer">
+            <div class="writer-info">
+              <h4 class="writer-name">{{ testimonial.writer }}</h4>
+              <p class="writer-designation">{{ testimonial.designation }}</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </section>
+<!-- Life @ SmartFinancial -->
+<section id="life-at-sf" class="section-wrapper life-at-sf">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="common-section-title">Life At SmartFinancial</h2>
+      </div>
     </div>
   </div>
 
+  <swiper-container #lifeMainSwiper class="life-main-swiper">
+    <swiper-slide *ngFor="let image of lifeImages" class="life-main-slide">
+      <div class="life-main-img-wrap">
+        <img [src]="'assets/images/careers/' + image.src" [alt]="image.alt">
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="container life-thumbs-container">
+    <swiper-container #lifeThumbsSwiper class="life-thumbs-swiper">
+      <swiper-slide *ngFor="let image of lifeImages" class="life-thumb-slide">
+        <div class="life-thumb-img-wrap">
+          <img [src]="'assets/images/careers/' + image.src" [alt]="image.alt">
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
 </section>
 
-<app-celebrate-harder></app-celebrate-harder>
+  <section class="insurance-section smart-way-insurance" id="our-offices">
+    <div class="container">
+      <h2 class="text-center common-section-title">Our Locations</h2>
+      <p>
+        We help consumers find insurance all across the country. We are headquartered in Sunny Newport Beach, California,
+        but many of our employees enjoy working from home!
+      </p>
 
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <div class="card office-address-wrapper">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-12 address-img-wrapper">
+                  <img src="/assets/images/contact/newport-beach.png" width="100%">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12 office-location-wrapper" style="margin-top: 10px">
+                  <h2 class="office-header">Newport Beach, CA</h2>
+                  <h4 class="office-address">
+                    4041 MacArthur Blvd, Suite 210, Newport Beach, CA 92660
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="card office-address-wrapper">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-12 address-img-wrapper">
+                  <img src="/assets/images/about_us/office_remote.png" width="100%">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12 office-location-wrapper" style="margin-top: 10px">
+                  <h2 class="office-header">Remote Employees</h2>
+                  <h4 class="office-address">
+                    We have remote employees in 26 states.
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

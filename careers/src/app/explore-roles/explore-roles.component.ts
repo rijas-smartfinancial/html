@@ -24,9 +24,9 @@ export class ExploreRolesComponent implements AfterViewInit, OnDestroy {
   @ViewChildren('photoEl') photoEls!: QueryList<ElementRef<HTMLElement>>;
 
   readonly photos: TeamPhoto[] = [
-    { src: 'assets/beachparty25_2.png', alt: 'SmartFinancial team outing' },
-    { src: 'assets/beachparty25.png', alt: 'SmartFinancial team group photo' },
-    { src: 'assets/holidayparty24_0040.png', alt: 'SmartFinancial team celebration' },
+    { src: 'assets/images/careers/beachparty25_2.png', alt: 'SmartFinancial team outing' },
+    { src: 'assets/images/careers/beachparty25.png', alt: 'SmartFinancial team group photo' },
+    { src: 'assets/images/careers/holidayparty24_0040.png', alt: 'SmartFinancial team celebration' },
   ];
 
   private observers: IntersectionObserver[] = [];

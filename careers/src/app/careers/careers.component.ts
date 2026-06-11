@@ -15,6 +15,10 @@ export interface TeamPhoto {
   src: string;
   alt: string;
 }
+export interface LifeImage {
+  src: string;
+  alt: string;
+}
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
@@ -89,17 +93,21 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
 
   lazy_default = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAACCAYAAACQahZdAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAF0lEQVQImWP8+vnzfwY0wIQuwMDAwAAAmJID3q86FtgAAAAASUVORK5CYII=';
 
-  sfLifeImages = [
-                    'front-office.jpg',
-                    'contact.jpg',
-                    'about1.png',
-                    'yoga.jpg',
-                    'sf-dog.jpg',
-                    'contact-center-group.jpg',
-                    'group.jpg',
-                    'about2.png',
-                    'andrew.jpg'
-                 ];
+  lifeImages: LifeImage[] = [
+    { src: 'beachparty25_2.png',        alt: 'SmartFinancial Beach Party' },
+    { src: 'beachparty25.png',          alt: 'SmartFinancial Beach Party' },
+    { src: 'holidayparty24_0040.png',   alt: 'SmartFinancial Holiday Party' },
+    { src: 'lasf-1.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-2.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-3.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-4.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-5.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-6.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-7.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-8.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-9.png',                alt: 'Life at SmartFinancial' },
+    { src: 'lasf-10.png',               alt: 'Life at SmartFinancial' },
+  ];
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -138,106 +146,6 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     return JSON.stringify(this.allJobs) === '{}';
   }
 
-  // public loadTestimonialSlider() {
-  //   const script = this.renderer.createElement('script');
-  //   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js';
-  //   script.onload = () => {
-  //     $('#staff-testimonial .team-testimonials-wrapper').slick({
-  //       infinite: true,
-  //       slidesToShow: 2,
-  //       slidesToScroll: 1,
-  //       autoplay: false,
-  //       dots: true,
-  //       dotsClass: 'career-testimonial-dots custom-slick-dots',
-  //       prevArrow: false,
-  //       nextArrow: false,
-  //       // centerMode: true,
-  //       // centerPadding: '350px',
-  //       responsive: [
-  //         {
-  //           breakpoint: 992,
-  //           settings: {
-  //             infinite: true,
-  //             slidesToShow: 1,
-  //             slidesToScroll: 1,
-  //             autoplay: false,
-  //             dots: true,
-  //             prevArrow: false,
-  //             nextArrow: false,
-  //             // centerMode: true,
-  //             // centerPadding: '150px',
-  //           }
-  //         },
-  //         {
-  //           breakpoint: 769,
-  //           settings: {
-  //             infinite: true,
-  //             slidesToShow: 1,
-  //             slidesToScroll: 1,
-  //             autoplay: false,
-  //             dots: true,
-  //             prevArrow: false,
-  //             nextArrow: false,
-  //             centerMode: false
-  //           }
-  //         }
-  //       ]
-  //     });
-  //   };
-  //   this.renderer.appendChild(this.elementRef.nativeElement, script);
-  // }
-
-  // public loadImageSlider() {
-  //   const script = this.renderer.createElement('script');
-  //   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js';
-  //   script.onload = () => {
-  //     $('#life-at-sf .sf-life-items').slick({
-  //       infinite: true,
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //       autoplay: false,
-  //       dots: true,
-  //       dotsClass: 'career-life-sf-dots custom-slick-dots',
-  //       prevArrow: false,
-  //       nextArrow: false,
-  //       centerMode: true,
-  //       centerPadding: '350px',
-  //       focusOnSelect: true,
-  //       responsive: [
-  //         {
-  //           breakpoint: 992,
-  //           settings: {
-  //             infinite: true,
-  //             slidesToShow: 1,
-  //             slidesToScroll: 1,
-  //             autoplay: false,
-  //             dots: true,
-  //             prevArrow: false,
-  //             nextArrow: false,
-  //             centerMode: true,
-  //             centerPadding: '150px',
-  //             focusOnSelect: true,
-  //           }
-  //         },
-  //         {
-  //           breakpoint: 769,
-  //           settings: {
-  //             infinite: true,
-  //             slidesToShow: 1,
-  //             slidesToScroll: 1,
-  //             autoplay: false,
-  //             dots: true,
-  //             prevArrow: false,
-  //             nextArrow: false,
-  //             centerMode: false,
-  //             focusOnSelect: true,
-  //           }
-  //         }
-  //       ]
-  //     });
-  //   };
-  //   this.renderer.appendChild(this.elementRef.nativeElement, script);
-  // }
 
   // public generateSidebar() {
   //   this.active_section = this.secondary_nav[0].id;
@@ -266,7 +174,10 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   @ViewChild('iframeEl') iframeEl!: ElementRef<HTMLIFrameElement>;
  // ── Award Slider ─────────────────────────────────────────────────
 
-   @ViewChild('awardsSwiper') swiperRef!: ElementRef;
+  @ViewChild('awardsSwiper') swiperRef!: ElementRef;
+  @ViewChild('testimonialsSwiper') testimonialsSwiperRef!: ElementRef;
+  @ViewChild('lifeMainSwiper') lifeSwiperRef!: ElementRef;
+  @ViewChild('lifeThumbsSwiper') lifeThumbsSwiperRef!: ElementRef;
 
   readonly pressawards: Award[] = [
     { id: 'webawards',   src: 'assets/images/awardsnew/webawards.png',                        alt: 'Web Awards' },
@@ -328,7 +239,57 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     });
     swiperEl.initialize();
 
-     this.observeEl(this.textBlockEl.nativeElement, 0);
+    const testimonialEl = this.testimonialsSwiperRef.nativeElement;
+    Object.assign(testimonialEl, {
+      slidesPerView: 3.5,
+      spaceBetween: 28,
+      loop: false,
+      navigation: false,
+      centeredSlides: true,
+      pagination: false,
+      grabCursor: true,
+      autoplay: {
+        pauseOnMouseEnter: true,
+      },
+      breakpoints: {
+        0:   { slidesPerView: 1.5, spaceBetween: 16 },
+        992: { slidesPerView: 3.5, spaceBetween: 28 },
+      },
+    });
+    testimonialEl.initialize();
+
+    const lifeThumbsEl = this.lifeThumbsSwiperRef.nativeElement;
+    Object.assign(lifeThumbsEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      watchSlidesProgress: true,
+      freeMode: true,
+      loop: false,
+    });
+    lifeThumbsEl.initialize();
+
+    const lifeMainEl = this.lifeSwiperRef.nativeElement;
+    Object.assign(lifeMainEl, {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      thumbs: { swiper: lifeThumbsEl.swiper },
+      breakpoints: {
+        768:  { slidesPerView: 1, spaceBetween: 20 },
+        1200: { slidesPerView:3, spaceBetween: 24 },
+      },
+    });
+    lifeMainEl.initialize();
+
+    this.observeEl(this.textBlockEl.nativeElement, 0);
     this.photoEls.forEach((ref, i) =>
       this.observeEl(ref.nativeElement, 200 + i * 160)
     );
@@ -419,9 +380,9 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   @ViewChildren('photoEl') photoEls!: QueryList<ElementRef<HTMLElement>>;
 
   readonly photos: TeamPhoto[] = [
-    { src: 'assets/images/beachparty25_2.png', alt: 'SmartFinancial team outing' },
-    { src: 'assets/images/beachparty25.png', alt: 'SmartFinancial team group photo' },
-    { src: 'assets/images/holidayparty24_0040.png', alt: 'SmartFinancial team celebration' },
+    { src: 'assets/images/careers/beachparty25_2.png', alt: 'SmartFinancial team outing' },
+    { src: 'assets/images/careers/beachparty25.png', alt: 'SmartFinancial team group photo' },
+    { src: 'assets/images/careers/holidayparty24_0040.png', alt: 'SmartFinancial team celebration' },
   ];
 
   private observers: IntersectionObserver[] = [];

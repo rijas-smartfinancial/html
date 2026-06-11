@@ -9,7 +9,21 @@
   overflow: hidden;
 }
 
+
+
 // ── Header ────────────────────────────────────────────────────────────────────
+
+.section-wrapper {
+  .section_heading {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 50px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--sf-dark);
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+}
 
 .celebrate__header {
   max-width: 620px;
@@ -23,15 +37,6 @@
   margin: 0 auto 14px;
 }
 
-.celebrate__heading {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 5.5vw, 56px);
-  font-weight: var(--weight-extrabold);
-  color: var(--sf-dark);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  margin: 0 0 16px;
-}
 
 .celebrate__sub {
   font-family: var(--font-body);

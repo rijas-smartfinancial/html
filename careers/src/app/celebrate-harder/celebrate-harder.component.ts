@@ -7,12 +7,14 @@ import {
   OnDestroy,
   ViewChild
 } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 interface Slide {
   img: string;
   alt: string;
   caption: string;
   hasVideo?: boolean;
+  videoId?: string;
 }
 
 @Component({
@@ -26,12 +28,9 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
   @ViewChild('dragBadge') badgeEl!: ElementRef<HTMLElement>;
 
   slides: Slide[] = [
-    { img: 'assets/images/beachparty25.png',        alt: 'Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true },
-    { img: 'assets/images/lasf-3.png',              alt: 'Team outing',        caption: 'Team Outing'         },
-    { img: 'assets/images/holidayparty24_0040.png', alt: 'Holiday Party 2024', caption: 'Holiday Party 2024'  },
-    { img: 'assets/images/beachparty25.png',        alt: 'Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true },
-    { img: 'assets/images/lasf-3.png',              alt: 'Team outing',        caption: 'Team Outing'         },
-    { img: 'assets/images/holidayparty24_0040.png', alt: 'Holiday Party 2024', caption: 'Holiday Party 2024'  },
+    { img: 'https://img.youtube.com/vi/r2TveYBAU0I/maxresdefault.jpg', alt: 'SmartFinancial Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true, videoId: 'r2TveYBAU0I' },
+    { img: 'https://img.youtube.com/vi/z7ykI7EKLLI/maxresdefault.jpg', alt: 'SmartFinancial Holiday Party 2024', caption: 'Holiday Party 2024', hasVideo: true, videoId: 'z7ykI7EKLLI' },
+    { img: 'https://img.youtube.com/vi/sS8RqcxHOrY/maxresdefault.jpg', alt: 'SmartFinancial Holiday Party 2025', caption: 'Holiday Party 2025', hasVideo: true, videoId: 'sS8RqcxHOrY' },
   ];
 
   activeIndex = 0;
@@ -42,13 +41,27 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
 
   get activeSlide(): Slide { return this.slides[this.activeIndex]; }
 
+  get previewUrl(): SafeResourceUrl {
+    const id = this.activeSlide.videoId ?? '';
+    return this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0`
+    );
+  }
+
+  get modalUrl(): SafeResourceUrl {
+    const id = this.activeSlide.videoId ?? '';
+    return this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://www.youtube.com/embed/${id}?autoplay=1`
+    );
+  }
+
   private targetX = 0;
   private targetY = 0;
   private currentX = 0;
   private currentY = 0;
   private rafId: number | null = null;
 
-  constructor(private ngZone: NgZone) {}
+  constructor(private ngZone: NgZone, private sanitizer: DomSanitizer) {}
 
   ngAfterViewInit(): void {
     const el = this.swiperEl.nativeElement as any;
@@ -78,6 +91,7 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
   onSwiperLeave(): void {
     this.isHovered = false;
     this.isDragging = false;
+    this.showPreview = false;
     this.stopLerp();
   }
 
