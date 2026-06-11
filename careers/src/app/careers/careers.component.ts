@@ -270,10 +270,10 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
 
     const lifeMainEl = this.lifeSwiperRef.nativeElement;
     Object.assign(lifeMainEl, {
-      effect: "coverflow",
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "auto",
+      autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
       coverflowEffect: {
         rotate: 50,
         stretch: 0,

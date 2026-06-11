@@ -2,7 +2,18 @@
   // =============================================================================
   // Hero — SmartFinancial Careers
   // =============================================================================
-
+  .section-wrapper {
+    padding: 60px 0;
+    .section_heading {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 50px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: #222222;
+      margin: 0 0 20px;
+      letter-spacing: -0.01em;
+    }
+  }
   .hero {
     position: relative;
     width: 100%;
@@ -47,12 +58,18 @@
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      background: linear-gradient(
-        160deg,
-        rgba(0, 0, 0, 0.18) 0%,
-        rgba(0, 0, 0, 0.4) 45%,
-        rgba(0, 0, 0, 0.78) 100%
-      );
+      background: url('/assets/images/careers/hero-screen.png') center/cover no-repeat;
+      opacity: 1;
+      transition: opacity 1s ease;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(26, 26, 26, 0.6) 0%, rgba(26, 26, 26, 0.4) 60%, rgba(26, 26, 26, 0.8) 100%);
+      }
+      &--hidden {
+        opacity: 0;
+      }
     }
 
     // ── Cursor-following badge ────────────────────────────────────────────────────
@@ -167,7 +184,7 @@
 
     .hero__content {
       position: relative;
-      z-index: 4;
+      z-index: 9999;
       margin-top: auto;
       padding: 0 60px 88px;
       text-align: center;
@@ -332,18 +349,7 @@
     }
   }
 
-  .section-wrapper {
-    padding: 60px 0;
-    .section_heading {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 4vw, 50px);
-      font-weight: 400;
-      line-height: 1.2;
-      color: #222222;
-      margin: 0 0 20px;
-      letter-spacing: -0.01em;
-    }
-  }
+
 
   // Explore roles section
   .explore-roles {
@@ -351,7 +357,6 @@
     padding: 60px 0 60px;
     overflow: hidden;
 
-    // ── Text block ────────────────────────────────────────────────────────────────
 
     .explore-roles__text {
       max-width: 680px;
@@ -383,7 +388,6 @@
       margin-right: auto;
     }
 
-    // ── CTA button ────────────────────────────────────────────────────────────────
 
     .explore-roles__cta {
       display: inline-block;
@@ -755,9 +759,9 @@
       flex-shrink: 0;
       margin-bottom: 6px;
 
-      svg {
-        width: 32px;
-        height: 32px;
+      img {
+        width: 36px;
+        height: 36px;
         color: #D42F7A;
       }
     }
@@ -909,23 +913,132 @@
 
 
 
-  #our-offices {
-    .office-address-wrapper {
-      .address-img-wrapper {
-        text-align: center;
+  // =============================================================================
+  // Our Locations
+  // =============================================================================
 
-        img {
-          width: 40%;
-        }
+  #our-offices {
+    background: #f9f9f9;
+    padding: 80px 0 88px;
+
+    .locations__container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+
+    .locations__heading {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      color: #222;
+      margin: 0 0 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .locations__subtitle {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 620px;
+      margin: 0 auto 52px;
+    }
+
+    .locations__grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    .locations__card {
+      flex: 1 1 0;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .locations__img-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: #e0e0e0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.45s ease;
       }
 
-      .office-location-wrapper {
-        margin-top: 20px;
-        text-align: center;
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
 
-        .office-header {
-          text-align: center;
-        }
+    .locations__label {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+      
+    }
+
+    .locations__pin {
+      width: 14px;
+      height: 18px;
+      flex-shrink: 0;
+      color: #D42F7A;
+    }
+
+    @media (max-width: 1024px) {
+      .locations__container {
+        padding: 0 32px;
+      }
+
+      .locations__grid {
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 60px 0 72px;
+
+      .locations__container {
+        padding: 0 20px;
+      }
+
+      .locations__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        flex-wrap: unset;
+      }
+
+      .locations__card:last-child {
+        grid-column: 1 / -1;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .locations__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .locations__card:last-child {
+        grid-column: auto;
+        max-width: none;
+        margin: 0;
       }
     }
   }

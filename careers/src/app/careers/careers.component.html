@@ -9,7 +9,7 @@
     </div>
 
     <!-- ── Dark gradient overlay ──────────────────────────────────────────── -->
-    <div class="hero__overlay"></div>
+    <div class="hero__overlay" [class.hero__overlay--hidden]="contentVisible"></div>
 
     <!-- ── Cursor-following Play badge ───────────────────────────────────── -->
     <!-- Position is driven purely by rAF lerp in the component class        -->
@@ -112,12 +112,7 @@
       <!-- Customer Obsessed -->
       <div class="our-values__card">
         <div class="our-values__icon-box">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 8h26a2 2 0 012 2v15a2 2 0 01-2 2H14l-7 5v-5a2 2 0 01-2-2V10a2 2 0 012-2z" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M20 13l1.3 2.8 3 .2-2.2 2 .8 3-2.9-1.8-2.9 1.8.8-3-2.2-2 3-.2z" stroke="currentColor"
-              stroke-width="1.5" stroke-linejoin="round" />
-          </svg>
+          <img src="/assets/images/icon/message-star.svg" alt="Customer Obsessed Value at SmartFinancial" class="our-values__icon" />
         </div>
         <h3 class="our-values__title">Customer Obsessed</h3>
         <p class="our-values__body">Every product we build, every decision we make, goes back to one question: does this
@@ -126,10 +121,7 @@
       <!-- Bootstrapper Mindset -->
       <div class="our-values__card">
         <div class="our-values__icon-box">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M23 7L11 22h11l-3 11 15-16H23L23 7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
-              stroke-linecap="round" />
-          </svg>
+          <img src="/assets/images/icon/bolt.svg" alt="Bootstrapper Mindset Value at SmartFinancial" class="our-values__icon" />
         </div>
         <h3 class="our-values__title">Bootstrapper mindset</h3>
         <p class="our-values__body">Scrappiness is in our DNA, and it's made us stronger. We move fast, cut what doesn't
@@ -139,12 +131,7 @@
       <!-- The bar is always moving -->
       <div class="our-values__card">
         <div class="our-values__icon-box">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="22" width="6" height="10" rx="1" stroke="currentColor" stroke-width="2" />
-            <rect x="17" y="16" width="6" height="16" rx="1" stroke="currentColor" stroke-width="2" />
-            <rect x="26" y="10" width="6" height="22" rx="1" stroke="currentColor" stroke-width="2" />
-            <path d="M6 34h28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
+          <img src="/assets/images/icon/chart-bar-big-columns.svg" alt="The bar is always moving Value at SmartFinancial" class="our-values__icon" />
         </div>
         <h3 class="our-values__title">The bar is always moving</h3>
         <p class="our-values__body">We celebrate wins but not for too long. If you're the type who finishes a project
@@ -153,11 +140,7 @@
       <!-- Results over activity -->
       <div class="our-values__card">
         <div class="our-values__icon-box">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="8" width="24" height="24" rx="3" stroke="currentColor" stroke-width="2" />
-            <path d="M14 20l5 5 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+          <img src="/assets/images/icon/check-square.svg" alt="Results over activity" class="our-values__icon" />
         </div>
         <h3 class="our-values__title">Results over activity</h3>
         <p class="our-values__body">We don't do meetings that should've been just a quick email or processes that exist
@@ -166,11 +149,7 @@
       <!-- Think like an owner -->
       <div class="our-values__card">
         <div class="our-values__icon-box">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 8a9 9 0 016.5 15.3c-.9.9-1.5 2-1.5 3.1V28H15v-1.6c0-1.1-.6-2.2-1.5-3.1A9 9 0 0120 8z"
-              stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-            <path d="M15.5 31h9M17 34h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
+          <img src="/assets/images/icon/light-bulb.svg" alt="Think like an owner Value at SmartFinancial" class="our-values__icon" />
         </div>
         <h3 class="our-values__title">Think like an owner</h3>
         <p class="our-values__body">We think long term, move with urgency, and take responsibility for outcomes. If
@@ -179,13 +158,7 @@
       <!-- Get stuff done -->
       <div class="our-values__card">
         <div class="our-values__icon-box">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M24 8c3.5.8 6 3 7 7 .5 2 .5 5 .5 5s-3 .5-5-.5c-1.5-.8-2.5-2-3.5-3L16 24l-4 1 1-4 7-7c-1-1-2.2-2-3-3.5-1-2-.5-5-.5-5s3 0 5 .5L24 8z"
-              stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-            <circle cx="23" cy="17" r="2" stroke="currentColor" stroke-width="1.5" />
-            <path d="M11 30l4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
+          <img src="/assets/images/icon/rocket.svg" alt="Get stuff done Value at SmartFinancial" class="our-values__icon" />
         </div>
         <h3 class="our-values__title">Get stuff done</h3>
         <p class="our-values__body">No problem is too big. We find a way every time. Doing and learning beats perfect
@@ -381,48 +354,63 @@
 </section>
 
   <section class="insurance-section smart-way-insurance" id="our-offices">
-    <div class="container">
-      <h2 class="text-center common-section-title">Our Locations</h2>
-      <p>
-        We help consumers find insurance all across the country. We are headquartered in Sunny Newport Beach, California,
-        but many of our employees enjoy working from home!
+    <div class="locations__container">
+      <h2 class="locations__heading">Our Locations</h2>
+      <p class="locations__subtitle">
+       We are headquartered in Newport Beach but also have offices in Tampa, Columbus, Philadelphia, Las Vegas and remote employees all over the country.
       </p>
+      <div class="locations__grid">
 
-      <div class="row">
-        <div class="col-lg-6 col-12">
-          <div class="card office-address-wrapper">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12 address-img-wrapper">
-                  <img src="/assets/images/contact/newport-beach.png" width="100%">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-12 office-location-wrapper" style="margin-top: 10px">
-                  <h2 class="office-header">Newport Beach, CA</h2>
-                  <h4 class="office-address">
-                    4041 MacArthur Blvd, Suite 210, Newport Beach, CA 92660
-                  </h4>
-                </div>
-              </div>
-            </div>
+        <div class="locations__card">
+          <div class="locations__img-wrap">
+            <img  src="/assets/images/careers/newport-img.png" alt="PIG" loading="lazy" />
+          </div>
+          <div class="locations__label">
+            <img src="/assets/images/pig.png" alt="Newport Beach, CA" class="locations__pin" />
+            <span>Newport Beach, CA</span>
           </div>
         </div>
-        <div class="col-lg-6 col-12">
-          <div class="card office-address-wrapper">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12 address-img-wrapper">
-                  <img src="/assets/images/about_us/office_remote.png" width="100%">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-12 office-location-wrapper" style="margin-top: 10px">
-                  <h2 class="office-header">Remote Employees</h2>
-                  <h4 class="office-address">
-                    We have remote employees in 26 states.
-                  </h4>
-                </div>
-              </div>
-            </div>
+
+        <div class="locations__card">
+          <div class="locations__img-wrap">
+            <img src="/assets/images/careers/tampa-img.png" alt="Tampa, FL" loading="lazy" />
+          </div>
+          <div class="locations__label">
+            <img class="locations__pin" src="/assets/images/pig.png" alt="PIG" loading="lazy" />
+            <span>Tampa, FL</span>
           </div>
         </div>
+
+        <div class="locations__card">
+          <div class="locations__img-wrap">
+            <img src="/assets/images/careers/columbus-img.png" alt="Columbus, OH" loading="lazy" />
+          </div>
+          <div class="locations__label">
+             <img class="locations__pin" src="/assets/images/pig.png" alt="PIG" loading="lazy" />
+            <span>Columbus, OH</span>
+          </div>
+        </div>
+
+        <div class="locations__card">
+          <div class="locations__img-wrap">
+            <img src="/assets/images/careers/philadelphia-img.png" alt="Philadelphia, PA" loading="lazy" />
+          </div>
+          <div class="locations__label">
+             <img class="locations__pin" src="/assets/images/pig.png" alt="PIG" loading="lazy" />
+            <span>Philadelphia, PA</span>
+          </div>
+        </div>
+
+        <div class="locations__card">
+          <div class="locations__img-wrap">
+            <img src="/assets/images/careers/vegas-img.png" alt="Las Vegas, NV" loading="lazy" />
+          </div>
+          <div class="locations__label">
+             <img class="locations__pin" src="/assets/images/pig.png" alt="PIG" loading="lazy" />
+            <span>Las Vegas, NV</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
