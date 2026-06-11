@@ -252,7 +252,7 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
         pauseOnMouseEnter: true,
       },
       breakpoints: {
-        0:   { slidesPerView: 1.5, spaceBetween: 16 },
+        0:   { slidesPerView: 1, spaceBetween: 16 },
         992: { slidesPerView: 3.5, spaceBetween: 28 },
       },
     });

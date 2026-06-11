@@ -66,6 +66,10 @@
    .celebrate__swiper {
       width: 520px;
       height: 560px;
+      @media (max-width: 768px) {
+        width: 210px;
+        height: 310px;
+      }
     }
 
     .celebrate__slide {
