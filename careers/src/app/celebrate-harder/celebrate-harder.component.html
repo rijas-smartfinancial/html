@@ -33,20 +33,21 @@
         <ng-container *ngIf="slide.hasVideo; else regularSlide">
           <img
             class="celebrate__thumb"
-            [src]="slide.img"
+            [src]="slide.poster"
             [alt]="slide.alt"
             loading="lazy"
-            [class.celebrate__thumb--hidden]="isHovered && activeIndex === i"
+            [class.celebrate__thumb--hidden]="showPreview && activeIndex === i"
           >
-          <div class="celebrate__preview" [class.celebrate__preview--on]="isHovered && activeIndex === i">
-            <iframe
+          <div class="celebrate__preview" [class.celebrate__preview--on]="showPreview && activeIndex === i">
+            <video
               *ngIf="showPreview && activeIndex === i"
               class="celebrate__preview-iframe"
-              [src]="previewUrl"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              [title]="slide.caption + ' preview'"
-            ></iframe>
+              [src]="slide.videoSrc"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
           </div>
         </ng-container>
         <ng-template #regularSlide>
@@ -106,13 +107,13 @@
         </svg>
       </button>
       <div class="celebrate__modal-video">
-        <iframe
-          [src]="modalUrl"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
+        <video
+          [src]="activeSlide.videoSrc"
+          controls
+          autoplay
+          playsinline
           [title]="activeSlide.caption"
-        ></iframe>
+        ></video>
       </div>
     </div>
   </div>

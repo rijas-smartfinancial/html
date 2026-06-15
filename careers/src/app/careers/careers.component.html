@@ -1,57 +1,16 @@
 <div id="insurance-page">
-  <section class="hero" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()" (click)="togglePause()">
+  <section class="hero">
 
-    <!-- ── Vimeo background video ─────────────────────────────────────────── -->
+    <!-- ── Local MP4 background video ────────────────────────────────────── -->
     <div class="hero__video-wrap">
-      <iframe #iframeEl class="hero__iframe"
-        src="https://player.vimeo.com/video/1010721302?background=1&autopause=0&quality=auto&dnt=1" frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture" title="SmartFinancial 2024 Beach Party"></iframe>
+      <video #videoEl class="hero__iframe" autoplay muted="true" loop playsinline
+        (playing)="onVideoCanPlay()">
+        <source src="assets/videos/smartfinancial_beach_party (720p).mp4" type="video/mp4">
+      </video>
     </div>
 
     <!-- ── Dark gradient overlay ──────────────────────────────────────────── -->
     <div class="hero__overlay" [class.hero__overlay--hidden]="contentVisible"></div>
-
-    <!-- ── Cursor-following Play badge ───────────────────────────────────── -->
-    <!-- Position is driven purely by rAF lerp in the component class        -->
-    <div #badgeEl class="hero__badge" [class.hero__badge--visible]="badgeVisible" aria-hidden="true">
-      <!-- Icon swaps with video state -->
-      <ng-container *ngIf="!isPaused">
-        <svg class="hero__badge-icon" viewBox="0 0 12 14" fill="none">
-          <rect x="0" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
-          <rect x="8.5" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
-        </svg>
-        <span class="hero_badge-text">Pause Videos</span>
-      </ng-container>
-      <ng-container *ngIf="isPaused">
-        <svg class="hero__badge-icon" viewBox="0 0 12 14" fill="none">
-          <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.5"
-            stroke-linejoin="round" />
-        </svg>
-        <span class="hero_badge-text">Play Video</span>
-      </ng-container>
-    </div>
-
-    <!-- ── Pause / Play button — bottom left ─────────────────────────────── -->
-    <button class="hero__pause-btn" (click)="togglePause(); $event.stopPropagation()"
-      [attr.aria-label]="isPaused ? 'Play video' : 'Pause video'" type="button">
-      <!-- Pause icon -->
-      <ng-container *ngIf="!isPaused">
-        <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
-          <rect x="0" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
-          <rect x="8.5" y="0" width="3.5" height="14" rx="1.5" fill="currentColor" />
-        </svg>
-        <span>Pause Video</span>
-      </ng-container>
-
-      <!-- Play icon -->
-      <ng-container *ngIf="isPaused">
-        <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
-          <path d="M1.5 1.5L10.5 7L1.5 12.5V1.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.5"
-            stroke-linejoin="round" />
-        </svg>
-        <span>Play Video</span>
-      </ng-container>
-    </button>
 
     <!-- ── Hero content — slides up once video starts playing ────────────── -->
     <div class="hero__content" [class.hero__content--visible]="contentVisible">
@@ -67,7 +26,9 @@
     <swiper-container #awardsSwiper init="false" class="awards-swiper">
       <swiper-slide *ngFor="let award of pressawards" class="award-slide">
         <figure class="award-item" [attr.title]="award.alt">
+          <a [href]="award.link" target="_blank" rel="noopener noreferrer">
           <img [src]="award.src" [alt]="award.alt" class="award-img" loading="lazy" />
+          </a>
         </figure>
       </swiper-slide>
     </swiper-container>
