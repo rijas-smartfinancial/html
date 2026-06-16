@@ -1,4 +1,5 @@
 import {Component, OnInit, PLATFORM_ID, Renderer2, ElementRef, AfterViewInit, OnDestroy, ViewChild, Inject, ViewChildren, QueryList} from '@angular/core';
+import { Mousewheel } from 'swiper/modules';
 
 // declare var $;
 // tslint:disable-next-line:ban-types
@@ -197,6 +198,22 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     { id: 'gptw',        link: 'http://www.greatplacetowork.com/certified-company/7038245',        src: 'assets/images/awardsnew/great-place-to-work.png', alt: 'Great Place to Work Certified' },
     { id: 'oc-register', link: 'https://www.ocregister.com/2020/12/11/top-workplaces-2020-see-the-list-of-orange-countys-winners/', src: 'assets/images/awardsnew/OCR-L-TWP-LOGO-2020.png',  alt: 'Top Work Places OC Register 2020' },
     { id: 'horizon',     link: 'https://www.prlog.org/12763712-horizon-interactive-awards-smartfinancial-in-two-categories.html',     src: 'assets/images/awardsnew/horizon-interactive-awards-logo.png',  alt: 'Horizon Interactive Awards' },
+    { id: 'webawards',   link: 'https://www.webaward.org/winner/37227/smartfinancial-wins-2024-webaward-for-smartfinancial.html',   src: 'assets/images/awardsnew/webawards.png', alt: 'Web Awards' },
+    { id: 'socal',       link: 'https://bestcompaniesgroup.com/best-places-to-work-southern-california/winners/',   src: 'assets/images/awardsnew/Best-Places-to-Work-SoCal-2026.png',   alt: 'Best Places to Work SoCal 2026' },
+    { id: 'deloitte',    link: 'https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/fast500-winners.html',    src: 'assets/images/awardsnew/deloitte.png',  alt: 'Deloitte' },
+    { id: 'ey',          link: 'http://www.prweb.com/releases/2022/6/prweb18749564.htm',          src: 'assets/images/awardsnew/EOY-2022_Regional-Winner.png',  alt: 'EY Entrepreneur of the Year 2022' },
+    { id: 'oc-places',   link: 'https://www.prweb.com/releases/2022/7/prweb18778160.htm',   src: 'assets/images/awardsnew/OCBJ-Best-Places-to-Work-Logo_2022.png', alt: 'OC Best Places to Work 2022' },
+    { id: 'gptw',        link: 'http://www.greatplacetowork.com/certified-company/7038245',        src: 'assets/images/awardsnew/great-place-to-work.png', alt: 'Great Place to Work Certified' },
+    { id: 'oc-register', link: 'https://www.ocregister.com/2020/12/11/top-workplaces-2020-see-the-list-of-orange-countys-winners/', src: 'assets/images/awardsnew/OCR-L-TWP-LOGO-2020.png',  alt: 'Top Work Places OC Register 2020' },
+    { id: 'horizon',     link: 'https://www.prlog.org/12763712-horizon-interactive-awards-smartfinancial-in-two-categories.html',     src: 'assets/images/awardsnew/horizon-interactive-awards-logo.png',  alt: 'Horizon Interactive Awards' },
+    { id: 'webawards',   link: 'https://www.webaward.org/winner/37227/smartfinancial-wins-2024-webaward-for-smartfinancial.html',   src: 'assets/images/awardsnew/webawards.png', alt: 'Web Awards' },
+    { id: 'socal',       link: 'https://bestcompaniesgroup.com/best-places-to-work-southern-california/winners/',   src: 'assets/images/awardsnew/Best-Places-to-Work-SoCal-2026.png',   alt: 'Best Places to Work SoCal 2026' },
+    { id: 'deloitte',    link: 'https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/fast500-winners.html',    src: 'assets/images/awardsnew/deloitte.png',  alt: 'Deloitte' },
+    { id: 'ey',          link: 'http://www.prweb.com/releases/2022/6/prweb18749564.htm',          src: 'assets/images/awardsnew/EOY-2022_Regional-Winner.png',  alt: 'EY Entrepreneur of the Year 2022' },
+    { id: 'oc-places',   link: 'https://www.prweb.com/releases/2022/7/prweb18778160.htm',   src: 'assets/images/awardsnew/OCBJ-Best-Places-to-Work-Logo_2022.png', alt: 'OC Best Places to Work 2022' },
+    { id: 'gptw',        link: 'http://www.greatplacetowork.com/certified-company/7038245',        src: 'assets/images/awardsnew/great-place-to-work.png', alt: 'Great Place to Work Certified' },
+    { id: 'oc-register', link: 'https://www.ocregister.com/2020/12/11/top-workplaces-2020-see-the-list-of-orange-countys-winners/', src: 'assets/images/awardsnew/OCR-L-TWP-LOGO-2020.png',  alt: 'Top Work Places OC Register 2020' },
+    { id: 'horizon',     link: 'https://www.prlog.org/12763712-horizon-interactive-awards-smartfinancial-in-two-categories.html',     src: 'assets/images/awardsnew/horizon-interactive-awards-logo.png',  alt: 'Horizon Interactive Awards' },
     
    
   ];
@@ -213,21 +230,22 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
 
     const swiperEl = this.awardswiperRef.nativeElement;
     Object.assign(swiperEl, {
-  slidesPerView: 'auto',
-  spaceBetween: 80,
-  loop: true,
-  allowTouchMove: false,
-  speed: 6000,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false,
-  },
-});
+      slidesPerView: 'auto',
+      spaceBetween: 80,
+      loop: true,
+      allowTouchMove: false,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      },
+    });
     swiperEl.initialize();
 
     const testimonialEl = this.testimonialsSwiperRef.nativeElement;
     Object.assign(testimonialEl, {
+      modules: [Mousewheel],
       slidesPerView: 3.5,
       spaceBetween: 28,
       loop: false,
@@ -235,6 +253,9 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
       centeredSlides: true,
       pagination: false,
       grabCursor: true,
+      mousewheel: {
+        releaseOnEdges: true,
+      },
       autoplay: {
         pauseOnMouseEnter: true,
       },
@@ -259,7 +280,9 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     Object.assign(lifeMainEl, {
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: "auto",
+      initialSlide: 2,
+      slidesPerView: 3,
+      loop: true,
       autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
       coverflowEffect: {
         rotate: 50,
@@ -271,7 +294,7 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
       thumbs: { swiper: lifeThumbsEl.swiper },
       breakpoints: {
         768:  { slidesPerView: 1, spaceBetween: 20 },
-        1200: { slidesPerView:3, spaceBetween: 24 },
+        992: { slidesPerView:3, spaceBetween: 24 },
       },
     });
     lifeMainEl.initialize();
