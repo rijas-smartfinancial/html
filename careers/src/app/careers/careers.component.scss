@@ -768,12 +768,18 @@
       max-width: 1160px;
       margin: 0 auto;
       padding: 0 40px;
+         @media (max-width: 768px) {
+        display: block;
+      }
     }
 
     .our-values__card {
       display: flex;
       flex-direction: column;
       gap: 10px;
+    @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
     }
 .our-values__card.span-3 {
   grid-column: span 3;
