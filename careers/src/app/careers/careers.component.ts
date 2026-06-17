@@ -293,8 +293,8 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
       },
       thumbs: { swiper: lifeThumbsEl.swiper },
       breakpoints: {
-        768:  { slidesPerView: 1, spaceBetween: 20 },
-        992: { slidesPerView:3, spaceBetween: 24 },
+        0:   { slidesPerView: 1, spaceBetween: 20 },
+        992: { slidesPerView: 3, spaceBetween: 24 },
       },
     });
     lifeMainEl.initialize();
