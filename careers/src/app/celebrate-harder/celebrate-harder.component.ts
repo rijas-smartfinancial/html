@@ -36,7 +36,6 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
   activeIndex = 0;
   isHovered = false;
   isDragging = false;
-  showPreview = false;
   modalOpen = false;
 
   get activeSlide(): Slide { return this.slides[this.activeIndex]; }
@@ -55,9 +54,6 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
       this.ngZone.run(() => {
         const swiper = (e as any).detail[0];
         this.activeIndex = swiper.realIndex;
-        if (!this.slides[this.activeIndex]?.hasVideo) {
-          this.showPreview = false;
-        }
       });
     });
   }
@@ -68,16 +64,12 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
 
   onSwiperEnter(): void {
     this.isHovered = true;
-    if (this.slides[this.activeIndex]?.hasVideo) {
-      this.showPreview = true;
-    }
     this.startLerp();
   }
 
   onSwiperLeave(): void {
     this.isHovered = false;
     this.isDragging = false;
-    this.showPreview = false;
     this.stopLerp();
   }
 

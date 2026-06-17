@@ -14,6 +14,28 @@
       letter-spacing: -0.01em;
     }
   }
+
+
+    .cta-btn {
+      display: inline-block;
+      border-radius: 5px;
+      background-color: #e73989;
+      color: #fff;
+      border-color: #d42f7a;
+      font-weight: 600;
+      margin-bottom: .5em;
+      height: auto;
+      line-height: 1em;
+      border-bottom: 4px solid #d42f7a;
+      padding:15px 24px;
+      transition: all 0.3s ease;
+      &:hover {
+            background: #d42f7a;
+        }
+
+    }
+
+ 
   .hero {
     position: relative;
     width: 100%;
@@ -360,7 +382,7 @@
     .explore-roles__text {
       max-width: 680px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 24px 30px;
       text-align: center;
 
       // Initial hidden state — animates to is-visible
@@ -497,7 +519,7 @@
 
   .perks {
     background: #fff;
-    padding: 80px 0 88px;
+    padding: 60px 0;
 
     .perks__header {
       text-align: center;
@@ -586,7 +608,7 @@
 
   .testimonials-section {
     background: #f4f2f2;
-    padding: 80px 0 88px;
+    padding: 60px 0;
 
     .testimonials__header {
       max-width: 900px;
@@ -626,7 +648,6 @@
 
     .testimonials-swiper {
       margin: 0 auto;
-      padding: 0 0 56px;
       --swiper-navigation-color: #D42F7A;
       --swiper-pagination-color: #D42F7A;
     }
@@ -638,7 +659,6 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
-      height: 100%;
       box-sizing: border-box;
     }
     .header-title {
@@ -705,7 +725,6 @@
     }
 
     .testimonial-slide {
-      height: auto;
       display: flex;
     }
 
@@ -734,7 +753,7 @@
 
   .our-values {
     background: #f4f2f2;
-    padding: 50px 0;
+    padding: 60px 0;
 
     .our-values__header {
       text-align: center;
@@ -745,7 +764,7 @@
     .our-values__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 48px 56px;
+      gap: 40px;
       max-width: 1160px;
       margin: 0 auto;
       padding: 0 40px;
@@ -756,7 +775,12 @@
       flex-direction: column;
       gap: 10px;
     }
-
+.our-values__card.span-3 {
+  grid-column: span 3;
+  .our-values__body {
+    max-width: 100%;
+  }
+}
     .our-values__icon-box {
       width: 64px;
       height: 64px;
@@ -838,7 +862,7 @@
   // =============================================================================
 
   .life-at-sf {
-    padding: 60px 60px 80px;
+    padding: 60px 60px 60px;
     overflow: hidden;
 
     .common-section-title {
@@ -938,7 +962,7 @@
 
   #our-offices {
     background: #f9f9f9;
-    padding: 80px 0 88px;
+    padding: 60px 0;
 
     .locations__container {
       max-width: 1160px;

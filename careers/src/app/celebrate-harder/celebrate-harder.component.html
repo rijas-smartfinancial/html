@@ -36,15 +36,15 @@
             [src]="slide.poster"
             [alt]="slide.alt"
             loading="lazy"
-            [class.celebrate__thumb--hidden]="showPreview && activeIndex === i"
+            [class.celebrate__thumb--hidden]="activeIndex === i"
           >
-          <div class="celebrate__preview" [class.celebrate__preview--on]="showPreview && activeIndex === i">
+          <div class="celebrate__preview" [class.celebrate__preview--on]="activeIndex === i">
             <video
-              *ngIf="showPreview && activeIndex === i"
+              *ngIf="activeIndex === i"
               class="celebrate__preview-iframe"
               [src]="slide.videoSrc"
               autoplay
-              muted
+              [muted]="true"
               loop
               playsinline
             ></video>
