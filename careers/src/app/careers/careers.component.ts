@@ -1,5 +1,5 @@
 import {Component, OnInit, PLATFORM_ID, Renderer2, ElementRef, AfterViewInit, OnDestroy, ViewChild, Inject, ViewChildren, QueryList} from '@angular/core';
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, Autoplay } from 'swiper/modules';
 
 // declare var $;
 // tslint:disable-next-line:ban-types
@@ -49,6 +49,48 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
 
   
   testimonials = [
+    {
+      title: '\"The amazing work-life balance.',
+      text: 'The team culture is awesome and the personal development growth is priceless. I get to work with inspiring colleagues and managers who help us achieve our goals. I also enjoy working with my clients in achieving their big goals, because their success is my success.\"',
+      image: 'encarnacion-img.png',
+      writer: 'Francesca Encarnacion',
+      designation: 'Account Manager'
+    },
+    {
+      title: '\"Everyone makes you feel like family!',
+      text: 'We are constantly encouraged and rewarded for our hard work. Training is consistently provided so we can continue to improve ourselves.\"',
+      image: 'henney2.jpg',
+      writer: 'Ashlie Henney',
+      designation: 'Contact Center'
+    },
+    {
+      title: '\"The collaboration, passion and integrity of our team.',
+      text: 'We are all dedicated to helping our agents achieve success with their marketing campaigns.\"',
+      image: 'leesment-img.png',
+      writer: 'Karl Erik Leesment',
+      designation: 'Account Manager'
+    },
+    {
+      title: '\"SmartFinancial rewards hard work and dedication.',
+      text: 'I have received all the tools I need to be successful along with multiple opportunities to grow and excel in my career in just a short amount of time.\"',
+      image: 'navarrete-img.png',
+      writer: 'Erika Navarrete',
+      designation: 'Account Executive Team Lead'
+    },
+    {
+      title: '\"Fun and rewarding!',
+      text: 'SmartFinancial has been the best company I have worked for, and I’ve had the most fun ever the last three years working here. I am granted the autonomy to do what I need to succeed in my position. I feel like I’m part of a family, all the way from our top leadership to the peers I work with everyday.\"',
+      image: 'henney1.jpg',
+      writer: 'Josh Henney',
+      designation: 'Inside Sales Rep'
+    },
+    {
+      title: '\"Helping clients reach their goals.',
+      text: 'I\'m proud to represent SmartFinancial and our opportunity that provides agents an easier way to grow their agency, hit targets and earn recognition. Agents partnering with SmartFinancial can anticipate an easy-to-use platform that delivers solid growth opportunities, supported by their very own amazing account manager who\'s main focus is "smiling together & growing together.\"',
+      image: 'tackett.jpg',
+      writer: 'Michelle Tackett',
+      designation: 'Inside Sales Rep'
+    },
     {
       title: '\"The amazing work-life balance.',
       text: 'The team culture is awesome and the personal development growth is priceless. I get to work with inspiring colleagues and managers who help us achieve our goals. I also enjoy working with my clients in achieving their big goals, because their success is my success.\"',
@@ -230,6 +272,7 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
 
     const swiperEl = this.awardswiperRef.nativeElement;
     Object.assign(swiperEl, {
+      modules: [Autoplay],
       slidesPerView: 'auto',
       spaceBetween: 80,
       loop: true,
@@ -242,13 +285,14 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
       },
     });
     swiperEl.initialize();
+    setTimeout(() => swiperEl.swiper?.autoplay?.start(), 100);
 
     const testimonialEl = this.testimonialsSwiperRef.nativeElement;
     Object.assign(testimonialEl, {
       modules: [Mousewheel],
       slidesPerView: 3.5,
       spaceBetween: 28,
-      loop: false,
+      loop: true,
       navigation: false,
       centeredSlides: true,
       pagination: false,
