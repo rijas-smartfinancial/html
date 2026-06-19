@@ -218,7 +218,7 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   @ViewChild('videoEl') videoEl!: ElementRef<HTMLVideoElement>;
  // ── Award Slider ─────────────────────────────────────────────────
 
-  @ViewChild('awardsSwiper') awardswiperRef!: ElementRef;
+
   @ViewChild('testimonialsSwiper') testimonialsSwiperRef!: ElementRef;
   @ViewChild('lifeMainSwiper') lifeSwiperRef!: ElementRef;
   @ViewChild('lifeThumbsSwiper') lifeThumbsSwiperRef!: ElementRef;
@@ -269,23 +269,6 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   video.volume = 0;
 
   video.play().catch(() => {});
-
-    const swiperEl = this.awardswiperRef.nativeElement;
-    Object.assign(swiperEl, {
-      modules: [Autoplay],
-      slidesPerView: 'auto',
-      spaceBetween: 80,
-      loop: true,
-      allowTouchMove: false,
-      speed: 6000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: false,
-      },
-    });
-    swiperEl.initialize();
-    setTimeout(() => swiperEl.swiper?.autoplay?.start(), 100);
 
     const testimonialEl = this.testimonialsSwiperRef.nativeElement;
     Object.assign(testimonialEl, {

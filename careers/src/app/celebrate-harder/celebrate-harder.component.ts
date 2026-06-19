@@ -31,7 +31,7 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
     { img: '', alt: 'SmartFinancial Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true, videoSrc: 'assets/videos/Beach%20Party%202025.mp4',   poster: 'assets/images/careers/beachparty25.png' },
     { img: '', alt: 'SmartFinancial Holiday Party 2024', caption: 'Holiday Party 2024', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202024.mp4', poster: 'assets/images/careers/holidayparty24_0040.png' },
     { img: '', alt: 'SmartFinancial Holiday Party 2025', caption: 'Holiday Party 2025', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202025.mp4', poster: 'assets/images/careers/holidayparty25 Medium.jpeg' },
-    { img: '', alt: 'SmartFinancial Beach Party 2024', caption: 'Beach Party 2024', hasVideo: true, videoSrc: 'assets/videos/smartfinancial_beach_party%20(720p).mp4', poster: 'assets/images/careers/beachparty25.png' },
+    { img: '', alt: 'SmartFinancial Beach Party 2024', caption: 'Beach Party 2024', hasVideo: true, videoSrc: 'assets/videos/beackparty-2024.mp4', poster: 'assets/images/careers/beachparty25.png' },
   ];
 
   activeIndex = 0;
