@@ -14,6 +14,7 @@ interface Slide {
   caption: string;
   hasVideo?: boolean;
   videoSrc?: string;
+  shortVideoSrc?: string;
   poster?: string;
 }
 
@@ -28,16 +29,17 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
   @ViewChild('dragBadge') badgeEl!: ElementRef<HTMLElement>;
 
   slides: Slide[] = [
-    { img: '', alt: 'SmartFinancial Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true, videoSrc: 'assets/videos/Beach%20Party%202025.mp4',   poster: 'assets/images/careers/beachparty25.png' },
-    { img: '', alt: 'SmartFinancial Holiday Party 2024', caption: 'Holiday Party 2024', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202024.mp4', poster: 'assets/images/careers/holidayparty24_0040.png' },
-    { img: '', alt: 'SmartFinancial Holiday Party 2025', caption: 'Holiday Party 2025', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202025.mp4', poster: 'assets/images/careers/holidayparty25 Medium.jpeg' },
-    { img: '', alt: 'SmartFinancial Beach Party 2024', caption: 'Beach Party 2024', hasVideo: true, videoSrc: 'assets/videos/beackparty-2024.mp4', poster: 'assets/images/careers/beachparty25.png' },
+    { img: '', alt: 'SmartFinancial Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true, videoSrc: 'assets/videos/Beach%20Party%202025.mp4',   shortVideoSrc: 'assets/videos/short/Beach%20Party%202025.mp4',   poster: 'assets/images/careers/beachparty25.png' },
+    { img: '', alt: 'SmartFinancial Holiday Party 2024', caption: 'Holiday Party 2024', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202024.mp4', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202024.mp4', poster: 'assets/images/careers/holidayparty24_0040.png' },
+    { img: '', alt: 'SmartFinancial Holiday Party 2025', caption: 'Holiday Party 2025', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202025.mp4', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202025.mp4', poster: 'assets/images/careers/holidayparty25 Medium.jpeg' },
+    { img: '', alt: 'SmartFinancial Beach Party 2024',   caption: 'Beach Party 2024',   hasVideo: true, videoSrc: 'assets/videos/beackparty-2024.mp4',           shortVideoSrc: 'assets/videos/short/beackparty-2024.mp4',           poster: 'assets/images/careers/beachparty25.png' },
   ];
 
   activeIndex = 0;
   isHovered = false;
   isDragging = false;
   modalOpen = false;
+  isVideoLoading = true;
 
   get activeSlide(): Slide { return this.slides[this.activeIndex]; }
 
@@ -55,6 +57,7 @@ export class CelebrateHarderComponent implements AfterViewInit, OnDestroy {
       this.ngZone.run(() => {
         const swiper = (e as any).detail[0];
         this.activeIndex = swiper.realIndex;
+        this.isVideoLoading = true;
       });
     });
   }

@@ -42,12 +42,17 @@
             <video
               *ngIf="activeIndex === i"
               class="celebrate__preview-iframe"
-              [src]="slide.videoSrc"
+              [src]="slide.shortVideoSrc"
               autoplay
               [muted]="true"
               loop
               playsinline
+              (waiting)="isVideoLoading = true"
+              (canplay)="isVideoLoading = false"
             ></video>
+            <div *ngIf="activeIndex === i && isVideoLoading" class="celebrate__video-loader">
+              <div class="celebrate__spinner"></div>
+            </div>
           </div>
         </ng-container>
         <ng-template #regularSlide>
@@ -109,6 +114,8 @@
       <div class="celebrate__modal-video">
         <video
           [src]="activeSlide.videoSrc"
+          controls
+          autoplay
           playsinline
           [title]="activeSlide.caption"
         ></video>
