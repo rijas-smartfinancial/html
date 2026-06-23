@@ -3,13 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CareersComponent } from './careers/careers.component';
-import { CelebrateHarderComponent } from './celebrate-harder/celebrate-harder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CareersComponent,
-    CelebrateHarderComponent,
   ],
   imports: [
     BrowserModule

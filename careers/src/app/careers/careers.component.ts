@@ -1,4 +1,4 @@
-import {Component, OnInit, PLATFORM_ID, Renderer2, ElementRef, AfterViewInit, OnDestroy, ViewChild, Inject, ViewChildren, QueryList} from '@angular/core';
+import {Component, OnInit, PLATFORM_ID, Renderer2, ElementRef, AfterViewInit, OnDestroy, ViewChild, Inject, ViewChildren, QueryList, HostListener, NgZone} from '@angular/core';
 import { Mousewheel, Autoplay } from 'swiper/modules';
 
 // declare var $;
@@ -6,6 +6,16 @@ import { Mousewheel, Autoplay } from 'swiper/modules';
 declare let whr: Function;
 // tslint:disable-next-line:ban-types
 declare let whr_embed: Function;
+
+interface Slide {
+  img: string;
+  alt: string;
+  caption: string;
+  hasVideo?: boolean;
+  videoSrc?: string;
+  shortVideoSrc?: string;
+  poster?: string;
+}
 
 export interface Award {
   id: string;
@@ -158,7 +168,8 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private renderer: Renderer2,
-    private readonly elementRef: ElementRef
+    private readonly elementRef: ElementRef,
+    private ngZone: NgZone
   ) {
   }
 
@@ -330,10 +341,20 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     this.photoEls.forEach((ref, i) =>
       this.observeEl(ref.nativeElement, 200 + i * 160)
     );
+
+    const celebrateEl = this.celebrateSwiperEl.nativeElement as any;
+    celebrateEl.addEventListener('swiperslidechange', (e: CustomEvent) => {
+      this.ngZone.run(() => {
+        const swiper = (e as any).detail[0];
+        this.activeIndex = swiper.realIndex;
+        this.isVideoLoading = true;
+      });
+    });
   }
 
   ngOnDestroy(): void {
     this.observers.forEach(o => o.disconnect());
+    this.stopCelebrateLerp();
   }
 
   onVideoCanPlay(): void {
@@ -351,6 +372,32 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
 
   private observers: IntersectionObserver[] = [];
 
+  // ── Celebrate Harder ──────────────────────────────────────────────────────────
+
+  @ViewChild('swiperEl') celebrateSwiperEl!: ElementRef<HTMLElement>;
+  @ViewChild('dragBadge') celebrateBadgeEl!: ElementRef<HTMLElement>;
+
+  slides: Slide[] = [
+    { img: '', alt: 'SmartFinancial Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true, videoSrc: 'assets/videos/Beach%20Party%202025.mp4',   shortVideoSrc: 'assets/videos/short/Beach%20Party%202025.mp4',   poster: 'assets/images/careers/beachparty25.png' },
+    { img: '', alt: 'SmartFinancial Holiday Party 2024', caption: 'Holiday Party 2024', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202024.mp4', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202024.mp4', poster: 'assets/images/careers/holidayparty24_0040.png' },
+    { img: '', alt: 'SmartFinancial Holiday Party 2025', caption: 'Holiday Party 2025', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202025.mp4', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202025.mp4', poster: 'assets/images/careers/holidayparty25 Medium.jpeg' },
+    { img: '', alt: 'SmartFinancial Beach Party 2024',   caption: 'Beach Party 2024',   hasVideo: true, videoSrc: 'assets/videos/beackparty-2024.mp4',           shortVideoSrc: 'assets/videos/short/beackparty-2024.mp4',           poster: 'assets/images/careers/beachparty25.png' },
+  ];
+
+  activeIndex = 0;
+  isHovered = false;
+  isDragging = false;
+  modalOpen = false;
+  isVideoLoading = true;
+
+  get activeSlide(): Slide { return this.slides[this.activeIndex]; }
+
+  private celebrateTargetX = 0;
+  private celebrateTargetY = 0;
+  private celebrateCurrentX = 0;
+  private celebrateCurrentY = 0;
+  private celebrateRafId: number | null = null;
+
 
 
   private observeEl(el: HTMLElement, delay: number): void {
@@ -367,5 +414,65 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     this.observers.push(observer);
   }
 
+  // ── Celebrate Harder methods ──────────────────────────────────────────────────
+
+  onSwiperEnter(): void {
+    this.isHovered = true;
+    this.startCelebrateLerp();
+  }
+
+  onSwiperLeave(): void {
+    this.isHovered = false;
+    this.isDragging = false;
+    this.stopCelebrateLerp();
+  }
+
+  onSwiperMouseDown(): void { this.isDragging = true; }
+  onSwiperMouseUp(): void   { this.isDragging = false; }
+
+  onMouseMove(event: MouseEvent): void {
+    const rect = (event.currentTarget as HTMLElement).getBoundingClientRect();
+    this.celebrateTargetX = event.clientX - rect.left;
+    this.celebrateTargetY = event.clientY - rect.top;
+  }
+
+  openModal(event?: MouseEvent): void {
+    if (event) event.stopPropagation();
+    this.modalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal(): void {
+    this.modalOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.modalOpen) this.closeModal();
+  }
+
+  private startCelebrateLerp(): void {
+    if (this.celebrateRafId !== null) return;
+    this.ngZone.runOutsideAngular(() => {
+      const tick = () => {
+        this.celebrateCurrentX += (this.celebrateTargetX - this.celebrateCurrentX) * 0.12;
+        this.celebrateCurrentY += (this.celebrateTargetY - this.celebrateCurrentY) * 0.12;
+        if (this.celebrateBadgeEl?.nativeElement) {
+          this.celebrateBadgeEl.nativeElement.style.transform =
+            `translate(calc(${this.celebrateCurrentX}px - 50%), calc(${this.celebrateCurrentY}px - 50%))`;
+        }
+        this.celebrateRafId = requestAnimationFrame(tick);
+      };
+      this.celebrateRafId = requestAnimationFrame(tick);
+    });
+  }
+
+  private stopCelebrateLerp(): void {
+    if (this.celebrateRafId !== null) {
+      cancelAnimationFrame(this.celebrateRafId);
+      this.celebrateRafId = null;
+    }
+  }
 
 }
