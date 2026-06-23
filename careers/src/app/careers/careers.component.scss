@@ -233,7 +233,7 @@
       border-radius: 5px;
       padding: 6px 12px;
       // color already set by .label-eyebrow in global styles
-      opacity: 0;
+      opacity: 1;
       transform: translateY(28px);
       transition:
         opacity 0.65s ease 0.1s,
@@ -250,7 +250,7 @@
       margin: 0 0 22px;
       letter-spacing: -0.02em;
 
-      opacity: 0;
+      opacity: 1;
       transform: translateY(40px);
       transition:
         opacity 0.75s ease 0.28s,
@@ -269,7 +269,7 @@
       color: rgba(255, 255, 255, 0.88);
       margin: 0;
 
-      opacity: 0;
+      opacity: 1;
       transform: translateY(24px);
       transition:
         opacity 0.65s ease 0.46s,
