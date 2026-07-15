@@ -1,5 +1,8 @@
+import {isPlatformBrowser} from '@angular/common';
 import {Component, OnInit, PLATFORM_ID, Renderer2, ElementRef, AfterViewInit, OnDestroy, ViewChild, Inject, ViewChildren, QueryList, HostListener, NgZone} from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 import { Mousewheel, Autoplay } from 'swiper/modules';
+
 
 // declare var $;
 // tslint:disable-next-line:ban-types
@@ -15,6 +18,7 @@ interface Slide {
   videoSrc?: string;
   shortVideoSrc?: string;
   poster?: string;
+  youtubeId?: string;
 }
 
 export interface Award {
@@ -57,7 +61,7 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   allJobs = {};
   otherJobs = [];
 
-  
+
   testimonials = [
     {
       title: '\"The amazing work-life balance.',
@@ -162,28 +166,24 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     { src: 'lasf-9.png',                alt: 'Life at SmartFinancial' },
     { src: 'lasf-10.png',               alt: 'Life at SmartFinancial' },
     { src: 'lasf-11.png',               alt: 'Life at SmartFinancial' },
-    
+
   ];
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private renderer: Renderer2,
     private readonly elementRef: ElementRef,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private sanitizer: DomSanitizer
   ) {
   }
 
   ngOnInit() {
-   // this.seoService.setTitle('Careers | SmartFinancial', 'careers');
-   // this.seoService.setDescription('We are building a more efficient insurance marketplace. If you enjoy solving big problems and achieving ambitious goals, we want you on our team.');
-    // if (isPlatformBrowser(this.platformId)) {
-    //   this.window.scrollTo(0, 0);
-    //   this.helperService.updateNav({type: 1, required: false});
-    //   this.loadJobOpenings();
-    //   this.generateSidebar();
-    //   this.loadTestimonialSlider();
-    //   this.loadImageSlider();
-    // }
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo(0, 0);
+      this.loadJobOpenings();
+      this.generateSidebar();
+    }
   }
 
   public loadJobOpenings() {
@@ -203,19 +203,17 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   }
 
 
-  // public generateSidebar() {
-  //   this.active_section = this.secondary_nav[0].id;
-  //   this.active_section_text = this.secondary_nav[0].text;
-  // }
+  public generateSidebar() {
+    this.active_section = this.secondary_nav[0].id;
+    this.active_section_text = this.secondary_nav[0].text;
+  }
 
   // public gotoSection(section) {
-  //   let topMargin = 124;
-  //   if (this.secondary_nav_expanded) {
-  //     topMargin = 320;
-  //   }
-  //   $('html, body').animate({
-  //     scrollTop: $('#' + section.id).offset().top - topMargin
-  //   }, 1000);
+  //   const topMargin = this.secondary_nav_expanded ? 320 : 124;
+  //   const el = document.getElementById(section.id);
+  //   if (!el) return;
+  //   const top = el.getBoundingClientRect().top + this.window.scrollY - topMargin;
+  //   this.window.scrollTo({ top, behavior: 'smooth' });
   //   setTimeout(() => {
   //     this.active_section = section.id;
   //     this.active_section_text = section.text;
@@ -267,8 +265,8 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
     { id: 'gptw',        link: 'http://www.greatplacetowork.com/certified-company/7038245',        src: 'assets/images/awardsnew/great-place-to-work.png', alt: 'Great Place to Work Certified' },
     { id: 'oc-register', link: 'https://www.ocregister.com/2020/12/11/top-workplaces-2020-see-the-list-of-orange-countys-winners/', src: 'assets/images/awardsnew/OCR-L-TWP-LOGO-2020.png',  alt: 'Top Work Places OC Register 2020' },
     { id: 'horizon',     link: 'https://www.prlog.org/12763712-horizon-interactive-awards-smartfinancial-in-two-categories.html',     src: 'assets/images/awardsnew/horizon-interactive-awards-logo.png',  alt: 'Horizon Interactive Awards' },
-    
-   
+
+
   ];
   contentVisible = false;
 
@@ -378,10 +376,10 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   @ViewChild('dragBadge') celebrateBadgeEl!: ElementRef<HTMLElement>;
 
   slides: Slide[] = [
-    { img: '', alt: 'SmartFinancial Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true, videoSrc: 'assets/videos/Beach%20Party%202025.mp4',   shortVideoSrc: 'assets/videos/short/Beach%20Party%202025.mp4',   poster: 'assets/images/careers/beachparty25.png' },
-    { img: '', alt: 'SmartFinancial Holiday Party 2024', caption: 'Holiday Party 2024', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202024.mp4', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202024.mp4', poster: 'assets/images/careers/holidayparty24_0040.png' },
-    { img: '', alt: 'SmartFinancial Holiday Party 2025', caption: 'Holiday Party 2025', hasVideo: true, videoSrc: 'assets/videos/Holiday%20Party%202025.mp4', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202025.mp4', poster: 'assets/images/careers/holidayparty25 Medium.jpeg' },
-    { img: '', alt: 'SmartFinancial Beach Party 2024',   caption: 'Beach Party 2024',   hasVideo: true, videoSrc: 'assets/videos/beackparty-2024.mp4',           shortVideoSrc: 'assets/videos/short/beackparty-2024.mp4',           poster: 'assets/images/careers/beachparty25.png' },
+    { img: '', alt: 'SmartFinancial Beach Party 2025',   caption: 'Beach Party 2025',   hasVideo: true, youtubeId: 'r2TveYBAU0I', shortVideoSrc: 'assets/videos/short/Beach%20Party%202025.mp4',   poster: 'assets/images/careers/beachparty25.png' },
+    { img: '', alt: 'SmartFinancial Holiday Party 2024', caption: 'Holiday Party 2024', hasVideo: true, youtubeId: 'VDEYlZVBWV8', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202024.mp4', poster: 'assets/images/careers/holidayparty24_0040.png' },
+    { img: '', alt: 'SmartFinancial Holiday Party 2025', caption: 'Holiday Party 2025', hasVideo: true, youtubeId: 'sS8RqcxHOrY', shortVideoSrc: 'assets/videos/short/Holiday%20Party%202025.mp4', poster: 'assets/images/careers/holidayparty25 Medium.jpeg' },
+    { img: '', alt: 'SmartFinancial Beach Party 2024',   caption: 'Beach Party 2024',   hasVideo: true, youtubeId: 'SnojLLBk5qE', shortVideoSrc: 'assets/videos/short/beackparty-2024.mp4',           poster: 'assets/images/careers/beachparty25.png' },
   ];
 
   activeIndex = 0;
@@ -391,6 +389,20 @@ export class CareersComponent implements OnInit,  AfterViewInit, OnDestroy {
   isVideoLoading = true;
 
   get activeSlide(): Slide { return this.slides[this.activeIndex]; }
+
+  private readonly youtubeUrlCache = new Map<string, SafeResourceUrl>();
+
+  get activeSlideYoutubeEmbedUrl(): SafeResourceUrl | null {
+    const id = this.activeSlide.youtubeId;
+    if (!id) return null;
+    if (!this.youtubeUrlCache.has(id)) {
+      this.youtubeUrlCache.set(
+        id,
+        this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`)
+      );
+    }
+    return this.youtubeUrlCache.get(id)!;
+  }
 
   private celebrateTargetX = 0;
   private celebrateTargetY = 0;

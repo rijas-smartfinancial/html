@@ -262,13 +262,23 @@
           </svg>
         </button>
         <div class="celebrate__modal-video">
-          <video
-            [src]="activeSlide.videoSrc"
-            controls
-            autoplay
-            playsinline
+          <iframe
+            *ngIf="activeSlide.youtubeId; else localVideo"
+            [src]="activeSlideYoutubeEmbedUrl"
             [title]="activeSlide.caption"
-          ></video>
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <ng-template #localVideo>
+            <video
+              [src]="activeSlide.videoSrc"
+              controls
+              autoplay
+              playsinline
+              [title]="activeSlide.caption"
+            ></video>
+          </ng-template>
         </div>
       </div>
     </div>
@@ -283,14 +293,14 @@
 
     <div class="perks__grid">
 
-      <!-- Competitive Salaries -->
+      <!-- Competitive Pay that Rewards Impact -->
       <div class="perks__card">
         <div class="perks__icon">
-          <img src="/assets/images/careers/perks_icons/comp-sal.png" alt="Competitive Salaries at SmartFinancial">
+          <img src="/assets/images/careers/perks_icons/comp-sal.png" alt="Competitive Pay that Rewards Impact at SmartFinancial">
         </div>
-        <h3 class="perks__title">Competitive Salaries</h3>
-        <p class="perks__body">We offer compensation packages that reflect your experience and keep you competitive
-          within the industry.</p>
+        <h3 class="perks__title">Competitive Pay that Rewards Impact</h3>
+        <p class="perks__body">We believe great work deserves great pay. Our compensation reflects your contributions and market value.
+</p>
       </div>
 
       <!-- Growth Opportunities -->
@@ -375,14 +385,13 @@
           reach.</p>
       </div>
 
-      <!-- Virtual Get Togethers -->
+      <!-- Team Connection & Culture -->
       <div class="perks__card">
         <div class="perks__icon">
-          <img src="/assets/images/careers/perks_icons/virtual.png" alt="Virtual Get Togethers at SmartFinancial">
+          <img src="/assets/images/careers/perks_icons/virtual.png" alt="Team Connection & Culture at SmartFinancial">
         </div>
-        <h3 class="perks__title">Virtual Get Togethers</h3>
-        <p class="perks__body">We make it a priority to keep remote teammates connected through regular virtual events
-          and team hangouts.</p>
+        <h3 class="perks__title">Team Connection & Culture</h3>
+        <p class="perks__body">From team events to everyday collaboration, we prioritize building real connections that make SmartFinancial a place people enjoy showing up to.</p>
       </div>
 
       <!-- Specialized Training Programs -->
@@ -406,6 +415,52 @@
         <h3 class="perks__title">Fun Company Outings</h3>
         <p class="perks__body">We regularly bring the team together for outings and events that foster connection
           outside of the day-to-day.</p>
+      </div>
+
+       <!-- Giving Back to the Community  -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/community.png"
+            alt="Giving Back to the Community  at SmartFinancial">
+
+        </div>
+        <h3 class="perks__title">Giving Back to the Community </h3>
+        <p class="perks__body">We're committed to making a positive impact beyond the workplace. From food bank volunteering to local community events, our team regularly comes together to support causes that matter.</p>
+      </div>
+
+       <!--  Modern Work Environment  -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/work-environment.png"
+            alt=" Modern Work Environment
+ at SmartFinancial">
+
+        </div>
+        <h3 class="perks__title">Modern Work Environment </h3>
+        <p class="perks__body">Enjoy a thoughtfully designed workspace (and flexibility where applicable) that supports productivity, collaboration, and comfort.
+</p>
+      </div>
+
+      <!--  Paid Family Leave -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/family-leave.png"
+            alt=" Paid Family Leave at SmartFinancial">
+
+        </div>
+        <h3 class="perks__title">Paid Family Leave   </h3>
+        <p class="perks__body">We support you and your growing family with paid leave so you can take the time you need to care for your loved ones.</p>
+      </div>
+
+      <!--  Flexible Work Schedules -->
+      <div class="perks__card">
+        <div class="perks__icon">
+          <img src="/assets/images/careers/perks_icons/flexible-work.png"
+            alt=" Flexible Work Schedules at SmartFinancial">
+
+        </div>
+        <h3 class="perks__title">Flexible Work Schedules</h3>
+        <p class="perks__body">  We provide flexible hours so you can easily manage your professional responsibilities alongside your personal life.</p>
       </div>
 
     </div>
@@ -459,7 +514,7 @@
       </div>
     </div>
 
-    <swiper-container #lifeMainSwiper class="life-main-swiper">
+    <swiper-container #lifeMainSwiper init="false" class="life-main-swiper">
       <swiper-slide *ngFor="let image of lifeImages" class="life-main-slide">
         <div class="life-main-img-wrap">
           <img [src]="'assets/images/careers/' + image.src" [alt]="image.alt">
@@ -468,7 +523,7 @@
     </swiper-container>
 
     <div class="container life-thumbs-container">
-      <swiper-container #lifeThumbsSwiper class="life-thumbs-swiper">
+      <swiper-container #lifeThumbsSwiper init="false" class="life-thumbs-swiper">
         <swiper-slide *ngFor="let image of lifeImages" class="life-thumb-slide">
           <div class="life-thumb-img-wrap">
             <img [src]="'assets/images/careers/' + image.src" [alt]="image.alt">
@@ -540,4 +595,32 @@
       </div>
     </div>
   </section>
+
+    <div id="job-openings" class='insurance-section'>
+    <div class='container'>
+      <div class="row">
+        <div class='col-lg-12 text-center'>
+          <h2 class="common-section-title" id="our-openings">Our Openings</h2>
+          <p class="mb-0">
+            Check out our current job openings below. If you have questions, please contact our Talent Acquisition team
+            at <a class="mailto" href="mailto:info@smartfinancial.com" target="_top">info@smartfinancial.com</a>.
+          </p>
+          <div class="text-center explore-roles-wrapper">
+              <div id="whr_embed_hook"></div>
+          </div>
+          <div class="career-disclaimer">
+            This link leads to the machine-readable files that are made available in response to the federal
+            Transparency in Coverage Rule and includes negotiated service rates and out-of-network allowed amounts
+            between health plans and healthcare providers. The machine-readable files are formatted to allow
+            researchers, regulators, and application developers to more easily access and analyze data.
+            <a href='https://healthy.kaiserpermanente.org/pages/technical-information#machine-readable-files'
+               target="_blank">Kaiser</a> -
+            <a
+              href='https://web.healthsparq.com/healthsparq/public/#/one/insurerCode=BSCA_I&brandCode=BSCA/machine-readable-transparency-in-coverage'
+              target="_blank"> Blue Shield of CA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

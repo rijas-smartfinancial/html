@@ -1,16 +1,20 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CareersComponent } from './careers/careers.component';
+import { AgentsComponent } from './agents/agents.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CareersComponent,
+    AgentsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],

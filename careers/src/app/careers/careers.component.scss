@@ -1,3 +1,117 @@
+
+:root {
+  // Colors — Brand
+  --sf-pink:           #E73989; 
+  --sf-pink-dark:      #d42f7a;
+  --sf-pink-hover:     #e73970;
+  --sf-yellow:         #f6be3e;
+  --sf-yellow-dark:    #d4a12d;
+  --sf-blue:           #2f9ee9;
+  --sf-teal:           #38c7b5;
+
+  // Colors — Neutrals
+  --sf-dark:           #252525;
+  --sf-dark-alt:       #222222;
+  --sf-body:           #3e3d3d;
+  --sf-muted:          #a0a0a0;
+  --sf-muted-alt:      #9a9a9a;
+  --sf-white:          #ffffff;
+  --sf-black:          #000000;
+
+  // Colors — Backgrounds
+  --sf-bg-light:       #f8f9fa;
+  --sf-bg-alt:         #f4f2f2;
+  --sf-bg-section:     #f5f3f3;
+
+  // Colors — Borders & Dividers
+  --sf-border:         #e1e1e1;
+  --sf-border-alt:     #dee2e6;
+  --sf-divider:        #d9d9d9;
+
+  // Typography — Families
+  --font-display:      'Raleway', sans-serif;
+  --font-body:         'Roboto', sans-serif;
+  --font-alt:          'Lato', sans-serif;
+
+  // Typography — Sizes
+  --text-xs:           13px;
+  --text-sm:           14px;
+  --text-base:         16px;
+  --text-md:           18px;
+  --text-lg:           20px;
+  --text-xl:           22px;
+  --text-2xl:          24px;
+  --text-3xl:          28px;
+  --text-4xl:          34px;
+  --text-5xl:          50px;
+  --text-6xl:          58px;
+
+  // Typography — Weights
+  --weight-light:      300;
+  --weight-regular:    400;
+  --weight-semibold:   600;
+  --weight-bold:       700;
+  --weight-extrabold:  800;
+
+  // Typography — Line Heights
+  --lh-tight:          1.2;
+  --lh-snug:           1.3;
+  --lh-normal:         1.5;
+  --lh-relaxed:        1.65;
+  --lh-hero:           70px;
+  --lh-hero-mobile:    45px;
+
+  // Spacing
+  --space-1:           4px;
+  --space-2:           8px;
+  --space-3:           12px;
+  --space-4:           16px;
+  --space-5:           20px;
+  --space-6:           24px;
+  --space-8:           32px;
+  --space-10:          40px;
+  --space-12:          48px;
+  --space-16:          64px;
+  --space-20:          80px;
+
+  // Border Radius
+  --radius-sm:         3px;
+  --radius-md:         5px;
+  --radius-lg:         8px;
+  --radius-xl:         10px;
+  --radius-full:       50%;
+
+  // Shadows
+  --shadow-sm:         0 0 10px #cccccc;
+  --shadow-md:         0 0 12px rgba(0, 0, 0, 0.6);
+  --shadow-card:       0 0 35px -9px rgba(0, 0, 0, 0.24);
+
+  // Transitions
+  --transition-fast:   0.15s ease-in-out;
+  --transition-base:   0.25s ease-in-out;
+  --transition-slow:   0.4s ease-in-out;
+
+  // Layout
+  --container-max:     1200px;
+  --container-wide:    1400px;
+}
+
+// -----------------------------------------------------------------------------
+// 2. Breakpoints (matches Bootstrap 4 grid used on the live site)
+// -----------------------------------------------------------------------------
+// xs:  0px
+// sm:  576px
+// md:  768px
+// lg:  992px
+// xl:  1200px
+//
+// Usage: @media (max-width: $bp-md) { ... }
+
+$bp-sm:  576px;
+$bp-md:  768px;
+$bp-lg:  992px;
+$bp-xl:  1200px;
+
 #insurance-page {
   // =============================================================================
   // Hero — SmartFinancial Careers
@@ -5,7 +119,7 @@
   .section-wrapper {
     padding: 60px 0;
     .section_heading {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: clamp(28px, 4vw, 50px);
       font-weight: 400;
       line-height: 1.2;
@@ -15,6 +129,9 @@
     }
   }
 
+  h3 {
+    border: none;
+  }
 
     .cta-btn {
       display: inline-block;
@@ -39,7 +156,7 @@
   .hero {
     position: relative;
     width: 100%;
-    height: 100dvh; // dynamic viewport height — handles mobile browser chrome
+    height: 90dvh; // dynamic viewport height — handles mobile browser chrome
     min-height: 600px;
     display: flex;
     flex-direction: column;
@@ -87,7 +204,6 @@
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      background: url('/assets/images/careers/hero-screen.jpeg') center/cover no-repeat;
       opacity: 1;
       transition: opacity 1s ease;
      
@@ -122,9 +238,9 @@
 
       border-image-source: linear-gradient(90deg, #e83889 0%, #7f39de 100%);
 
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 18px;
-      font-weight: var(--weight-bold);
+      font-weight: 700;
       color: #fff;
 
       // Visibility toggled by [class.hero__badge--visible]
@@ -170,9 +286,9 @@
       border-radius: 30px;
       padding: 10px 20px 10px 16px;
 
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 13px;
-      font-weight: var(--weight-semibold);
+      font-weight: 600;
       letter-spacing: 0.05em;
       color: #fff;
       cursor: pointer;
@@ -208,7 +324,7 @@
 
     .hero__content {
       position: relative;
-      z-index: 9999;
+      z-index: 2;
       margin-top: auto;
       padding: 0 60px 88px;
       text-align: center;
@@ -232,19 +348,27 @@
       margin-bottom: 18px;
       border-radius: 5px;
       padding: 6px 12px;
-      // color already set by .label-eyebrow in global styles
+      
       opacity: 1;
       transform: translateY(28px);
+      text-transform: uppercase;
       transition:
         opacity 0.65s ease 0.1s,
         transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
       background-color: #fff;
     }
+    .label-eyebrow {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #E73989;
+}
 
     .hero__headline {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: clamp(40px, 5.8vw, 64px);
-      font-weight: var(--weight-extrabold);
+      font-weight: 800;
       line-height: 1.04;
       color: #fff;
       margin: 0 0 22px;
@@ -263,9 +387,9 @@
     }
 
     .hero__sub {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: clamp(16px, 2vw, 48px);
-      font-weight: var(--weight-semibold);
+      font-weight: 600;
       color: rgba(255, 255, 255, 0.88);
       margin: 0;
 
@@ -429,7 +553,7 @@
     }
 
     .explore-roles__body {
-      font-family: var(--font-body);
+      font-family: 'Roboto', sans-serif;;
       font-size: 16px;
       line-height: 1.75;
       color: #252525;
@@ -442,12 +566,12 @@
 
     .explore-roles__cta {
       display: inline-block;
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 15px;
-      font-weight: var(--weight-bold);
+      font-weight: 700;
       letter-spacing: 0.03em;
       color: #fff;
-      background: var(--sf-pink);
+      background: #E73989;;
       border: solid #d42f7a;
       border-width: 0 0 4px 0;
       border-radius: 5px;
@@ -482,7 +606,7 @@
     .explore-roles__photo {
       overflow: hidden;
       aspect-ratio: 4 / 3;
-      background: var(--sf-bg-alt); // placeholder while image loads
+      background: #f4f2f2; // placeholder while image loads
 
       // Initial hidden state
       opacity: 0;
@@ -552,7 +676,7 @@
     padding: 60px 0;
     text-align: center;
     overflow: hidden;
-  }
+
 
   .celebrate__header {
     max-width: 620px;
@@ -567,7 +691,7 @@
   }
 
   .celebrate__sub {
-    font-family: var(--font-body);
+    font-family: 'Roboto', sans-serif;;
     font-size: 16px;
     line-height: 1.72;
     max-width: 520px;
@@ -603,7 +727,7 @@
     color: #fff;
     border: 4px solid #fff;
     border-radius: 20px;
-    background: var(--sf-bg-alt);
+    background: #f4f2f2;
     position: relative;
 
     img, video {
@@ -702,10 +826,10 @@
   }
 
   .celebrate__caption {
-    font-family: var(--font-display);
+    font-family: 'Raleway', sans-serif;
     font-size: 17px;
-    font-weight: var(--weight-extrabold);
-    color: var(--sf-dark);
+    font-weight: 800;
+    color: #E73989;
     margin: 8px 0 16px;
   }
 
@@ -713,12 +837,12 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-family: var(--font-display);
+    font-family: 'Raleway', sans-serif;
     font-size: 15px;
-    font-weight: var(--weight-bold);
+    font-weight: 700;
     letter-spacing: 0.03em;
     color: #fff;
-    background: var(--sf-pink);
+    background: #E73989;;
     border: solid #d42f7a;
     border-width: 0 0 4px 0;
     border-radius: 5px;
@@ -727,7 +851,7 @@
     transition: background 0.2s ease, transform 0.15s ease;
 
     &:hover {
-      background: var(--sf-pink-dark);
+      background: #d42f7a;
       transform: translateY(-2px);
     }
 
@@ -808,6 +932,8 @@
     to   { transform: scale(1);   opacity: 1; }
   }
 
+  }
+
   // =============================================================================
   // Team Member Perks
   // =============================================================================
@@ -849,23 +975,24 @@
       margin-bottom: 4px;
       margin:0 auto; // center horizontally
        transition: all 0.3s ease;
-      svg {
-        width: 100%;
-        height: 100%;
+      img {
+       max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
       }
     }
 
     .perks__title {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 24px;
-      font-weight: var(--weight-bold);
+      font-weight: 700;
       color: #222222;
       margin: 0;
       line-height: 1.3;
     }
 
     .perks__body {
-      font-family: var(--font-body);
+      font-family: 'Roboto', sans-serif;;
       font-size:18px;
       line-height: 1.65;
       color: #252525;
@@ -917,7 +1044,7 @@
     }
 
     .testimonials__subtitle {
-      font-family: var(--font-body);
+      font-family: 'Roboto', sans-serif;;
       font-size: 16px;
       line-height: 1.75;
       color: #444;
@@ -966,7 +1093,7 @@
       gap: 14px;
     }
     .testimonial-title {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 20px;
       font-weight: 800;
       color: #D42F7A;
@@ -975,7 +1102,7 @@
     }
 
     .testimonial-text {
-      font-family: var(--font-body);
+      font-family: 'Roboto', sans-serif;;
       font-size: 15px;
       line-height: 1.75;
       color: #666666;
@@ -1007,7 +1134,7 @@
     }
 
     .writer-name {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 18px;
       font-weight: 800;
       color: #333;
@@ -1015,7 +1142,7 @@
     }
 
     .writer-designation {
-      font-family: var(--font-body);
+      font-family: 'Roboto', sans-serif;;
       font-size: 14px;
       font-weight: 700;
       color: #333;
@@ -1115,7 +1242,7 @@
     }
 
     .our-values__title {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 24px;
       font-weight: 800;
       color: #222222;
@@ -1127,7 +1254,7 @@
     }
 
     .our-values__body {
-      font-family: var(--font-body);
+      font-family: 'Roboto', sans-serif;;
       font-size: 18px;
       line-height: 1.75;
       color: #252525;
@@ -1177,7 +1304,7 @@
     overflow: hidden;
 
     .common-section-title {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: clamp(28px, 4vw, 48px);
       font-weight: 400;
       color: #222;
@@ -1194,15 +1321,16 @@
       // aspect-ratio: 16 / 10;
       overflow: hidden;
       border-radius: 10px;
+          height: 360px;
 
       @media (max-width: 768px) {
         border-radius: 0;
       }
 
       img {
-        // width: 100%;
-        // height: 100%;
-        // object-fit: cover;
+         width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: block;
         transition: transform 0.5s ease;
       }
@@ -1287,7 +1415,7 @@
     }
 
     .locations__heading {
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: clamp(32px, 4vw, 52px);
       font-weight: 300;
       color: #222;
@@ -1296,7 +1424,7 @@
     }
 
     .locations__subtitle {
-      font-family: var(--font-body);
+      font-family: 'Roboto', sans-serif;;
       font-size: 16px;
       line-height: 1.7;
       color: #555;
@@ -1349,7 +1477,7 @@
       align-items: center;
       justify-content: start;
       gap: 6px;
-      font-family: var(--font-display);
+      font-family: 'Raleway', sans-serif;
       font-size: 14px;
       font-weight: 600;
       color: #444;
@@ -1404,6 +1532,18 @@
         max-width: none;
         margin: 0;
       }
+    }
+  }
+
+  .career-disclaimer {
+    
+    text-align: center;
+    margin-top: 35px;
+    font-weight: 500;
+    font-size: 14px;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
     }
   }
 }
