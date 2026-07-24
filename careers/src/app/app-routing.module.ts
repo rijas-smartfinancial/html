@@ -5,7 +5,7 @@ import { CareersComponent } from './careers/careers.component';
 import { AgentsComponent } from './agents/agents.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'careers', pathMatch: 'full' },
+  { path: '', redirectTo: 'agents', pathMatch: 'full' },
   { path: 'careers', component: CareersComponent },
   { path: 'agents', component: AgentsComponent },
 ];

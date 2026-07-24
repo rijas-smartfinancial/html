@@ -1,1 +1,381 @@
-<p>agents works!</p>
+<main class="agents-page">
+  <section class="agents-hero">
+    <div class="agents-hero__container">
+
+      <div class="agents-hero__eyebrow">
+        <svg class="agents-hero__shield" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2.5l7.5 3v6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10v-6l7.5-3z" stroke="currentColor"
+            stroke-width="1.8" stroke-linejoin="round" />
+          <path d="M8.75 12l2.25 2.25 4.25-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <span class="agents-hero__eyebrow-highlight">10k+ Active Agents</span>
+        <span class="agents-hero__eyebrow-text">are using SmartFinancial</span>
+        <span class="agents-hero__stars" aria-label="5 out of 5 stars">
+          <svg *ngFor="let star of [1,2,3,4,5]" class="agents-hero__star" width="16" height="16" viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.6 5.9 21l1.5-6.8-5.2-4.7 6.9-.7L12 2.5z"
+              fill="currentColor" />
+          </svg>
+        </span>
+      </div>
+
+      <h1 class="agents-hero__headline">
+        The Insurance Growth Platform Built for
+        <span class="agents-hero__headline-gradient">Agents and Carriers</span>
+      </h1>
+
+      <p class="agents-hero__sub">
+        SmartFinancial connects insurance agents and carriers with verified, high-intent consumers
+        actively shopping for coverage.
+      </p>
+
+      <a href="#" class="agents-hero__cta">Talk to Sales &amp; Get Pricing</a>
+
+    </div>
+  </section>
+
+  <section class="agents-trust">
+    <div class="agents-trust__container">
+
+      <h2 class="agents-trust__heading">
+        The #1 <span class="agents-trust__highlight">Fastest</span> Growing Insurance Marketing Platform
+      </h2>
+
+      <!-- <div class="agents-trust__logos">
+      <img src="assets/images/agents/partners.png" alt="Logo 1" class="agents-trust__logo" />
+    </div> -->
+      <div class="agents-carriers">
+        <div class="agents-carriers__container">
+          <div init="false" class="agents-carriers__swiper">
+            <div *ngFor="let carrier of carriers" class="agents-carriers__slide">
+              <img class="agents-carriers__logo" [src]="'assets/images/company/' + carrier.src" [alt]="carrier.alt"
+                loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="agents-trust__container">
+        <div class="agents-trust__stats">
+
+          <div class="agents-trust__stat">
+            <svg class="age" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.5 22.5H7.5V31.5H4.5V22.5ZM10.5 19.5H13.5V31.5H10.5V19.5ZM16.5 18H19.5V31.5H16.5V18ZM22.5 19.5H25.5V31.5H22.5V19.5ZM28.5 12H31.5V31.5H28.5V12Z"
+                fill="#E83889" />
+              <path
+                d="M28.8149 3.57001L21.5099 12.885L14.0099 6.88501L4.81494 18.57L7.18494 20.43L14.4899 11.115L21.9899 17.115L31.1849 5.43001L28.8149 3.57001Z"
+                fill="#E83889" />
+            </svg>
+
+            <div class="agents-trust__stat-value">35%</div>
+            <p class="agents-trust__stat-label">Higher Close Rate vs. Competitor Shared Leads</p>
+          </div>
+
+          <div class="agents-trust__stat">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6 12C6 15.42 8.58 18 12 18C15.42 18 18 15.42 18 12C18 8.58 15.42 6 12 6C8.58 6 6 8.58 6 12ZM15 12C15 13.77 13.77 15 12 15C10.23 15 9 13.77 9 12C9 10.23 10.23 9 12 9C13.77 9 15 10.23 15 12ZM4.5 30H19.5C20.325 30 21 29.325 21 28.5V27C21 22.86 17.64 19.5 13.5 19.5H10.5C6.36 19.5 3 22.86 3 27V28.5C3 29.325 3.675 30 4.5 30ZM10.5 22.5H13.5C15.975 22.5 18 24.525 18 27H6C6 24.525 8.025 22.5 10.5 22.5ZM18.435 17.565L22.935 22.065C23.235 22.365 23.61 22.5 24 22.5C24.39 22.5 24.765 22.35 25.065 22.065L32.565 14.565L30.45 12.45L24.015 18.885L20.58 15.45L18.465 17.565H18.435Z"
+                fill="#E83889" />
+            </svg>
+
+            <div class="agents-trust__stat-value">1.5M</div>
+            <p class="agents-trust__stat-label">Number of Leads Produced Per Month</p>
+          </div>
+
+          <div class="agents-trust__stat">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M30.6299 9.16501L18.6749 3.16501C18.2549 2.95501 17.7449 2.95501 17.3249 3.16501L5.36991 9.16501C4.90491 9.39001 4.60491 9.84001 4.54491 10.35C4.52991 10.515 3.10491 26.49 17.3699 32.865C17.5628 32.9538 17.7726 32.9998 17.9849 32.9998C18.1972 32.9998 18.4071 32.9538 18.5999 32.865C32.8649 26.49 31.4549 10.5 31.4249 10.35C31.401 10.0982 31.3125 9.85682 31.1679 9.64923C31.0234 9.44164 30.8278 9.27486 30.5999 9.16501H30.6299ZM17.9999 29.85C7.88991 24.945 7.40991 14.46 7.49991 11.46L17.9999 6.19501L28.4999 11.46C28.5599 14.445 28.0049 24.99 17.9999 29.85Z"
+                fill="#E83889" />
+              <path
+                d="M16.5001 18.885L14.5651 16.935L12.4351 19.065L16.5001 23.115L23.5651 16.065L21.4351 13.935L16.5001 18.885Z"
+                fill="#E83889" />
+            </svg>
+
+            <div class="agents-trust__stat-value">100%</div>
+            <p class="agents-trust__stat-label">Consent Verified &amp; TCPA Compliant</p>
+          </div>
+
+          <div class="agents-trust__stat">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18 3C9.735 3 3 9.735 3 18C3 26.265 9.735 33 18 33C26.265 33 33 26.265 33 18C33 9.735 26.265 3 18 3ZM29.25 13.86C27.675 13.185 25.71 12.705 23.61 12.405C23.31 10.305 22.83 8.34 22.155 6.765C25.44 7.98 28.035 10.59 29.25 13.86ZM23.925 20.52C23.97 19.68 24 18.84 24 18C24 17.16 23.97 16.32 23.925 15.48C27.93 16.185 30 17.46 30 18C30 18.54 27.915 19.815 23.925 20.52ZM18 30C17.46 30 16.185 27.915 15.48 23.925C16.32 23.97 17.16 24 18 24C18.84 24 19.68 23.97 20.52 23.925C19.815 27.93 18.54 30 18 30ZM18 21C16.965 21 16.005 20.955 15.105 20.895C15.03 19.995 15 19.035 15 18C15 16.965 15.045 16.005 15.105 15.105C16.005 15.03 16.965 15 18 15C19.035 15 19.995 15.045 20.895 15.105C20.97 16.005 21 16.965 21 18C21 19.035 20.955 19.995 20.895 20.895C19.995 20.97 19.035 21 18 21ZM6 18C6 17.46 8.085 16.185 12.075 15.48C12.03 16.32 12 17.16 12 18C12 18.84 12.03 19.68 12.075 20.52C8.07 19.815 6 18.54 6 18ZM18 6C18.54 6 19.815 8.085 20.52 12.075C19.68 12.03 18.84 12 18 12C17.16 12 16.32 12.03 15.48 12.075C16.185 8.07 17.46 6 18 6ZM13.86 6.75C13.185 8.325 12.705 10.29 12.405 12.39C10.305 12.69 8.34 13.17 6.765 13.845C7.36902 12.2224 8.31533 10.7489 9.5396 9.5246C10.7639 8.30033 12.2374 7.35402 13.86 6.75ZM6.765 22.14C8.34 22.815 10.305 23.295 12.405 23.595C12.705 25.695 13.185 27.66 13.86 29.235C12.2374 28.631 10.7639 27.6847 9.5396 26.4604C8.31533 25.2361 7.36902 23.7626 6.765 22.14ZM22.155 29.235C22.83 27.66 23.31 25.695 23.61 23.595C25.71 23.295 27.675 22.815 29.25 22.14C28.646 23.7626 27.6997 25.2361 26.4754 26.4604C25.2511 27.6847 23.7776 28.631 22.155 29.235Z"
+                fill="#E83889" />
+            </svg>
+
+            <div class="agents-trust__stat-value">10K+</div>
+            <p class="agents-trust__stat-label">Active Agents on Our Nationwide network</p>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section class="agents-how">
+    <div class="agents-how__container">
+      <span class="agents-how__eyebrow">How It Works</span>
+      <h2 class="agents-how__heading">How SmartFinancial Insurance Marketplace Works</h2>
+      <p class="agents-how__sub">A streamlined process that connects you with high-intent consumers ready to shop for
+        coverage.</p>
+
+      <div class="agents-how__steps">
+        <div class="agents-how__step">
+          <div class="agents-how__step-number">1</div>
+          <h3 class="agents-how__step-title">Consumer Shops</h3>
+          <p class="agents-how__step-text">A high-intent consumer submits a quote request on SmartFinancial and is asked
+            to complete a detailed application including information about their current coverage and contact
+            information.</p>
+        </div>
+
+        <div class="agents-how__step">
+          <div class="agents-how__step-number">2</div>
+          <h3 class="agents-how__step-title">Platform Matches</h3>
+          <p class="agents-how__step-text">Our SmartMatch system validates and filters the opportunity and finds the
+            best agent fit based on expertise and location.</p>
+        </div>
+
+        <div class="agents-how__step">
+          <div class="agents-how__step-number">3</div>
+          <h3 class="agents-how__step-title">You Connect &amp; Close</h3>
+          <p class="agents-how__step-text">A real-time lead or live transfer is delivered instantly based on your
+            appetite and preferences. Quote and convert with a complete consumer profile and intent data at your
+            fingertips.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="agents-sourcing">
+    <div class="agents-sourcing__container">
+
+      <div class="agents-sourcing__content">
+        <span class="agents-sourcing__eyebrow">Sourcing</span>
+
+        <h2 class="agents-sourcing__heading">
+          Data-Driven Sourcing
+          <span class="agents-sourcing__eq" aria-hidden="true"><i></i><i></i></span>
+          <br />
+          Better Prospects
+        </h2>
+
+        <p class="agents-sourcing__sub">
+          Utilizing SEO, SEM, and AI technology, SmartFinancial invests hundreds of millions of dollars a year in
+          finding and sourcing the best, high-quality traffic for our insurance partners. SmartFinancial owns and
+          generates traffic from some of the most powerful, top-rated consumer insurance properties online.
+        </p>
+
+        <div class="agents-sourcing__logos">
+          <img src="assets/images/agents/sourcing-logos.png" alt="Agents Sourcing" class="agents-sourcing__logos" />
+        </div>
+      </div>
+
+      <div class="agents-sourcing__visual">
+        <img src="assets/images/agents/sourcing-img.png" alt="Agents Sourcing" class="agents-sourcing__visual-image" />
+      </div>
+
+    </div>
+    <!---->
+    <div class="agents-sourcing__container">
+      <div class="agents-sourcing__visual">
+        <img src="assets/images/agents/agents-platform-img.png" alt="Agents Sourcing"
+          class="agents-sourcing__visual-image" />
+      </div>
+
+      <div class="agents-sourcing__content">
+        <span class="agents-sourcing__eyebrow">Platform</span>
+
+        <h2 class="agents-sourcing__heading">
+          SmartFinancial Technology Platform
+
+        </h2>
+
+        <p class="agents-sourcing__sub">
+          Our platform enables unprecedented targeting precision. As an agent, you can set your own targeting filters
+          and define the types of prospects you want to receive, ensuring control over your business growth strategy.
+          Use our CPA calculator and track the conversion rate of prospects from quote to bind.
+        </p>
+
+        <div class="agents-sourcing__features">
+          <div class="agents-sourcing__feature">
+            <svg class="agents-sourcing__feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"
+                fill="#E83889" />
+              <path
+                d="M13 4.07V2H11V4.07C9.23998 4.29319 7.60408 5.0951 6.34959 6.34959C5.0951 7.60408 4.29319 9.23998 4.07 11H2V13H4.07C4.29319 14.76 5.0951 16.3959 6.34959 17.6504C7.60408 18.9049 9.23998 19.7068 11 19.93V22H13V19.93C14.76 19.7068 16.3959 18.9049 17.6504 17.6504C18.9049 16.3959 19.7068 14.76 19.93 13H22V11H19.93C19.7068 9.23998 18.9049 7.60408 17.6504 6.34959C16.3959 5.0951 14.76 4.29319 13 4.07ZM12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C15.31 6 18 8.69 18 12C18 15.31 15.31 18 12 18Z"
+                fill="#E83889" />
+            </svg>
+
+            <span class="agents-sourcing__feature-text">Custom Targeting Filters</span>
+          </div>
+
+          <div class="agents-sourcing__feature">
+            <svg class="agents-sourcing__feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 11H9C10.1 11 11 10.1 11 9V4C11 2.9 10.1 2 9 2H4C2.9 2 2 2.9 2 4V9C2 10.1 2.9 11 4 11ZM4 4H9V9H4V4ZM15 13C13.9 13 13 13.9 13 15V20C13 21.1 13.9 22 15 22H20C21.1 22 22 21.1 22 20V15C22 13.9 21.1 13 20 13H15ZM15 20V15H20V20H15ZM4 20H7V22L11 19L7 16V18H4V13H2V18C2 19.1 2.9 20 4 20ZM22 6C22 4.9 21.1 4 20 4H17V2L13 5L17 8V6H20V11H22V6Z"
+                fill="#E83889" />
+            </svg>
+
+            <span class="agents-sourcing__feature-text">Precise Prospect Matching</span>
+          </div>
+
+          <div class="agents-sourcing__feature">
+            <svg class="agents-sourcing__feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19 2H5C3.9 2 3 2.9 3 4V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V4C21 2.9 20.1 2 19 2ZM5 20V4H19V20H5Z"
+                fill="#E83889" />
+              <path
+                d="M7 12H9V14H7V12ZM7 16H9V18H7V16ZM11 12H13V14H11V12ZM7 6H17V10H7V6ZM11 16H13V18H11V16ZM15 12H17V18H15V12Z"
+                fill="#E83889" />
+            </svg>
+
+            <span class="agents-sourcing__feature-text">CPA Calculator</span>
+          </div>
+
+          <div class="agents-sourcing__feature">
+            <svg class="agents-sourcing__feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
+                fill="#E83889" />
+              <path
+                d="M12 11C10 11 10 10.37 10 10C10 9.52 10.7 9 12 9C13.18 9 13.39 9.64 13.4 10.02L14.4 10H15.4C15.4 8.97 14.73 7.53 13 7.12V6H11V7.09C9.03 7.42 8 8.72 8 10C8 11.12 8.52 13 12 13C14 13 14 13.68 14 14C14 14.42 13.38 15 12 15C10.16 15 10.01 14.14 10 14H8C8 14.92 8.66 16.55 11 16.92V18H13V16.91C14.97 16.58 16 15.28 16 14C16 12.88 15.48 11 12 11Z"
+                fill="#E83889" />
+            </svg>
+
+            <span class="agents-sourcing__feature-text">Quote to Bind Tracker</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="agents-delivery">
+    <div class="agents-delivery__container">
+      <span class="agents-delivery__eyebrow">Delivery</span>
+      <h2 class="agents-delivery__heading">Insurance Leads &amp; Live Call Transfers</h2>
+      <p class="agents-delivery__sub">Smartfinancial delivers opportunities to you through your preferred method.</p>
+      <div class="agents-delivery__cards">
+        <div class="agents-delivery__card">
+        <img src="assets/images/agents/delivery-leads.jpg"
+          alt="Agent reviewing a high-intent insurance lead on his phone" class="agents-delivery__card-image" />
+        <div class="agents-delivery__card-overlay"></div>
+
+        <div class="agents-delivery__card-content">
+          <h3 class="agents-delivery__card-title">
+            <svg class="agents-delivery__card-title-icon" width="36" height="36" viewBox="0 0 36 36" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.00006 12.1351L4.06506 10.1851L1.93506 12.3151L6.00006 16.3651L13.0651 9.31506L10.9351 7.18506L6.00006 12.1351ZM6.00006 24.1351L4.06506 22.1851L1.93506 24.3151L6.00006 28.3651L13.0651 21.3151L10.9351 19.1851L6.00006 24.1351ZM15.0001 22.5001H33.0001V25.5001H15.0001V22.5001ZM15.0001 10.5001H33.0001V13.5001H15.0001V10.5001Z"
+                fill="#E83889" />
+            </svg>
+
+            High-Intent Insurance Leads
+          </h3>
+
+          <p class="agents-delivery__card-text">
+            We find, verify and deliver the highest intent insurance leads. Our proprietary customer acquisition
+            system captures consumer data, verifies accuracy and intent and delivers high-intent leads directly to
+            your agency.
+          </p>
+
+          <ul class="agents-delivery__card-list">
+            <li>
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96436 13.3462L5.3082 16.6667L14.0358 8" stroke="#E83889" stroke-width="3.33333"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Real-Time Verified Consumers
+            </li>
+            <li>
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96436 13.3462L5.3082 16.6667L14.0358 8" stroke="#E83889" stroke-width="3.33333"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Verified Consumer Data
+            </li>
+            <li>
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96436 13.3462L5.3082 16.6667L14.0358 8" stroke="#E83889" stroke-width="3.33333"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Filter &amp; Targeting Options
+            </li>
+          </ul>
+
+          <a href="#" class="agents-delivery__card-cta">Learn More</a>
+        </div>
+      </div>
+
+       <div class="agents-delivery__card">
+        <img src="assets/images/agents/delivery-leads.jpg"
+          alt="Agent reviewing a high-intent insurance lead on his phone" class="agents-delivery__card-image" />
+        <div class="agents-delivery__card-overlay"></div>
+
+        <div class="agents-delivery__card-content">
+          <h3 class="agents-delivery__card-title">
+            <svg class="agents-delivery__card-title-icon" width="36" height="36" viewBox="0 0 36 36" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.00006 12.1351L4.06506 10.1851L1.93506 12.3151L6.00006 16.3651L13.0651 9.31506L10.9351 7.18506L6.00006 12.1351ZM6.00006 24.1351L4.06506 22.1851L1.93506 24.3151L6.00006 28.3651L13.0651 21.3151L10.9351 19.1851L6.00006 24.1351ZM15.0001 22.5001H33.0001V25.5001H15.0001V22.5001ZM15.0001 10.5001H33.0001V13.5001H15.0001V10.5001Z"
+                fill="#E83889" />
+            </svg>
+
+            High-Intent Insurance Leads
+          </h3>
+
+          <p class="agents-delivery__card-text">
+            We find, verify and deliver the highest intent insurance leads. Our proprietary customer acquisition
+            system captures consumer data, verifies accuracy and intent and delivers high-intent leads directly to
+            your agency.
+          </p>
+
+          <ul class="agents-delivery__card-list">
+            <li>
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96436 13.3462L5.3082 16.6667L14.0358 8" stroke="#E83889" stroke-width="3.33333"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Real-Time Verified Consumers
+            </li>
+            <li>
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96436 13.3462L5.3082 16.6667L14.0358 8" stroke="#E83889" stroke-width="3.33333"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Verified Consumer Data
+            </li>
+            <li>
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96436 13.3462L5.3082 16.6667L14.0358 8" stroke="#E83889" stroke-width="3.33333"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Filter &amp; Targeting Options
+            </li>
+          </ul>
+
+          <a href="#" class="agents-delivery__card-cta">Learn More</a>
+        </div>
+      </div>
+      </div>
+
+      </div>
+    
+  </section>
+
+</main>
