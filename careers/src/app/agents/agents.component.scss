@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__shield {
-    color: #E73989;
+    color: #E83889;
     flex-shrink: 0;
   }
 
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 
   &__headline-gradient {
     display: block;
-    background: linear-gradient(90deg, #E73989 0%, #7f39de 100%);
+    background: linear-gradient(90deg, #E83889 0%, #7f39de 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
     font-weight: 700;
     color: #fff;
-    background: #E73989;
+    background: #E83889;
     border-radius: 8px;
     padding: 16px 32px;
     text-decoration: none;
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 
   &__highlight {
     position: relative;
-    color: #E73989;
+    color: #E83889;
 
     &::after {
       content: '';
@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
       bottom: -4px;
       height: 4px;
       border-radius: 0;
-      background: #E73989;
+      background: #E83889;
     }
   }
 
@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__stat-icon {
-    color: #E73989;
+    color: #E83889;
     margin-bottom: 14px;
   }
 
@@ -423,7 +423,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     font-weight: 700;
     font-size: 14px;
-    color: #E73989;
+    color: #E83889;
     margin-bottom: 14px;
   }
 
@@ -446,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       width: 26px;
       height: 6px;
-      background: #E73989;
+      background: #E83889;
       font-style: normal;
     }
   }
@@ -587,7 +587,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     font-weight: 700;
     font-size: 14px;
-    color: #E73989;
+    color: #E83889;
     margin-bottom: 10px;
   }
 
@@ -638,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #E73989;
+    background: #E83889;
     color: #fff;
     font-weight: 700;
     font-size: 15px;
@@ -697,7 +697,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     font-weight: 700;
     font-size: 14px;
-    color: #E73989;
+    color: #E83889;
     margin-bottom: 10px;
   }
 
@@ -848,6 +848,129 @@ h1, h2, h3, h4, h5, h6 {
 
     &__card-text {
       max-width: none;
+    }
+  }
+}
+
+// =============================================================================
+// Agents Why — "Why Agents Choose SmartFinancial" feature cards
+// =============================================================================
+
+.agents-why {
+  background: #FFF;
+  padding: 72px 24px;
+  text-align: center;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: #E83889;
+    margin-bottom: 12px;
+  }
+
+  &__heading {
+    font-size: clamp(28px, 3.6vw, 36px);
+    font-weight: 800;
+    color: #333;
+    margin: 0 0 12px;
+  }
+
+  &__sub {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 760px;
+    margin: 0 auto 48px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background: #fff;
+    border-radius: 24px;
+    padding: 36px 24px;
+    box-shadow: 0px 0px 20px 0px #00000026;
+    opacity: 0;
+    will-change: transform, opacity;
+
+    &.is-visible {
+      animation: agentsTrustFadeUp 0.7s ease forwards;
+    }
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}).is-visible {
+        animation-delay: ($i - 1) * 0.12s;
+      }
+    }
+  }
+
+  &__card-icon {
+    margin-bottom: 16px;
+  }
+
+  &__card-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #333;
+    margin: 0 0 20px;
+  }
+
+  &__card-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  // ── Responsive ───────────────────────────────────────────────────────────
+
+  @media (max-width: 992px) {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    padding: 56px 20px 64px;
+
+    &__sub {
+      margin-bottom: 36px;
+    }
+
+    &__cards {
+      gap: 20px;
+    }
+
+    &__card {
+      padding: 28px 24px;
     }
   }
 }

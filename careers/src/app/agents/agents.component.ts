@@ -34,7 +34,7 @@ export class AgentsComponent implements AfterViewInit {
   }
 
   private observeTrustStats(): void {
-    const stats = document.querySelectorAll('.agents-trust__stat, .agents-how__step, [class*="__heading"]');
+    const stats = document.querySelectorAll('.agents-trust__stat, .agents-how__step, .agents-why__card, [class*="__heading"]');
     if (!stats.length) {
       return;
     }
