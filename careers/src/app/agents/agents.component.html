@@ -489,4 +489,50 @@
     </div>
   </section>
 
+  <section class="agents-stories">
+    <div class="agents-stories__container">
+      <span class="agents-stories__eyebrow">Success Stories</span>
+      <h2 class="agents-stories__heading">Real Results From Real Agents</h2>
+
+      <div class="agents-stories__cards">
+        <div class="agents-stories__card" *ngFor="let story of successStories">
+          <div class="agents-stories__card-header">
+            <div class="agents-stories__avatar">{{ story.initials }}</div>
+            <div>
+              <h3 class="agents-stories__name">{{ story.name }}</h3>
+              <p class="agents-stories__company">{{ story.company }}</p>
+            </div>
+          </div>
+
+          <p class="agents-stories__quote">{{ story.quote }}</p>
+
+          <ul class="agents-stories__points">
+            <li *ngFor="let point of story.points">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96436 13.3462L5.3082 16.6667L14.0358 8" stroke="#E83889" stroke-width="3.33333"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              {{ point }}
+            </li>
+          </ul>
+
+          <a href="#" class="agents-stories__read-more">Read More</a>
+        </div>
+      </div>
+
+      <div class="agents-stories__reviews">
+        <div class="agents-stories__review" *ngFor="let review of reviews">
+          <div class="agents-stories__review-stars" aria-label="5 out of 5 stars">
+            <svg *ngFor="let star of [1,2,3,4,5]" width="16" height="16" viewBox="0 0 24 24">
+              <path d="M12 2.5l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.6 5.9 21l1.5-6.8-5.2-4.7 6.9-.7L12 2.5z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <p class="agents-stories__review-quote">{{ review.quote }}</p>
+          <p class="agents-stories__review-name">{{ review.name }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
