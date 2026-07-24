@@ -1,0 +1,89 @@
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="site-footer__cta">
+      <div class="site-footer__cta-copy">
+        <h2 class="site-footer__heading">
+          Join the #1 <span class="site-footer__heading-highlight">Insurance Marketplace</span>
+        </h2>
+        <p class="site-footer__subtext">
+          10,000 Insurance providers use SmartFinancial to grow their business.<br />
+          Speak with one of our reps to get pricing <a href="tel:{{ phone }}">{{ phone }}</a>
+        </p>
+      </div>
+
+      <a href="#" class="btn btn-primary site-footer__cta-btn">Get Started</a>
+    </div>
+
+    <div class="site-footer__main">
+      <div class="site-footer__brand">
+        <img src="/assets/images/pig.png" alt="SmartFinancial" class="site-footer__logo" />
+      </div>
+
+      <nav class="site-footer__column" *ngFor="let column of columns">
+        <h4 class="site-footer__column-title">{{ column.title }}</h4>
+        <ul class="site-footer__links">
+          <li *ngFor="let link of column.links">
+            <a [href]="link.href">{{ link.label }}</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__social">
+        <h4 class="site-footer__column-title">Follow Us</h4>
+        <div class="site-footer__social-icons">
+          <a *ngFor="let social of socialLinks" [href]="social.href" [attr.aria-label]="social.label"
+            class="site-footer__social-icon">
+
+            <svg *ngIf="social.icon === 'facebook'" width="14" height="14" viewBox="0 0 14 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_4790_976)">
+                <path
+                  d="M10.5493 7.875L10.9381 5.34133H8.50701V3.69715C8.50701 3.00398 8.84662 2.32832 9.93545 2.32832H11.0407V0.171172C11.0407 0.171172 10.0377 0 9.07877 0C7.07666 0 5.76799 1.21352 5.76799 3.41031V5.34133H3.54248V7.875H5.76799V14H8.50701V7.875H10.5493Z"
+                  fill="#2A3042" />
+              </g>
+              <defs>
+                <clipPath id="clip0_4790_976">
+                  <rect width="14" height="14" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+
+            <svg *ngIf="social.icon === 'x'" width="14" height="14" viewBox="0 0 14 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.98807 6.08118L12.3593 1H11.3234L7.52792 5.41192L4.49645 1H1L5.58418 7.6716L1 13H2.0359L6.04407 8.34086L9.24552 13H12.742L7.98781 6.08118H7.98807ZM6.56927 7.73038L6.10479 7.06604L2.40914 1.77981H4.00022L6.98265 6.04596L7.44712 6.71031L11.3239 12.2557H9.73286L6.56927 7.73063V7.73038Z"
+                fill="#2A3042" />
+            </svg>
+
+
+            <svg *ngIf="social.icon === 'linkedin'" width="14" height="14" viewBox="0 0 14 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.77848 12.8332H1.35921V5.04411H3.77848V12.8332ZM2.56755 3.98161C1.79411 3.98161 1.1665 3.34098 1.1665 2.56755C1.1665 2.19515 1.31494 1.84098 1.57796 1.57796C1.84098 1.31494 2.19775 1.1665 2.56755 1.1665C2.93734 1.1665 3.29411 1.31494 3.55713 1.57796C3.82015 1.84098 3.96859 2.19775 3.96859 2.56755C3.96859 3.34098 3.34098 3.98161 2.56755 3.98161ZM12.8306 12.8332H10.4165V9.0415C10.4165 8.13786 10.3983 6.979 9.15869 6.979C7.90088 6.979 7.70817 7.96078 7.70817 8.9764V12.8332H5.2915V5.04411H7.61182V6.10661H7.64567C7.96859 5.49463 8.75765 4.8488 9.93473 4.8488C12.3827 4.8488 12.8332 6.46078 12.8332 8.55453V12.8332H12.8306Z"
+                fill="#2A3042" />
+            </svg>
+
+
+            <svg *ngIf="social.icon === 'youtube'" width="14" height="14" viewBox="0 0 14 14" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.7075 3.87371C13.5464 3.26745 13.072 2.78997 12.4697 2.62794C11.3779 2.3335 7 2.3335 7 2.3335C7 2.3335 2.6221 2.3335 1.53029 2.62794C0.927952 2.79 0.453555 3.26745 0.292544 3.87371C0 4.97259 0 7.26531 0 7.26531C0 7.26531 0 9.55803 0.292544 10.6569C0.453555 11.2632 0.927952 11.7208 1.53029 11.8828C2.6221 12.1772 7 12.1772 7 12.1772C7 12.1772 11.3779 12.1772 12.4697 11.8828C13.072 11.7208 13.5464 11.2632 13.7075 10.6569C14 9.55803 14 7.26531 14 7.26531C14 7.26531 14 4.97259 13.7075 3.87371ZM5.56817 9.34693V5.18369L9.22725 7.26536L5.56817 9.34693Z"
+                fill="#2A3042" />
+            </svg>
+
+
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="site-footer__disclaimer">
+      As part of our ongoing effort to provide you with the best possible service, SmartFinancial and its Service
+      Providers may monitor and/or record and retain all activity on this website and its applicable links, for
+      informational and quality control purposes.
+    </p>
+
+  </div>
+</footer>
