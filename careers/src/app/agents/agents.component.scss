@@ -980,8 +980,8 @@ h1, h2, h3, h4, h5, h6 {
 // =============================================================================
 
 .agents-stories {
-  background: #2A3042;
-  padding: 80px 24px 96px;
+  background: #FFF;
+  padding: 72px 24px;
   text-align: center;
 
   &__container {
@@ -1000,7 +1000,7 @@ h1, h2, h3, h4, h5, h6 {
   &__heading {
     font-size: clamp(28px, 3.6vw, 36px);
     font-weight: 800;
-    color: #fff;
+    color: #333;
     margin: 0 0 48px;
   }
 
@@ -1009,8 +1009,9 @@ h1, h2, h3, h4, h5, h6 {
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 48px;
     margin-bottom: 64px;
+    
   }
 
   &__card {
@@ -1020,7 +1021,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     background: #fff;
     border-radius: 24px;
-    padding: 36px;
+    padding: 32px;
+    box-shadow: 0px 0px 20px 0px #00000026;
     opacity: 0;
     will-change: transform, opacity;
 
@@ -1047,34 +1049,36 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: linear-gradient(135deg, #E83889 0%, #7f39de 100%);
     color: #fff;
     font-weight: 800;
     font-size: 20px;
+    overflow: hidden;
   }
 
   &__name {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 800;
     color: #333;
     margin: 0 0 4px;
   }
 
   &__company {
-    font-size: 15px;
-    color: #777;
+    font-size: 18px;
+    color: #333;
     margin: 0;
   }
 
   &__quote {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.5;
     color: #333;
     margin: 0 0 24px;
+    text-align: center;
   }
 
   &__points {
@@ -1083,7 +1087,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
 
     li {
       display: flex;
@@ -1099,7 +1103,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__read-more {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
     color: #E83889;
     text-decoration: none;
@@ -1127,16 +1131,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__review-quote {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.75);
+    color: #333;
     margin: 0 0 12px;
   }
 
   &__review-name {
     font-weight: 700;
-    font-size: 15px;
-    color: #fff;
+    font-size: 16px;
+    color: #333;
     margin: 0;
   }
 

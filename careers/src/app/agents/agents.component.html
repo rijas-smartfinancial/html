@@ -497,7 +497,9 @@
       <div class="agents-stories__cards">
         <div class="agents-stories__card" *ngFor="let story of successStories">
           <div class="agents-stories__card-header">
-            <div class="agents-stories__avatar">{{ story.initials }}</div>
+            <div class="agents-stories__avatar">
+              <img src="{{ story.avatar }}" alt="{{ story.name }}" class="agents-stories__avatar-image" />
+             </div>
             <div>
               <h3 class="agents-stories__name">{{ story.name }}</h3>
               <p class="agents-stories__company">{{ story.company }}</p>
@@ -523,10 +525,15 @@
       <div class="agents-stories__reviews">
         <div class="agents-stories__review" *ngFor="let review of reviews">
           <div class="agents-stories__review-stars" aria-label="5 out of 5 stars">
-            <svg *ngFor="let star of [1,2,3,4,5]" width="16" height="16" viewBox="0 0 24 24">
-              <path d="M12 2.5l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17.6 5.9 21l1.5-6.8-5.2-4.7 6.9-.7L12 2.5z"
-                fill="currentColor" />
+            <svg width="91" height="16" viewBox="0 0 91 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#F8C028"/>
+              <path d="M26.6665 0L29.0176 4.76393L34.275 5.52786L30.4707 9.23607L31.3688 14.4721L26.6665 12L21.9642 14.4721L22.8623 9.23607L19.0581 5.52786L24.3154 4.76393L26.6665 0Z" fill="#F8C028"/>
+              <path d="M45.3335 0L47.6846 4.76393L52.9419 5.52786L49.1377 9.23607L50.0358 14.4721L45.3335 12L40.6312 14.4721L41.5293 9.23607L37.725 5.52786L42.9824 4.76393L45.3335 0Z" fill="#F8C028"/>
+              <path d="M64 0L66.3511 4.76393L71.6085 5.52786L67.8042 9.23607L68.7023 14.4721L64 12L59.2977 14.4721L60.1958 9.23607L56.3915 5.52786L61.6489 4.76393L64 0Z" fill="#F8C028"/>
+              <path d="M82.6665 0L85.0176 4.76393L90.275 5.52786L86.4707 9.23607L87.3688 14.4721L82.6665 12L77.9642 14.4721L78.8623 9.23607L75.0581 5.52786L80.3154 4.76393L82.6665 0Z" fill="#F8C028"/>
             </svg>
+
+
           </div>
           <p class="agents-stories__review-quote">{{ review.quote }}</p>
           <p class="agents-stories__review-name">{{ review.name }}</p>
