@@ -29,28 +29,12 @@ export class AgentsComponent implements AfterViewInit {
   ];
 
   ngAfterViewInit(): void {
-    // const carriersEl = this.carriersSwiperRef.nativeElement;
-    // Object.assign(carriersEl, {
-    //   modules: [Autoplay],
-    //   loop: true,
-    //   speed: 5000,
-    //   autoplay: {
-    //     delay: 0,
-    //     disableOnInteraction: false,
-    //     pauseOnMouseEnter: false,
-    //   },
-    //   breakpoints: {
-    //     0: { slidesPerView: 1, spaceBetween: 16, allowTouchMove: true, simulateTouch: true },
-    //     992: { slidesPerView: 3, spaceBetween: 40, allowTouchMove: false, simulateTouch: false },
-    //   },
-    // });
-    // carriersEl.initialize();
 
     this.observeTrustStats();
   }
 
   private observeTrustStats(): void {
-    const stats = document.querySelectorAll('.agents-trust__stat');
+    const stats = document.querySelectorAll('.agents-trust__stat, .agents-how__step, [class*="__heading"]');
     if (!stats.length) {
       return;
     }
