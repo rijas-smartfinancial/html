@@ -29,7 +29,7 @@ export class FooterComponent {
     {
       title: 'Company',
       links: [
-        { label: 'About', href: '#' },
+        { label: 'About', href: 'about' },
         { label: 'Carriers', href: '#' },
         { label: 'Resources', href: '#' },
         { label: 'Contact', href: '#' },

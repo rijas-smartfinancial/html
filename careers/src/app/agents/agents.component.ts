@@ -110,7 +110,7 @@ export class AgentsComponent implements AfterViewInit {
   }
 
   private observeTrustStats(): void {
-    const stats = document.querySelectorAll('.agents-trust__stat, .agents-how__step, .agents-why__card, .agents-stories__card, [class*="__heading"]');
+    const stats = document.querySelectorAll('.fadeUp, .zoomIn');
     if (!stats.length) {
       return;
     }
@@ -118,8 +118,12 @@ export class AgentsComponent implements AfterViewInit {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
+          const target = entry.target;
+          target.classList.add('is-visible');
+          target.addEventListener('animationend', () => {
+            target.classList.add('reveal-done');
+          }, { once: true });
+          obs.unobserve(target);
         }
       });
     }, { threshold: 0.2 });

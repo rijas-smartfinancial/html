@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CareersComponent } from './careers/careers.component';
 import { AgentsComponent } from './agents/agents.component';
+import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppComponent,
     CareersComponent,
     AgentsComponent,
+    AboutComponent,
     FooterComponent,
   ],
   imports: [
