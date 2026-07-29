@@ -139,7 +139,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       breakpoints: {
         0: { slidesPerView: 1.15, spaceBetween: 16 },
         576: { slidesPerView: 1.6, spaceBetween: 20 },
-        992: { slidesPerView: 3, spaceBetween: 48 },
+        992: { slidesPerView: 3, spaceBetween: 24 },
       },
     });
     swiperEl.initialize();

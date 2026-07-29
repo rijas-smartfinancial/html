@@ -181,6 +181,7 @@ $font-inter: 'Inter', sans-serif;
   &__slide {
     border-radius: 16px;
     overflow: hidden;
+    padding: 24px;
     aspect-ratio: 4 / 3;
         margin-bottom: 40px;
   }
@@ -190,6 +191,7 @@ $font-inter: 'Inter', sans-serif;
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 16px;
   }
 }
 
