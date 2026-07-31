@@ -1,0 +1,703 @@
+// =============================================================================
+// Overview Hero
+// =============================================================================
+
+$bp-md: 768px;
+
+$font-inter: "Inter", sans-serif;
+
+.overview-page {
+  font-family: $font-inter !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-inter;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.overview-hero {
+  background: #2a3042;
+  padding: 72px 24px;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  // ── Content ──────────────────────────────────────────────────────────────
+
+  &__content {
+    max-width: 560px;
+  }
+
+  &__headline {
+    font-size: clamp(32px, 4.4vw, 42px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+  }
+
+  &__headline-gradient {
+    background: linear-gradient(90deg, #b23fd0 0%, #e83889 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__sub {
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 480px;
+    margin: 0 0 32px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 0 40px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  &__cta {
+    display: inline-block;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #e83889;
+    border-radius: 8px;
+    padding: 16px 32px;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      background: #d42f7a;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  // ── Visual (circular framed photo + decorative accents) ────────────────────
+
+  &__visual {
+    position: relative;
+    flex-shrink: 0;
+    width: 420px;
+    height: 420px;
+  }
+
+  // &__frame {
+  //   width: 100%;
+  //   height: 100%;
+  //   border-radius: 50%;
+  //   padding: 6px;
+  //   background: linear-gradient(135deg, #e83889 0%, #7f39de 100%);
+  // }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background: #2a3042;
+  }
+
+  &__accent {
+    position: absolute;
+    height: 8px;
+    border-radius: 4px;
+
+    &--top {
+      top: 14%;
+      right: -32px;
+      width: 56px;
+      background: #7f39de;
+    }
+
+    &--left {
+      bottom: 6%;
+      left: -40px;
+      width: 40px;
+      background: #e83889;
+    }
+
+    &--bottom {
+      bottom: -2%;
+      left: -4px;
+      width: 64px;
+      background: #e83889;
+    }
+  }
+
+  // ── Responsive ───────────────────────────────────────────────────────────
+
+  @media (max-width: 992px) {
+    &__container {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__list {
+      align-items: center;
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    padding: 64px 20px;
+
+    &__visual {
+      width: 280px;
+      height: 280px;
+    }
+
+    &__sub {
+      font-size: 14px;
+    }
+  }
+}
+
+// =============================================================================
+// Overview Sales — "Power Your Insurance Sales"
+// =============================================================================
+
+.overview-sales {
+  background: #FFF;
+  padding: 72px 24px;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  // ── Visual ───────────────────────────────────────────────────────────────
+
+  &__visual {
+    flex: 0 0 46%;
+    max-width: 46%;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+
+  }
+
+  // ── Content ──────────────────────────────────────────────────────────────
+
+  &__content {
+    flex: 1;
+  }
+
+  &__heading {
+    font-size: clamp(28px, 3.6vw, 36px);
+    font-weight: 800;
+    color: #52565f;
+    margin: 0 0 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0 0 20px;
+
+    &--lead {
+      color: #333;
+    }
+  }
+
+  &__logos {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin-top: 32px;
+    opacity: 0.9;
+  }
+
+  // ── Responsive ───────────────────────────────────────────────────────────
+
+  @media (max-width: 992px) {
+    &__container {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__visual,
+    &__content {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    &__heading,
+    &__text {
+      text-align: center;
+    }
+
+    &__logos {
+      margin: 32px auto 0;
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    padding: 56px 20px;
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+
+
+// =============================================================================
+// Agents How It Works
+// =============================================================================
+
+.overview-how {
+  background: #fff;
+  padding: 72px 24px;
+  text-align: center;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: #e83889;
+    margin-bottom: 10px;
+  }
+
+  &__heading {
+    font-size: clamp(28px, 3.6vw, 36px);
+    font-weight: 800;
+    color: #333;
+    margin: 0 0 16px;
+  }
+
+  &__sub {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 auto 48px;
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: left;
+  }
+
+  &__step {
+    background: #2a3042;
+    border-radius: 16px;
+    padding: 32px;
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}).is-visible {
+        animation-delay: ($i - 1) * 0.12s;
+      }
+    }
+  }
+
+  &__step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e83889;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  &__step-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 12px;
+  }
+
+  &__step-text {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+  }
+
+  @media (max-width: 992px) {
+    &__steps {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    padding: 48px 12px;
+
+    &__sub {
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+
+    &__steps {
+      gap: 20px;
+    }
+  }
+}
+
+// =============================================================================
+// Overview Engineered — "Engineered for the Success of Insurance Agents"
+// =============================================================================
+
+.overview-engineered {
+  background: #fff;
+  padding: 72px 24px;
+
+  &__card {
+    max-width: 1160px;
+    margin: 0 auto;
+    background: #2a3042;
+    border-radius: 40px;
+    padding: 64px 56px;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: clamp(26px, 3.4vw, 34px);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 20px;
+  }
+
+  &__heading-gradient {
+    background: linear-gradient(90deg, #b23fd0 0%, #e83889 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__sub {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 780px;
+    margin: 0 auto 56px;
+  }
+
+  // ── Feature grid ─────────────────────────────────────────────────────────
+
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 32px;
+    text-align: left;
+    margin-bottom: 64px;
+  }
+
+  &__feature-icon {
+    flex-shrink: 0;
+    margin-bottom: 16px;
+  }
+
+  &__feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
+  }
+
+  &__feature-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+  }
+
+  // ── Nested panel: CRM integrations + compliance ─────────────────────────
+
+  &__panel {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 48px;
+  }
+
+  &__panel-heading {
+    font-size: clamp(22px, 2.6vw, 28px);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 10px;
+  }
+
+  &__panel-sub {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0 32px;
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+
+  &__logo-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+
+    img {
+      max-width: 100%;
+      max-height: 40px;
+      object-fit: contain;
+    }
+
+    &--more {
+      background: linear-gradient(135deg, #e83889 0%, #7f39de 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
+  &__divider {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin: 48px 0;
+  }
+
+  &__compliance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  &__compliance-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__compliance-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 16px;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__compliance-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
+  }
+
+  &__compliance-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+    max-width: 280px;
+  }
+
+  // ── Responsive ───────────────────────────────────────────────────────────
+
+  @media (max-width: 992px) {
+    &__card {
+      padding: 48px 32px;
+    }
+
+    &__features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__logos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__compliance {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    padding: 48px 12px;
+
+    &__card {
+      padding: 40px 20px;
+      border-radius: 28px;
+    }
+
+    &__sub {
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+
+    &__features {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    &__panel {
+      padding: 28px 20px;
+    }
+
+    &__logos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__divider {
+      margin: 32px 0;
+    }
+  }
+}
+
+// =============================================================================
+// Overview Learn — "Learn More About Our Insurance Leads"
+// =============================================================================
+
+.overview-learn {
+  background: #fff;
+  padding: 96px 24px;
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-size: clamp(28px, 3.6vw, 36px);
+    font-weight: 800;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0 0 56px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 64px;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0 0 12px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 340px;
+    margin: 0 0 16px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    color: #e83889;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // ── Responsive ───────────────────────────────────────────────────────────
+
+  @media (max-width: 992px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    padding: 48px 12px;
+
+    &__heading {
+      margin-bottom: 32px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    &__text {
+      max-width: none;
+    }
+  }
+}
