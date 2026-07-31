@@ -57,14 +57,20 @@ $font-inter: 'Inter', sans-serif;
 
 .about-hero {
   background: #2A3042;
-  padding: 96px 0 64px;
+  padding: 72px 0;
   font-family: $font-inter;
+  @media (max-width: $bp-md) {
+       padding: 48px 0;
+  }
 
   &__container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
     text-align: center;
+     @media (max-width: $bp-md) {
+       padding: 0 12px;
+    }
   }
 
   &__heading {
@@ -87,7 +93,7 @@ $font-inter: 'Inter', sans-serif;
 
     @media (max-width: $bp-md) {
       font-size: 16px;
-      margin-bottom: 36px;
+      margin-bottom: 24px;
     }
   }
 
@@ -101,11 +107,10 @@ $font-inter: 'Inter', sans-serif;
 
     @media (max-width: $bp-lg) {
       grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 48px;
+      gap: 12px;
     }
 
-    @media (max-width: 480px) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__stat {
@@ -115,6 +120,10 @@ $font-inter: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: $bp-lg) {
+      padding: 12px;
+    }
 
     @for $i from 1 through 4 {
       &:nth-child(#{$i}).is-visible {
@@ -146,14 +155,23 @@ $font-inter: 'Inter', sans-serif;
     color: #1a1a1a;
     line-height: 1.1;
     margin-bottom: 8px;
+    @media (max-width: $bp-lg) {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
   }
 
   &__stat-label {
     margin: 0;
-    font-size: 15px;
-    color: #666;
+    font-size: 16px;
+    color: #333;
     text-align: center;
     line-height: 1.4;
+    @media (max-width: $bp-lg) {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
   }
 
   // ── Photo swiper ─────────────────────────────────────────────────────────
@@ -165,6 +183,9 @@ $font-inter: 'Inter', sans-serif;
   &__swiper {
     width: 100%;
     padding-bottom: 44px;
+    @media (max-width: $bp-lg) {
+     padding-bottom: 0;
+    }
 
     &::part(bullet) {
       background: rgba(255, 255, 255, 0.4);
@@ -183,7 +204,11 @@ $font-inter: 'Inter', sans-serif;
     overflow: hidden;
     padding: 24px;
     aspect-ratio: 4 / 3;
-        margin-bottom: 40px;
+    margin-bottom: 40px;
+    @media (max-width: $bp-lg) {
+     padding: 0 0 24px 0;
+     margin-bottom: 24px;
+    }
   }
 
   &__slide-img {
@@ -209,13 +234,16 @@ $font-inter: 'Inter', sans-serif;
   text-align: center;
 
   @media (max-width: $bp-md) {
-    padding: 64px 0;
+    padding: 48px 0;
   }
 
   &__container {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 24px;
+     @media (max-width: $bp-md) {
+       padding: 0 12px;
+    }
   }
 
   &__badge {
@@ -259,16 +287,16 @@ $font-inter: 'Inter', sans-serif;
     margin: 0 0 28px;
 
     @media (max-width: $bp-md) {
-      font-size: 22px;
+      font-size: 24px;
     }
   }
 
   &__statement-dark {
-    color: #1a1a1a;
+    color: #333;
   }
 
   &__statement-underline {
-    color: #1a1a1a;
+    color: #333;
     text-decoration: underline;
     text-decoration-color: #E83889;
     text-decoration-thickness: 4px;
@@ -281,6 +309,10 @@ $font-inter: 'Inter', sans-serif;
     margin-right: 12px;
     width: 32px;
     height: 32px;
+    @media (max-width: $bp-md) {
+      vertical-align: -8px;
+      margin-right: 16px;
+    }
   }
 
   &__statement-gradient {
@@ -315,10 +347,10 @@ $font-inter: 'Inter', sans-serif;
     margin: 0 auto;
     font-size: 16px;
     line-height: 1.5;
-    color: #555;
+    color: #333;
 
     @media (max-width: $bp-md) {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 }
@@ -335,13 +367,16 @@ $font-inter: 'Inter', sans-serif;
   text-align: center;
 
   @media (max-width: $bp-md) {
-    padding: 64px 0;
+    padding: 48px 0;
   }
 
   &__container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
+     @media (max-width: $bp-md) {
+       padding: 0 12px;
+    }
   }
 
   &__eyebrow {
@@ -372,17 +407,18 @@ $font-inter: 'Inter', sans-serif;
 
     @media (max-width: $bp-lg) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
-
-    @media (max-width: $bp-md) {
-      grid-template-columns: 1fr;
-    }
+    
   }
 
   &__card {
     background: #2A3042;
     border-radius: 20px;
     padding: 32px;
+     @media (max-width: $bp-lg) {
+      padding: 12px;
+    }
      @for $i from 1 through 6 {
       &:nth-child(#{$i}).is-visible {
         animation-delay: ($i - 1) * 0.12s;
@@ -405,6 +441,11 @@ $font-inter: 'Inter', sans-serif;
   &__icon {
     display: block;
     margin-bottom: 20px;
+    @media (max-width: $bp-lg) {
+      margin-bottom: 12px;
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &__card-title {
@@ -413,6 +454,9 @@ $font-inter: 'Inter', sans-serif;
     color: #fff;
     line-height: 1.3;
     margin: 0 0 12px;
+    @media (max-width: $bp-lg) {
+      font-size: 18px;
+    }
   }
 
   &__card-text {
@@ -436,13 +480,16 @@ $font-inter: 'Inter', sans-serif;
   overflow: hidden;
 
   @media (max-width: $bp-md) {
-    padding: 64px 0 72px;
+    padding: 48px 0;
   }
 
   &__container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
+     @media (max-width: $bp-md) {
+       padding: 0 12px;
+    }
   }
 
   &__eyebrow {
@@ -480,11 +527,19 @@ $font-inter: 'Inter', sans-serif;
   &__gallery {
     padding-bottom: 8px;
   }
+  .d-md-none {
+    @media (max-width: $bp-md) {
+      display: none;
+    }
+  }
 
   &__swiper {
     width: 100%;
     padding: 4px 24px 44px;
 
+    @media (max-width: $bp-md) {
+      padding: 0;
+    }
     &::part(bullet) {
       background: rgba(232, 56, 137, 0.25);
       opacity: 1;
@@ -500,6 +555,7 @@ $font-inter: 'Inter', sans-serif;
   &__slide {
     height: auto;
     margin-bottom: 40px;
+   
   }
 
   &__card {
@@ -519,6 +575,10 @@ $font-inter: 'Inter', sans-serif;
     display: block;
     border-radius: 16px;
     margin-bottom: 24px;
+    @media (max-width: $bp-md) {
+      height: 206px;
+      margin-bottom: 12px;
+    }
   }
 
 
@@ -530,6 +590,9 @@ $font-inter: 'Inter', sans-serif;
     font-weight: 700;
     color: #E83889;
     margin-bottom: 8px;
+    @media (max-width: $bp-md) {
+      font-size: 14px;
+    }
   }
 
   &__title {
@@ -538,6 +601,9 @@ $font-inter: 'Inter', sans-serif;
     color: #1a1a1a;
     line-height: 1.3;
     margin: 0 0 10px;
+    @media (max-width: $bp-md) {
+      font-size: 28px;
+    }
   }
 
   &__text {
@@ -545,6 +611,9 @@ $font-inter: 'Inter', sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
+     @media (max-width: $bp-md) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -560,13 +629,16 @@ $font-inter: 'Inter', sans-serif;
   text-align: center;
 
   @media (max-width: $bp-md) {
-    padding: 64px 0 72px;
+    padding: 48px 0;
   }
 
   &__container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
+     @media (max-width: $bp-md) {
+       padding: 0 12px;
+    }
   }
 
   &__eyebrow {
@@ -604,15 +676,17 @@ $font-inter: 'Inter', sans-serif;
 
     @media (max-width: $bp-lg) {
       grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     @media (max-width: $bp-md) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px 20px;
+      
     }
 
     @media (max-width: 480px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
   }
 
@@ -669,13 +743,16 @@ $font-inter: 'Inter', sans-serif;
   text-align: center;
 
   @media (max-width: $bp-md) {
-    padding: 64px 0 72px;
+    padding: 48px 0;
   }
 
   &__container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
+     @media (max-width: $bp-md) {
+       padding: 0 12px;
+    }
   }
 
   &__eyebrow {
@@ -829,12 +906,15 @@ $font-inter: 'Inter', sans-serif;
   overflow: hidden;
 
   @media (max-width: $bp-md) {
-    padding: 64px 0 72px;
+    padding: 48px 0;
   }
 
   &__container {
     max-width: 1180px;
     margin: 0 auto;
+     @media (max-width: $bp-md) {
+       padding: 0 12px;
+    }
   }
 
   &__eyebrow {

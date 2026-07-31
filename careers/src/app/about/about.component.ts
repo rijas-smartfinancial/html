@@ -137,7 +137,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       autoplay: { delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true },
       pagination: { clickable: true, dynamicBullets: true },
       breakpoints: {
-        0: { slidesPerView: 1.15, spaceBetween: 16 },
+        0: { slidesPerView: 1.5, spaceBetween: 16 },
         576: { slidesPerView: 1.6, spaceBetween: 20 },
         992: { slidesPerView: 3, spaceBetween: 24 },
       },
@@ -154,7 +154,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       autoplay: { delay: 3200, disableOnInteraction: false, pauseOnMouseEnter: true },
       pagination: { clickable: true, dynamicBullets: true },
       breakpoints: {
-        0: { slidesPerView: 1.15, spaceBetween: 16 },
+        0: { slidesPerView: 1.5, spaceBetween: 12 },
         576: { slidesPerView: 1.8, spaceBetween: 20 },
         992: { slidesPerView: 2.4, spaceBetween: 24 },
         1200: { slidesPerView: 4.3, spaceBetween: 48 },
